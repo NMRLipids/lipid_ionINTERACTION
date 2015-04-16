@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.1.18)  24 FEB 2015 13:13
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.1.18)  16 APR 2015 14:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -414,106 +414,105 @@ Package caption Info: End \AtBeginDocument code.
 Class revtex4-1 Warning: Assuming \noaffiliation for authors.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 77.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 79.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 77.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 79.
 
-Underfull \hbox (badness 2932) in paragraph at lines 77--77
+Underfull \hbox (badness 2932) in paragraph at lines 79--79
   [][]\OT1/ptm/b/n/8 Author to whom cor-re-spon-dence may be ad-dressed. E-mail
 :
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 81.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 83.
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--82
+Underfull \hbox (badness 10000) in paragraph at lines 82--84
 
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 83.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 85.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 182.
+               Default added (so using `tbp') on input line 184.
 
-Package epstopdf Info: Source file: <POPCstructure.eps>
-(epstopdf)                    date: 2015-01-22 12:22:15
+Package epstopdf Info: Source file: <../Fig/POPCstructure.eps>
+(epstopdf)                    date: 2015-04-16 13:39:22
 (epstopdf)                    size: 794141 bytes
-(epstopdf)             Output file: <POPCstructure-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-01-22 12:22:31
-(epstopdf)                    size: 11539 bytes
-(epstopdf)             Command: <repstopdf --outfile=POPCstructure-eps-converte
-d-to.pdf POPCstructure.eps>
-(epstopdf)             \includegraphics on input line 184.
-Package epstopdf Info: Output file is already uptodate.
-<POPCstructure-eps-converted-to.pdf, id=12, 722.7pt x 542.025pt>
-File: POPCstructure-eps-converted-to.pdf Graphic file (type pdf)
+(epstopdf)             Output file: <../Fig/POPCstructure-eps-converted-to.pdf>
 
-<use POPCstructure-eps-converted-to.pdf>
-Package pdftex.def Info: POPCstructure-eps-converted-to.pdf used on input line 
-184.
+(epstopdf)                    date: 2015-04-16 14:10:28
+(epstopdf)                    size: 11539 bytes
+(epstopdf)             Command: <repstopdf --outfile=../Fig/POPCstructure-eps-c
+onverted-to.pdf ../Fig/POPCstructure.eps>
+(epstopdf)             \includegraphics on input line 186.
+Package epstopdf Info: Output file is already uptodate.
+<../Fig/POPCstructure-eps-converted-to.pdf, id=12, 722.7pt x 542.025pt>
+File: ../Fig/POPCstructure-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ../Fig/POPCstructure-eps-converted-to.pdf>
+Package pdftex.def Info: ../Fig/POPCstructure-eps-converted-to.pdf used on inpu
+t line 186.
 (pdftex.def)             Requested size: 244.69386pt x 183.51689pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 215.
+               Default added (so using `tbp') on input line 217.
 
-Package epstopdf Info: Source file: <OrderParameterIONSnaclSIGN.eps>
-(epstopdf)                    date: 2015-02-24 09:51:55
+Package epstopdf Info: Source file: <../Fig/OrderParameterIONSnaclSIGN.eps>
+(epstopdf)                    date: 2015-04-16 13:39:22
 (epstopdf)                    size: 34553 bytes
-(epstopdf)             Output file: <OrderParameterIONSnaclSIGN-eps-converted-t
-o.pdf>
-(epstopdf)                    date: 2015-02-24 12:58:45
+(epstopdf)             Output file: <../Fig/OrderParameterIONSnaclSIGN-eps-conv
+erted-to.pdf>
+(epstopdf)                    date: 2015-04-16 14:10:28
 (epstopdf)                    size: 11625 bytes
-(epstopdf)             Command: <repstopdf --outfile=OrderParameterIONSnaclSIGN
--eps-converted-to.pdf OrderParameterIONSnaclSIGN.eps>
-(epstopdf)             \includegraphics on input line 217.
+(epstopdf)             Command: <repstopdf --outfile=../Fig/OrderParameterIONSn
+aclSIGN-eps-converted-to.pdf ../Fig/OrderParameterIONSnaclSIGN.eps>
+(epstopdf)             \includegraphics on input line 219.
 Package epstopdf Info: Output file is already uptodate.
-<OrderParameterIONSnaclSIGN-eps-converted-to.pdf, id=13, 505.89pt x 867.24pt>
-File: OrderParameterIONSnaclSIGN-eps-converted-to.pdf Graphic file (type pdf)
 
-<use OrderParameterIONSnaclSIGN-eps-converted-to.pdf>
-Package pdftex.def Info: OrderParameterIONSnaclSIGN-eps-converted-to.pdf used o
-n input line 217.
+<../Fig/OrderParameterIONSnaclSIGN-eps-converted-to.pdf, id=13, 505.89pt x 867.
+24pt>
+File: ../Fig/OrderParameterIONSnaclSIGN-eps-converted-to.pdf Graphic file (type
+ pdf)
+ <use ../Fig/OrderParameterIONSnaclSIGN-eps-converted-to.pdf>
+Package pdftex.def Info: ../Fig/OrderParameterIONSnaclSIGN-eps-converted-to.pdf
+ used on input line 219.
 (pdftex.def)             Requested size: 227.62204pt x 390.2147pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 227.
+               Default added (so using `tbp') on input line 229.
 
-Package epstopdf Info: Source file: <OrderParameterIONSCaCl.eps>
-(epstopdf)                    date: 2015-02-24 13:06:23
+Package epstopdf Info: Source file: <../Fig/OrderParameterIONSCaCl.eps>
+(epstopdf)                    date: 2015-04-16 13:39:22
 (epstopdf)                    size: 30161 bytes
-(epstopdf)             Output file: <OrderParameterIONSCaCl-eps-converted-to.pd
-f>
-(epstopdf)                    date: 2015-02-24 13:10:39
+(epstopdf)             Output file: <../Fig/OrderParameterIONSCaCl-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2015-04-16 14:10:28
 (epstopdf)                    size: 11551 bytes
-(epstopdf)             Command: <repstopdf --outfile=OrderParameterIONSCaCl-eps
--converted-to.pdf OrderParameterIONSCaCl.eps>
-(epstopdf)             \includegraphics on input line 229.
+(epstopdf)             Command: <repstopdf --outfile=../Fig/OrderParameterIONSC
+aCl-eps-converted-to.pdf ../Fig/OrderParameterIONSCaCl.eps>
+(epstopdf)             \includegraphics on input line 231.
 Package epstopdf Info: Output file is already uptodate.
-<OrderParameterIONSCaCl-eps-converted-to.pdf, id=14, 505.89pt x 867.24pt>
-File: OrderParameterIONSCaCl-eps-converted-to.pdf Graphic file (type pdf)
 
-<use OrderParameterIONSCaCl-eps-converted-to.pdf>
-Package pdftex.def Info: OrderParameterIONSCaCl-eps-converted-to.pdf used on in
-put line 229.
+<../Fig/OrderParameterIONSCaCl-eps-converted-to.pdf, id=14, 505.89pt x 867.24pt
+>
+File: ../Fig/OrderParameterIONSCaCl-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use ../Fig/OrderParameterIONSCaCl-eps-converted-to.pdf>
+Package pdftex.def Info: ../Fig/OrderParameterIONSCaCl-eps-converted-to.pdf use
+d on input line 231.
 (pdftex.def)             Requested size: 227.62204pt x 390.2147pt.
 
 
-Package natbib Warning: Citation `??' on page 2 undefined on input line 250.
+Package natbib Warning: Citation `??' on page 2 undefined on input line 252.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 250.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 252.
 
-Package natbib Warning: Citation `??' on page 2 undefined on input line 251.
-
-
-Package natbib Warning: Citation `??' on page 2 undefined on input line 254.
-
-
-Package natbib Warning: Citation `??' on page 2 undefined on input line 255.
+Package natbib Warning: Citation `??' on page 2 undefined on input line 253.
 
 
 Package natbib Warning: Citation `??' on page 2 undefined on input line 256.
@@ -522,10 +521,10 @@ Package natbib Warning: Citation `??' on page 2 undefined on input line 256.
 Package natbib Warning: Citation `??' on page 2 undefined on input line 257.
 
 
-Package natbib Warning: Citation `??' on page 2 undefined on input line 260.
+Package natbib Warning: Citation `??' on page 2 undefined on input line 258.
 
 
-Package natbib Warning: Citation `??' on page 2 undefined on input line 261.
+Package natbib Warning: Citation `??' on page 2 undefined on input line 259.
 
 
 Package natbib Warning: Citation `??' on page 2 undefined on input line 262.
@@ -534,10 +533,10 @@ Package natbib Warning: Citation `??' on page 2 undefined on input line 262.
 Package natbib Warning: Citation `??' on page 2 undefined on input line 263.
 
 
+Package natbib Warning: Citation `??' on page 2 undefined on input line 264.
+
+
 Package natbib Warning: Citation `??' on page 2 undefined on input line 265.
-
-
-Package natbib Warning: Citation `??' on page 2 undefined on input line 266.
 
 
 Package natbib Warning: Citation `??' on page 2 undefined on input line 267.
@@ -549,80 +548,87 @@ Package natbib Warning: Citation `??' on page 2 undefined on input line 268.
 Package natbib Warning: Citation `??' on page 2 undefined on input line 269.
 
 
-Package natbib Warning: Citation `??' on page 2 undefined on input line 272.
+Package natbib Warning: Citation `??' on page 2 undefined on input line 270.
+
+
+Package natbib Warning: Citation `??' on page 2 undefined on input line 271.
+
+
+Package natbib Warning: Citation `??' on page 2 undefined on input line 274.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 316.
+               Default added (so using `tbp') on input line 318.
 
-Package epstopdf Info: Source file: <OrderParameterIONSchanges.eps>
-(epstopdf)                    date: 2015-02-24 12:14:45
+Package epstopdf Info: Source file: <../Fig/OrderParameterIONSchanges.eps>
+(epstopdf)                    date: 2015-04-16 13:39:22
 (epstopdf)                    size: 35161 bytes
-(epstopdf)             Output file: <OrderParameterIONSchanges-eps-converted-to
-.pdf>
-(epstopdf)                    date: 2015-02-24 12:58:46
+(epstopdf)             Output file: <../Fig/OrderParameterIONSchanges-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2015-04-16 14:10:28
 (epstopdf)                    size: 13065 bytes
-(epstopdf)             Command: <repstopdf --outfile=OrderParameterIONSchanges-
-eps-converted-to.pdf OrderParameterIONSchanges.eps>
-(epstopdf)             \includegraphics on input line 318.
+(epstopdf)             Command: <repstopdf --outfile=../Fig/OrderParameterIONSc
+hanges-eps-converted-to.pdf ../Fig/OrderParameterIONSchanges.eps>
+(epstopdf)             \includegraphics on input line 320.
 Package epstopdf Info: Output file is already uptodate.
 
-<OrderParameterIONSchanges-eps-converted-to.pdf, id=15, 707.64375pt x 614.295pt
->
-File: OrderParameterIONSchanges-eps-converted-to.pdf Graphic file (type pdf)
- <use OrderParameterIONSchanges-eps-converted-to.pdf>
-Package pdftex.def Info: OrderParameterIONSchanges-eps-converted-to.pdf used on
- input line 318.
+<../Fig/OrderParameterIONSchanges-eps-converted-to.pdf, id=15, 707.64375pt x 61
+4.295pt>
+File: ../Fig/OrderParameterIONSchanges-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use ../Fig/OrderParameterIONSchanges-eps-converted-to.pdf>
+Package pdftex.def Info: ../Fig/OrderParameterIONSchanges-eps-converted-to.pdf 
+used on input line 320.
 (pdftex.def)             Requested size: 227.62204pt x 197.59073pt.
 
 
-Package natbib Warning: Citation `??' on page 2 undefined on input line 326.
+Package natbib Warning: Citation `??' on page 2 undefined on input line 328.
 
 
-Package natbib Warning: Citation `??' on page 2 undefined on input line 326.
+Package natbib Warning: Citation `??' on page 2 undefined on input line 328.
 
 Missing character: There is no â in font ptmb7t!
 Missing character: There is no ˆ in font ptmb7t!
 Missing character: There is no ’ in font ptmb7t!
-[2 <./POPCstructure-eps-converted-to.pdf>]
+[2 <../Fig/POPCstructure-eps-converted-to.pdf>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 368.
+               Default added (so using `tbp') on input line 370.
 
-Package epstopdf Info: Source file: <IONdensities.eps>
-(epstopdf)                    date: 2015-02-18 13:52:15
+Package epstopdf Info: Source file: <../Fig/IONdensities.eps>
+(epstopdf)                    date: 2015-04-16 13:39:22
 (epstopdf)                    size: 38209 bytes
-(epstopdf)             Output file: <IONdensities-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-02-18 13:53:07
+(epstopdf)             Output file: <../Fig/IONdensities-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-04-16 14:10:28
 (epstopdf)                    size: 12037 bytes
-(epstopdf)             Command: <repstopdf --outfile=IONdensities-eps-converted
--to.pdf IONdensities.eps>
-(epstopdf)             \includegraphics on input line 370.
+(epstopdf)             Command: <repstopdf --outfile=../Fig/IONdensities-eps-co
+nverted-to.pdf ../Fig/IONdensities.eps>
+(epstopdf)             \includegraphics on input line 372.
 Package epstopdf Info: Output file is already uptodate.
-<IONdensities-eps-converted-to.pdf, id=24, 505.89pt x 867.24pt>
-File: IONdensities-eps-converted-to.pdf Graphic file (type pdf)
+<../Fig/IONdensities-eps-converted-to.pdf, id=23, 505.89pt x 867.24pt>
+File: ../Fig/IONdensities-eps-converted-to.pdf Graphic file (type pdf)
 
-<use IONdensities-eps-converted-to.pdf>
-Package pdftex.def Info: IONdensities-eps-converted-to.pdf used on input line 3
-70.
+<use ../Fig/IONdensities-eps-converted-to.pdf>
+Package pdftex.def Info: ../Fig/IONdensities-eps-converted-to.pdf used on input
+ line 372.
 (pdftex.def)             Requested size: 227.62204pt x 390.2147pt.
  [3]
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 416.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 411.
 
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 416.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 411.
 
 
 Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
 
-[4 <./OrderParameterIONSnaclSIGN-eps-converted-to.pdf> <./OrderParameterIONSCaC
-l-eps-converted-to.pdf>]
+[4 <../Fig/OrderParameterIONSnaclSIGN-eps-converted-to.pdf> <../Fig/OrderParame
+terIONSCaCl-eps-converted-to.pdf>]
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 447.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 446.
 
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 447.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 446.
 
 
 Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
@@ -632,7 +638,7 @@ Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no © in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¤ in font ptmr7t!
- [5 <./OrderParameterIONSchanges-eps-converted-to.pdf>]
+ [5 <../Fig/OrderParameterIONSchanges-eps-converted-to.pdf>]
 
 LaTeX Warning: A float is stuck (cannot be placed) on input line 123.
 
@@ -709,10 +715,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 374--383
 
 ) [6]
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 502.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 504.
 
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 502.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 504.
 
 
 Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
@@ -723,7 +729,7 @@ Missing character: There is no ¨ in font ptmr7t!
 
 LaTeX Warning: A float is stuck (cannot be placed) on input line 1.
 
-[8 <./IONdensities-eps-converted-to.pdf>]
+[8 <../Fig/IONdensities-eps-converted-to.pdf>]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¤ in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
@@ -746,7 +752,7 @@ Missing character: There is no â in font ptmr7t!
 Missing character: There is no ˆ in font ptmr7t!
 Missing character: There is no ’ in font ptmr7t!
 
-Underfull \hbox (badness 2653) in paragraph at lines 35--35
+Underfull \hbox (badness 2653) in paragraph at lines 34--34
 [][] \OT1/ptm/m/n/10 31.  I think that it would be very in-ter-est-ing to test 
 the mod-i-fied CHARMM ions: Ven-able et al. 
  []
@@ -809,10 +815,10 @@ Package natbib Warning: There were undefined citations.
 
 [10] (./LIPIDionINTERACT.aux) ) 
 Here is how much of TeX's memory you used:
- 6009 strings out of 493493
- 86828 string characters out of 3143797
- 186757 words of memory out of 3000000
- 9215 multiletter control sequences out of 15000+200000
+ 6012 strings out of 493493
+ 86993 string characters out of 3143797
+ 186823 words of memory out of 3000000
+ 9217 multiletter control sequences out of 15000+200000
  26813 words of font info for 54 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,15n,43p,1228b,446s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -829,7 +835,7 @@ lic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courie
 r/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on LIPIDionINTERACT.pdf (10 pages, 218454 bytes).
+Output written on LIPIDionINTERACT.pdf (10 pages, 218677 bytes).
 PDF statistics:
  130 PDF objects out of 1000 (max. 8388607)
  91 compressed objects within 1 object stream
