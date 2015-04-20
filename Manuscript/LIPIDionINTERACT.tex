@@ -594,6 +594,63 @@ were regenerated for each molecule in each frame after the simulation trajectory
 ??The statistical error estimate for each order parameter calculated from simulation was roughly
 0.01, which is much smaller than the differences discussed in this work.??
 
+
+%Testing of the effect of changing the ion model and accounting of electronic polarization in lipid-ion interactions
+%-Jukka
+\subsection{Effect of ion model and polarization}
+
+ We also tested if different ion models and implicit accounting of polarization would affect ion binding.
+ Changing the model description from Berger-DPPC-98~\cite{Marrink98} and Gromos ion
+ parameters~\cite{??}\todoi{Appropriate reference for the ion model?} to OPLS-AA compatible
+ Berger-DPPC-06~\cite{tieleman06} and \r{A}qvist ions~\cite{Aaqvist90} results in slightly decreased ion binding affinity
+ as seen from the density plots in Figure \ref{ionnotscaled}~\cite{DPPCBergerNaCl, DPPCBergerOPLS06NaCl}. The failure
+ of Gromos ions to properly account ion-ion and ion-water binding propensities of sodium and chloride ions has been
+ reported previously~\cite{Reif13}. The \r{A}qvist ions have been parameterized in aqueous solutions with good agreement
+ to experimental energies~\cite{Aaqvist90}. Yet, the binding affinity of ions to lipid bilayers has not been
+ calibrated - instead it is assumed to work based purely on forces obtained using combination rules. Compared to Gromos
+ ions \r{A}qvist parameters are better, yet sodium overbinding still occurs.
+
+To take account for polarization effects in non-polarizable models, Leontyev et al.~\cite{leontyev11} have suggested
+that ion charges should be scaled by a factor of 0.7. We scaled the charges of both Gromos and \r{A}qvist ions. After
+scaling the water affinity of both ion models is significantly increased, see
+Figure \ref{ionscaled}~\cite{DPPCBergerNaClscaled, DPPCBergerOPLS06NaClscaled}. The intuitive explanation is that by
+scaling the partial charges the charge discrepancy between the ion and water partial charges is decreased. This means
+that there is a lesser driving force for ions to bind to the highly-charged phosphate group. Furthermore, with
+Berger-DPPC-06 and scaled Åqvist ions (Q=0.7) we obtain that there is only very weak binding of sodium to DPPC as
+observed experimentally (right side of Figure \ref{ionscaled}).
+
+The results indicate that the polarization effect actually improves ion binding affinities irrespectively of the model.
+However, the drawback of the scaled charges is that the total charge of the simulation box is non-zero whenever
+counterions and charged molecules are present. This may cause simulation artefacts. Even though in methods such as
+PME the residual charge does not affect the forces (and thus nor dynamics), it still has an effect to the energies.
+This is because the potential from the residual charge is 'smeared in the box' and so depends on the possibly
+fluctuating (at least in NPT conditions) volume of the simulation box. 
+
+
+\begin{figure}[]
+  \centering
+  \includegraphics[width=0.49\textwidth]{../Fig/ionnotscaledberger98.eps} %https://zenodo.org/record/16319/files/density.png
+  \includegraphics[width=0.49\textwidth]{../Fig/ionnotscaledberger06.eps} %https://zenodo.org/record/16484/files/density.png
+  \caption{\label{ionnotscaled}
+    Density plots of DPPC bilayer and ions. DPPC density has been scaled down by a factor of 100 for clarity. Left: Berger-DPPC-98 model with Gromos ions. Right: Berger-DPPC-06 model with \r{A}qvist ions.
+}
+\end{figure}
+%Raw data in .xvg format for this figure can be found at
+%https://zenodo.org/record/16319/files/ and https://zenodo.org/record/16384/files/
+
+\begin{figure}[]
+  \centering
+  \includegraphics[width=0.49\textwidth]{../Fig/ionscaledberger98.eps} %https://zenodo.org/record/16320/files/density.png
+  \includegraphics[width=0.49\textwidth]{../Fig/ionscaledberger06.eps} %https://zenodo.org/record/16485/files/density.png
+  \caption{\label{ionscaled}
+   Density plots of DPPC bilayer and polarization corrected ions, where ion charges are scaled by 0.7. DPPC density has been scaled down by a factor of 100 for clarity. Left: Berger-DPPC-98 model with scaled Gromos ions. Right: Berger-DPPC-06 model with scaled \r{A}qvist ions.
+   }
+\end{figure}
+%Raw data in .xvg format for this figure can be found at
+%https://zenodo.org/record/16320/files/ and https://zenodo.org/record/16385/files/
+
+
+
 %The order parameters calculated from previously published quadrupolar splitting data were calculated using 
 %the equation $|S_{{\rm CD}}|=0.00784 \times \Delta \nu_Q$, where $\Delta \nu_Q$ is the quadrupolar splitting measured
 %by $^2$H NMR (for more details see~\cite{seelig77c} and supplementary information).
