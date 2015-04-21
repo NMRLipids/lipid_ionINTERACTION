@@ -1,0 +1,13 @@
+# From Akutsu and Seelig Biochemistry 20, 7366-7373 (1981)
+# 
+#
+#
+#
+
+# Absolute values of quadrupolar splittings (kHz) values directly from the Table II in the publication, T=323K 
+# [NaCl]    beta   alpha  
+0           4.22    5.95
+10          4.43    4.83
+100         5.3     3.38
+350         6.35    1.69
+1000        6.64    -0.16
