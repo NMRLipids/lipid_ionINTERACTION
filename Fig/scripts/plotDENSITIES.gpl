@@ -31,8 +31,8 @@ set label at screen 0.37,screen 0.55 "CHARMM36 (690 mM)"
 #set ylabel "g_{3}  S_{CH}"
 #set yrange [-0.3:-0.1]
 plot  "../../scratch/POPCcharmm/POPCnacl/26na/NAdens_20-70ns.xvg" using 1:2 title 'Na' with lines linetype 1 , \
-      "../../scratch/POPCcharmm/POPCnacl/26na/POPCdens_20-70ns.xvg" using 1:($2/100) notitle with lines linetype 11 lc rgb 'black'
-    
+      "../../scratch/POPCcharmm/POPCnacl/26na/POPCdens_20-70ns.xvg" using 1:($2/100) notitle with lines linetype 11 lc rgb 'black', \
+      "../../scratch/POPCcharmm/POPCcacl/26CA/CAmassDENS80-200ns.xvg" using 1:2 notitle with lines linetype 11 lc rgb 'green'    
 
 set label at screen 0.37,screen 0.35 "Orange (510 mM)"
 #set ylabel "g_{2}  S_{CH}"
