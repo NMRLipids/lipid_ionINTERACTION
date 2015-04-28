@@ -428,7 +428,12 @@ The overestimation of the effect could be due to too strong partitioning or too 
 \todo{The discussion should be finished when we have CHARMM results with CaCl$_2$.} \\
 \todo{The $^1$H NMR experiments suggest that the N-$\beta$-$\alpha$-O dihedral is only in gaughe conformation in the absense of ions, but
 in the presense of multivalent ions there would be also anti conformations present [Hauser et al. BBA {\bf 508}, 450 (1978), Hauser et al. Chem. Phys. Lipids {\bf 29}, 103 (1981)].
-I think that we should check if this happens in simulations.}
+I have now calculated the dihedral distributions for this dihedral with different CaCl$_2$ concentrations in different models, see Fig.~\ref{ObaNdihs}.
+The change suggested by the $^1$H NMR experiments is not seen in the CHARMM36 model. In Orange model this dihedral is mostly in anti
+conformation also without CaCl$_2$, oppositely as suggested by $^1$H NMR experiments. With CaCl$_2$ anti conformations become slightly more
+pronounced, however, the conformation seems to be unrealistic from the beginning so the studies of structural response to the CaCl$_2$
+might not be reasonable with this model. I think we need more simulations with CHARMM36 to see how good the order parameter response
+to the CaCl$_2$ actually is. Then we can discuss more about its structural response.}
 
 %In conclusion, our results show that the Na$^+$ association to PC bilayer is significantly too strong in the Berger and MacRog models,
 %while Orange and CHARMM36 force fields predict more realistic binding affinity. Since some modest changes are also seen in 
@@ -672,7 +677,15 @@ fluctuating (at least in NPT conditions) volume of the simulation box.
 %Raw data in .xvg format for this figure can be found at
 %https://zenodo.org/record/16320/files/ and https://zenodo.org/record/16385/files/
 
+\subsection{Structural changes induced by CaCl$_2$}
 
+\begin{figure*}[]
+  \centering
+  \includegraphics[width=0.49\textwidth]{../Fig/O-b-a-NdihWITHcaCHARMM36.eps} %https://zenodo.org/record/16320/files/density.png
+  \includegraphics[width=0.49\textwidth]{../Fig/O-b-a-NdihWITHcaORANGE.eps} %https://zenodo.org/record/16485/files/density.png
+  \caption{\label{ObaNdihs}
+      Dihedral angle distributions for O-$\beta$-$\alpha$-N dihedral with different CaCl$_2$ concentrations.}
+\end{figure*}
 
 %The order parameters calculated from previously published quadrupolar splitting data were calculated using 
 %the equation $|S_{{\rm CD}}|=0.00784 \times \Delta \nu_Q$, where $\Delta \nu_Q$ is the quadrupolar splitting measured
