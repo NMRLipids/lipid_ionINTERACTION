@@ -6,7 +6,7 @@ set multiplot  layout 2,2
 set xrange [-1:1050] 
 set ytic 0.01
 #set key above
-set key at screen 0.6,screen 0.8 maxcols 2 maxrows 6
+set key at screen 0.6,screen 0.84 maxcols 1 maxrows 8
 set key font ",13"
 
 
@@ -24,7 +24,11 @@ plot "../../scratch/EXP-Akutsu1981-DPPC-NaClchange.dat"  using 1:($2*-0.00784) t
      "../../scratch/ORANGEnaclCONSchange.dat" using 1:2 title 'POPC+NaCl, Orange, T=298K' with linespoint linetype 1 pt 9 lc rgb 'orange', \
      "../../scratch/ORANGEnaclCONSchange.dat" using 1:3 notitle with linespoints  linetype 1 pt 9 lc rgb 'orange', \
      "../../scratch/SLIPIDSnaclCONSchangeDPPC.dat" using 1:2 title 'DPPC+NaCl, Slipid, T=323K' with linespoint linetype 1 pt 9 lc rgb 'violet', \
-     "../../scratch/SLIPIDSnaclCONSchangeDPPC.dat" using 1:3 notitle with linespoints  linetype 1 pt 9 lc rgb 'violet'
+     "../../scratch/SLIPIDSnaclCONSchangeDPPC.dat" using 1:3 notitle with linespoints  linetype 1 pt 9 lc rgb 'violet', \
+     "../../scratch/DPPCberger/DPPCnacl/NACLconschange.dat" using 1:2 title 'DPPC+NaCl, Berger, T=323K'  with linespoint linetype 1 pt 7, \
+     "../../scratch/DPPCberger/DPPCnacl/NACLconschange.dat" using 1:3 notitle with linespoints  linetype 1 pt 7, \
+     "../../scratch/DPPCbergerOPLS/DPPCnacl/NACLconsOPLSchange.dat" using 1:2 title 'DPPC+NaCl, Berger-OPLS, T=323K' with linespoint linetype 1 pt 7 lc rgb 'brown', \
+     "../../scratch/DPPCbergerOPLS/DPPCnacl/NACLconsOPLSchange.dat" using 1:3 notitle with linespoints  linetype 1 pt 7 lc rgb 'brown'
 #     "SLIPIDSnaclCONSchangePOPC.dat" using 1:2 title 'POPC+NaCl, Slipid, T=323K' with linespoint linetype 1 pt 9 lc rgb 'violet', \
 #     "SLIPIDSnaclCONSchangePOPC.dat" using 1:3 notitle with linespoints  linetype 1 pt 9 lc rgb 'violet'
 
@@ -57,7 +61,11 @@ plot "../../scratch/EXP-Akutsu1981-DPPC-NaClchange.dat"  using 1:($3*0.00784) no
      "../../scratch/CHARMMnaclCONSchange.dat" using 1:4 notitle with linespoint linetype 1 pt 9 lc rgb 'green', \
      "../../scratch/CHARMMnaclCONSchange.dat" using 1:5 notitle with linespoints  linetype 1 pt 9 lc rgb 'green' ,\
      "../../scratch/SLIPIDSnaclCONSchangeDPPC.dat" using 1:4 notitle with linespoint linetype 1 pt 9 lc rgb 'violet', \
-     "../../scratch/SLIPIDSnaclCONSchangeDPPC.dat" using 1:5 notitle with linespoints  linetype 1 pt 9 lc rgb 'violet'
+     "../../scratch/SLIPIDSnaclCONSchangeDPPC.dat" using 1:5 notitle with linespoints  linetype 1 pt 9 lc rgb 'violet', \
+     "../../scratch/DPPCberger/DPPCnacl/NACLconschange.dat" using 1:4 notitle  with linespoint linetype 1 pt 7, \
+     "../../scratch/DPPCberger/DPPCnacl/NACLconschange.dat" using 1:5 notitle with linespoints  linetype 1 pt 7, \
+     "../../scratch/DPPCbergerOPLS/DPPCnacl/NACLconsOPLSchange.dat" using 1:4 notitle  with linespoint linetype 1 pt 7 lc rgb 'brown', \
+     "../../scratch/DPPCbergerOPLS/DPPCnacl/NACLconsOPLSchange.dat" using 1:5 notitle with linespoints  linetype 1 pt 7 lc rgb 'brown'
 #     "SLIPIDSnaclCONSchangePOPC.dat" using 1:4 notitle with linespoint linetype 1 pt 9 lc rgb 'violet', \
 #     "SLIPIDSnaclCONSchangePOPC.dat" using 1:5 notitle with linespoints  linetype 1 pt 9 lc rgb 'violet'
 
