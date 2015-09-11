@@ -1,0 +1,72 @@
+# This file was created Mon Mar 30 14:54:58 2015
+# Created by:
+# GROMACS:      gmx density, VERSION 5.0.4
+# Executable:   /u/16/jsmaatta/unix/gromacs5/bin/gmx
+# Library dir:  /u/16/jsmaatta/unix/gromacs5/share/gromacs/top
+# Command line:
+#   g_density -f mdcenter.xtc -s md -center -o cl.xvg -b 60000
+# g_density is part of G R O M A C S:
+#
+# GROwing Monsters And Cloning Shrimps
+#
+@    title "Partial density"
+@    xaxis  label "Relative position from center (nm)"
+@    yaxis  label "Density (kg m\S-3\N)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "CL"
+    -3.61695          6.01617
+    -3.46932          5.79096
+    -3.32169          5.83564
+    -3.17406          6.10914
+    -3.02643          6.14134
+     -2.8788          6.42146
+    -2.73117          5.99429
+    -2.58354          5.57217
+    -2.43591          4.32965
+    -2.28828          2.94021
+    -2.14064          1.82315
+    -1.99301         0.778115
+    -1.84538         0.405334
+    -1.69775         0.224975
+    -1.55012          0.11476
+    -1.40249         0.131267
+    -1.25486         0.126153
+    -1.10723         0.120642
+   -0.959599         0.137108
+   -0.811969         0.164277
+   -0.664338          0.13138
+   -0.516707         0.120578
+   -0.369077        0.0658582
+   -0.221446        0.0109636
+  -0.0738153        0.0054717
+   0.0738153                0
+    0.221446                0
+    0.369077                0
+    0.516707                0
+    0.664338                0
+    0.811969                0
+    0.959599                0
+     1.10723                0
+     1.25486                0
+     1.40249                0
+     1.55012        0.0493087
+     1.69775         0.142403
+     1.84538         0.388693
+     1.99301          1.04025
+     2.14064          2.31571
+     2.28828          4.36335
+     2.43591          6.34398
+     2.58354           7.8723
+     2.73117          8.43077
+      2.8788          8.47488
+     3.02643          7.33561
+     3.17406          6.64017
+     3.32169          6.30023
+     3.46932          6.51802
+     3.61695          5.69819

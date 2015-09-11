@@ -1,0 +1,3 @@
+wget https://zenodo.org/record/16484/files/dppc_density.xvg
+wget https://zenodo.org/record/16484/files/na_density.xvg
+wget https://zenodo.org/record/16484/files/cl_density.xvg

@@ -1,0 +1,36 @@
+#set term postscript enhanced color  
+set size 1, 1.2
+set terminal postscript portrait enhanced color dashed lw 1 "Helvetica" 14 
+#set terminal png enhanced color dashed lw 1 "Helvetica" 14 
+#set terminal png size 555,880 enhanced font "Helvetica,20"
+set output "../CAdensities.eps"
+set multiplot  layout 3,1
+#set size 1.0, 0.25
+set yrange [0:0.8]
+set xrange [-5:5] 
+set ytic 0.2
+#set key box
+#set key above
+set key at screen 0.8,screen 1.01 maxcols 3 maxrows 1
+
+set ylabel "Number\nDensity"
+set label at screen 0.18,screen 0.95 "Berger (340 mM CaCl_2)"
+#set yrange [0.01:0.16]
+plot  "../../Data/POPC/CaCl/BERGER/44ca/LIPIDdensity.xvg" using 1:3 title 'Ca' with lines linetype 1 lw 1, \
+      "../../Data/POPC/CaCl/BERGER/44ca/LIPIDdensity.xvg" using 1:($4/2) title 'Cl' with lines linetype 1 lw 1 lc rgb 'green', \
+      "../../Data/POPC/CaCl/BERGER/44ca/LIPIDdensity.xvg" using 1:($2/100) title 'Lipid' with lines linetype 1 lc rgb 'black' lw 3
+
+set label at screen 0.5,screen 0.6 "CHARMM36 (670 mM CaCl_2)"
+plot  "../../Data/POPC/CaCl/CHARMM36/26ca/LIPIDdensity.xvg" using 1:3 notitle  with lines linetype 1 lw 2,\
+      "../../Data/POPC/CaCl/CHARMM36/26ca/LIPIDdensity.xvg" using 1:($4/2) notitle with lines linetype 1 lw 2 lc rgb 'green', \
+      "../../Data/POPC/CaCl/CHARMM36/26ca/LIPIDdensity.xvg" using 1:($2/200) notitle with lines linetype 1 lc rgb 'black' lw 3
+
+set xlabel "z (nm)"
+set label at screen 0.2,screen 0.25 "Orange (510 mM CaCl_2)"
+plot  "../../Data/POPC/CaCl/ORANGE/26ca/LIPIDdensity.xvg" using 1:3 notitle with lines linetype 1 lw 2, \
+      "../../Data/POPC/CaCl/ORANGE/26ca/LIPIDdensity.xvg" using 1:($4/2) notitle with lines linetype 1 lw 2 lc rgb 'green', \
+      "../../Data/POPC/CaCl/ORANGE/26ca/LIPIDdensity.xvg" using 1:($2/100) notitle with lines linetype 1 lc rgb 'black' lw 3
+
+
+unset multiplot
+

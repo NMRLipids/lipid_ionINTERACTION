@@ -228,6 +228,10 @@ however the measurements for POPC gave essentially the same results~\cite{altenb
      The experimental data for the effect of ions to the glycerol backbone is not found, thus only the values without ions are shown. 
      The straight line between the results with and without ions is plotted to guide the eye. 
    }
+\todo{I think that this figure could be removed. This is very unclear and I think would be difficult to make
+more clea. I am thinking that we could show the order parameters for pure bilayer compared to experiments 
+(as in the first paper) to remind the quality different models without ions. And the show only the changes
+as a function of ions.}
 \end{figure}
 
 \begin{figure}[]
@@ -240,8 +244,8 @@ however the measurements for POPC gave essentially the same results~\cite{altenb
 and Orange force fields compared to the experiments by Akutsu et al.~\cite{akutsu81} and Altenbach et al.~\cite{altenbach84}. 
 The signs are assumed to be the same as measured by Hong et al.~\cite{hong95a}, Hong et al.~\cite{hong95a} and Gross et al.~\cite{gross97}. 
      The effect of ions to the g1 and g2 were not measured, thus only the values without ions are shown. The straight line between the results with and without ions is 
-     plotted to guide the eye. 
-   }
+     plotted to guide the eye. }
+\todo{I think that this figure could be removed as the previous.}
 \end{figure}
 
 \begin{table*}[htb]
@@ -253,10 +257,12 @@ where [water]=55.5M. These correspond the concentrations reported in the experim
 Force field & lipid & [Ion] mM & \footnote{The number of lipid molecules}N$_{\rm l}$   &  \footnote{The number of water molecules}N$_{\rm w}$   & \footnote{The number of Na$^+$ molecules}N$_{\rm Na}$  & \footnote{The number of Ca$^{2+}$ molecules}N$_{\rm Ca}$   &  \footnote{The number of Cl molecules}N$_{\rm Cl}$ & \footnote{Simulation temperature}T (K)  & \footnote{The total simulation time}t$_{{\rm sim}}$(ns) & \footnote{Time frames used in the analysis}t$_{{\rm anal}}$ (ns) & Files\\
 \hline
 Berger-POPC-07\cite{ollila07a}   &   POPC & 0          & 128 & 7290 & 0  & 0  & 0 & 298  & 270 & 240 & \cite{bergerFILESpopc}  \\
-Berger-DPPC-98\cite{marrink98}   &   DPPC & 0 & 72 & 2880 & 0  & 0  & 0 &323  & ? & ? &\cite{bergerDPPCfiles} \\
 Berger-POPC-07\cite{ollila07a}, ionFF~\cite{??}\todoi{Appropriate reference for the ion model?}   &   POPC & 340 (NaCl) & 128 & 7202 & 44  & 0  & 44 &298  & 110 & 50 &?\todoi{Samuli put to Zenodo} \\
-Berger-DPPC-98\cite{marrink98}, ionFF~\cite{??}   &   DPPC & 1000 (NaCl) & 72 & 2778 & 51  & 0  & 51 &323  & 120 & 60 &\cite{bergerDPPC1000mMfiles} \\
+%\hdashline
 Berger-POPC-07\cite{ollila07a}, ionFF~\cite{??}\todoi{Appropriate reference for the ion model?}   &   POPC & 340 (CaCl$_2$) & 128 & 7157 & 0 & 44  & 88 &298 & 110 & 50 &?\todoi{Samuli put to Zenodo}  \\
+\hline
+Berger-DPPC-98\cite{marrink98}   &   DPPC & 0 & 72 & 2880 & 0  & 0  & 0 &323  & ? & ? &\cite{bergerDPPCfiles} \\
+Berger-DPPC-98\cite{marrink98}, ionFF~\cite{??}   &   DPPC & 1000 (NaCl) & 72 & 2778 & 51  & 0  & 51 &323  & 120 & 60 &\cite{bergerDPPC1000mMfiles} \\
 \hline
 BergerOPLS-DPPC-06\cite{tieleman06} &   DPPC & 0 & 72 & 2880 & 0  & 0  & 0 &323  & 120 & 60 &\cite{bergerOPLSDPPCfiles} \\
 BergerOPLS-DPPC-06\cite{tieleman06}, ionFF~\cite{??} &   DPPC & 150 & 72 & 2880 & 8  & 0  & 8 &323  & 120 & 60 &\cite{bergerOPLSDPPCfiles150mMnacl} \\
@@ -270,11 +276,11 @@ CHARMM36\cite{klauda10}, ionFF~\cite{??}\todoi{Appropriate reference for the ion
 CHARMM36\cite{klauda10}, ionFF~\cite{??}\todoi{Appropriate reference for the ion model?}   & POPC & 2080  (NaCl)  & 72 & 2085 & 78  & 0 & 78 & 303  & 73 & 60 &?\todoi{Samuli put to Zenodo} \\
 CHARMM36\cite{klauda10}, ionFF~\cite{??}   & POPC &  670 (CaCl$_2$)  & 72 & 2164 & 26  & 0 & 52 & 303  & 200  & 120 &? \\
 \hline
-MacRog\cite{maciejewski14}\todoi{DONE}  & POPC & 0 & 288 & 14400 & 0 & 0 & 0 & 310 & 90&40  &~\cite{macrogdehydFILES}  \\
-MacRog\cite{maciejewski14}\todoi{DONE} , ionFF~\cite{??}\todoi{Appropriate reference for the ion model?}  & POPC & 100 (NaCl) & 288 & 14554 & 27 & 0 & 27 & 310 & 90&50  & \cite{macrogIONfiles} \\
-MacRog\cite{maciejewski14}\todoi{DONE} , ionFF~\cite{??}\todoi{Appropriate reference for the ion model?}        & POPC &  210 (NaCl) & 288 & 14500 & 54 & 0 & 54 & 310 & 90&50  &\cite{macrogIONfiles}  \\
-MacRog\cite{maciejewski14}\todoi{DONE} , ionFF~\cite{??}\todoi{Appropriate reference for the ion model?}        & POPC &   310 (NaCl) & 288 & 14446 & 81 & 0 & 81 & 310 & 90&50  & \cite{macrogIONfiles} \\
-MacRog\cite{maciejewski14}\todoi{DONE} , ionFF~\cite{??}\todoi{Appropriate reference for the ion model?}        & POPC &   420 (NaCl) & 288 & 14392 & 108 & 0 & 108 & 310 & 90& 50  & \cite{macrogIONfiles}  \\
+MacRog\cite{maciejewski14}  & POPC & 0 & 288 & 14400 & 0 & 0 & 0 & 310 & 90&40  &~\cite{macrogdehydFILES}  \\
+MacRog\cite{maciejewski14}, ionFF~\cite{??}\todoi{Appropriate reference for the ion model?}  & POPC & 100 (NaCl) & 288 & 14554 & 27 & 0 & 27 & 310 & 90&50  & \cite{macrogIONfiles} \\
+MacRog\cite{maciejewski14}, ionFF~\cite{??}\todoi{Appropriate reference for the ion model?}        & POPC &  210 (NaCl) & 288 & 14500 & 54 & 0 & 54 & 310 & 90&50  &\cite{macrogIONfiles}  \\
+MacRog\cite{maciejewski14}, ionFF~\cite{??}\todoi{Appropriate reference for the ion model?}        & POPC &   310 (NaCl) & 288 & 14446 & 81 & 0 & 81 & 310 & 90&50  & \cite{macrogIONfiles} \\
+MacRog\cite{maciejewski14}, ionFF~\cite{??}\todoi{Appropriate reference for the ion model?}        & POPC &   420 (NaCl) & 288 & 14392 & 108 & 0 & 108 & 310 & 90& 50  & \cite{macrogIONfiles}  \\
 \hline
 Orange, ionFF~\cite{??}\todoi{Samuli check the numbers}   &   POPC & 0 & 72 & 2880 & 0 & 0  & 0 & 298 & 60 & 50 &?\todoi{Jukka Määttä and Luca Monticelli, please let us know if we can share some files. This is unpublished model.}  \\
 Orange, ionFF~\cite{??}\ &   POPC & 140 (NaCl) & 72 & 2866 & 7 & 0  & 7 & 298 & 120 & 100 &?  \\
@@ -328,9 +334,9 @@ Na$^+$~\cite{akutsu81,altenbach84}.
 %whereas a systematic decrease was observed by the addition of CaCl$_2$. Following the electrometer
 %concept this means that the binding constant for divalent Ca$^{2+}$ is higher than for monovalent Na$^+$
 %which is in line with the large amount of experimental data with different techniques~\cite{cevc90,binder02,petrache06,pabst07,filippov09}.
-\begin{figure}[]
+\begin{figure*}[]
   \centering
-  \includegraphics[width=8cm]{../Fig/OrderParameterIONSchanges.eps}
+  \includegraphics[width=15cm]{../Fig/OrderParameterIONSchanges.eps}
   \caption{\label{ordPions}
     The change of order parameters for $\beta$ and $\alpha$ segments as a function of NaCl (left column) and CaCl$_2$ (right column) concentrations from simulations 
     and experiments by Akutsu et al.~\cite{akutsu81}. The signs of the order parameters without ions are taken from~\cite{hong95a,hong95b,gross97} and it is reasonable
@@ -350,7 +356,7 @@ The agreement with experiments is pretty good. The text should be modified accor
 \todo{ I think that it would be very interesting to test the modified CHARMM ions: Venable et al. dx.doi.org/10.1021/jp401512z, J. Phys. Chem. B 2013, 117, 10183−10192.
 According to the paper, these parameters improve the ion binding to the charged lipid bilayers. Even though I think that testing this would be highly relevant, I do not have
 time to do it now.}
-\end{figure}
+\end{figure*}
 
 The differences in NaCl behaviour between different models already seen in Fig.~\ref{ordPnacl} are seen more clearly in Fig.~\ref{ordPions} showing the changes.
 \todo{The discussion about simulation results with CaCl$_2$ to be written once we have all the results.}
@@ -386,27 +392,27 @@ are shown in Fig.~\ref{IONdensCOMP} for lipids and cations from different simula
 %in choline order parameters correlates with ion binding also in simulation models.
 \begin{figure}[]
   \centering
-  \includegraphics[width=8cm]{../Fig/IONdensities.eps}
+  \includegraphics[width=8cm]{../Fig/NAdensities.eps}
   \caption{\label{IONdensCOMP}
-    Mass density profiles for lipids and ions from simulations with different force fields. 
-    The lipid densities are divided with 100 to make them visible with the used y-axis scale.
+    Number density profiles for lipids, Na and Cl ions from simulations with different force fields and different NaCl concetrations. 
+    The lipid densities are scaled with 100 (united atom) or 200 (all atom model) to make them visible with the used y-axis scale.
   }
-\todo{This figure is in progress, however, the main point can be seen. \\
-- I think that we should use number densities instead of mass densities to make the difference between Na and Ca distributions more clear. 
-Now the difference comparison is little bit distracted due to the different mass of the atoms. \\
-- The lipid density from MacRog simulation is missing. Maybe Matti Javanainen could provide this?
-If the data will be uploaded to Zenodo, it also trivial to calculate it with script. \\
-- CONCENTRATION CALCULATION ISSUE FIXED, SEE http://nmrlipids.blogspot.com/2015/02/the-first-draft-of-ion-lipid.html?showComment=1423750867868\#c3435589938183508901. \\
-The systems are here now with quite different concentrations so comparison is not straigthforward. One option would be to run simulations of all
-systems with 150mM which would be close to physiological concentrations, and show the density distributions from those here. \\
-- The CHARMM36 simulations with CaCl$_2$ is now done. With a first look it seems that the partition is similar or stronger than in Orange model
+\todo{- For Slipids we need number densities of Na, Cl and Lipids. If data is uploaded to Zenodo, this is trivial to calculate with the current scripts.
+}
+\end{figure}
+\begin{figure}[]
+  \centering
+  \includegraphics[width=8cm]{../Fig/CAdensities.eps}
+  \caption{\label{IONdensCOMP}
+    Number density profiles for lipids, Ca and Cl ions from simulations with different force fields and different NaCl concetrations. 
+    The lipid densities are scaled with 100 (united atom) or 200 (all atom model) to make them visible with the used y-axis scale.
+  }
+\todo{- The CHARMM36 simulations with CaCl$_2$ is now done. With a first look it seems that the partition is similar or stronger than in Orange model
 even though the order parameter change was much larger in the Orange model (see Fig.~\ref{ordPions}).
 This would indicate that the different order parameter response in the Orange model would be due to the reaction of headgroup into
 penetrating charge, not due to the difference in partition. However, this requires more detailed studies.
 Since the CHARMM36 results are pretty good, it would be reasonable to run the simulations also with different concentrations.
-The text should be updated accordingly. \\
-- Figure editing will be finished (centering of the graphs, labels, etc.) will be done once the above issues have been sorted out.
- }
+The text should be updated accordingly.}
 \end{figure}
 It is evident from the figure that the Na$^+$ density peaks at the lipid bilayer interface are higher (indicating stronger ion binding) for the models
 experiencing also larger changes in order parameters with NaCl concentration shown in Fig.~\ref{ordPnacl}. 
@@ -583,7 +589,6 @@ for lipids and water to 303~K with the velocity-rescale method~\cite{bussi07} wi
 Pressure was semi-isotropically coupled to the athmospheric pressure with the Berendsen method~\cite{berendsen84}.
 
 \subsubsection{MacRog}
-\todo{DONE}
 The simulation parameters are identical to those employed in our earlier study~\cite{botan15} for the full 
 hydration and dehydration simulations. The initial structures with varying amounts of NaCl were constructed from an 
 extensively hydrated bilayer by replacing water molecules with ions using the gromacs tool genion. Even at the highest 
@@ -594,7 +599,6 @@ considered salt concentration, the amount of water molecules per lipid after thi
 
 \subsubsection{Slipids}
 The simulation without ions is the same as in~\cite{botan15}.
-\todo{DONE}
 
 For the simulations with ions, the starting DPPC lipid bilayer, which was built with the online CHARMM-GUI
 (http://www.charmm-gui.org/), contained 600 lipids, 30 water molecules/lipid, Na+ and Cl- ions (150 mM NaCl). 
