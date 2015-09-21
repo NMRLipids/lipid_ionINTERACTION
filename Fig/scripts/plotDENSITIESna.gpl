@@ -1,27 +1,29 @@
 #set term postscript enhanced color  
-set size 1, 1.2
+set size 1, 1.1
 set terminal postscript portrait enhanced color dashed lw 1 "Helvetica" 14 
 #set terminal png enhanced color dashed lw 1 "Helvetica" 14 
 #set terminal png size 555,880 enhanced font "Helvetica,20"
 set output "../NAdensities.eps"
 set multiplot  layout 7,1
-#set size 1.0, 0.25
-set yrange [0:0.8]
+set size 1.0, 0.2
+set yrange [0:0.79]
 set xrange [-5:5] 
 set ytic 0.2
 #set key box
 #set key above
-set key at screen 0.8,screen 1.01 maxcols 3 maxrows 1
+set key at screen 0.8,screen 1.08 maxcols 3 maxrows 1
 
+set xtics format " " 
 set ylabel "Number\nDensity"
-set label at screen 0.18,screen 1 "Berger (340 mM NaCl)"
+set label at screen 0.18,screen 1.0 "Berger (340 mM NaCl)"
 #set yrange [0.01:0.16]
 plot  "../../Data/POPC/NaCl/BERGER/44na/LIPIDdensity.xvg" using 1:3 title 'Na' with lines linetype 1 lw 1, \
       "../../Data/POPC/NaCl/BERGER/44na/LIPIDdensity.xvg" using 1:4 title 'Cl' with lines linetype 1 lw 1 lc rgb 'green', \
       "../../Data/POPC/NaCl/BERGER/44na/LIPIDdensity.xvg" using 1:($2/100) title 'Lipid' with lines linetype 1 lc rgb 'black' lw 3
 
-set label at screen 0.17,screen 0.8 "MacRog" 
-set key at screen 0.95,screen 0.775 maxcols 1 maxrows 4 font ",10"
+set size 1.0, 0.2
+set label at screen 0.18,screen 0.85 "MacRog" 
+set key at screen 0.95,screen 0.89 maxcols 1 maxrows 4 font ",10"
 #set yrange [-0.1:0.105]
 plot "../../Data/POPC/NaCl/MACROG/27na/LIPIDdensity.xvg" using 1:3 title '100 mM' with lines linetype 1 lw 1, \
      "../../Data/POPC/NaCl/MACROG/27na/LIPIDdensity.xvg" using 1:4 notitle with lines linetype 1 lw 1 lc rgb 'green', \
@@ -44,10 +46,11 @@ plot "../../Data/POPC/NaCl/MACROG/27na/LIPIDdensity.xvg" using 1:3 title '100 mM
 #      "../../Data/POPC/NaCl/BERGERopls/8na/cl_density.xvg" using 1:2 notitle with lines linetype 1 lw 1 lc rgb 'green', \
 #      "../../Data/POPC/NaCl/BERGERopls/8na/dppc_density.xvg" using 1:($2/100) notitle with lines linetype 1 lc rgb 'black' lw 3
      
-set label at screen 0.17,screen 0.6 "CHARMM36"
-set label at screen 0.83,screen 0.46 "350 mM" 
-set label at screen 0.83,screen 0.51 "690 mM" 
-set label at screen 0.83,screen 0.55 "950 mM" 
+set size 1.0, 0.2
+set label at screen 0.17,screen 0.725 "CHARMM36"
+set label at screen 0.83,screen 0.64 "350 mM" 
+set label at screen 0.83,screen 0.69 "690 mM" 
+set label at screen 0.83,screen 0.73 "950 mM" 
 plot  "../../Data/POPC/NaCl/CHARMM36/13na/LIPIDdensity.xvg" using 1:3 notitle with lines linetype 1 lw 1, \
       "../../Data/POPC/NaCl/CHARMM36/13na/LIPIDdensity.xvg" using 1:4 notitle with lines linetype 1 lw 1 lc rgb 'green', \
       "../../Data/POPC/NaCl/CHARMM36/13na/LIPIDdensity.xvg" using 1:($2/200) notitle with lines linetype 1 lc rgb 'black' lw 3,\
@@ -64,30 +67,33 @@ plot  "../../Data/POPC/NaCl/CHARMM36/13na/LIPIDdensity.xvg" using 1:3 notitle wi
 #      "../../Data/POPC/NaCl/CHARMM36/78na/LIPIDdensity.xvg" using 1:4 notitle with lines linetype 1 lw 5 lc rgb 'green', \
 #      "../../Data/POPC/NaCl/CHARMM36/78na/LIPIDdensity.xvg" using 1:($2/100) notitle with lines linetype 1 lc rgb 'black'
 
-set label at screen 0.17,screen 0.4 "LIPID14"
-set label at screen 0.845,screen 0.265 "150 mM"
-set label at screen 0.82,screen 0.34 "1000 mM"
+set size 1.0, 0.2
+set label at screen 0.17,screen 0.59 "LIPID14"
+set label at screen 0.845,screen 0.5 "150 mM"
+set label at screen 0.82,screen 0.55 "1000 mM"
 plot  "../../Data/POPC/NaCl/LIPID14/12na/LIPIDdensity.xvg" using 1:3 notitle with lines linetype 1 lw 1, \
       "../../Data/POPC/NaCl/LIPID14/12na/LIPIDdensity.xvg" using 1:4 notitle with lines linetype 1 lw 1 lc rgb 'green', \
       "../../Data/POPC/NaCl/LIPID14/12na/LIPIDdensity.xvg" using 1:($2/200) notitle with lines linetype 1 lc rgb 'black' lw 3,\
       "../../Data/POPC/NaCl/LIPID14/77na/LIPIDdensity.xvg" using 1:3 notitle  with lines linetype 1 lw 2,\
       "../../Data/POPC/NaCl/LIPID14/77na/LIPIDdensity.xvg" using 1:4 notitle with lines linetype 1 lw 2 lc rgb 'green', \
-      "../../Data/POPC/NaCl/LIPID14/77na/LIPIDdensity.xvg" using 1:($2/200) notitle with lines linetype 1 lc rgb 'black' lw 3,\
+      "../../Data/POPC/NaCl/LIPID14/77na/LIPIDdensity.xvg" using 1:($2/200) notitle with lines linetype 1 lc rgb 'black' lw 3
 
-set label at screen 0.17,screen 0.2 "ULMSCHNEIDER"
-set label at screen 0.845,screen 0.265 "150 mM"
-set label at screen 0.82,screen 0.34 "1000 mM"
+set size 1.0, 0.2
+set label at screen 0.17,screen 0.445 "ULMSCHNEIDER"
+set label at screen 0.845,screen 0.35 "150 mM"
+set label at screen 0.82,screen 0.435 "1000 mM"
 plot  "../../Data/POPC/NaCl/ULM/12na/LIPIDdensity.xvg" using 1:3 notitle with lines linetype 1 lw 1, \
       "../../Data/POPC/NaCl/ULM/12na/LIPIDdensity.xvg" using 1:4 notitle with lines linetype 1 lw 1 lc rgb 'green', \
       "../../Data/POPC/NaCl/ULM/12na/LIPIDdensity.xvg" using 1:($2/200) notitle with lines linetype 1 lc rgb 'black' lw 3,\
       "../../Data/POPC/NaCl/ULM/77na/LIPIDdensity.xvg" using 1:3 notitle  with lines linetype 1 lw 2,\
       "../../Data/POPC/NaCl/ULM/77na/LIPIDdensity.xvg" using 1:4 notitle with lines linetype 1 lw 2 lc rgb 'green', \
-      "../../Data/POPC/NaCl/ULM/77na/LIPIDdensity.xvg" using 1:($2/200) notitle with lines linetype 1 lc rgb 'black' lw 3,\
+      "../../Data/POPC/NaCl/ULM/77na/LIPIDdensity.xvg" using 1:($2/200) notitle with lines linetype 1 lc rgb 'black' lw 3
 
-set label at screen 0.17,screen 0 "Orange"
-set label at screen 0.860,screen 0.165 "140 mM" 
-set label at screen 0.848,screen 0.19 "510 mM" 
-set label at screen 0.82,screen 0.24 "1000 mM" 
+set size 1.0, 0.2
+set label at screen 0.17,screen 0.28 "Orange"
+set label at screen 0.860,screen 0.21 "140 mM" 
+set label at screen 0.848,screen 0.24 "510 mM" 
+set label at screen 0.82,screen 0.28 "1000 mM" 
 plot  "../../Data/POPC/NaCl/ORANGE/7na/LIPIDdensity.xvg" using 1:3 notitle with lines linetype 1 lw 1, \
       "../../Data/POPC/NaCl/ORANGE/7na/LIPIDdensity.xvg" using 1:4 notitle with lines linetype 1 lw 1 lc rgb 'green', \
       "../../Data/POPC/NaCl/ORANGE/7na/LIPIDdensity.xvg" using 1:($2/100) notitle with lines linetype 1 lc rgb 'black' lw 3,\
@@ -98,14 +104,15 @@ plot  "../../Data/POPC/NaCl/ORANGE/7na/LIPIDdensity.xvg" using 1:3 notitle with 
       "../../Data/POPC/NaCl/ORANGE/50na/LIPIDdensity.xvg" using 1:4 notitle with lines linetype 1 lw 3 lc rgb 'green', \
       "../../Data/POPC/NaCl/ORANGE/50na/LIPIDdensity.xvg" using 1:($2/100) notitle with lines linetype 1 lc rgb 'black' lw 3
 
-set yrange [0:12]    
+set yrange [0:15]    
 set ytic 2
+set xtics format "%G"
 set key at screen 0.8,screen 1.1 maxcols 2 maxrows 6
-set label at screen 0.37,screen 0.19 "Slipid (DPPC, 150 mM NaCl)"
+set label at screen 0.37,screen 0.13 "Slipid (DPPC, 150 mM NaCl)"
 #set ylabel "g_{1}  S_{CH}"
 set xlabel "z (nm)"
 #set yrange [-0.23:0.05]
-set size 1.0, 0.23
+set size 1.0, 0.17
 plot "../../scratch/CATTEdensityDATA.dat" using 1:3 notitle with lines linetype 1 ,\
      "../../scratch/CATTEdensityDATA.dat" using 1:($2/100) notitle with lines linetype 1 lc rgb 'black'  lw 3
 
