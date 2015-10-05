@@ -24,6 +24,8 @@
 %\renewcommand{\bibnumfmt}[1]{#1.}
 \usepackage[obeyFinal]{easy-todo}
 
+\usepackage[normalem]{ulem}
+
 \begin{document}
 %\singlespacing
 
@@ -67,16 +69,17 @@
 %Consequently, many of the conclusions drawn over the years from this model might be erroneous.
 %This manuscript has not been submitted to any journal, instead its contents are discussed at 
 %nmrlipids.blogspot.fi.
-Despite of vast amount of experimental and theoretical studies the binding affinity of cations, especially biologically relevant Na$^+$ and Ca$^{2+}$ ions,
-into a phosholipid bilayer is not agreed in the literature. Here we directly compare the measured choline headgroup order parameters
-to the simulations with different models in the presence of different cations. We conclude that the least complicated explanation
-for the experimental and theoretical observations is that the Na$^+$ ions do not penetrate into a phosphatidylcholine lipid
-bilayer in mM concentrations, in contrast to Ca$^{2+}$. Further, the binding affinity of Na$^+$ is overestimated in almost all molecular dynamics simulation models.
-However, the electrometer concept connecting the choline order parameter changes to the penetrating charges is valid also in simulations.
-This work has been, and continues to be, progressed and discussed through the blog: nmrlipids.blogspot.fi.
+Despite of vast amount of experimental and theoretical studies, the binding affinity of cations, especially the biologically relevant Na$^+$ and Ca$^{2+}$ ions,
+into a phosholipid bilayer is not agreed on in the literature. Here we directly compare the measured choline headgroup order parameters
+to the simulations with different models in the presence of different cations. We conclude that the simplest explanation
+for the experimental and theoretical observations is that at mM concentrations the Na$^+$ ions do not  \sout{penetrate into} bind to \todo{Markus: 'penetrate into' gives the impression they go really deep, that is, even in the tails. On the other hand, 'bind to' could mean that they are bound just to the headgroup region. Should we maybe say precisely until where do they penetrate?}
+phosphatidylcholine lipid bilayers, in contrast to Ca$^{2+}$. Further, the binding affinity of Na$^+$ is overestimated in almost all molecular dynamics simulation models.
+However, the electrometer concept (connecting the choline order parameter changes to the amount of penetrating charge) is valid also in simulations.
+
+{\it This work has been, and continues to be, progressed and discussed through the blog: nmrlipids.blogspot.fi.
 Everyone is invited to join the discussion and make contributions through the blog. The manuscript will be
 eventually submitted to an appropriate scientific journal. Everyone who has contributed to the work through the
-blog will be offered coauthorship. For more details see: nmrlipids.blogspot.fi.
+blog will be offered coauthorship. For more details see: nmrlipids.blogspot.fi.}
 \end{abstract}
 
 
@@ -88,26 +91,26 @@ blog will be offered coauthorship. For more details see: nmrlipids.blogspot.fi.
 
 \section{Introduction}
 
-The cation interactions with phospholipid membranes are present in large amount
+The cation interactions with phospholipid membranes occur in a large amount
 of physiological processes, nerve cell signalling being the prime example.
 Thus, the interactions between different cations and phospholipid bilayers have been very widely studied experimentally
 and theoretically. It is practically agreed that the relative binding affinity of different
-ions follows the Hofmeister series~\cite{eisenberg79,cevc90,tocanne90,binder02,celma07,leontidis09,vacha09a,klasczyk10,harb13}, however the quantitative binding affinities of different
-ions are not agreed in the literature. The extensive reviews about work done prior 1990~\cite{cevc90,tocanne90}
-concluded that monovalent cations (lithium being an exception) interact only weakly with phopholipid bilayers, 
-while the interactions are significant for multivalent ions. This conclusion has been supported by
-further studies where the bilayer poperties have been intact with increasing monovalent salt 
+ions follows the Hofmeister series~\cite{eisenberg79,cevc90,tocanne90,binder02,celma07,leontidis09,vacha09a,klasczyk10,harb13}, however, the quantitative binding affinities of different
+ions are not agreed on in the literature. The extensive reviews of the work done prior 1990~\cite{cevc90,tocanne90}
+concluded that monovalent cations (Li$^+$ being an exception) interact only weakly with phospholipid bilayers, 
+while for multivalent ions the interactions are significant. This conclusion has been supported by
+further studies where the bilayer poperties have remained intact with increasing monovalent salt 
 concentration~\cite{binder02,pabst07,filippov09}. On the other hand, the weak interactions of monovalent ions, especially
 sodium, has been also questioned in several more recent studies suggesting stronger 
-binding~\cite{bockmann03,bockmann04,vacha09a,manyes05,manyes06,fukuma07,leontidis09,ferber11,morata12,klasczyk10,harb13}. In this work we concentrate on the 
-interactions between phospholipid bilayer and two widely studied and biologically relevant cations, monovalent sodium and divalent calcium.
+binding~\cite{bockmann03,bockmann04,vacha09a,manyes05,manyes06,fukuma07,leontidis09,ferber11,morata12,klasczyk10,harb13}. In this work, we concentrate on the 
+interactions between phospholipid bilayers and two widely studied and biologically relevant cations, monovalent sodium and divalent calcium.
 
 The experimental studies supporting the weak interactions between sodium ions and phospholipid bilayer
-have shown that NaCl with mM concentrations has a negligible effect on 
-choline headgroup order parameters~\cite{akutsu81}, area per molecule~\cite{pabst07}, dipole potential~\cite{clarke99}
-and lipid lateral diffusion~\cite{filippov09} while these properties were significantly affected by the presense
+have shown that at mM concentrations NaCl has a negligible effect on the
+choline headgroup order parameters~\cite{akutsu81}, area per molecule~\cite{pabst07}, dipole potential~\cite{clarke99},
+and lipid lateral diffusion~\cite{filippov09}; in contrast, these properties are significantly affected by the presense
 of CaCl$_2$ or other multivalent ions. In addition, water sorption isotherm for POPC/NaCl system
-was essentially similar to NaCl in pure water indicating only weak interaction between ion and lipid~\cite{binder02}.
+was essentially similar to NaCl in pure water---indicating only weak interaction between ion and lipid~\cite{binder02}.
 Only minor changes in POPC infrared spectra were observed in the presense of NaCl compared to the significant 
 changes in the presense of CaCl$_2$ and other multivalent ions, and it was again concluded that the Na$^+$-lipid interactions are weak~\cite{binder02}.
 
@@ -123,18 +126,17 @@ changes in the presense of CaCl$_2$ and other multivalent ions, and it was again
 In contrast, experimentally observed decrease in fluorescent probe rotational and translational dynamics
 in lipid bilayer due to addition of NaCl has suggested significant ion binding also with mM 
 concentrations~\cite{bockmann03,vacha09a,harb13}. However, the reduced lateral diffusion is not observed
-in NMR experiments without probes suggesting that it would arise from interactions between probe and ion,
+in NMR experiments without probes, which suggests that it arises from interactions between probe and ion,
 not between lipid and ion~\cite{filippov09}. NaCl binding to phospholipids leading to the change of the strength of 
 bilayer against rupture and area per lipid reduction has been also suggested from Atomistic Force Microscopy (AFM)~\cite{manyes05,manyes06,fukuma07,ferber11,morata12}.
 Interpretation of calorimetric measurements has been controversial: Previously the small effect of
-monovalent ions (except Lithium)  on phase transition temperature compared to multivalent ions was interpreted such that 
-only multivalent ions and Lithium specifically bind to phosholipid bilayer~\cite{cevc90}, however more recently the
+monovalent ions (except Li$^+$)  on phase transition temperature compared to multivalent ions was interpreted such that 
+only multivalent ions and Li$^+$ specifically bind to phosholipid bilayer~\cite{cevc90}, however, more recently the
 small changes in calorimetric experiments have been interpreted to indicate also Na$^+$ binding~\cite{bockmann03,klasczyk10}.
-In electrophoresis measurements of phosphatidylcholine vesicles the NaCl can increase the originally negative zeta potential 
-close to zero, however positive zeta potential can be typically reached only with multivalent ions or Lithium
-ions~\cite{eisenberg79,tatulian87,manyes05,manyes06,klasczyk10}. The lack of significant positive electrophoretic mobility in the presence
-of NaCl has been rekognized to contradict with suggested strong binding of Na$^+$ and the contradiction
-has been explained by the effect of cl$^-$ ions to the electrophoretic mobility~\cite{berkowitz06,knecht13}.
+In electrophoresis measurements of phosphatidylcholine vesicles, NaCl can increase the originally negative zeta potential 
+close to zero, however, positive zeta potential can be typically reached only with multivalent ions or Lit$^+$~\cite{eisenberg79,tatulian87,manyes05,manyes06,klasczyk10}. The lack of significant positive electrophoretic mobility in the presence
+of NaCl has been recognized to contradict with suggested strong binding of Na$^+$ and the contradiction
+has been explained by the effect of Cl$^-$ ions to the electrophoretic mobility~\cite{berkowitz06,knecht13}.
  
 %However, the origin of negative mobility of vesicles in the absence of ions is not known and 
 %electrophoretic mobility depends also on the location of slip plane, not only on directly bound ions~\cite{??},
@@ -152,18 +154,18 @@ has been explained by the effect of cl$^-$ ions to the electrophoretic mobility~
 
 %Especially the Na$^+$ binding has been widely discussed in recent molecular dynamics simulation
 %literature. 
-In atomistic resolution molecular dynamics simulations all the generally used models seems
+In atomistic resolution molecular dynamics simulations, all the generally used models seems
 to predict binding of Na${^+}$ ions into a phoshatidylcholine lipid bilayer, 
-but the strength of binding depends on the force field~\cite{bockmann03,bockmann04,sachs04,berkowitz06,cordomi09,valley11,berkowitz12}. 
+but the strength of binding depends on model used~\cite{bockmann03,bockmann04,sachs04,berkowitz06,cordomi09,valley11,berkowitz12}. 
 %Generally the CHARMM based force fields predict less Na$^+$ binding and changes in bilayer
 %properties than the GROMOS based force fields~\cite{sachs04,valley11}.
-The reduction of lipid lateral diffusion due to Na binding in simulations is in agreement with 
+The reduction of lipid lateral diffusion due to Na$^+$ binding in simulations is in agreement with 
 fluorescent probe measurements~\cite{bockmann03,vacha09a,harb13}, but not with the NMR experiments~\cite{filippov09}.
-The AFM experiments are interpereted to agree with the area per lipid reduction due to Na binding
-in simulations~\cite{manyes05,manyes06,fukuma07,ferber11,morata12}, however compared to the scattering experiments the are reduction 
-is observed with too low concentrations in simulations compared to experiments~\cite{pabst07}.
-The simulations has been suggested to predict larger positive electrophoretic mobility than experimentally
-measured with NaCl, which has been explained by choride ion behaviour~\cite{berkowitz06,knecht13}.
+The AFM experiments are interpreted to agree with the area per lipid reduction due to Na$^+$ binding
+in simulations~\cite{manyes05,manyes06,fukuma07,ferber11,morata12}, however, compared to the scattering experiments the area reduction 
+is observed significantly with too low concentrations in simulations compared to experiments~\cite{pabst07}.
+The simulations have been suggested to predict larger positive electrophoretic mobility than is experimentally
+measured with NaCl, which has been explained by Cl$^-$ behaviour~\cite{berkowitz06,knecht13}.
 
 
 %It has been concluded that the simulation results are in agreement with 
@@ -178,11 +180,11 @@ measured with NaCl, which has been explained by choride ion behaviour~\cite{berk
 %the bilayer~\cite{filippov09}.
 
 It is agreed in the literature that the Ca$^{2+}$ ions do penetrate in the phosphatidylcholine bilayer and
-signifincantyl affect membrane properties already with mM concentrations of CaCl$_2$, however the strength of the binding is not agreed~\cite{tatulian87,altenbach84,bockmann04}.
+significantly affect membrane properties already at mM concentrations of CaCl$_2$, however, the strength of the binding is not agreed on~\cite{tatulian87,altenbach84,bockmann04}.
+\todo{Markus: Mention shortly what strengths have been suggested?}
 
-
-One of the experimental methods used to measure the ion binding is the so called
-''electrometer concept'' where the changes of the C-H bond order parameters for the 
+One of the experimental methods used to measure ion binding is the so-called
+''electrometer concept'' where the changes of the C--H bond order parameters for the 
 choline $\alpha$ and $\beta$ segments (see Fig.~\ref{POPCstructure} for definitions and 1-palmitoyl-2-oleoylphosphatidylcholine (POPC) 
 chemical structure) are used to determine the amount of penetrating charges into a bilayer~\cite{akutsu81,altenbach84,seelig87,scherer89}.
 \begin{figure}[]
@@ -194,29 +196,29 @@ chemical structure) are used to determine the amount of penetrating charges into
   
 \end{figure}
 The concept is based on the findings that the absolute value of the $\beta$ order parameter
-increases and the $\alpha$ order parameter decreases with inceasing amount of penetrating 
+increases, and the $\alpha$ order parameter decreases, with inceasing amount of penetrating 
 charges~\cite{akutsu81,altenbach84,seelig87,scherer89}. 
-From the simulation point of view the electrometer concept is particularly interesting since one
-can directly compare the actual measurable quantity, i.e. order parameters, to the simulations.
+From the simulation point of view, the electrometer concept is particularly interesting since one
+can directly and quantitatively compare an actual measurable set of quantities, the order parameters, to the simulations.
 In this work we compare the ion induced changes in phosphatidylcholine headgroup order parameters
 between different simulation models to resolve the above discussed controversies in the literature.
 
 %In this work we concentrate on the effect of Na$^+$ and Ca$^{2+}$ since those are widely discussed 
 %ions in the simulation literature~\cite{pandit03,bockmann03,bockmann04,??}, and the experimental data is available~\cite{akutsu81,altenbach84}. 
 
-In our recent work we showed that the experimental order parameters for choline and glycerol backbone were not
+In our recent work, we showed that the experimental order parameters for choline and glycerol backbone were not
 quantitatively reproduced by any available lipid model in fully hydrated conditions, however, the response of the choline order parameters
-to the dehydration were qualitatively correct in all models and the response to the cholesterol  concentration
-was correct for the CHARMM36 model~\cite{botan15}. In this work, we show that the qualitative response of order parameters
-to penetrating cations is qualitatively correct but the partition of ions is too strong in all the studied models.
+to dehydration were qualitatively correct in all \todo{Markus: This 'all' gives the impression that it is the same as the 'any available' in the beginning of the sentence. I propose we make it clear here that we only tested four FFs against dehydration.} models, and the response to the cholesterol  content
+was qualitatively correct in the CHARMM36 model~\cite{botan15}. \todo{Markus: Wouldn't you say that the response of the choline order parameters to cholesterol content was qualitatively just as correct in MacRog as it was in CHARMM36? (Fig.~9 in Ref.~\cite{botan15})} In this work, we show that the qualitative response of order parameters
+to penetrating cations is qualitatively correct, but the partitioning of ions is too strong in all the studied models.
 
 
 \section{Results and Discussion}
 The effect of NaCl on the choline and glycerol bakcbone order parameters from experiments by Akutsu et al.~\cite{akutsu81}
 and various simulations are shown in Fig.~\ref{ordPnacl}. 
-The simulated systems are described in the table~\ref{IONsystems} and further details are given in Supplementary Information. 
-The experimental results are shown for DPPC bilayer due to more extensive data set~\cite{akutsu81}, 
-however the measurements for POPC gave essentially the same results~\cite{altenbach84}.
+The simulated systems are described in the Table~\ref{IONsystems} and further details are given in Supplementary Information. 
+The experimental results are shown for DPPC bilayer due to a more extensive data set~\cite{akutsu81}, 
+however, the measurements for POPC gave essentially the same results~\cite{altenbach84}.
 
 \begin{figure}[]
   \centering
@@ -224,14 +226,16 @@ however the measurements for POPC gave essentially the same results~\cite{altenb
   \caption{\label{ordPnacl}
     Order parameters as a function of NaCl concentration from simulations 
      with the Berger, CHARMM36, MacRog and Orange force fields compared to the experiments
-     by Akutsu et al.~\cite{akutsu81} and Altenbach et al.~\cite{altenbach84}. The signs are assumed to be the same as measured by Hong et al.~\cite{hong95a}, Hong et al.~\cite{hong95a} and Gross et al.~\cite{gross97}. 
+     by Akutsu et al.~\cite{akutsu81} and Altenbach et al.~\cite{altenbach84}. The signs are assumed to be the same as measured by Hong et al.~\cite{hong95a}, Hong et al.~\cite{hong95b} and Gross et al.~\cite{gross97}. 
      The experimental data for the effect of ions to the glycerol backbone is not found, thus only the values without ions are shown. 
      The straight line between the results with and without ions is plotted to guide the eye. 
    }
-\todo{I think that this figure could be removed. This is very unclear and I think would be difficult to make
+\todo{Samuli: I think that this figure could be removed. This is very unclear and I think would be difficult to make
 more clea. I am thinking that we could show the order parameters for pure bilayer compared to experiments 
 (as in the first paper) to remind the quality different models without ions. And the show only the changes
-as a function of ions. Issue discussed here: https://github.com/NMRLipids/lipid\_ionINTERACTION/issues/3}
+as a function of ions. Issue discussed here: https://github.com/NMRLipids/lipid\_ionINTERACTION/issues/3
+%
+Markus: Also, is there any point in showing the glycerol values as a function of [NaCl], if we do not have experimental data to compare against?}
 \end{figure}
 
 \begin{figure}[]
@@ -242,7 +246,7 @@ as a function of ions. Issue discussed here: https://github.com/NMRLipids/lipid\
      with the Berger 
 %CHARMM36, MacRog 
 and Orange force fields compared to the experiments by Akutsu et al.~\cite{akutsu81} and Altenbach et al.~\cite{altenbach84}. 
-The signs are assumed to be the same as measured by Hong et al.~\cite{hong95a}, Hong et al.~\cite{hong95a} and Gross et al.~\cite{gross97}. 
+The signs are assumed to be the same as measured by Hong et al.~\cite{hong95a}, Hong et al.~\cite{hong95b} and Gross et al.~\cite{gross97}. 
      The effect of ions to the g1 and g2 were not measured, thus only the values without ions are shown. The straight line between the results with and without ions is 
      plotted to guide the eye. }
 \todo{I think that this figure could be removed as the previous. Issue discussed here: https://github.com/NMRLipids/lipid\_ionINTERACTION/issues/3}
@@ -287,16 +291,16 @@ Orange, ionFF~\cite{??}\ &   POPC & 140 (NaCl) & 72 & 2866 & 7 & 0  & 7 & 298 & 
 Orange, ionFF~\cite{??}\todoi{Appropriate reference for the ion model?}   &   POPC & 510 (NaCl) & 72 & 2802 & 26 & 0  & 26 & 298 & 120 & 100 &?\todoi{Jukka Määttä and Luca Monticelli, please let us know if we can share some files through Zenodo. This is unpublished model.}  \\
 Orange, ionFF~\cite{??}  &   POPC & 1000 (NaCl) & 72 & 2780 & 50 & 0  & 50 & 298 & 120 & 80 &? \\
 %\hdashline
-Orange, ionFF~\cite{??}\todoi{Appropriate reference for the ion model?}   &   POPC & 510 (CaCl$_2$)  & 72 & 2802 & 0 & 26  & 52 & 298 & 120 & 60 &? \todoi{Jukka Määttä and Luca Monticelli, please let us know if we can share some files. This is unpublished model.} \\
+Orange, ionFF~\cite{??}\todoi{Appropriate reference for the ion model?}   &   POPC & 510 (CaCl$_2$)  & 72 & 2802 & 0 & 26  & 52 & 298 & 120 & 60 &? \todoi{Jukka M\"a\"att\"a and Luca Monticelli, please let us know if we can share some files. This is unpublished model.} \\
 \hline
 Slipid\cite{jambeck12}   &   DPPC & 0 & 128 &3840 & 0 & 0  & 0 & 323 & 150 & 100 &~\cite{slipidsFILES}  \\
 Slipid\cite{jambeck12}, ionFF~\cite{??}\todoi{Andrea Catte, please let us know if you share some files through Zenodo}    &   DPPC & 150 (NaCl) & 600 & 18000 & 49 & 0  & 49 & 323 & 100 & 40 &?  \\
 \end{tabular}
 \end{table*} 
 
-The most important observation is that the experimental order parameters for the headgroup and glycerol bakcbone g$_3$ segment 
-are practically unhanged even though 1M NaCl concentration was added to the system. Thus, the presense of mM concentrations
-of NaCl do not affect the structure of these parts of lipids. On the other hand, the presence of multivalent ions or 
+The most important observation is that the experimental order parameters for the headgroup and glycerol bakcbone g$_3$ segment \todo{Markus: There seems to be NO experimental g$_3$ data in Fig.~\ref{ordPnacl}...}
+are practically unhanged even though 1M NaCl concentration was added to the system. Thus, the presence of mM concentrations
+of NaCl does not affect the structure of these parts of lipids. On the other hand, the presence of multivalent ions or 
 charged amphiphiles changes the $\alpha$ and $\beta$ order parameters in a systematic way suggesting that the amount
 and sign of charge penetrated into a bilayer can be measured from the changes of these parameters~\cite{akutsu81,altenbach84,seelig87,scherer89}.
 This is known as the ''electrometer concept''. Thus, the most straightforward explanation for the experimental results shown
@@ -306,7 +310,7 @@ The response of order parameters to the NaCl concentration in simulations depend
 The addition of NaCl leads to a significant changes for choline and $g_2$ and g$_3$ segments in glycerol bakcbone
 in Berger and MacRog models, while only moderate changes are seen in CHARMM36 and Orange force fields.
 The experimental data for glycerol backbone as a function of NaCl concentration is available only for the
-g$_3$ segment. The changes in g$_1$ and g$_2$ are unlikely since all the other order parameters are unaffected
+g$_3$ segment. \todo{Markus: For some reason, these g$_3$ data are not shown in Fig.~\ref{ordPnacl}} The changes in g$_1$ and g$_2$ are unlikely since all the other order parameters are unaffected
 and $^1$H NMR data indicates that multivalent cations binding to phospholipid interact mainly with choline group
 leaving glycerol backbone conformations intact~\cite{hauser76,hauser78}.
 
@@ -320,13 +324,13 @@ leaving glycerol backbone conformations intact~\cite{hauser76,hauser78}.
 
 The core idea of the electrometer concept is that the decrease (increase) of $\beta$- and $\alpha$-carbon order parameters
 is related to cation (anion) penetration into a lipid bilayer. 
-It should be noted that in the original experiments the absolute value of $\beta$ order parameter was increasing with the presense of cations,
-however it was shown later on that the $\beta$ order parameter is negative~\cite{hong95a,hong95b,gross97}, 
+It should be noted that in the original experiments the absolute value of the $\beta$ order parameter decreased in the presence of cations,
+however, it was shown later that the $\beta$ order parameter is negative~\cite{hong95a,hong95b,gross97}, 
 thus the value is actually increasing (becoming less negative).
 The order parameter changes for  $\beta$- and $\alpha$-segments 
-are plotted in Fig.~\ref{ordPions} in the presense of NaCl and CaCl$_2$ from experiments and different simulations. 
-The clear decrease seen with CaCl$_2$ compared to the negligible effect of NaCl. Interpreted in terms of
-electrometer concept, the result indicates that the Ca$^{2+}$ ions signifincantly penetrate into PC bilayer in contrast to 
+are plotted in Fig.~\ref{ordPions} in the presence of NaCl and CaCl$_2$ from experiments and different simulations. 
+The clear decrease is seen with CaCl$_2$ compared to the negligible effect of NaCl. Interpreted in terms of
+the electrometer concept, the result indicates that Ca$^{2+}$ ions significantly penetrate into PC bilayer in contrast to 
 Na$^+$~\cite{akutsu81,altenbach84}.
 
 %The experimental results~\cite{akutsu81}, plotted in Fig.~\ref{ordPions} shows a distinct difference
@@ -340,9 +344,9 @@ Na$^+$~\cite{akutsu81,altenbach84}.
   \caption{\label{ordPions}
     The change of order parameters for $\beta$ and $\alpha$ segments as a function of NaCl (left column) and CaCl$_2$ (right column) concentrations from simulations 
     and experiments by Akutsu et al.~\cite{akutsu81}. The signs of the order parameters without ions are taken from~\cite{hong95a,hong95b,gross97} and it is reasonable
-    to assume that the sign do not change with concentrations repsented here~\cite{altenbach84}. Note that the $\beta$ order parameter with negative sign decreases here with cation
+    to assume that the signs do not change with concentrations represented here~\cite{altenbach84}. Note that the $\beta$ order parameter with negative sign decreases here with cation
     penetration in contrast to measured absolute value increase in the origical studues~\cite{akutsu81,altenbach84}.
-    Regarding the actual electrometer concept this not relevant, however. 
+    Regarding the actual electrometer concept this is not relevant, however. 
     The experimental accuracy of order parameter changes is much higher than the accuracy of quantitative values due to high resolution of $^2$H NMR spectroscopy~\cite{??}. 
    }
 \todo{I have now added the new results with ORANGE (140mM and 1M) and CHARMM36 (950mM).
@@ -394,7 +398,7 @@ are shown in Fig.~\ref{IONdensCOMP} for lipids and cations from different simula
   \centering
   \includegraphics[width=8cm]{../Fig/NAdensities.eps}
   \caption{\label{IONdensCOMP}
-    Number density profiles for lipids, Na and Cl ions from simulations with different force fields and different NaCl concetrations. 
+    Number density profiles for lipids, Na$^+$ and Cl$^-$ ions from simulations with different force fields and different NaCl concetrations. 
     The lipid densities are scaled with 100 (united atom) or 200 (all atom model) to make them visible with the used y-axis scale.
     Figure discussed in https://github.com/NMRLipids/lipid\_ionINTERACTION/issues/4.
   }
@@ -405,7 +409,7 @@ are shown in Fig.~\ref{IONdensCOMP} for lipids and cations from different simula
   \centering
   \includegraphics[width=8cm]{../Fig/CAdensities.eps}
   \caption{\label{IONdensCOMP}
-    Number density profiles for lipids, Ca and Cl ions from simulations with different force fields and different NaCl concetrations. 
+    Number density profiles for lipids, Ca$^{2+}$ and Cl$^-$ ions from simulations with different force fields and different CaCl$_2$ concentrations. 
     The lipid densities are scaled with 100 (united atom) or 200 (all atom model) to make them visible with the used y-axis scale.
     Figure discussed in https://github.com/NMRLipids/lipid\_ionINTERACTION/issues/4.
   }
@@ -426,21 +430,21 @@ Thus, the correlation between decreasing choline order parameters
 and amount of penetrating cations (i.e. the electrometer concept) is also seen in simulations, independently of the quantitative quality of the used simulation model.
 
 The most straightforward explanation for our results is that Na$^+$ ions do not practically penetrate into a PC lipid bilayer
-with mM concentrations, thus the presense of NaCl does not affect the bilayer properties as observed in various experiments~\cite{akutsu81,altenbach84,clarke99,binder02,pabst07,filippov09}.
+at mM concentrations, thus the presense of NaCl does not affect the bilayer properties as observed in various experiments~\cite{akutsu81,altenbach84,clarke99,binder02,pabst07,filippov09}.
 Consequently, the Na$^+$ penetration and concominant changes in order parameters, area per molecule and lateral diffusion 
 seen in almost all simulation models would be artefact due to overestimated attraction between ions and lipid bilayer.
 Even though this would also explain the absense of positive zeta potential in electrophoresis experiments~\cite{eisenberg79,tatulian87,manyes05,manyes06,klasczyk10},  
-the presented data do not rule out the suggested possiblity of equal binding of Na$^+$ and Cl$^-$ ions~\cite{knecht13},
+the presented data do not rule out the suggested possibility of equal binding of Na$^+$ and Cl$^-$ ions~\cite{knecht13},
 however, this equal binding should happen in such a way that the bilayer properties are unaffected.
-Negligible binding of Na$^+$ with mM concentrations suggested here differs from the conclusions made from 
-measurements of fluorescent probe dynamics~\cite{bockmann03,vacha09a,harb13}, membrane hardiness with AFM~\cite{manyes05,manyes06,fukuma07,ferber11,morata12} and calorimetry~\cite{bockmann03,klasczyk10}.
+The negligible binding of Na$^+$ at mM concentrations suggested here differs from the conclusions made from 
+measurements of fluorescent probe dynamics~\cite{bockmann03,vacha09a,harb13}, membrane hardness with AFM~\cite{manyes05,manyes06,fukuma07,ferber11,morata12} and calorimetry~\cite{bockmann03,klasczyk10}.
 However, the fluorescent measurement results may arise from direct interactions between probe and ions, as already suggested by Filippov et al.~\cite{filippov09}. 
 Further, the calorimetric results have been also interpreted to support negligible binding~\cite{cevc90}, and AFM result is relatively indirect, thus
 there may be alternative explanations as well.
 
 The effect of Ca$^{2+}$ on the $\alpha$ and $\beta$ order parameters is overestimated in all the simulation models, however,
 qualitatively the change is correct, i.e. order parameters are decreasing.
-The overestimation of the effect could be due to too strong partitioning or too sensitive headgroup model to the presense of ions.
+The overestimation of the effect could be due to too strong partitioning or too sensitive headgroup model to the presence of ions.
 \todo{The discussion should be finished when we have CHARMM results with CaCl$_2$.} \\
 \todo{The $^1$H NMR experiments suggest that the N-$\beta$-$\alpha$-O dihedral is only in gaughe conformation in the absense of ions, but
 in the presense of multivalent ions there would be also anti conformations present [Hauser et al. BBA {\bf 508}, 450 (1978), Hauser et al. Chem. Phys. Lipids {\bf 29}, 103 (1981)].
@@ -459,10 +463,10 @@ to the CaCl$_2$ actually is. Then we can discuss more about its structural respo
 %however the novelty of this work in this respect is that we make a direct comparison
 %to the experiments which can be used as measure for the model quality. 
 
-The origin for suggested inaccuracies in lipid-ion interactions in simulation models us unknown. 
+The origin for suggested inaccuracies in lipid-ion interactions in simulation models is unknown. 
 In principle, the incorrect choline structure~\cite{botan15}, lack of polarizability~\cite{leontyev11} or
-the used water model could cause such results. The effect of changes in lipid and ion model ot the ion
-partition is discussed in supplementary material.
+the used water model could cause such results. The effect of changes in lipid and ion models on the ion
+partitioning is discussed in the supplementary material.
 \todo{In the Orange simulation only lipid model is changed, respect to Berger, and Jukka tested the effect
 of 0.7 charge scaling for Na ion (suggested by Leontyev et al.~\cite{leontyev11} to compensate to the lack 
 of electronic polarizability in the model). I think we should discuss these things in supplementary material.
@@ -482,10 +486,10 @@ Even though we cannot be fully conclusive, there is some essential information a
 We have compared phosholipid bilayer interactions with NaCl and CaCl$_2$ between different molecular dynamics simulation
 models and $^2$H NMR experiments. The comparison led to the following conclusions
 
-- The most straighforward explanation for the various experimental obsevations is that there is no Na$^+$ ion binding
+- The most straighforward explanation for the various experimental observations is that there is no Na$^+$ ion binding
 into the phospholipid bilayer with mM concentrations, in constrast to Ca$^{2+}$ which specifically binds.
 
-- The Na$^+$ is overestimated in almost all molecular dynamics simulation models, however, from the publicly available
+- The Na$^+$ partitioning is overestimated in almost all molecular dynamics simulation models, however, from the publicly available
 models the CHARMM36 has the most realistic description.
 
 - The electrometer concept suggesting connection between $\alpha$ and $\beta$ order parameter decrease and
@@ -522,7 +526,7 @@ cation partitioning~\cite{akutsu81,altenbach84,seelig87,scherer89} works also in
 %These results indicate that the changes in the headgroup structure due to a permeating charge are not correct
 %in the Berger model and, in particular, that sodium ions penetrating the headgroup region is erroneous.
 
-This work has been, and will be further, progressed and discussed through the blog: nmrlipids.blogspot.fi. 
+This work has been, and will be, progressed and discussed through the blog: nmrlipids.blogspot.fi. 
 Everyone is invited to join the discussion and make contributions through the blog. 
 The manuscript will be eventually submitted to an appropriate scientific journal. 
 Everyone who has contributed to the work through the blog will be offered 
@@ -530,7 +534,8 @@ coauthorship. For more details see: nmrlipids.blogspot.fi.
 
 {\bf Acknowledgements: }
 OHSO acknowledges Tiago Ferreira for very useful discussions, the Emil Aaltonen foundation for financial support, Aalto Science-IT project and CSC-IT Center for Science for computational resources. 
-
+%
+MSM acknowledges financial support from the Volkswagen Foundation (86110).
 
 \newpage
 
@@ -571,8 +576,8 @@ made by replacing water molecules with appropriate amount of ions under study.
 The Berger force field was used for the POPC~\cite{berger97}, with the dihedral potential next to the double bond 
 taken from~\cite{bachar04}. The simulations are identical to previous publications~\cite{ollila07a,ferreira13,ferreira15}.
 Timestep of 2~fs was used with leap-frog integrator. Covalent bond lengths were constrained with LINCS algorithm~\cite{hess97,hess07}. 
-Coordinated were written every 10~ps. PME with real space cut-off 1.0~nm was used 
-for electrostatics. Plain cut-off was used for the Lennart-Jones interactions with a 1.0~nm cut-off.
+Coordinates were written every 10~ps. PME with real space cut-off 1.0~nm was used 
+for electrostatics. Plain cut-off was used for the Lennard-Jones interactions with a 1.0~nm cut-off.
 The neighbour list was updated every 5th step with cut-off 1.0~nm. Temperature was coupled separately
 for lipids and water to 298~K with the velocity-rescale method~\cite{bussi07} with coupling constant 0.1~ps$^{-1}$.
 Pressure was semi-isotropically coupled to the athmospheric pressure with the Berendsen method~\cite{berendsen84}.
@@ -584,8 +589,8 @@ made by replacing water molecules with appropriate amount of ions under study.
 \todo{Samuli, finalize and check the methods.}
 
 Timestep of 1~fs was used with leap-frog integrator. Covalent bonds with hydrogens were constrained with LINCS algorithm~\cite{hess97,hess07}. 
-Coordinated were written every 5~ps. PME with real space cut-off 1.4~nm was used 
-for electrostatics. Lennart-Jones interactions were switched to zero between 0.8~nm and 1.2~nm.
+Coordinates were written every 5~ps. PME with real space cut-off 1.4~nm was used 
+for electrostatics. Lennard-Jones interactions were switched to zero between 0.8~nm and 1.2~nm.
 The neighbour list was updated every 5th step with cut-off 1.4~nm. Temperature was coupled separately
 for lipids and water to 303~K with the velocity-rescale method~\cite{bussi07} with coupling constant 0.2~ps.
 Pressure was semi-isotropically coupled to the athmospheric pressure with the Berendsen method~\cite{berendsen84}.
@@ -593,7 +598,7 @@ Pressure was semi-isotropically coupled to the athmospheric pressure with the Be
 \subsubsection{MacRog}
 The simulation parameters are identical to those employed in our earlier study~\cite{botan15} for the full 
 hydration and dehydration simulations. The initial structures with varying amounts of NaCl were constructed from an 
-extensively hydrated bilayer by replacing water molecules with ions using the gromacs tool genion. Even at the highest 
+extensively hydrated bilayer by replacing water molecules with ions using the Gromacs tool genion. Even at the highest 
 considered salt concentration, the amount of water molecules per lipid after this replacement process was still greater than 50.
 
 \subsubsection{Orange}
@@ -602,28 +607,31 @@ considered salt concentration, the amount of water molecules per lipid after thi
 \subsubsection{Slipids}
 The simulation without ions is the same as in~\cite{botan15}.
 
+\todo{Add references to Slipids with ions.}
 For the simulations with ions, the starting DPPC lipid bilayer, which was built with the online CHARMM-GUI
-(http://www.charmm-gui.org/), contained 600 lipids, 30 water molecules/lipid, Na+ and Cl- ions (150 mM NaCl). 
-The TIP3p water model was used to solvate the system. AA MD simulations of DPPC lipid bilayers were performed 
+(http://www.charmm-gui.org/), contained 600 lipids, 30 water molecules/lipid, Na$^+$ and Cl$^-$ ions (150 mM NaCl). 
+The TIP3P water model was used to solvate the system. All-atom MD simulations of DPPC lipid bilayers were performed 
 at ten different temperatures (283, 298, 303, 308, 312, 313, 314, 318, 323, and 333 K) using the GROMACS software 
 package version 4.5.5 and the Stockholm lipids (Slipids) force field parameters for phospholipids. After energy 
-minimization and a short equilibration run of 50 ps (time step 1fs), 100 ns production runs were performed using 
-a time step of 2 fs with leap-frog integrator. All covalent bonds were constrained with the LINCS
+minimization and a short equilibration run of 50 ps (time step 1~fs), 100 ns production runs were performed using 
+a time step of 2~fs with leap-frog integrator. All covalent bonds were constrained with the LINCS
 algorithm. Coordinates were written every 100 ps. PME with real space cut-off at 1.0 nm was used for Coulomb 
-interactions. Lennard-Jones (LJ) interactions were switched to zero between 1.0 nm and 1.4 nm. The neighbour 
-lists were updated every 10th step with a cut-off of 1.6 nm. Temperature was coupled separately for upper and 
-bottom leaflets of the lipid bilayer, and for water to one of the temperatures reported above with the Nosè-Hoover 
+interactions. Lennard-Jones interactions were switched to zero between 1.0 nm and 1.4 nm. The neighbour 
+lists were updated every 10$^\mathrm{th}$ step with a cut-off of 1.6 nm. Temperature was coupled separately for upper and 
+bottom leaflets of the lipid bilayer, and for water to one of the temperatures reported above with the Nos\'e-Hoover 
 thermostat using a time constant of 0.5 ps. Pressure was semi-isotropically coupled to the atmospheric pressure 
 with the Parrinello-Rahman barostat using a time constant of 10 ps.
 The last 40 ns of each simulation was employed for the analysis of DPPC choline and glycerol backbone order parameters.
 
-\subsection{analysis}
+\subsection{Analysis}
 The order parameters were calculated from simulation trajectories directly applying the equation
-$S_{{\rm CH}}=\frac{3}{2} \langle \cos^2 \theta-1 \rangle$. For united atom models the hydrogen locations
+$S_{{\rm CH}}=\langle \frac{3}{2}  \cos^2 \theta-\frac{1}{2} \rangle$,
+where $\theta$ is the angle between a given C--H bond and the bilayer normal.
+ For united atom models the hydrogen locations
 were regenerated for each molecule in each frame after the simulation trajectory was created.
 ??The statistical error estimate for each order parameter calculated from simulation was roughly
 0.01, which is much smaller than the differences discussed in this work.??
-
+\todo{Markus: What do the question marks mean? Was the error estimation not performed yet?}
 
 %Testing of the effect of changing the ion model and accounting of electronic polarization in lipid-ion interactions
 %-Jukka
@@ -634,28 +642,28 @@ were regenerated for each molecule in each frame after the simulation trajectory
  parameters~\cite{??}\todoi{Appropriate reference for the ion model?} to OPLS-AA compatible
  Berger-DPPC-06~\cite{tieleman06} and \r{A}qvist ions~\cite{Aaqvist90} results in slightly decreased ion binding affinity
  as seen from the density plots in Figure \ref{ionnotscaled}~\cite{DPPCBergerNaCl, DPPCBergerOPLS06NaCl}. The failure
- of Gromos ions to properly account ion-ion and ion-water binding propensities of sodium and chloride ions has been
+ of Gromos ions to properly account ion--ion and ion--water binding propensities of Na$^+$ and Cl$^-$ ions has been
  reported previously~\cite{Reif13}. The \r{A}qvist ions have been parameterized in aqueous solutions with good agreement
  to experimental energies~\cite{Aaqvist90}. Yet, the binding affinity of ions to lipid bilayers has not been
- calibrated - instead it is assumed to work based purely on forces obtained using combination rules. Compared to Gromos
- ions \r{A}qvist parameters are better, yet sodium overbinding still occurs.
+ calibrated---instead it is assumed to work based purely on forces obtained using combination rules. Compared to Gromos
+ ions, \r{A}qvist parameters are better, yet Na$^+$ overbinding still occurs.
 
-To take account for polarization effects in non-polarizable models, Leontyev et al.~\cite{leontyev11} have suggested
+To account for polarization effects in non-polarizable models, Leontyev et al.~\cite{leontyev11} have suggested
 that ion charges should be scaled by a factor of 0.7. We scaled the charges of both Gromos and \r{A}qvist ions. 
-After scaling the order parameter changes due to ions and ion affinity into a bilayer of both ion models is decreased, see
+After scaling, both the order parameter changes due to ions and the ion affinity into a bilayer are decreased in both ion models, see
 Figs. \ref{OPchangesSCALED}, \ref{ionnotscaled} and \ref{ionscaled}~\cite{DPPCBergerNaClscaled, DPPCBergerOPLS06NaClscaled}. The intuitive explanation is that by
 scaling the partial charges the charge discrepancy between the ion and water partial charges is decreased. This means
 that there is a lesser driving force for ions to bind to the highly-charged phosphate group. Furthermore, with
-Berger-DPPC-06 and scaled Åqvist ions (Q=0.7) we obtain that there is only very weak binding of sodium to DPPC as
+Berger-DPPC-06 and scaled \r{A}qvist ions (Q=0.7) we obtain that there is only very weak binding of sodium to DPPC as
 observed experimentally (right side of Figure \ref{ionscaled}). In scaled models the order parameter changes 
-are also small. However, the ion concentraion is also small. To be fully conclusive, if the affinity can be fixed by scaling
+are also small. However, the ion concentration is also small. To be fully conclusive, if the affinity can be fixed by scaling,
 we need to run simulations also with large concentrations.
 
 
 The results indicate that the polarization effect actually improves ion binding affinities irrespectively of the model.
 However, the drawback of the scaled charges is that the total charge of the simulation box is non-zero whenever
 counterions and charged molecules are present. This may cause simulation artefacts. Even though in methods such as
-PME the residual charge does not affect the forces (and thus nor dynamics), it still has an effect to the energies.
+PME the residual charge does not affect the forces (and thus dynamics), it still has an effect to the energies.
 This is because the potential from the residual charge is 'smeared in the box' and so depends on the possibly
 fluctuating (at least in NPT conditions) volume of the simulation box. 
 
