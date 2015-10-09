@@ -14,17 +14,17 @@ set yrange [-0.08:0.01]
 set ylabel "{/Symbol b}   {/Symbol D}S_{CH}"
 set origin 0,0.35
 set size 0.65, 0.35
-plot "../../scratch/EXP-Akutsu1981-DPPC-NaClchange.dat"  using 1:($2*-0.00784) title 'DPPC+NaCl, ^2H NMR, T=323K' with linespoints  linetype 1 pt 9 lc rgb 'black', \
-     "../../scratch/BERGERnaclCONSchange.dat" using 1:2 title 'POPC+NaCl, Berger, T=298K'  with linespoint linetype 1 pt 9, \
-     "../../scratch/BERGERnaclCONSchange.dat" using 1:3 notitle with linespoints  linetype 1 pt 9, \
-     "../../scratch/MACROGnaclCONSchange.dat" using 1:2 title 'POPC+NaCl, MacRog, T=310K' with linespoint linetype 1 pt 9 lc rgb 'blue', \
-     "../../scratch/MACROGnaclCONSchange.dat" using 1:3 notitle with linespoints  linetype 1 pt 9 lc rgb 'blue', \
-     "../../scratch/CHARMMnaclCONSchange.dat" using 1:2 title 'POPC+NaCl, CHARMM, T=303K' with linespoint linetype 1 pt 9 lc rgb 'green', \
-     "../../scratch/CHARMMnaclCONSchange.dat" using 1:3 notitle with linespoints  linetype 1 pt 9 lc rgb 'green', \
-     "../../scratch/ORANGEnaclCONSchange.dat" using 1:2 title 'POPC+NaCl, Orange, T=298K' with linespoint linetype 1 pt 9 lc rgb 'orange', \
-     "../../scratch/ORANGEnaclCONSchange.dat" using 1:3 notitle with linespoints  linetype 1 pt 9 lc rgb 'orange', \
-     "../../scratch/SLIPIDSnaclCONSchangeDPPC.dat" using 1:2 title 'DPPC+NaCl, Slipid, T=323K' with linespoint linetype 1 pt 9 lc rgb 'violet', \
-     "../../scratch/SLIPIDSnaclCONSchangeDPPC.dat" using 1:3 notitle with linespoints  linetype 1 pt 9 lc rgb 'violet', \
+plot "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-NaClchange.dat"  using 1:($2*-0.00784) title 'DPPC+NaCl, ^2H NMR, T=323K' with linespoints  linetype 1 pt 7 lc rgb 'black', \
+     "../../scratch/BERGERnaclCONSchange.dat" using 1:2 title 'POPC+NaCl, Berger, T=298K'  with linespoint linetype 1 pt 5, \
+     "../../scratch/BERGERnaclCONSchange.dat" using 1:3 notitle with linespoints  linetype 1 pt 5, \
+     "../../scratch/MACROGnaclCONSchange.dat" using 1:2 title 'POPC+NaCl, MacRog, T=310K' with linespoint linetype 1 pt 5 lc rgb 'blue', \
+     "../../scratch/MACROGnaclCONSchange.dat" using 1:3 notitle with linespoints  linetype 1 pt 5 lc rgb 'blue', \
+     "../../Data/POPC/NaCl/CHARMM36/CHARMMnaclCONSchange.dat" using 1:2:3 with yerrorbars notitle pt 5 lt 1 lc rgb 'green', "" using 1:2 with linespoint title 'POPC+NaCl, CHARMM, T=303K' pt 5 linetype 1 lc rgb 'green', \
+     "../../Data/POPC/NaCl/CHARMM36/CHARMMnaclCONSchange.dat" using 1:4:5 with yerrorbars notitle  pt 5 lt 1 lc rgb 'green', "" using 1:4 with lines notitle linetype 1 lc rgb 'green', \
+     "../../scratch/ORANGEnaclCONSchange.dat" using 1:2 title 'POPC+NaCl, Orange, T=298K' with linespoint linetype 1 pt 5 lc rgb 'orange', \
+     "../../scratch/ORANGEnaclCONSchange.dat" using 1:3 notitle with linespoints  linetype 1 pt 5 lc rgb 'orange', \
+     "../../scratch/SLIPIDSnaclCONSchangeDPPC.dat" using 1:2 title 'DPPC+NaCl, Slipid, T=323K' with linespoint linetype 1 pt 7 lc rgb 'violet', \
+     "../../scratch/SLIPIDSnaclCONSchangeDPPC.dat" using 1:3 notitle with linespoints  linetype 1 pt 7 lc rgb 'violet', \
      "../../scratch/DPPCberger/DPPCnacl/NACLconschange.dat" using 1:2 title 'DPPC+NaCl, Berger, T=323K'  with linespoint linetype 1 pt 7, \
      "../../scratch/DPPCberger/DPPCnacl/NACLconschange.dat" using 1:3 notitle with linespoints  linetype 1 pt 7, \
      "../../scratch/DPPCbergerOPLS/DPPCnacl/NACLconsOPLSchange.dat" using 1:2 title 'DPPC+NaCl, Berger-OPLS, T=323K' with linespoint linetype 1 pt 7 lc rgb 'brown', \
@@ -37,31 +37,31 @@ set key at screen 1.3,screen 0.82 maxcols 2 maxrows 5
 #set ylabel "{/Symbol b}  {/Symbol D}S_{CH}"
 set origin 0.7,0.35
 set size 0.65, 0.35
-plot "../../scratch/EXP-Akutsu1981-DPPC-CaClchange-T332.dat"  using 1:($2*-0.00784) title 'DPPC+CaCl_2, ^2H NMR, T=332K' with linespoints  linetype 1 pt 6 lc rgb 'black', \
-     "../../scratch/EXP-Akutsu1981-DPPC-CaClchange-T323.dat"  using 1:($2*-0.00784) title 'DPPC+CaCl_2, ^2H NMR, T=323K' with linespoints  linetype 1 pt 7 lc rgb 'black', \
+plot "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-CaClchange-T332.dat"  using 1:($2*-0.00784) title 'DPPC+CaCl_2, ^2H NMR, T=332K' with linespoints  linetype 1 pt 6 lc rgb 'black', \
+     "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-CaClchange-T323.dat"  using 1:($2*-0.00784) title 'DPPC+CaCl_2, ^2H NMR, T=323K' with linespoints  linetype 1 pt 7 lc rgb 'black', \
      "../../scratch/BERGERcaclCONSchange.dat" using 1:2 title 'POPC+CaCl_2, Berger, T=298K' with linespoint linetype 1 pt 5 lc rgb 'red', \
      "../../scratch/BERGERcaclCONSchange.dat" using 1:3 notitle with linespoints  linetype 1 pt 5 lc rgb 'red', \
      "../../scratch/ORANGEcaclCONSchange.dat" using 1:2 title 'POPC+CaCl_2, Orange, T=298K' with linespoint linetype 1 pt 5 lc rgb 'orange', \
      "../../scratch/ORANGEcaclCONSchange.dat" using 1:3 notitle with linespoints  linetype 1 pt 5 lc rgb 'orange', \
-     "../../scratch/CHARMMcaclCONSchange.dat" using 1:2 title 'POPC+CaCl_2, Orange, T=298K' with linespoint linetype 1 pt 5 lc rgb 'green', \
-     "../../scratch/CHARMMcaclCONSchange.dat" using 1:3 notitle with linespoints  linetype 1 pt 5 lc rgb 'green'
+     "../../Data/POPC/CaCl/CHARMM36/CHARMMcaclCONSchange.dat" using 1:2:3 with yerrorbars notitle pt 5 lt 1 lc rgb 'green', "" using 1:2 with linespoint title 'POPC+CaCl_2, CHARMM, T=303K' pt 5 linetype 1 lc rgb 'green', \
+     "../../Data/POPC/CaCl/CHARMM36/CHARMMcaclCONSchange.dat" using 1:4:5 with yerrorbars notitle  pt 5 lt 1 lc rgb 'green', "" using 1:4 with lines notitle linetype 1 lc rgb 'green'
 
 #set yrange [-0.015:0.11]
 set ylabel "{/Symbol a}  {/Symbol D}S_{CH}"
 set xlabel "[NaCl] (mM)"
 set origin 0,0
 set size 0.65, 0.35
-plot "../../scratch/EXP-Akutsu1981-DPPC-NaClchange.dat"  using 1:($3*0.00784) notitle with linespoints  linetype 1 pt 9 lc rgb 'black', \
+plot "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-NaClchange.dat"  using 1:($3*0.00784) notitle with linespoints  linetype 1 pt 7 lc rgb 'black', \
      "../../scratch/BERGERnaclCONSchange.dat" using 1:4 notitle  with linespoint linetype 1 pt 9, \
      "../../scratch/BERGERnaclCONSchange.dat" using 1:5 notitle with linespoints  linetype 1 pt 9, \
      "../../scratch/MACROGnaclCONSchange.dat" using 1:4 notitle  with linespoint linetype 1 pt 9 lc rgb 'blue' , \
      "../../scratch/MACROGnaclCONSchange.dat" using 1:5 notitle with linespoints  linetype 1 pt 9 lc rgb 'blue', \
      "../../scratch/ORANGEnaclCONSchange.dat" using 1:4 notitle with linespoint linetype 1 pt 9 lc rgb 'orange', \
      "../../scratch/ORANGEnaclCONSchange.dat" using 1:5 notitle with linespoints  linetype 1 pt 9 lc rgb 'orange', \
-     "../../scratch/CHARMMnaclCONSchange.dat" using 1:4 notitle with linespoint linetype 1 pt 9 lc rgb 'green', \
-     "../../scratch/CHARMMnaclCONSchange.dat" using 1:5 notitle with linespoints  linetype 1 pt 9 lc rgb 'green' ,\
-     "../../scratch/SLIPIDSnaclCONSchangeDPPC.dat" using 1:4 notitle with linespoint linetype 1 pt 9 lc rgb 'violet', \
-     "../../scratch/SLIPIDSnaclCONSchangeDPPC.dat" using 1:5 notitle with linespoints  linetype 1 pt 9 lc rgb 'violet', \
+     "../../Data/POPC/NaCl/CHARMM36/CHARMMnaclCONSchange.dat" using 1:6:7  with yerrorbars notitle pt 5 lt 1 lc rgb 'green', "" using 1:6 with lines notitle linetype 1 lc rgb 'green', \
+     "../../Data/POPC/NaCl/CHARMM36/CHARMMnaclCONSchange.dat" using 1:8:9  with yerrorbars notitle pt 5 lt 1 lc rgb 'green', "" using 1:8 with lines notitle linetype 1 lc rgb 'green',\
+     "../../scratch/SLIPIDSnaclCONSchangeDPPC.dat" using 1:4 notitle with linespoint linetype 1 pt 7 lc rgb 'violet', \
+     "../../scratch/SLIPIDSnaclCONSchangeDPPC.dat" using 1:5 notitle with linespoints  linetype 1 pt 7 lc rgb 'violet', \
      "../../scratch/DPPCberger/DPPCnacl/NACLconschange.dat" using 1:4 notitle  with linespoint linetype 1 pt 7, \
      "../../scratch/DPPCberger/DPPCnacl/NACLconschange.dat" using 1:5 notitle with linespoints  linetype 1 pt 7, \
      "../../scratch/DPPCbergerOPLS/DPPCnacl/NACLconsOPLSchange.dat" using 1:4 notitle  with linespoint linetype 1 pt 7 lc rgb 'brown', \
@@ -77,15 +77,15 @@ set key at screen 1.3,screen 0.72 maxcols 2 maxrows 6
 set xlabel "[CaCl] (mM)"
 set origin 0.7,0
 set size 0.65, 0.35
-plot "../../scratch/EXP-Akutsu1981-DPPC-CaClchange-T332.dat"  using 1:($3*0.00784) notitle with linespoints  linetype 1 pt 6 lc rgb 'black', \
-     "../../scratch/EXP-Akutsu1981-DPPC-CaClchange-T323.dat"  using 1:($3*0.00784) notitle with linespoints  linetype 1 pt 7 lc rgb 'black', \
-     "../../scratch/EXP-Altenbach1984-POPC-CaClchange-T313.dat"  using ($1*1000):($2*0.00784) title 'POPC+CaCl_2, ^2H NMR, T=313K' with linespoints  linetype 1 pt 5 lc rgb 'black', \
+plot "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-CaClchange-T332.dat"  using 1:($3*0.00784) notitle with linespoints  linetype 1 pt 6 lc rgb 'black', \
+     "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-CaClchange-T323.dat"  using 1:($3*0.00784) notitle with linespoints  linetype 1 pt 7 lc rgb 'black', \
+     "../../Data/POPC/NaCl/EXP-Altenbach1984-POPC-CaClchange-T313.dat"  using ($1*1000):($2*0.00784) title 'POPC+CaCl_2, ^2H NMR, T=313K' with linespoints  linetype 1 pt 5 lc rgb 'black', \
      "../../scratch/BERGERcaclCONSchange.dat" using 1:4 notitle with linespoint linetype 1 pt 5 lc rgb 'red', \
      "../../scratch/BERGERcaclCONSchange.dat" using 1:5 notitle with linespoints  linetype 1 pt 5 lc rgb 'red', \
      "../../scratch/ORANGEcaclCONSchange.dat" using 1:4 notitle with linespoint linetype 1 pt 5 lc rgb 'orange', \
      "../../scratch/ORANGEcaclCONSchange.dat" using 1:5 notitle with linespoints  linetype 1 pt 5 lc rgb 'orange', \
-     "../../scratch/CHARMMcaclCONSchange.dat" using 1:4 notitle with linespoint linetype 1 pt 5 lc rgb 'green', \
-     "../../scratch/CHARMMcaclCONSchange.dat" using 1:5 notitle with linespoints  linetype 1 pt 5 lc rgb 'green'
+     "../../Data/POPC/CaCl/CHARMM36/CHARMMcaclCONSchange.dat"  using 1:6:7  with yerrorbars notitle pt 5 lt 1 lc rgb 'green', "" using 1:6 with lines notitle linetype 1 lc rgb 'green', \
+     "../../Data/POPC/CaCl/CHARMM36/CHARMMcaclCONSchange.dat" using 1:8:9  with yerrorbars notitle pt 5 lt 1 lc rgb 'green', "" using 1:8 with lines notitle linetype 1 lc rgb 'green'
 
 
 unset multiplot
