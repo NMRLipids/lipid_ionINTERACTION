@@ -3,7 +3,7 @@ mkdir $tmpDIRname
 cd $tmpDIRname
 cp ../calcORDPberger.sh ./
 cp ../gro_OP.awk ./
-trajname=/wrk/ollilas1/IONS/popcCACL/popcCACL1-2.trr
+trajname=/wrk/ollilas1/IONS/popcCACL/popcCACL_50-108ns.xtc
 tprname=/wrk/ollilas1/IONS/popcCACL/popcCACL.tpr
 tprname402=/wrk/ollilas1/IONS/popcCACL/run407.tpr
 hdbfile=/wrk/ollilas1/IONS/ffgmx2.hdb

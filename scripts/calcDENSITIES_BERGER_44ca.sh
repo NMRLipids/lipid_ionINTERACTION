@@ -4,7 +4,7 @@ cd $tmpDIRname
 #source for data:
 #wget https://zenodo.org/record/14976/files/100.tpr
 #wget https://zenodo.org/record/14976/files/100mM_50ns_100ps.xtc
-trajname=/wrk/ollilas1/IONS/popcCACL/popcCACL1-2.trr
+trajname=/wrk/ollilas1/IONS/popcCACL/popcCACL_50-108ns.xtc
 tprname=/wrk/ollilas1/IONS/popcCACL/popcCACL.tpr
 mappingFILE=../../../NmrLipidsCholXray/MAPPING/mappingPOPCberger.txt
 outFILE=../../Data/POPC/CaCl/BERGER/44ca/LIPIDdensity.xvg
