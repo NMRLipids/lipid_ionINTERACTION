@@ -1,15 +1,10 @@
 tmpDIRname=ORANGE_26ca_DENStmp
 mkdir $tmpDIRname
 cd $tmpDIRname
-#source for data:
-#wget https://zenodo.org/record/14976/files/100.tpr
-#wget https://zenodo.org/record/14976/files/100mM_50ns_100ps.xtc
 trajname=/wrk/ollilas1/POPCdata/POPCorange/POPCcacl/popcRUN2.trr
 tprname=/wrk/ollilas1/POPCdata/POPCorange/POPCcacl/popcRUN2.tpr
 mappingFILE=/wrk/ollilas1/POPCdata/POPCorange/mappingPOPCorange.txt
 outFILE=../../Data/POPC/CaCl/ORANGE/26ca/LIPIDdensity.xvg
-#groFILE=/wrk/ollilas1/POPCdata/POPCcharmm/POPCnacl/13na/popcRUN2.gro
-#trjcat -f popcCHOL50molPER0-25ns.trr popcCHOL50molPER25-50ns.trr
 LIPIDname=$(grep M_POPC_M $mappingFILE | awk '{printf "%5s\n",$2}')
 LIPIDindexNR=$(echo q | make_ndx -f $tprname | grep $LIPIDname | awk '{if(NR==1)print $1}')
 CAname=$(grep M_CA_M $mappingFILE | awk '{printf " %5s\n",$2}')

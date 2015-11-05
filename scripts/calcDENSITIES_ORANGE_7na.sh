@@ -1,9 +1,6 @@
 tmpDIRname=ORANGE_7na_DENStmp
 mkdir $tmpDIRname
 cd $tmpDIRname
-#source for data:
-#wget https://zenodo.org/record/14976/files/100.tpr
-#wget https://zenodo.org/record/14976/files/100mM_50ns_100ps.xtc
 trajname=/wrk/ollilas1/POPCdata/POPCorange/POPCnacl/7NaCl/popcRUN2.trr
 tprname=/wrk/ollilas1/POPCdata/POPCorange/POPCnacl/7NaCl/popcRUN2.tpr
 mappingFILE=/wrk/ollilas1/POPCdata/POPCorange/mappingPOPCorange.txt

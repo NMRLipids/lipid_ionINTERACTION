@@ -4,6 +4,9 @@ awk -f calcOPchanges.awk ../Data/POPC/CaCl/CHARMM36/OPvsCACLcons.dat  > ../Data/
 awk -f calcOPchanges.awk ../Data/POPC/NaCl/BERGER/OPvsNACLcons.dat  > ../Data/POPC/NaCl/BERGER/BERGERnaclCONSchange.dat
 awk -f calcOPchanges.awk ../Data/POPC/CaCl/BERGER/OPvsCACLcons.dat  > ../Data/POPC/CaCl/BERGER/BERGERcaclCONSchange.dat
 
+awk -f calcOPchanges.awk ../Data/POPC/NaCl/ORANGE/OPvsNACLcons.dat  > ../Data/POPC/NaCl/ORANGE/ORANGEnaclCONSchange.dat
+awk -f calcOPchanges.awk ../Data/POPC/CaCl/ORANGE/OPvsCACLcons.dat  > ../Data/POPC/CaCl/ORANGE/ORANGEcaclCONSchange.dat
+
 
 #cat EXPnaclCONS.dat | awk '{if(NR==1){a=$2;b=$3}print $1" " $2-a" "$3-b}' > EXPnaclCONSchange.dat
 #cat EXPcaclCONS.dat | awk '{if(NR==1){a=$2;b=$3}print $1" " $2-a" "$3-b}' > EXPcaclCONSchange.dat
