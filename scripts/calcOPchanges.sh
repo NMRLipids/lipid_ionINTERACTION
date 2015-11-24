@@ -7,6 +7,7 @@ awk -f calcOPchanges.awk ../Data/POPC/CaCl/BERGER/OPvsCACLcons.dat  > ../Data/PO
 awk -f calcOPchanges.awk ../Data/POPC/NaCl/ORANGE/OPvsNACLcons.dat  > ../Data/POPC/NaCl/ORANGE/ORANGEnaclCONSchange.dat
 awk -f calcOPchanges.awk ../Data/POPC/CaCl/ORANGE/OPvsCACLcons.dat  > ../Data/POPC/CaCl/ORANGE/ORANGEcaclCONSchange.dat
 
+awk -f calcOPchanges.awk ../Data/POPC/NaCl/LIPID14/OPvsNACLcons.dat  > ../Data/POPC/NaCl/LIPID14/LIPID14naclCONSchange.dat
 
 #cat EXPnaclCONS.dat | awk '{if(NR==1){a=$2;b=$3}print $1" " $2-a" "$3-b}' > EXPnaclCONSchange.dat
 #cat EXPcaclCONS.dat | awk '{if(NR==1){a=$2;b=$3}print $1" " $2-a" "$3-b}' > EXPcaclCONSchange.dat
