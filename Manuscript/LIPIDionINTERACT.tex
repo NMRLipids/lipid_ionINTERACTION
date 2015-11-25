@@ -233,22 +233,50 @@ is related to cation (anion) penetration into a lipid bilayer.
 It should be noted that in the original experiments the absolute value of the $\beta$ order parameter {\bf increased} in the presence of cations,
 however, it was shown later that the $\beta$ order parameter is negative~\cite{hong95a,hong95b,gross97}, 
 thus the value is actually {\bf decreasing} (becoming more negative).
+
 The order parameter changes for  $\beta$- and $\alpha$-segments 
 are plotted in Fig.~\ref{ordPions} in the presence of NaCl and CaCl$_2$ from experiments and different simulations. 
-The clear decrease is seen with CaCl$_2$ compared to the negligible effect of NaCl. Interpreted in terms of
+The clear decrease is seen with CaCl$_2$ in experiments compared to the negligible effect of NaCl. Interpreted in terms of
 the electrometer concept, the result indicates that Ca$^{2+}$ ions significantly penetrate into PC bilayer in contrast to 
 Na$^+$~\cite{akutsu81,altenbach84}.
+\begin{figure*}[]
+  \centering
+  \includegraphics[width=15cm]{../Fig/OrderParameterIONSchanges.eps}
+  \caption{\label{ordPions}
+    The change of order parameters for $\beta$ and $\alpha$ segments as a function of NaCl (left column) and CaCl$_2$ (right column) concentrations from simulations 
+    and experiments by Akutsu et al.~\cite{akutsu81}. The signs of the order parameters without ions are taken from~\cite{hong95a,hong95b,gross97} and it is reasonable
+    to assume that the signs do not change with concentrations represented here~\cite{altenbach84}. Note that the $\beta$ order parameter with negative sign decreases here with cation
+    penetration in contrast to measured absolute value increase in the origical studues~\cite{akutsu81,altenbach84}.
+    Regarding the actual electrometer concept this is not relevant, however. 
+    The experimental accuracy of order parameter changes is much higher than the accuracy of quantitative values due to high resolution of $^2$H NMR spectroscopy~\cite{??}. 
+   }
+\todo{Mykhailo Girych is already running Lipid14 and more CHARMM36 simulations with CaCl$_2$. When done those results will be added.} \\
+\todo{I wrote previously ''I think that it would be very interesting to test the modified CHARMM ions: Venable et al. dx.doi.org/10.1021/jp401512z, J. Phys. Chem. B 2013, 117, 10183−10192.
+According to the paper, these parameters improve the ion binding to the charged lipid bilayers. Even though I think that testing this would be highly relevant, I do not have
+time to do it now.''. However Matti Javanainen claimed in Skype that in the current CHARMM36 simulations we already have these ions. This has to be checked.}
+\end{figure*}
+
 
 To study the correlation between order parameter changes and ion partitioning into a bilayer, 
-suggested by the electrometer concept~\cite{akutsu81,altenbach84,seelig87,scherer89}, the density distributions as a function of membrane normal 
-are shown in Fig.~\ref{IONdensCOMP} for lipids and cations from different simulation models. 
-%to see if larger ion induced effects
-%in choline order parameters correlates with ion binding also in simulation models.
+suggested by the electrometer concept~\cite{akutsu81,altenbach84,seelig87,scherer89}, the ion 
+density distributions from different simulation models as a function of membrane normal with NaCl and CaCl$_2$ are shown in 
+Figs.~\ref{NAdensties} and~\ref{CAdensities}, respectively.
+It is evident from the figure that the Na$^+$ density peaks at the lipid bilayer interface are higher (indicating stronger ion binding) for the models
+experiencing also larger changes in order parameters with NaCl concentration shown in Fig.~\ref{ordPnacl}. 
+The both Na$^+$ binding affinity and order parameter changes are smallest, thus closest to the experiments, for the Orange model, and then incease 
+in order CHARMM36, MacRog, and Berger having the highest binding affinity and order parameter changes.
+%Simultaneously, it is evident from Figs.~\ref{ordPnacl} and~\ref{ordPions} that the order parameter decrease due to addition
+%of NaCl is more pronounced in Berger and MacRog models compared to the CHARMM36 and Orange. 
+Thus, the correlation between decreasing choline order parameters
+and amount of penetrating cations (i.e. the electrometer concept) is also seen in simulations, independently of the quantitative quality of the used simulation model.
+
 \begin{figure}[]
   \centering
   \includegraphics[width=8cm]{../Fig/NAdensities.eps}
-  \caption{\label{IONdensCOMP}
+  \caption{\label{NAdensities}
     Number density profiles for lipids, Na$^+$ and Cl$^-$ ions from simulations with different force fields and different NaCl concetrations. 
+    The force fields are ordered according to the order parameter changes observed in Fig.~\ref{ordPions} such that the models with smallest
+    observed changes are top.
     The lipid densities are scaled with 100 (united atom) or 200 (all atom model) to make them visible with the used y-axis scale.
     Figure discussed in https://github.com/NMRLipids/lipid\_ionINTERACTION/issues/4.
   }
@@ -258,7 +286,7 @@ are shown in Fig.~\ref{IONdensCOMP} for lipids and cations from different simula
 \begin{figure}[]
   \centering
   \includegraphics[width=8cm]{../Fig/CAdensities.eps}
-  \caption{\label{IONdensCOMP}
+  \caption{\label{CAdensities}
     Number density profiles for lipids, Ca$^{2+}$ and Cl$^-$ ions from simulations with different force fields and different CaCl$_2$ concentrations. 
     The lipid densities are scaled with 100 (united atom) or 200 (all atom model) to make them visible with the used y-axis scale.
     Figure discussed in https://github.com/NMRLipids/lipid\_ionINTERACTION/issues/4.
@@ -267,17 +295,9 @@ are shown in Fig.~\ref{IONdensCOMP} for lipids and cations from different simula
 even though the order parameter change was much larger in the Orange model (see Fig.~\ref{ordPions}).
 This would indicate that the different order parameter response in the Orange model would be due to the reaction of headgroup into
 penetrating charge, not due to the difference in partition. However, this requires more detailed studies.
-Since the CHARMM36 results are pretty good, it would be reasonable to run the simulations also with different concentrations.
-The text should be updated accordingly.}
+Mykhailo Girych is already running Lipid14 and more CHARMM36 simulations with CaCl$_2$. When done those results will be added.}
 \end{figure}
-It is evident from the figure that the Na$^+$ density peaks at the lipid bilayer interface are higher (indicating stronger ion binding) for the models
-experiencing also larger changes in order parameters with NaCl concentration shown in Fig.~\ref{ordPnacl}. 
-The both Na$^+$ binding affinity and order parameter changes are smallest, thus closest to the experiments, for the Orange model, and then incease 
-in order CHARMM36, MacRog, and Berger having the highest binding affinity and order parameter changes.
-%Simultaneously, it is evident from Figs.~\ref{ordPnacl} and~\ref{ordPions} that the order parameter decrease due to addition
-%of NaCl is more pronounced in Berger and MacRog models compared to the CHARMM36 and Orange. 
-Thus, the correlation between decreasing choline order parameters
-and amount of penetrating cations (i.e. the electrometer concept) is also seen in simulations, independently of the quantitative quality of the used simulation model.
+
 
 The effect of Ca$^{2+}$ on the $\alpha$ and $\beta$ order parameters is overestimated in all the simulation models, however,
 qualitatively the change is correct, i.e. order parameters are decreasing.
@@ -415,29 +435,6 @@ leaving glycerol backbone conformations intact~\cite{hauser76,hauser78}.
 %whereas a systematic decrease was observed by the addition of CaCl$_2$. Following the electrometer
 %concept this means that the binding constant for divalent Ca$^{2+}$ is higher than for monovalent Na$^+$
 %which is in line with the large amount of experimental data with different techniques~\cite{cevc90,binder02,petrache06,pabst07,filippov09}.
-\begin{figure*}[]
-  \centering
-  \includegraphics[width=15cm]{../Fig/OrderParameterIONSchanges.eps}
-  \caption{\label{ordPions}
-    The change of order parameters for $\beta$ and $\alpha$ segments as a function of NaCl (left column) and CaCl$_2$ (right column) concentrations from simulations 
-    and experiments by Akutsu et al.~\cite{akutsu81}. The signs of the order parameters without ions are taken from~\cite{hong95a,hong95b,gross97} and it is reasonable
-    to assume that the signs do not change with concentrations represented here~\cite{altenbach84}. Note that the $\beta$ order parameter with negative sign decreases here with cation
-    penetration in contrast to measured absolute value increase in the origical studues~\cite{akutsu81,altenbach84}.
-    Regarding the actual electrometer concept this is not relevant, however. 
-    The experimental accuracy of order parameter changes is much higher than the accuracy of quantitative values due to high resolution of $^2$H NMR spectroscopy~\cite{??}. 
-   }
-\todo{I have now added the new results with ORANGE (140mM and 1M) and CHARMM36 (950mM).
-I think that based on the current results we cannot say that the CHARMM36 has too strong Na binding compared to experiments.
-This conclusion was originally partly based on simulations with much higher concentration 
-(see discussion at: http://nmrlipids.blogspot.com/2015/02/the-first-draft-of-ion-lipid.html?showComment=1423750867868\#c3435589938183508901).
-The text should be modified accordignly. It would be reasonable also to run longer CHARMM36 simulations since the model seems to be quite close
-to experiments. The new results did not change the conclusion about the Orange model.} \\
-\todo{I have now also ran simulation with CaCl$_2$ using CHARMM36 and the results are in the figure.
-The agreement with experiments is pretty good. The text should be modified accordingly.} \\
-\todo{ I think that it would be very interesting to test the modified CHARMM ions: Venable et al. dx.doi.org/10.1021/jp401512z, J. Phys. Chem. B 2013, 117, 10183−10192.
-According to the paper, these parameters improve the ion binding to the charged lipid bilayers. Even though I think that testing this would be highly relevant, I do not have
-time to do it now.}
-\end{figure*}
 
 The differences in NaCl behaviour between different models already seen in Fig.~\ref{ordPnacl} are seen more clearly in Fig.~\ref{ordPions} showing the changes.
 \todo{The discussion about simulation results with CaCl$_2$ to be written once we have all the results.}
