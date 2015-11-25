@@ -1,20 +1,20 @@
 tmpDIRname=ULM_0na_OPtmp
 mkdir $tmpDIRname
 cd $tmpDIRname
-cp ../calcORDP_ULM_015M.sh ./
+cp ../calcORDPulmschneider.sh ./
 cp ../gro_OP.awk ./
-trajname=
-tprname402=
-hdbfile=../scratch/ffgmx2_ULM_POPC.hdb
-cp $hdbfile ./
+trajname=/wrk/ollilas1/POPCdata/POPCulmschneider/0na/popc_ulm_200ns_verlet.xtc
+tprname402=/wrk/ollilas1/POPCdata/POPCulmschneider/0na/402.tpr
+hdbfile=../../scratch/ffgmx2_ULM_POPC.hdb
+cp $hdbfile ./ffgmx2.hdb
 starttime=0
-endtime=240000
+#endtime=240000
 numberOFlipids=128
-outFILE=../../Data/POPC/NaCl/BERGER/0na/OrderParameters.dat
+outFILE=../../Data/POPC/NaCl/ULM/0na/OrderParameters.dat
 #Calculate order parameter for each lipid separately
 echo 'q
 ' | make_ndx -f $tprname402
-echo 0 | /home/ollilas1/gromacs/gromacs402/bin/trjconv -f $trajname -s $tprname402 -o trjtmpINBOX.xtc -n index.ndx -pbc res -b $starttime -e $endtime
+echo 0 | /home/ollilas1/gromacs/gromacs402/bin/trjconv -f $trajname -s $tprname402 -o trjtmpINBOX.xtc -n index.ndx -pbc res -b $starttime #-e $endtime
 echo 'keep 2
 splitres 0
 q
@@ -23,7 +23,7 @@ for((  j = 1 ;  j <= $numberOFlipids;  j=j+1  ))
 do
     rm runPROT.gro
     echo "$j" | /home/ollilas1/gromacs/gromacs402/bin/protonate -f trjtmpINBOX.xtc -s $tprname402 -o runPROT.gro -n index.ndx
-    sh calcORDP_ULM_015M.sh > OrderParameters_"$j".dat
+    sh calcORDPulmschneider.sh > OrderParameters_"$j".dat
 done
 #Calculate average and the error of the mean of order parameters over lipids.
 echo '0
