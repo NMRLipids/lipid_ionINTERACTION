@@ -1,10 +1,10 @@
-tmpDIRname=BERGERdppc_51naSCALED_DENStmp
+tmpDIRname=BERGERdppc_51na_DENStmp
 mkdir $tmpDIRname
 cd $tmpDIRname
-trajname=/wrk/ollilas1/DPPCdata/DPPCberger/51naSCALED/md.xtc
-tprname=/wrk/ollilas1/DPPCdata/DPPCberger/51naSCALED/402.tpr
+trajname=/wrk/ollilas1/DPPCdata/DPPCberger/51na/md.xtc
+tprname=/wrk/ollilas1/DPPCdata/DPPCberger/51na/402.tpr
 #mappingFILE=/wrk/ollilas1/POPCdata/POPCorange/mappingPOPCorange.txt
-outFILE=../../Data/DPPC/NaCl/BERGER/51naSCALED/LIPIDdensity.xvg
+outFILE=../../Data/DPPC/NaCl/BERGER/51na/LIPIDdensity.xvg
 starttime=60000
 #LIPIDname=$(grep M_POPC_M $mappingFILE | awk '{printf "%5s\n",$2}')
 LIPIDindexNR=$(echo q | make_ndx -f $tprname | grep DPPC | awk '{if(NR==1)print $1}')
@@ -20,5 +20,5 @@ echo System | trjconv -f ANALtraj.xtc -s $tprname -o INBOXtraj.xtc -pbc mol
 echo $LIPIDindexNR | g_traj -f INBOXtraj.xtc -s $tprname -ox com.xvg -com -xvg none
 Zcom=$(cat com.xvg | awk '{sumZ=sumZ+$4; sum=sum+1}END{print sumZ/sum}')
 cat densNC.xvg | awk -v Zcom=$Zcom '{print $1-Zcom" "$2" "$3" "$4}' > $outFILE
-rmdir $tmpDIRname
+rm -r $tmpDIRname
 

@@ -8,6 +8,7 @@ awk -f calcOPchanges.awk ../Data/POPC/NaCl/ORANGE/OPvsNACLcons.dat  > ../Data/PO
 awk -f calcOPchanges.awk ../Data/POPC/CaCl/ORANGE/OPvsCACLcons.dat  > ../Data/POPC/CaCl/ORANGE/ORANGEcaclCONSchange.dat
 
 awk -f calcOPchanges.awk ../Data/POPC/NaCl/LIPID14/OPvsNACLcons.dat  > ../Data/POPC/NaCl/LIPID14/LIPID14naclCONSchange.dat
+awk -f calcOPchanges.awk ../Data/POPC/CaCl/LIPID14/OPvsCACLcons.dat  > ../Data/POPC/CaCl/LIPID14/LIPID14caclCONSchange.dat
 
 awk -f calcOPchanges.awk ../Data/POPC/NaCl/ULM/OPvsNACLcons.dat  > ../Data/POPC/NaCl/ULM/ULMnaclCONSchange.dat
 

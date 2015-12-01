@@ -5,12 +5,13 @@ trajname=/wrk/ollilas1/DPPCdata/DPPCbergerOPLS/51na/md.xtc
 tprname=/wrk/ollilas1/DPPCdata/DPPCbergerOPLS/51na/402.tpr
 #mappingFILE=/wrk/ollilas1/POPCdata/POPCorange/mappingPOPCorange.txt
 outFILE=../../Data/DPPC/NaCl/BERGERopls/51na/LIPIDdensity.xvg
+starttime=60000
 #LIPIDname=$(grep M_POPC_M $mappingFILE | awk '{printf "%5s\n",$2}')
 LIPIDindexNR=$(echo q | make_ndx -f $tprname | grep DPPC | awk '{if(NR==1)print $1}')
 #CAname=$(grep M_CA_M $mappingFILE | awk '{printf " %5s\n",$2}')
 CAindexNR=$(echo q | make_ndx -f $tprname | grep " NA" | awk '{if(NR==1)print $1}')
 CLindexNR=$(echo q | make_ndx -f $tprname | grep " CL" | awk '{if(NR==1)print $1}')
-echo $LIPIDindexNR System | trjconv -f $trajname -s $tprname -fit progressive -o FITtraj.xtc
+echo $LIPIDindexNR System | trjconv -f $trajname -s $tprname -fit progressive -o FITtraj.xtc -b $starttime
 #Ztrans=$(tail -n 1 $groFILE | awk '{print $3/2}')
 Ztrans=-1.25
 echo System | trjconv -f FITtraj.xtc -s $tprname -trans 0 0 $Ztrans -o ANALtraj.xtc
