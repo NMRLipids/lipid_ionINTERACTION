@@ -1,12 +1,12 @@
 #set term postscript enhanced color  
 set terminal postscript portrait enhanced color dashed lw 1 "Helvetica" 14 
 set output "../OrderParameterIONSchangesSCALED.eps"
-set size 1.4, 0.85
+set size 0.65, 0.85
 set multiplot  layout 2,1
 set xrange [-1:1050] 
 set ytic 0.01
 #set key above
-set key at screen 0.7,screen 0.8 maxcols 2 maxrows 6
+set key at screen 0.6,screen 0.8 maxcols 2 maxrows 6
 set key font ",13"
 
 
@@ -15,14 +15,11 @@ set ylabel "{/Symbol b}   {/Symbol D}S_{CH}"
 set origin 0,0.35
 set size 0.65, 0.35
 plot "../../scratch/EXP-Akutsu1981-DPPC-NaClchange.dat"  using 1:($2*-0.00784) title 'DPPC+NaCl, ^2H NMR, T=323K' with linespoints  linetype 1 pt 9 lc rgb 'black', \
-     "../../scratch/DPPCberger/DPPCnacl/NACLconschange.dat" using 1:2 title 'DPPC+NaCl, Berger, T=323K'  with linespoint linetype 1 pt 9, \
-     "../../scratch/DPPCberger/DPPCnacl/NACLconschange.dat" using 1:3 notitle with linespoints  linetype 1 pt 9, \
-     "../../scratch/DPPCberger/DPPCnacl/NACLconsSCALEDchange.dat" using 1:2 title 'DPPC+NaCl, Berger scaled, T=323K' with linespoint linetype 1 pt 9 lc rgb 'blue', \
-     "../../scratch/DPPCberger/DPPCnacl/NACLconsSCALEDchange.dat" using 1:3 notitle with linespoints  linetype 1 pt 9 lc rgb 'blue', \
-     "../../scratch/DPPCbergerOPLS/DPPCnacl/NACLconsOPLSchange.dat" using 1:2 title 'DPPC+NaCl, Berger-OPLS, T=323K' with linespoint linetype 1 pt 9 lc rgb 'green', \
-     "../../scratch/DPPCbergerOPLS/DPPCnacl/NACLconsOPLSchange.dat" using 1:3 notitle with linespoints  linetype 1 pt 9 lc rgb 'green', \
-     "../../scratch/DPPCbergerOPLS/DPPCnacl/NACLconsOPLSscaledchange.dat" using 1:2 title 'DPPC+NaCl, Berger-OPLS scaled, T=323K' with linespoint linetype 1 pt 9 lc rgb 'brown', \
-     "../../scratch/DPPCbergerOPLS/DPPCnacl/NACLconsOPLSscaledchange.dat" using 1:3 notitle with linespoints  linetype 1 pt 9 lc rgb 'brown'
+     "../../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchangeSCALED.dat" using 1:2:3 with yerrorbars notitle pt 7 lt 1 lc rgb 'red', "" using 1:2 with linespoint title 'DPPC+NaCl, Berger, T=323K' pt 7 linetype 1 lc rgb 'red', \
+     "../../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchangeSCALED.dat" using 1:4:5 with yerrorbars notitle  pt 7 lt 1 lc rgb 'red', "" using 1:4 with lines notitle linetype 1 lc rgb 'red',\
+     "../../Data/DPPC/NaCl/BERGERopls/BERGERoplsnaclCONSchangeSCALED.dat" using 1:2:3 with yerrorbars notitle pt 7 lt 1 lc rgb 'brown', "" using 1:2 with linespoint title 'DPPC+NaCl, Berger-OPLS, T=323K' pt 7 linetype 1 lc rgb 'brown', \
+     "../../Data/DPPC/NaCl/BERGERopls/BERGERoplsnaclCONSchangeSCALED.dat" using 1:4:5 with yerrorbars notitle  pt 7 lt 1 lc rgb 'brown', "" using 1:4 with lines notitle linetype 1 lc rgb 'brown'
+
 
 #set yrange [-0.015:0.15]
 set ylabel "{/Symbol a}  {/Symbol D}S_{CH}"
@@ -30,14 +27,14 @@ set xlabel "[NaCl] (mM)"
 set origin 0,0
 set size 0.65, 0.35
 plot "../../scratch/EXP-Akutsu1981-DPPC-NaClchange.dat"  using 1:($3*0.00784) notitle with linespoints  linetype 1 pt 9 lc rgb 'black', \
-      "../../scratch/DPPCberger/DPPCnacl/NACLconschange.dat" using 1:4 notitle  with linespoint linetype 1 pt 9, \
-     "../../scratch/DPPCberger/DPPCnacl/NACLconschange.dat" using 1:5 notitle with linespoints  linetype 1 pt 9, \
-     "../../scratch/DPPCberger/DPPCnacl/NACLconsSCALEDchange.dat" using 1:4 notitle with linespoint linetype 1 pt 9 lc rgb 'blue', \
-     "../../scratch/DPPCberger/DPPCnacl/NACLconsSCALEDchange.dat" using 1:5 notitle with linespoints  linetype 1 pt 9 lc rgb 'blue',\
-     "../../scratch/DPPCbergerOPLS/DPPCnacl/NACLconsOPLSchange.dat" using 1:4 notitle  with linespoint linetype 1 pt 9 lc rgb 'green', \
-     "../../scratch/DPPCbergerOPLS/DPPCnacl/NACLconsOPLSchange.dat" using 1:5 notitle with linespoints  linetype 1 pt 9 lc rgb 'green', \
-     "../../scratch/DPPCbergerOPLS/DPPCnacl/NACLconsOPLSscaledchange.dat" using 1:4 notitle with linespoint linetype 1 pt 9 lc rgb 'brown', \
-     "../../scratch/DPPCbergerOPLS/DPPCnacl/NACLconsOPLSscaledchange.dat" using 1:5 notitle with linespoints  linetype 1 pt 9 lc rgb 'brown'
+     "../../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchangeSCALED.dat" using 1:6:7  with yerrorbars notitle pt 7 lt 1 lc rgb 'red', "" using 1:6 with lines notitle linetype 1 lc rgb 'red', \
+     "../../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchangeSCALED.dat" using 1:8:9  with yerrorbars notitle pt 7 lt 1 lc rgb 'red', "" using 1:8 with lines notitle linetype 1 lc rgb 'red',\
+     "../../Data/DPPC/NaCl/BERGERopls/BERGERoplsnaclCONSchangeSCALED.dat" using 1:6:7  with yerrorbars notitle pt 7 lt 1 lc rgb 'brown', "" using 1:6 with lines notitle linetype 1 lc rgb 'brown', \
+     "../../Data/DPPC/NaCl/BERGERopls/BERGERoplsnaclCONSchangeSCALED.dat" using 1:8:9  with yerrorbars notitle pt 7 lt 1 lc rgb 'brown', "" using 1:8 with lines notitle linetype 1 lc rgb 'brown'
+
+
+#     "../../scratch/DPPCbergerOPLS/DPPCnacl/NACLconsOPLSscaledchange.dat" using 1:4 notitle with linespoint linetype 1 pt 9 lc rgb 'brown', \
+#     "../../scratch/DPPCbergerOPLS/DPPCnacl/NACLconsOPLSscaledchange.dat" using 1:5 notitle with linespoints  linetype 1 pt 9 lc rgb 'brown'
 
 unset multiplot
 

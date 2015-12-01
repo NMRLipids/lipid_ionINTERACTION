@@ -13,6 +13,12 @@ awk -f calcOPchanges.awk ../Data/POPC/NaCl/ULM/OPvsNACLcons.dat  > ../Data/POPC/
 
 awk -f calcOPchanges.awk ../Data/DPPC/NaCl/BERGERopls/OPvsNACLcons.dat  > ../Data/DPPC/NaCl/BERGERopls/BERGERoplsnaclCONSchange.dat
 
+awk -f calcOPchanges.awk ../Data/DPPC/NaCl/BERGERopls/OPvsNACLconsSCALED.dat  > ../Data/DPPC/NaCl/BERGERopls/BERGERoplsnaclCONSchangeSCALED.dat
+
+awk -f calcOPchanges.awk ../Data/DPPC/NaCl/BERGER/OPvsNACLcons.dat  > ../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchange.dat
+
+awk -f calcOPchanges.awk ../Data/DPPC/NaCl/BERGER/OPvsNACLconsSCALED.dat  > ../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchangeSCALED.dat
+
 #cat EXPnaclCONS.dat | awk '{if(NR==1){a=$2;b=$3}print $1" " $2-a" "$3-b}' > EXPnaclCONSchange.dat
 #cat EXPcaclCONS.dat | awk '{if(NR==1){a=$2;b=$3}print $1" " $2-a" "$3-b}' > EXPcaclCONSchange.dat
 cat ../Data/DPPC/NaCl/EXP-Akutsu1981.dat | awk '{if($0!~"#") print $0}' | awk '{if(NR==1){a=$2;b=$3}print $1" " $2-a" "$3-b}' > ../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-NaClchange.dat
