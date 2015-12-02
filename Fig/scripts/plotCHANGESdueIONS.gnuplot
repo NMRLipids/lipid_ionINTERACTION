@@ -38,7 +38,7 @@ plot "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-NaClchange.dat"  using 1:($2*-0.0
 #     "SLIPIDSnaclCONSchangePOPC.dat" using 1:2 title 'POPC+NaCl, Slipid, T=323K' with linespoint linetype 1 pt 9 lc rgb 'violet', \
 #     "SLIPIDSnaclCONSchangePOPC.dat" using 1:3 notitle with linespoints  linetype 1 pt 9 lc rgb 'violet'
 
-set key at screen 1.3,screen 0.82 maxcols 2 maxrows 5
+set key at screen 1.3,screen 0.84 maxcols 2 maxrows 6
 #set yrange [-0.11:0.05]
 #set ylabel "{/Symbol b}  {/Symbol D}S_{CH}"
 set origin 0.7,0.35
