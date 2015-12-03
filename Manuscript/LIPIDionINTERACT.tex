@@ -192,7 +192,13 @@ studies \cite{cevc90,tocanne90,binder02,pabst07,filippov09}
     for pure PC bilayer wihtout ions, indicating structural inaccuracies with varying severity
     for all models \cite{botan15}.
    }
-\todo{Mykhailo Girych is already running Lipid14 and more CHARMM36 simulations with CaCl$_2$. When done those results will be added.} \\
+\todo{New results with CaCl$_2$ from CHARMM36 simulations are now added. 
+The older results with 670mM are out of the trend of the new ones. 
+I think that the older one should be ran with larger box to check if this is the
+problem. If it turns out to be problem, it may be reasonable to run 1M NaCl simulation
+also with larger box to check if it would change conclusions from NaCl simulations.
+I have opened issue about this: \\
+https://github.com/NMRLipids/lipid\_ionINTERACTION/issues/16} \\
 \todo{I wrote previously 
 ''I think that it would be very interesting to test the modified CHARMM ions: 
 Venable et al. dx.doi.org/10.1021/jp401512z, J. Phys. Chem. B 2013, 117, 10183−10192.
@@ -243,22 +249,22 @@ The Ca$^{2+}$ penetration and related order parameter decrease is seen with all 
     The lipid densities are scaled with 100 (united atom) or 200 (all atom model) to make them visible with the used y-axis scale.
     Figure discussed in https://github.com/NMRLipids/lipid\_ionINTERACTION/issues/4.
   }
-\todo{- For Slipids we need number densities of Na, Cl and Lipids. If data is uploaded to Zenodo, this is trivial to calculate with the current scripts.
+  \todo{We need compatible data for Slipids. This is easy to calculate by modifying the current scripts, if the 
+    data is available.
 }
 \end{figure}
 \begin{figure}[]
   \centering
-  \includegraphics[width=8cm]{../Fig/CAdensities.eps}
+  \includegraphics[width=8cm]{../Fig/CAdensitiesCLEAR.eps}
   \caption{\label{CAdensities}
-    Number density profiles for lipids, Ca$^{2+}$ and Cl$^-$ ions from simulations with different force fields and different CaCl$_2$ concentrations. 
+    Number density profiles for lipids, Ca$^{2+}$ and Cl$^-$ ions from simulations with different force fields.
+    The profiles only with smallest available CaCl$_2$ concentration are shown for clarity.
+    Figure including all the available concetrations is shown in the Supplementary Information.
     The lipid densities are scaled with 100 (united atom) or 200 (all atom model) to make them visible with the used y-axis scale.
     Figure discussed in https://github.com/NMRLipids/lipid\_ionINTERACTION/issues/4.
   }
-\todo{- The CHARMM36 simulations with CaCl$_2$ is now done. With a first look it seems that the partition is similar or stronger than in Orange model
-even though the order parameter change was much larger in the Orange model (see Fig.~\ref{ordPions}).
-This would indicate that the different order parameter response in the Orange model would be due to the reaction of headgroup into
-penetrating charge, not due to the difference in partition. However, this requires more detailed studies.
-Mykhailo Girych is already running Lipid14 and more CHARMM36 simulations with CaCl$_2$. When done those results will be added.}
+\todo{The densities calculated over the last 50ns shown now for CHARMM with 350mM and 1000mM, however,
+I think we should use the last 100ns. Mykhailo, could you ran the script for the last 100ns?}
 \end{figure}
 
 
@@ -587,6 +593,16 @@ binding affinity cannot be fixed by only scaling charges.
 %https://zenodo.org/record/16320/files/ and https://zenodo.org/record/16385/files/
 
 \section{Structural changes induced by CaCl$_2$}
+\begin{figure}[]
+  \centering
+  \includegraphics[width=8cm]{../Fig/CAdensities.eps}
+  \caption{\label{CAdensities}
+    Number density profiles for lipids, Ca$^{2+}$ and Cl$^-$ ions from simulations with different force fields 
+    and different CaCl$_2$ concentrations. 
+    The lipid densities are scaled with 100 (united atom) or 200 (all atom model) to make them visible with the used y-axis scale.
+    Figure discussed in https://github.com/NMRLipids/lipid\_ionINTERACTION/issues/4.
+  }
+\end{figure}
 
 \begin{figure*}[]
   \centering
