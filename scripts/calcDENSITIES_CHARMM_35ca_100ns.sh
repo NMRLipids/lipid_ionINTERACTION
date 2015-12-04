@@ -4,7 +4,7 @@ mkdir $tmpDIRname
 cd $tmpDIRname
 trajname=/work/girychm1/24_11_15/035m_popc_crm/gromacs/035m_popc_crm_200ns.xtc
 tprname=/work/girychm1/24_11_15/035m_popc_crm/gromacs/200ns_run.tpr
-mappingFILE=../../MAPPING/mappingPOPClipid14.txt
+mappingFILE=../../MAPPING/mappingPOPCcharmm.txt
 outFILE=../../Data/POPC/CaCl/CHARMM36/35ca/LIPIDdensity_100ns.xvg
 groFILE=/work/girychm1/24_11_15/035m_popc_crm/gromacs/confout.gro
 #trjcat -f popcCHOL50molPER0-25ns.trr popcCHOL50molPER25-50ns.trr
