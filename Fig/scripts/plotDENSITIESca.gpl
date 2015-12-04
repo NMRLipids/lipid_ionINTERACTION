@@ -35,15 +35,15 @@ set label at graph 0.4, graph 0.84 "CHARMM36"
 set label at graph 0.85,graph 0.21 "350 mM" 
 set label at graph 0.85,graph 0.41 "670 mM" 
 set label at graph 0.83,graph 0.69 "1000 mM" 
-plot  "../../Data/POPC/CaCl/CHARMM36/35ca/LIPIDdensity_200ns.xvg" using 1:3 notitle  with lines linetype 1 lw 1,\
-      "../../Data/POPC/CaCl/CHARMM36/35ca/LIPIDdensity_200ns.xvg" using 1:($4/2) notitle with lines linetype 1 lw 1 lc rgb 'green', \
-      "../../Data/POPC/CaCl/CHARMM36/35ca/LIPIDdensity_200ns.xvg" using 1:($2/200) notitle with lines linetype 1 lc rgb 'black' lw 3,\
+plot  "../../Data/POPC/CaCl/CHARMM36/35ca/LIPIDdensity_last100ns.xvg" using 1:3 notitle  with lines linetype 1 lw 1,\
+      "../../Data/POPC/CaCl/CHARMM36/35ca/LIPIDdensity_last100ns.xvg" using 1:($4/2) notitle with lines linetype 1 lw 1 lc rgb 'green', \
+      "../../Data/POPC/CaCl/CHARMM36/35ca/LIPIDdensity_last100ns.xvg" using 1:($2/200) notitle with lines linetype 1 lc rgb 'black' lw 3,\
       "../../Data/POPC/CaCl/CHARMM36/26ca/LIPIDdensity.xvg" using 1:3 notitle  with lines linetype 1 lw 2,\
       "../../Data/POPC/CaCl/CHARMM36/26ca/LIPIDdensity.xvg" using 1:($4/2) notitle with lines linetype 1 lw 2 lc rgb 'green', \
       "../../Data/POPC/CaCl/CHARMM36/26ca/LIPIDdensity.xvg" using 1:($2/200) notitle with lines linetype 1 lc rgb 'black' lw 3, \
-      "../../Data/POPC/CaCl/CHARMM36/100ca/LIPIDdensity_192ns.xvg" using 1:3 notitle  with lines linetype 1 lw 3,\
-      "../../Data/POPC/CaCl/CHARMM36/100ca/LIPIDdensity_192ns.xvg" using 1:($4/2) notitle with lines linetype 1 lw 3 lc rgb 'green', \
-      "../../Data/POPC/CaCl/CHARMM36/100ca/LIPIDdensity_192ns.xvg" using 1:($2/200) notitle with lines linetype 1 lc rgb 'black' lw 3
+      "../../Data/POPC/CaCl/CHARMM36/100ca/LIPIDdensity_last100ns.xvg" using 1:3 notitle  with lines linetype 1 lw 3,\
+      "../../Data/POPC/CaCl/CHARMM36/100ca/LIPIDdensity_last100ns.xvg" using 1:($4/2) notitle with lines linetype 1 lw 3 lc rgb 'green', \
+      "../../Data/POPC/CaCl/CHARMM36/100ca/LIPIDdensity_last100ns.xvg" using 1:($2/200) notitle with lines linetype 1 lc rgb 'black' lw 3
 unset label
 
 set xlabel "z (nm)"
