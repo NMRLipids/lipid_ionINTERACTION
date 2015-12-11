@@ -361,9 +361,9 @@ to the CaCl$_2$ actually is. Then we can discuss more about its structural respo
   CHARMM36\cite{klauda10}/ionFF~\cite{??}  & POPC & 950 (NaCl)  & 72 & 2168 & 37  & 0 & 37 & 303  & 80 & 60 &\cite{charmmPOPC950mMNaClfiles}  \\
   %CHARMM36\cite{klauda10}, ionFF~\cite{??}\todoi{Appropriate reference for the ion model?}  & POPC & 1380 (NaCl)  & 72 & 2085 & 52  & 0 & 52 & 303  & 80 & 60 &?\todoi{Samuli put to Zenodo} \\
   %CHARMM36\cite{klauda10}, ionFF~\cite{??}\todoi{Appropriate reference for the ion model?}   & POPC & 2080  (NaCl)  & 72 & 2085 & 78  & 0 & 78 & 303  & 73 & 60 &?\todoi{Samuli put to Zenodo} \\
-  CHARMM36\cite{klauda10}/ionFF~\cite{??} & POPC &  350 (CaCl$_2$)  & ? & ? & 0& 35 & 70 & ?  & 200  & 100 & \cite{charmmPOPC350mMCaClfiles}  \\
-  CHARMM36\cite{klauda10}/ionFF~\cite{??} & POPC &  670 (CaCl$_2$)  & 72 & 2164 & 0& 26 & 52 & 303  & 200  & 120 & \cite{charmmPOPC670mMCaClfiles}  \\  
-  CHARMM36\cite{klauda10}/ionFF~\cite{??} & POPC &  1000 (CaCl$_2$)  & ? & ? & 0& 100 & 200 & ? & 200  & 100 & \cite{charmmPOPC1000mMCaClfiles}  \\
+  CHARMM36\cite{klauda10}/ionFF~\cite{??} & POPC &  350 (CaCl$_2$)  & 128 & 6400 & 0& 35 & 70 & 303  & 200  & 100 & \cite{charmmPOPC350mMCaClfiles}  \\
+  CHARMM36\cite{klauda10}/ionFF~\cite{??} & POPC &  670 (CaCl$_2$)  & 128 & 6400 & 0& 67 & 134 & 303  & 200  & 120 & \cite{charmmPOPC670mMCaClfiles}  \\  
+  CHARMM36\cite{klauda10}/ionFF~\cite{??} & POPC &  1000 (CaCl$_2$) & 128 & 6400 & 0& 100 & 200 & 303 & 200  & 100 & \cite{charmmPOPC1000mMCaClfiles}  \\
   \hline
   MacRog\cite{maciejewski14}  & POPC & 0 & 288 & 14400 & 0 & 0 & 0 & 310 & 90&40  &~\cite{macrogdehydFILES}  \\
   MacRog\cite{maciejewski14}/ionFF~\cite{??}\todoi{Appropriate reference for the ion model?}  & POPC & 100 (NaCl) & 288 & 14554 & 27 & 0 & 27 & 310 & 90&50  & \cite{macrogIONfiles} \\
@@ -630,7 +630,7 @@ binding affinity cannot be fixed by only scaling charges.
 
 \subsection{Simulated systems}
 All simulations are ran with a standard setup for planar lipid bilayer in zero tension
-with periodic boundary conditions with Gromacs software package (version numbers 4.5-X-4.6.X).
+with periodic boundary conditions with Gromacs software package (version numbers 4.5-X-5.0.X).
 %The number of molecules, temperatures and the length of simulations for all the fully 
 %hydrated lipid bilayer simulations are listed in Table~\ref{systems}. Full simulation
 %details for all simulations are given the next section.
@@ -668,10 +668,14 @@ Pressure was semi-isotropically coupled to the athmospheric pressure with the Be
 \todo{Simulation details from Jukka M{\"a}{\"a}tt{\"a}}
 
 \subsubsection{CHARMM36}
-The simulation without ions is the same as in~\cite{botan15}. The starting structures for simulations with ions is
-made by replacing water molecules with appropriate amount of ions under study.
-\todo{Samuli, finalize and check the methods.}
-
+{\it POPC with NaCl}
+The simulation without ions is taken directly from~\cite{botan15,charmm36filesSHORT}. 
+The starting structures for simulations with NaCl were made by replacing randomly located 
+water molecules of the structure of pure POPC simulation with appropriate amount of ions.
+The force field for lipid were the same as in~\cite{botan15,charmm36filesSHORT}.
+The ion parameters with NBFIX by Venable et al.~\cite{venable13} were used.
+Simulations were ran with Gromacs 4.5.5 software~\cite{pronk13}.
+\todo{Still to be checked}
 Timestep of 1~fs was used with leap-frog integrator. Covalent bonds with hydrogens were constrained with LINCS algorithm~\cite{hess97,hess07}. 
 Coordinates were written every 5~ps. PME with real space cut-off 1.4~nm was used 
 for electrostatics. Lennard-Jones interactions were switched to zero between 0.8~nm and 1.2~nm.
@@ -679,10 +683,22 @@ The neighbour list was updated every 5th step with cut-off 1.4~nm. Temperature w
 for lipids and water to 303~K with the velocity-rescale method~\cite{bussi07} with coupling constant 0.2~ps.
 Pressure was semi-isotropically coupled to the athmospheric pressure with the Berendsen method~\cite{berendsen84}.
 
+%CaCl_2 simulations by MYKHAILO:
+{\it POPC with CaCl$_2$}
+The starting structures with varying amounts of CaCl$_2$ ions were constructed using the CHARMM-GUI Membrane Builder (http://www.charmm-gui.org/) online tool~\cite{lee15}. 
+All runs were performed with Gromacs 5.0.3 software package~\cite{abraham15} and CHARMM36 additive force field parameters for lipids~\cite{klauda10} and ions~\cite{??} were obtained from CHARMM-GUI input files. 
+Standard CHARMM-GUI mdp options were used. Particularly, h-bond lengths were constrained with LINCS~\cite{hess97,hess07}. The temperatures of the 
+lipids and the solvent were separately coupled to the Nose-Hoover~\cite{nose84,hoover85} thermostat with a target temperature of 303 K and a relaxation time constant of 1.0 ps. Semi-isotropical 
+pressure coupling to 1 bar was obtained with the Parrinello-Rahman barostat~\cite{parrinello81} with a time constant of 5 ps. Equations of motion were integrated with the Verlet algorithm~\cite{pall13} 
+using a timestep of 2 fs. Long-range electrostatic interactions were calculated using the PME~\cite{darden93,essman95} method with a fourth order smoothing spline. A real space cut-off of 1.2 nm 
+was employed with grid spacing of 0.12 nm in the reciprocal space. Lennard-Jones interactions were smoothly swithced to zero between 1.0 nm and 1.2 nm. Verlet cutoff-scheme~\cite{pall13}  
+were used with the long-range neighbor list updated every 20 steps. Coordinates were written every 10 ps.
+After energy minimization and an equilibration run of 0.5 ns, 200ns simulations were ran and the last 100ns of each simulation was employed for the analysis.
+
 \subsubsection{MacRog}
 The simulation parameters are identical to those employed in our earlier study~\cite{botan15} for the full 
 hydration and dehydration simulations. The initial structures with varying amounts of NaCl were constructed from an 
-extensively hydrated bilayer by replacing water molecules with ions using the Gromacs tool genion. Even at the highest 
+extensively hydrated bilayer by replacing water molecules with ions using the Gromacs tool genion~\cite{gromacsMANUAL}. Even at the highest 
 considered salt concentration, the amount of water molecules per lipid after this replacement process was still greater than 50.
 
 \subsubsection{Orange}
@@ -696,7 +712,7 @@ For the simulations with ions, the starting DPPC lipid bilayer, which was built 
 (http://www.charmm-gui.org/), contained 600 lipids, 30 water molecules/lipid, Na$^+$ and Cl$^-$ ions (150 mM NaCl). 
 The TIP3P water model was used to solvate the system. All-atom MD simulations of DPPC lipid bilayers were performed 
 at ten different temperatures (283, 298, 303, 308, 312, 313, 314, 318, 323, and 333 K) using the GROMACS software 
-package version 4.5.5 and the Stockholm lipids (Slipids) force field parameters for phospholipids. After energy 
+package version 4.5.5~\cite{pronk13} and the Stockholm lipids (Slipids) force field parameters for phospholipids. After energy 
 minimization and a short equilibration run of 50 ps (time step 1~fs), 100 ns production runs were performed using 
 a time step of 2~fs with leap-frog integrator. All covalent bonds were constrained with the LINCS
 algorithm. Coordinates were written every 100 ps. PME with real space cut-off at 1.0 nm was used for Coulomb 
@@ -708,12 +724,43 @@ with the Parrinello-Rahman barostat using a time constant of 10 ps.
 The last 40 ns of each simulation was employed for the analysis of DPPC choline and glycerol backbone order parameters.
 
 \subsubsection{Lipid14}
+The starting structures with varying amounts of ions were constructed using the CHARMM-GUI Membrane Builder (http://www.charmm-gui.org/) 
+online tool~\cite{lee15}. The GROMACS compatible force field parameters generated in~\cite{botan15} and available at~\cite{lipid14files} were used. 
+The TIP3P water model~\cite{jorgensen83} was used to solvate the system. Ions were described by AMBER99SB-ILDN force field~\cite{??}. 
+All runs were performed with Gromacs 5.0.3 software package~\cite{abraham15}
+and LIPID14 force field parameters for POPC~\cite{dickson14}. 
 
-\todo{Simulation details from Mykhailo Girych}
+H-bond lengths were constrained with LINCS~\cite{hess97,hess07}. The temperatures of the lipids and the solvent were separately coupled to the 
+Nose-Hoover~\cite{nose84,hoover85} thermostat with a target temperature of 298.15 K and a relaxation time constant of 0.1 ps. Semi-isotropical pressure 
+coupling to 1 bar was obtained with the Parrinello-Rahman barostat~\cite{parrinello81} with a time constant of 2 ps. Equations of motion were integrated 
+with the Verlet algorithm~\cite{pall13} using a timestep of 2 fs. Long-range electrostatic interactions were calculated using the PME~\cite{darden93,essman95} method 
+with a fourth order smoothing spline. A real space cut-off of 1.0 nm was employed with grid spacing of 0.12 nm in the reciprocal space. 
+Lennard-Jones potentials were cut-off at 1 nm, with a dispersion correction applied to both energy and pressure. Verlet cutoff-scheme~\cite{pall13} 
+were used with the long-range neighbor list updated every 20 steps. Coordinates were written every 10 ps.
+
+After energy minimization and an equilibration run of 5 ns, 200ns production runs were performed and analysed. In case of the CaCl2 systems 
+only the last 100ns of each simulation was employed for the analysis.
 
 \subsubsection{Ulmscneiders}
+The starting structures with varying amounts of ions were constructed using the CHARMM-GUI Membrane Builder (http://www.charmm-gui.org/) 
+online tool~\cite{lee15}. The force field parameters were obtained from Lipidbook~\cite{domanski10}. The TIP3P water model~\cite{jorgensen83} 
+was used to solvate the system.  Additionally, the simulations of ion-free bilayer were repeated with both Verlet and Group cutoff-schemes~\cite{ulmschneiderPOPC0mMNaClfiles}. 
+There was no significant difference in headgroup or glycerol backbone order parameters between these cutoff-schemes. All runs were performed with Gromacs 5.0.3 software package~\cite{abraham15}. 
+The glycerol backbone order parameters without iones were not the same as reported in the previous study~\cite{botan15}.
+The origin of discrepancy was located to the different initial structures which was taken from CHARMM-GUI in this work
+and from Lipidbook in the previous work. Since the order parameters with the initial structure from CHARMM-GUI are
+closer to the experimental values, the results indicate that the structure available from Lipidbook is stuck to a
+state with incorrect glycerol backbone strucuture, for more discussion see \url{https://github.com/NMRLipids/lipid_ionINTERACTION/issues/8}.
 
-\todo{Simulation details from Mykhailo Girych}
+All-bond lengths were constrained with LINCS~\cite{hess97,hess07}. The temperatures of the lipids and the solvent were separately coupled to the Nose-Hoover~\cite{nose84,hoover85} 
+thermostat with a target temperature of 298.15 K and a relaxation time constant of 0.1 ps. Semi-isotropical pressure coupling to 1 bar was obtained 
+with the Parrinello-Rahman barostat~\cite{parrinello81} with a time constant of 2 ps. Equations of motion were integrated with the Verlet algorithm~\cite{pall13} using a 
+timestep of 2 fs. Long-range electrostatic interactions were calculated using the PME~\cite{darden93,essman95} method with a fourth order smoothing spline. 
+A real space cut-off of 1.0 nm was employed with grid spacing of 0.12 nm in the reciprocal space. Lennard-Jones potentials were cut-off at 1 nm, 
+with a dispersion correction applied to both energy and pressure. Verlet cutoff-scheme~\cite{pall13} were used with the long-range neighbor list updated 
+every 20 steps. Coordinates were written every 10 ps. After energy minimization and an equilibration run of 5 ns, 200ns simulations were ran and 
+the last 100ns of each simulation was employed for the analysis.
+
 
 \subsection{Analysis}
 The order parameters were calculated from simulation trajectories directly applying the equation
