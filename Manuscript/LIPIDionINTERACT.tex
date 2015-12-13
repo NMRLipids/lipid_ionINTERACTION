@@ -192,20 +192,6 @@ studies \cite{cevc90,tocanne90,binder02,pabst07,filippov09}
     for pure PC bilayer wihtout ions, indicating structural inaccuracies with varying severity
     for all models \cite{botan15}.
    }
-\todo{New results with CaCl$_2$ from CHARMM36 simulations are now added. 
-The older results with 670mM are out of the trend of the new ones. 
-I think that the older one should be ran with larger box to check if this is the
-problem. If it turns out to be problem, it may be reasonable to run 1M NaCl simulation
-also with larger box to check if it would change conclusions from NaCl simulations.
-I have opened issue about this: \\
-https://github.com/NMRLipids/lipid\_ionINTERACTION/issues/16} \\
-\todo{I wrote previously 
-''I think that it would be very interesting to test the modified CHARMM ions: 
-Venable et al. dx.doi.org/10.1021/jp401512z, J. Phys. Chem. B 2013, 117, 10183−10192.
-According to the paper, these parameters improve the ion binding to the charged lipid bilayers. 
-Even though I think that testing this would be highly relevant, I do not have
-time to do it now.''. 
-However Matti Javanainen claimed in Skype that in the current CHARMM36 simulations we already have these ions. This has to be checked.}
 \end{figure*}
 
 Also order parameter changes with NaCl and CaCl$_2$ concentrations from various simulation models are shown in Fig.~\ref{ordPions}. 
@@ -229,7 +215,7 @@ with our recent results with dehydration~\cite{botan15}.
 To study the correlation between order parameter changes and ion partitioning into a bilayer, 
 suggested by the electrometer concept~\cite{akutsu81,altenbach84,seelig87,scherer89}, the ion 
 density distributions from different simulation models as a function of membrane normal with NaCl and CaCl$_2$ are shown in 
-Figs.~\ref{NAdensities} and~\ref{CAdensities}, respectively. The density profiles from different models in Fig.~\ref{NAdensities}
+Figs.~\ref{NAdensities} and~\ref{CAdensitiesCLEAR}, respectively. The density profiles from different models in Fig.~\ref{NAdensities}
 are arranged to increasing order according to the changes observed in order parameters with NaCl concentration in Fig.~\ref{ordPions}
 such that the model with smallest change is on top and towards the bottom are models with larger observed order parameter changes.
 The Fig.~\ref{ordPions} clearly shows that the larger Na$^+$ density peaks at the lipid bilayer interface are
@@ -256,15 +242,13 @@ The Ca$^{2+}$ penetration and related order parameter decrease is seen with all 
 \begin{figure}[]
   \centering
   \includegraphics[width=8cm]{../Fig/CAdensitiesCLEAR.eps}
-  \caption{\label{CAdensities}
+  \caption{\label{CAdensitiesCLEAR}
     Number density profiles for lipids, Ca$^{2+}$ and Cl$^-$ ions from simulations with different force fields.
     The profiles only with smallest available CaCl$_2$ concentration are shown for clarity.
     Figure including all the available concetrations is shown in the Supplementary Information.
     The lipid densities are scaled with 100 (united atom) or 200 (all atom model) to make them visible with the used y-axis scale.
     Figure discussed in https://github.com/NMRLipids/lipid\_ionINTERACTION/issues/4.
   }
-\todo{The densities calculated over the last 50ns shown now for CHARMM with 350mM and 1000mM, however,
-I think we should use the last 100ns. Mykhailo, could you ran the script for the last 100ns?}
 \end{figure}
 
 
@@ -283,20 +267,27 @@ It is agreed in the literature that the Ca$^{2+}$ ions do penetrate in the phosp
 significantly affect membrane properties already at mM concentrations of CaCl$_2$, however, the strength of 
 the binding is not agreed on~\cite{tatulian87,altenbach84,bockmann04}.
 \todo{Markus: Mention shortly what strengths have been suggested?}
-The $^1$H NMR data indicates that multivalent cations binding to phospholipid interact mainly with choline group
-leaving glycerol backbone conformations intact~\cite{hauser76,hauser78}.
-%The effect of Ca$^{2+}$ on the $\alpha$ and $\beta$ order parameters is overestimated in all the simulation models, however,
-%qualitatively the change is correct, i.e. order parameters are decreasing.
-%The overestimation of the effect could be due to too strong partitioning or too sensitive headgroup model to the presence of ions.
-\todo{The discussion about CaCl$_2$ results will be written when we have all the results. Mykhailo Girych is already running Lipid14 and more CHARMM36 simulations with CaCl$_2$.} \\
-\todo{The $^1$H NMR experiments suggest that the N-$\beta$-$\alpha$-O dihedral is only in gaughe conformation in the absense of ions, but
-in the presense of multivalent ions there would be also anti conformations present [Hauser et al. BBA {\bf 508}, 450 (1978), Hauser et al. Chem. Phys. Lipids {\bf 29}, 103 (1981)].
-I have now calculated the dihedral distributions for this dihedral with different CaCl$_2$ concentrations in different models, see Fig.~\ref{ObaNdihs}.
-The change suggested by the $^1$H NMR experiments is not seen in the CHARMM36 model. In Orange model this dihedral is mostly in anti
-conformation also without CaCl$_2$, oppositely as suggested by $^1$H NMR experiments. With CaCl$_2$ anti conformations become slightly more
-pronounced, however, the conformation seems to be unrealistic from the beginning so the studies of structural response to the CaCl$_2$
-might not be reasonable with this model. I think we need more simulations with CHARMM36 to see how good the order parameter response
-to the CaCl$_2$ actually is. Then we can discuss more about its structural response.} \\
+The binding and related order parameter decrease are seen in all tested models in Figs. \ref{ordPions} and \ref{CAdensitiesCLEAR}.
+However, the order parameter changes are overestimated in all models in respect to the experiments,
+thus none of these models cannot be used to interpret the Ca$^{2+}$ induced structural changes to the
+lipids or number of bound lipids. In contrast to the Na$ +$, there is no clear correlation between Ca$^{2+}$
+binding affinity and order parameter changes, thus the overestimation of order parameter change can be 
+due to, e.g. too strong strong binding, incorrect headgroup response to penetrating divalent cation or 
+penetration depth. The penetration depth of Ca$^{2+}$ ions is similar (density maxima close to $\pm$2 nm) 
+in all models except Berger with deeper penetration depth (density maxima close to $\pm$1.8 nm).  
+The location closer to water phase is probably more realistic since $^1$H NMR and neutron scattering data 
+indicates that Ca$^{2+}$ interact mainly with choline group~\cite{hauser76,hauser78,herbette84,cevc90}.
+Further, the $^1$H NMR experiments suggest that the N-$\beta$-$\alpha$-O dihedral is only in 
+gaughe--conformation in the absense of ions, but in the presense of multivalent ions also anti--conformations
+would be present \cite{hauser78, hauser81}. However, since the models reproduce the conformations 
+without ions with varying quality and the experimental order parameter response to CaCl$_2$ concentration
+current MD models cannot used to interpret this.
+%I have now calculated the dihedral distributions for this dihedral with different CaCl$_2$ concentrations in different models, see Fig.~\ref{ObaNdihs}.
+%The change suggested by the $^1$H NMR experiments is not seen in the CHARMM36 model. In Orange model this dihedral is mostly in anti
+%conformation also without CaCl$_2$, oppositely as suggested by $^1$H NMR experiments. With CaCl$_2$ anti conformations become slightly more
+%pronounced, however, the conformation seems to be unrealistic from the beginning so the studies of structural response to the CaCl$_2$
+%might not be reasonable with this model. I think we need more simulations with CHARMM36 to see how good the order parameter response
+%to the CaCl$_2$ actually is. Then we can discuss more about its structural response.} \\
 \todo{The P-N vector tilting analysis should be considered}
 
 
@@ -356,9 +347,9 @@ to the CaCl$_2$ actually is. Then we can discuss more about its structural respo
   BergerOPLS-DPPC-06\cite{tieleman06}/\r{A}qvist~\cite{aqvist90} &   DPPC & 1000 & 72 & 2778 & 51  & 0  & 51 &323  & 120 & 60 &\cite{bergerOPLSDPPCfiles1000mMnacl} \\
   \hline
   CHARMM36\cite{klauda10}   & POPC & 0           & 72 & 2242 & 0  & 0 & 0 & 303  & 30 & 20 & \cite{charmm36filesSHORT} \\
-  CHARMM36\cite{klauda10}/ionFF~\cite{??}\todoi{Appropriate reference for the ion model?}   & POPC & 350 (NaCl)  & 72 & 2085 & 13  & 0 & 13 & 303  & 80 & 60 & \cite{charmmPOPC350mMNaClfiles} \\
-  CHARMM36\cite{klauda10}/ionFF~\cite{??}\todoi{Appropriate reference for the ion model?}   & POPC & 690 (NaCl)  & 72 & 2085 & 26  & 0 & 26 & 303  & 73 & 60 & \cite{charmmPOPC690mMNaClfiles}   \\
-  CHARMM36\cite{klauda10}/ionFF~\cite{??}  & POPC & 950 (NaCl)  & 72 & 2168 & 37  & 0 & 37 & 303  & 80 & 60 &\cite{charmmPOPC950mMNaClfiles}  \\
+  CHARMM36\cite{klauda10}/ionFF~\cite{venable13} & POPC & 350 (NaCl)  & 72 & 2085 & 13  & 0 & 13 & 303  & 80 & 60 & \cite{charmmPOPC350mMNaClfiles} \\
+  CHARMM36\cite{klauda10}/ionFF~\cite{venable13} & POPC & 690 (NaCl)  & 72 & 2085 & 26  & 0 & 26 & 303  & 73 & 60 & \cite{charmmPOPC690mMNaClfiles}   \\
+  CHARMM36\cite{klauda10}/ionFF~\cite{venable13}  & POPC & 950 (NaCl)  & 72 & 2168 & 37  & 0 & 37 & 303  & 80 & 60 &\cite{charmmPOPC950mMNaClfiles}  \\
   %CHARMM36\cite{klauda10}, ionFF~\cite{??}\todoi{Appropriate reference for the ion model?}  & POPC & 1380 (NaCl)  & 72 & 2085 & 52  & 0 & 52 & 303  & 80 & 60 &?\todoi{Samuli put to Zenodo} \\
   %CHARMM36\cite{klauda10}, ionFF~\cite{??}\todoi{Appropriate reference for the ion model?}   & POPC & 2080  (NaCl)  & 72 & 2085 & 78  & 0 & 78 & 303  & 73 & 60 &?\todoi{Samuli put to Zenodo} \\
   CHARMM36\cite{klauda10}/ionFF~\cite{??} & POPC &  350 (CaCl$_2$)  & 128 & 6400 & 0& 35 & 70 & 303  & 200  & 100 & \cite{charmmPOPC350mMCaClfiles}  \\
