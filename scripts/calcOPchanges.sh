@@ -11,6 +11,7 @@ awk -f calcOPchanges.awk ../Data/POPC/NaCl/LIPID14/OPvsNACLcons.dat  > ../Data/P
 awk -f calcOPchanges.awk ../Data/POPC/CaCl/LIPID14/OPvsCACLcons.dat  > ../Data/POPC/CaCl/LIPID14/LIPID14caclCONSchange.dat
 
 awk -f calcOPchanges.awk ../Data/POPC/NaCl/SLIPID/OPvsNACLconsSD.dat  > ../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSD.dat
+awk -f calcOPchanges.awk ../Data/POPC/NaCl/SLIPID/OPvsNACLconsSCALED.dat  > ../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSCALED.dat
 
 awk -f calcOPchanges.awk ../Data/POPC/NaCl/ULM/OPvsNACLcons.dat  > ../Data/POPC/NaCl/ULM/ULMnaclCONSchange.dat
 
