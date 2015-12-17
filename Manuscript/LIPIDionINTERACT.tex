@@ -51,33 +51,22 @@
 \thanks{University of East Anglia, Norwich, United Kingdom}
 \author{O. H. Samuli Ollila} 
 \thanks{{\bf Author to whom correspondence may be addressed. E-mail: samuli.ollila@aalto.fi.}}
-\thanks{Helsinki Biophysics and Biomembrane Group, Department of Biomedical Engineering and Computational Science, Aalto University, Espoo, Finland}
-%\footnote{Author to whom 
-%correspondence may be addressed. E-mail: samuli.ollila@aalto.fi.\\
-%}
-%\affiliation{
-%  Helsinki Biophysics and Biomembrane Group,
-%Department of Biomedical Engineering and Computational Science, Aalto University, Espoo, Finland
-%}
-
+\thanks{Department of Neuroscience and Biomedical Engineering, Aalto University, Espoo, Finland}
+%\footnote{Author to whom correspondence may be addressed. E-mail: samuli.ollila@aalto.fi.\\}
 
 
 \begin{abstract}
-%We compare the order parameters predicted for the hydrocarbon segments in lipid bilayer headgroup region
-%by the Berger molecular dynamics simulation model to those measured by Nuclear Magnetic Resonance (NMR) experiments.
-%We first show results for a fully hydrated POPC bilayer, and then focus on changes of the order parameters as
-%a function of hydration level, NaCl and CaCl$_2$ concentrations, and cholesterol content. The experimental headgroup order 
-%parameters are never reproduced.
-%This indicates that under all of these conditions the used model is unable to correctly reproduce the headgroup structure. 
-%Consequently, many of the conclusions drawn over the years from this model might be erroneous.
-%This manuscript has not been submitted to any journal, instead its contents are discussed at 
-%nmrlipids.blogspot.fi.
-Despite of vast amount of experimental and theoretical studies, the binding affinity of cations, especially the biologically relevant Na$^+$ and Ca$^{2+}$ ions,
-into a phosholipid bilayer is not agreed on in the literature. Here we directly compare the measured choline headgroup order parameters
-to the simulations with different models in the presence of different cations. We conclude that the simplest explanation
-for the experimental and theoretical observations is that at mM concentrations the Na$^+$ ions do not  \sout{penetrate into} bind to \todo{Markus: 'penetrate into' gives the impression they go really deep, that is, even in the tails. On the other hand, 'bind to' could mean that they are bound just to the headgroup region. Should we maybe say precisely until where do they penetrate?}
-phosphatidylcholine lipid bilayers, in contrast to Ca$^{2+}$. Further, the binding affinity of Na$^+$ is overestimated in almost all molecular dynamics simulation models.
-However, the electrometer concept (connecting the choline order parameter changes to the amount of penetrating charge) is valid also in simulations.
+Despite of vast amount of experimental and theoretical studies, the binding affinity of cations, especially the 
+biologically relevant Na$^+$ and Ca$^{2+}$ ions, into a phosholipid bilayer is not agreed on in the literature. 
+Here we show that the ion binding affinity can be directly compared between simulations and experiments by 
+using the choline headgroup order parameters according to the electrometer concept.
+Our results strongly support the traditional view that Na$^+$ ions and other monovalent ions
+(except Li$^+$) do not specifically bind to phosphatidylcholine lipid bilayers with mM concentrations, 
+in contrast to Ca$^{2+}$ and other multivalent ions. Especially the Na$^+$ binding affinity is 
+overestimated by several molecular dynamics simulation models, leading to artificially positively
+charged lipid bilayer. Qualitatively correct headgroup order parameter response is observed with
+Ca$^{2+}$ binding in all the tested models, however none of the tested models has sufficient 
+quantitative accuracy to interpret the Ca$^{2+}$/lipid stoichiometry or induced atomistic resolution structural changes.
 
 {\it This work has been, and continues to be, progressed and discussed through the blog: nmrlipids.blogspot.fi.
 Everyone is invited to join the discussion and make contributions through the blog. The manuscript will be
@@ -403,9 +392,9 @@ and concomitant structural changes can be interpreted.
   Lipid14~\cite{dickson14}, \r{A}qvist~\cite{aqvist90}   &   POPC & 350 (CaCl$_2$) & 128 & 6400 & 0 & 35 & 70 & 298 & 200 & 100 &~\cite{lipid14POPC350mMCaClfiles}  \\
   Lipid14~\cite{dickson14}, \r{A}qvist~\cite{aqvist90}   &   POPC & 1000 (CaCl$_2$) & 128 & 6400 & 0 & 100 & 200 & 298 & 200 & 100 &~\cite{lipid14POPC1000mMCaClfiles}  \\
   \hline
-  Ulmschneiders/OPLS\cite{??}       &   POPC & 0          & 128 & 5120 & 0 & 0  & 0 & 298.15 & 205 & 200 &~\cite{ulmschneiderPOPC0mMNaClfiles}  \\
-  Ulmschneiders/OPLS\cite{??}       &   POPC & 150 (NaCl) & 128 & 5120 & 12 & 0  & 12 & 298.15 & 205 & 200 &~\cite{ulmschneiderPOPC150mMNaClfiles}  \\
-  Ulmschneiders/OPLS\cite{??}       &   POPC & 1000 (NaCl) & 128 & 5120 & 77 & 0  & 77 & 298.15 & 205 & 200 &~\cite{ulmschneiderPOPC1000mMNaClfiles}  \\
+  Ulmschneiders~\cite{Ulmschneider09}/OPLS\cite{??}       &   POPC & 0          & 128 & 5120 & 0 & 0  & 0 & 298.15 & 205 & 200 &~\cite{ulmschneiderPOPC0mMNaClfiles}  \\
+  Ulmschneiders~\cite{Ulmschneider09}/OPLS\cite{??}       &   POPC & 150 (NaCl) & 128 & 5120 & 12 & 0  & 12 & 298.15 & 205 & 200 &~\cite{ulmschneiderPOPC150mMNaClfiles}  \\
+  Ulmschneiders~\cite{Ulmschneider09}/OPLS\cite{??}       &   POPC & 1000 (NaCl) & 128 & 5120 & 77 & 0  & 77 & 298.15 & 205 & 200 &~\cite{ulmschneiderPOPC1000mMNaClfiles}  \\
 \end{tabular}
 \end{table*} 
 
@@ -663,6 +652,16 @@ with periodic boundary conditions with Gromacs software package (version numbers
 %The order parameters were calculated from the last 50~ns of a trajectory
 %totalling 110~ns. 
 
+\subsection{Analysis}
+The order parameters were calculated from simulation trajectories directly applying the equation
+$S_{{\rm CH}}=\langle \frac{3}{2}  \cos^2 \theta-\frac{1}{2} \rangle$,
+where $\theta$ is the angle between a given C--H bond and the bilayer normal and average is taken
+over all lipids and timeframes. For united atom models the hydrogen locations
+were regenerated for each molecule in each frame by using the {\it protonate} tool in 
+Gromacs 4.0.2 \cite{gromacsMANUAL402}. For statistical error estimate order parameter
+for each lipid molecule was separately calculated and the error of the mean over these 
+values was used as done also in the previous work \cite{botan15}.
+All the scripts used in analysis and the resulting data are available in the GitHub repository \cite{githubIONpaper}
 
 \subsection{Simulation details}
 \subsubsection{Berger}
@@ -720,28 +719,32 @@ considered salt concentration, the amount of water molecules per lipid after thi
 \todo{Jukka Maatta and Luca Monticelli, please deliver as much details as you can.}
 
 \subsubsection{Slipids}
-The simulation without ions is the same as in~\cite{botan15}.
-
-\todo{Add references to Slipids with ions.}
-For the simulations with ions, the starting DPPC lipid bilayer, which was built with the online CHARMM-GUI
+{\it DPPC} The simulation without ions from~\cite{botan15}, available at \cite{slipidsFILES} was used. 
+For the simulations with ions, the starting DPPC lipid bilayer, which was built with the online CHARMM-GUI~\cite{lee15}
 (http://www.charmm-gui.org/), contained 600 lipids, 30 water molecules/lipid, Na$^+$ and Cl$^-$ ions (150 mM NaCl). 
-The TIP3P water model was used to solvate the system. All-atom MD simulations of DPPC lipid bilayers were performed 
-at ten different temperatures (283, 298, 303, 308, 312, 313, 314, 318, 323, and 333 K) using the GROMACS software 
-package version 4.5.5~\cite{pronk13} and the Stockholm lipids (Slipids) force field parameters for phospholipids. After energy 
+The TIP3P water model was used to solvate the system and ion parameters by Roux \cite{beglov94,roux96} were used. 
+%All-atom MD simulations of DPPC lipid bilayers were performed 
+%at ten different temperatures (283, 298, 303, 308, 312, 313, 314, 318, 323, and 333 K) using 
+the GROMACS software  package version 4.5.5~\cite{pronk13} and the Stockholm lipids (Slipids) force field parameters 
+for phospholipids were used. After energy 
 minimization and a short equilibration run of 50 ps (time step 1~fs), 100 ns production runs were performed using 
-a time step of 2~fs with leap-frog integrator. All covalent bonds were constrained with the LINCS
-algorithm. Coordinates were written every 100 ps. PME with real space cut-off at 1.0 nm was used for Coulomb 
+a time step of 2~fs with leap-frog integrator. All covalent bonds were constrained with the LINCS~\cite{hess97,hess07}
+algorithm. Coordinates were written every 100 ps. PME~\cite{darden93,essman95} with real space cut-off at 1.0 nm was used for Coulomb 
 interactions. Lennard-Jones interactions were switched to zero between 1.0 nm and 1.4 nm. The neighbour 
 lists were updated every 10$^\mathrm{th}$ step with a cut-off of 1.6 nm. Temperature was coupled separately for upper and 
 bottom leaflets of the lipid bilayer, and for water to one of the temperatures reported above with the Nos\'e-Hoover 
-thermostat using a time constant of 0.5 ps. Pressure was semi-isotropically coupled to the atmospheric pressure 
-with the Parrinello-Rahman barostat using a time constant of 10 ps.
-The last 40 ns of each simulation was employed for the analysis of DPPC choline and glycerol backbone order parameters.
+thermostat~\cite{nose84,hoover85} using a time constant of 0.5 ps. Pressure was semi-isotropically coupled to the atmospheric pressure 
+with the Parrinello-Rahman~\cite{parrinello81} barostat using a time constant of 10 ps.
+%The last 40 ns of each simulation was employed for the analysis of DPPC choline and glycerol backbone order parameters.
+
+{\it POPC} The simulation without ions from~\cite{botan15}, available at \cite{slipidsFILESpopc} was used. 
+\todo{Add simulation details for Slipids POPC simulation with ions.}
 
 \subsubsection{Lipid14}
 The starting structures with varying amounts of ions were constructed using the CHARMM-GUI Membrane Builder (http://www.charmm-gui.org/) 
-online tool~\cite{lee15}. The GROMACS compatible force field parameters generated in~\cite{botan15} and available at~\cite{lipid14files} were used. 
-The TIP3P water model~\cite{jorgensen83} was used to solvate the system. Ions were described by AMBER99SB-ILDN force field~\cite{??}. 
+online tool~\cite{lee15}. The GROMACS compatible force field parameters generated in~\cite{botan15} and 
+available at~\cite{lipid14files} were used. 
+The TIP3P water model~\cite{jorgensen83} was used to solvate the system and \r{A}qvist \cite{aqvist90} parameters were used for ions.
 All runs were performed with Gromacs 5.0.3 software package~\cite{abraham15}
 and LIPID14 force field parameters for POPC~\cite{dickson14}. 
 
@@ -777,16 +780,17 @@ every 20 steps. Coordinates were written every 10 ps. After energy minimization 
 the last 100ns of each simulation was employed for the analysis.
 
 
-\subsection{Analysis}
-The order parameters were calculated from simulation trajectories directly applying the equation
-$S_{{\rm CH}}=\langle \frac{3}{2}  \cos^2 \theta-\frac{1}{2} \rangle$,
-where $\theta$ is the angle between a given C--H bond and the bilayer normal.
- For united atom models the hydrogen locations
-were regenerated for each molecule in each frame after the simulation trajectory was created.
-??The statistical error estimate for each order parameter calculated from simulation was roughly
-0.01, which is much smaller than the differences discussed in this work.??
-\todo{Markus: What do the question marks mean? Was the error estimation not performed yet?}
 
+\section{Author Contributions}
+\noindent 
+{\it Andrea Catte} \\
+{\it Mykhailo Girych} \\
+{\it Matti Javanainen} \\
+{\it Markus S. Miettinen} \\
+{\it Luca Monticelli}  \\
+{\it Jukka M{\"a}{\"a}tt{\"a}}  \\
+{\it Vasily S. Oganesyan} \\
+{\it O. H. Samuli Ollila} co-designed the project with MSM and managed the work. Ran and analyzed several simulations. Wrote the manuscript. \\
 
 
 \onecolumngrid
