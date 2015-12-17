@@ -31,8 +31,8 @@ plot "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-NaClchange.dat"  using 1:($2*-0.0
      "../../Data/DPPC/NaCl/BERGERopls/BERGERoplsnaclCONSchange.dat" using 1:4:5 with yerrorbars notitle  pt 7 lt 1 lc rgb 'brown', "" using 1:4 with lines notitle linetype 1 lc rgb 'brown', \
      "../../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSD.dat" using 1:2:3 with yerrorbars notitle pt 5 lt 1 lc rgb 'violet', "" using 1:2 with linespoint title 'POPC+NaCl, SLIPID, T=310K' pt 5 linetype 1 lc rgb 'violet', \
      "../../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSD.dat" using 1:4:5 with yerrorbars notitle  pt 5 lt 1 lc rgb 'violet', "" using 1:4 with lines notitle linetype 1 lc rgb 'violet', \
-     "../../scratch/SLIPIDSnaclCONSchangeDPPC.dat" using 1:2 title 'DPPC+NaCl, Slipid, T=323K' with linespoint linetype 1 pt 7 lc rgb 'violet', \
-     "../../scratch/SLIPIDSnaclCONSchangeDPPC.dat" using 1:3 notitle with linespoints  linetype 1 pt 7 lc rgb 'violet', \
+     "../../Data/DPPC/NaCl/SLIPIDS/SLIPIDnaclCONSchangeRX.dat" using 1:2:3 with yerrorbars notitle pt 7 lt 1 lc rgb 'violet', "" using 1:2 with linespoint title 'DPPC+NaCl, SLIPID, T=323K' pt 7 linetype 1 lc rgb 'violet', \
+     "../../Data/DPPC/NaCl/SLIPIDS/SLIPIDnaclCONSchangeRX.dat" using 1:4:5 with yerrorbars notitle  pt 7 lt 1 lc rgb 'violet', "" using 1:4 with lines notitle linetype 1 lc rgb 'violet', \
      "../../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchange.dat" using 1:2:3 with yerrorbars notitle pt 7 lt 1 lc rgb 'red', "" using 1:2 with linespoint title 'DPPC+NaCl, Berger, T=323K' pt 7 linetype 1 lc rgb 'red', \
      "../../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchange.dat" using 1:4:5 with yerrorbars notitle  pt 7 lt 1 lc rgb 'red', "" using 1:4 with lines notitle linetype 1 lc rgb 'red'
 
@@ -78,8 +78,8 @@ plot "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-NaClchange.dat"  using 1:($3*0.00
      "../../Data/POPC/NaCl/CHARMM36/CHARMMnaclCONSchange.dat" using 1:8:9  with yerrorbars notitle pt 5 lt 1 lc rgb 'green', "" using 1:8 with lines notitle linetype 1 lc rgb 'green',\
      "../../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSD.dat" using 1:6:7  with yerrorbars notitle pt 5 lt 1 lc rgb 'violet', "" using 1:6 with lines notitle linetype 1 lc rgb 'violet', \
      "../../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSD.dat" using 1:8:9  with yerrorbars notitle pt 5 lt 1 lc rgb 'violet', "" using 1:8 with lines notitle linetype 1 lc rgb 'violet',\
-     "../../scratch/SLIPIDSnaclCONSchangeDPPC.dat" using 1:4 notitle with linespoint linetype 1 pt 7 lc rgb 'violet', \
-     "../../scratch/SLIPIDSnaclCONSchangeDPPC.dat" using 1:5 notitle with linespoints  linetype 1 pt 7 lc rgb 'violet', \
+     "../../Data/DPPC/NaCl/SLIPIDS/SLIPIDnaclCONSchangeRX.dat" using 1:6:7  with yerrorbars notitle pt 7 lt 1 lc rgb 'violet', "" using 1:6 with lines notitle linetype 1 lc rgb 'violet', \
+     "../../Data/DPPC/NaCl/SLIPIDS/SLIPIDnaclCONSchangeRX.dat" using 1:8:9  with yerrorbars notitle pt 7 lt 1 lc rgb 'violet', "" using 1:8 with lines notitle linetype 1 lc rgb 'violet',\
      "../../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchange.dat" using 1:6:7  with yerrorbars notitle pt 7 lt 1 lc rgb 'red', "" using 1:6 with lines notitle linetype 1 lc rgb 'red', \
      "../../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchange.dat" using 1:8:9  with yerrorbars notitle pt 7 lt 1 lc rgb 'red', "" using 1:8 with lines notitle linetype 1 lc rgb 'red'
 

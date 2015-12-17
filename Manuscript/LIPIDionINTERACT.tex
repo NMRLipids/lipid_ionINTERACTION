@@ -213,8 +213,6 @@ glycerol backbone structures is different simulation models~\cite{botan15}.
     observed changes are top.
     The lipid densities are scaled with 100 (united atom) or 200 (all atom model) to make them visible with the used y-axis scale.
     Figure discussed in https://github.com/NMRLipids/lipid\_ionINTERACTION/issues/4.}
-    \todo{We need compatible data for Slipids. This is easy to calculate by modifying the current scripts, if the 
-      data is available.}
 \end{figure}
 
 The lowest Na$^+$ binding affinities and order parameter changes in best agreement with experiments are seen for the Orange,
@@ -394,10 +392,10 @@ and concomitant structural changes can be interpreted.
   Orange, ionFF~\cite{??}\todoi{Appropriate reference for the ion model?}   &   POPC & 510 (CaCl$_2$)  & 72 & 2802 & 0 & 26  & 52 & 298 & 120 & 60 & \cite{orangePOPC510mMCaClfiles}  \\
   \hline
   Slipid\cite{jambeck12}   &   DPPC & 0 & 128 &3840 & 0 & 0  & 0 & 323 & 150 & 100 &~\cite{slipidsFILES}  \\
-  Slipid\cite{jambeck12}, ionFF~\cite{??}\todoi{Andrea Catte, please let us know if you share some files through Zenodo}    &   DPPC & 150 (NaCl) & 600 & 18000 & 49 & 0  & 49 & 323 & 100 & 40 &?  \\
+  Slipid\cite{jambeck12}, Roux~\cite{beglov94,roux96} &   DPPC & 150 (NaCl) & 600 & 18000 & 49 & 0  & 49 & 323 & 100 & 40 &-  \\
   \hline
   Slipid\cite{jambeck12b}   &   POPC & 0 & 128 & 5120 & 0 & 0  & 0 & 303 & 200 & 150 &~\cite{slipidsFILESpopc}  \\
-  Slipid\cite{jambeck12b}, ionFF~\cite{smith94}  &  POPC & 130 (NaCl) & 200 & 9000 & 21 & 0  & 21 & 310 & 105 & 100 &~\cite{slipidsFILESpopc130mMnaclSD}  \\
+  Slipid\cite{jambeck12b}, Smith \& Dang~\cite{smith94}  &  POPC & 130 (NaCl) & 200 & 9000 & 21 & 0  & 21 & 310 & 105 & 100 &~\cite{slipidsFILESpopc130mMnaclSD}  \\
   \hline
   Lipid14~\cite{dickson14}, \r{A}qvist~\cite{aqvist90}  &   POPC & 0          & 128 & 5120 & 0 & 0  & 0 & 298 & 205 & 200 &~\cite{lipid14POPC0mMNaClfiles}  \\
   Lipid14~\cite{dickson14}, \r{A}qvist~\cite{aqvist90}   &   POPC & 150 (NaCl) & 128 & 5120 & 12 & 0 & 12 & 298 & 205 & 200 &~\cite{lipid14POPC150mMNaClfiles}  \\
@@ -443,6 +441,16 @@ calorimetry~\cite{bockmann03,klasczyk10} and AFM~\cite{manyes05,manyes06,fukuma0
 direct interactions between Na$^+$ and fluorescent probes~\cite{filippov09}, alternative intepretation of significance
 of small phase transition temperature shift~\cite{cevc90} and insufficient resolution of AFM for atomistic resolution interpretation.
 
+The artificial specific Na$^+$ binding in simulations may lead to duobtful results since it leads effectively 
+positively charged phoshatidylcholine lipid bilayer even in physiological NaCl concetration.
+Such a bilayer has distinctly different interactions with charged objects compared to the more realistic
+model without specific Na$^+$ binding. Furthermore, the overestimation of Na$^+$ binding affinity may
+extend also to other positively charged objects, e.g. membrane protein segments. This would affect
+lipid protein interactions and could explain contradicting results on electrostatic interactions 
+between charged protein segments and lipid bilayer \cite{arkhipov13,kaszuba15}. In conclusion, 
+more careful studies and model development on lipid bilayer--charged object interactions are
+needed to make molecular dynamics simulations straighforwardly usable in physiologically relevant
+electrostatic environment. 
 
 
 %The most straightforward explanation for our results is that Na$^+$ ions do not practically penetrate into a PC lipid bilayer
