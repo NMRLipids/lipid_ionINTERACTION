@@ -345,13 +345,13 @@ and concomitant structural changes can be interpreted.
   Force field (lipid, ion)& lipid & [Ion] mM & \footnote{The number of lipid molecules}N$_{\rm l}$   &  \footnote{The number of water molecules}N$_{\rm w}$   & \footnote{The number of Na$^+$ molecules}N$_{\rm Na}$  & \footnote{The number of Ca$^{2+}$ molecules}N$_{\rm Ca}$   &  \footnote{The number of Cl molecules}N$_{\rm Cl}$ & \footnote{Simulation temperature}T (K)  & \footnote{The total simulation time}t$_{{\rm sim}}$(ns) & \footnote{Time frames used in the analysis}t$_{{\rm anal}}$ (ns) & Files\\
   \hline
   Berger-POPC-07\cite{ollila07a}   &   POPC & 0          & 128 & 7290 & 0  & 0  & 0 & 298  & 270 & 240 & \cite{bergerFILESpopc}  \\
-  Berger-POPC-07\cite{ollila07a}/Gromos~\cite{??}\todoi{Appropriate reference for the ion model?}   &   POPC & 340 (NaCl) & 128 & 7202 & 44  & 0  & 44 &298  & 110 & 50 & \cite{bergerPOPC340mMNaClfiles} \\
+  Berger-POPC-07\cite{ollila07a}, Gromos~\cite{straatsma88}  &   POPC & 340 (NaCl) & 128 & 7202 & 44  & 0  & 44 &298  & 110 & 50 & \cite{bergerPOPC340mMNaClfiles} \\
   %\hdashline
-  Berger-POPC-07\cite{ollila07a}/Gromos~\cite{??}\todoi{Appropriate reference for the ion model?}   &   POPC & 340 (CaCl$_2$) & 128 & 7157 & 0 & 44  & 88 &298 & 108 & 58 &\cite{bergerPOPC340mMCaClfiles}  \\
+  Berger-POPC-07\cite{ollila07a}, Gromos~\cite{straatsma88}  &   POPC & 340 (CaCl$_2$) & 128 & 7157 & 0 & 44  & 88 &298 & 108 & 58 &\cite{bergerPOPC340mMCaClfiles}  \\
   \hline
   Berger-DPPC-98\cite{marrink98}   &   DPPC & 0 & 72 & 2880 & 0  & 0  & 0 &323  & 60 & 50 &\cite{bergerDPPCfiles} \\
-  Berger-DPPC-98\cite{marrink98}/Gromos~\cite{??}   &   DPPC & 0 & 72 & 2880 & 8  & 0  & 8 &323  & 120 & 60 &\cite{bergerDPPC150mMfiles} \\
-  Berger-DPPC-98\cite{marrink98}/Gromos~\cite{??}   &   DPPC & 1000 (NaCl) & 72 & 2778 & 51  & 0  & 51 &323  & 120 & 60 &\cite{bergerDPPC1000mMfiles} \\
+  Berger-DPPC-98\cite{marrink98}, Gromos~\cite{straatsma88}   &   DPPC & 0 & 72 & 2880 & 8  & 0  & 8 &323  & 120 & 60 &\cite{bergerDPPC150mMfiles} \\
+  Berger-DPPC-98\cite{marrink98}, Gromos~\cite{straatsma88}   &   DPPC & 1000 (NaCl) & 72 & 2778 & 51  & 0  & 51 &323  & 120 & 60 &\cite{bergerDPPC1000mMfiles} \\
   \hline
   BergerOPLS-DPPC-06\cite{tieleman06} &   DPPC & 0 & 72 & 2880 & 0  & 0  & 0 &323  & 120 & 60 &\cite{bergerOPLSDPPCfiles} \\
   BergerOPLS-DPPC-06\cite{tieleman06}, \r{A}qvist~\cite{aqvist90} &   DPPC & 150 & 72 & 2880 & 8  & 0  & 8 &323  & 120 & 60 &\cite{bergerOPLSDPPCfiles150mMnacl} \\
@@ -368,10 +368,10 @@ and concomitant structural changes can be interpreted.
   CHARMM36\cite{klauda10}/ionFF~\cite{??} & POPC &  1000 (CaCl$_2$) & 128 & 6400 & 0& 100 & 200 & 303 & 200  & 100 & \cite{charmmPOPC1000mMCaClfiles}  \\
   \hline
   MacRog\cite{maciejewski14}  & POPC & 0 & 288 & 14400 & 0 & 0 & 0 & 310 & 90&40  &~\cite{macrogdehydFILES}  \\
-  MacRog\cite{maciejewski14}/ionFF~\cite{??}\todoi{Appropriate reference for the ion model?}  & POPC & 100 (NaCl) & 288 & 14554 & 27 & 0 & 27 & 310 & 90&50  & \cite{macrogIONfiles} \\
-  MacRog\cite{maciejewski14}/ionFF~\cite{??}\todoi{Appropriate reference for the ion model?}        & POPC &  210 (NaCl) & 288 & 14500 & 54 & 0 & 54 & 310 & 90&50  &\cite{macrogIONfiles}  \\
-  MacRog\cite{maciejewski14}/ionFF~\cite{??}\todoi{Appropriate reference for the ion model?}        & POPC &   310 (NaCl) & 288 & 14446 & 81 & 0 & 81 & 310 & 90&50  & \cite{macrogIONfiles} \\
-  MacRog\cite{maciejewski14}/ionFF~\cite{??}\todoi{Appropriate reference for the ion model?}        & POPC &   420 (NaCl) & 288 & 14392 & 108 & 0 & 108 & 310 & 90& 50  & \cite{macrogIONfiles}  \\
+  MacRog\cite{maciejewski14}, \r{A}qvist~\cite{aqvist90}  & POPC & 100 (NaCl) & 288 & 14554 & 27 & 0 & 27 & 310 & 90&50  & \cite{macrogIONfiles} \\
+  MacRog\cite{maciejewski14}, \r{A}qvist~\cite{aqvist90}  & POPC &  210 (NaCl) & 288 & 14500 & 54 & 0 & 54 & 310 & 90&50  &\cite{macrogIONfiles}  \\
+  MacRog\cite{maciejewski14}, \r{A}qvist~\cite{aqvist90}  & POPC &   310 (NaCl) & 288 & 14446 & 81 & 0 & 81 & 310 & 90&50  & \cite{macrogIONfiles} \\
+  MacRog\cite{maciejewski14}, \r{A}qvist~\cite{aqvist90}  & POPC &   420 (NaCl) & 288 & 14392 & 108 & 0 & 108 & 310 & 90& 50  & \cite{macrogIONfiles}  \\
   \hline
   Orange, \r{A}qvist~\cite{aqvist90}  &   POPC & 0 & 72 & 2880 & 0 & 0  & 0 & 298 & 60 & 50 & \cite{orangePOPCfiles}  \\
   Orange, \r{A}qvist~\cite{aqvist90} &   POPC & 140 (NaCl) & 72 & 2866 & 7 & 0  & 7 & 298 & 120 & 100 &\cite{orangePOPC140mMNaClfiles}  \\
