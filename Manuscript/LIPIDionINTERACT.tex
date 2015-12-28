@@ -540,8 +540,7 @@ and Slipids with scaled Na$^+$ and Cl$^-$ ions. For Berger-DPPC-98 and BergerOPL
 the ion charge in systems listed in Table~\ref{IONsystems} was simply scaled with 0.7 and
 the related files are available 
 at ~\cite{DPPCBergerNaCl150mMscaled,DPPCBergerNaCl1000mMscaled,DPPCBergerOPLS06NaCl150mMscaled,DPPCBergerOPLS06NaCl1000mMscaled}). 
-For simulations with Slipids the ion model by Kohagen et al. was used~\cite{kohagen15} and the simulation
-details and related files are available at~\cite{slipidsFILESpopcSCALED}.
+For simulations with Slipids the ion model by Kohagen et al. was used~\cite{kohagen15} and the related files are available at~\cite{slipidsFILESpopcSCALED}. The simulation parameters were identical to those employed in the simulation of POPC with 130~mM NaCl (see Methods).
 The order parameter changes and Na$^+$ binding affinity are decreased by the charge scaling but 
 yet overestimated respect to the experiments as seen from Figs. \ref{OPchangesSCALED} and~\ref{NAdensitySCALED}. 
 Thus the overestimated binding affinity cannot be fixed by only scaling charges.
@@ -687,7 +686,20 @@ with the Parrinello-Rahman~\cite{parrinello81} barostat using a time constant of
 %The last 40 ns of each simulation was employed for the analysis of DPPC choline and glycerol backbone order parameters.
 
 {\it POPC} The simulation without ions from~\cite{botan15}, available at \cite{slipidsFILESpopc} was used. 
-\todo{Simulation details for Slipids POPC simulation with ions from Matti Javanainen}
+Additionally, a POPC bilayer consisting of 200 lipids, hydrated with 45 water molecules per lipid, 
+was simulated in the presence of 130 mM NaCl. The Slipids model \cite{jambeck12,jambeck12b}
+was employed for lipids, the tip3p model \cite{jorgensen83} for water, and the ion parameters by Smith 
+and Dang \cite{smith94} for NaCl. The system was first
+equilibrated for 5~ns with a time step of 1~fs after which a 100~ns production run was performed using
+a time step of 2~fs. Trajectories were written every 100~ps. The system was kept in a tensionless state at 1~bar 
+using a semi-isotropical Parrinello--Rahman barostat \cite{parrinello81} with a time constant of 1~ps. 
+The temperature was maintained at 310~K
+with the velocity rescaling thermostat \cite{bussi07}. The time constant was set to 0.5~ps for both lipids and 
+solvent (water and ions) which were coupled separately. Non-bonded interactions were calculated
+within a neighbor list with a radius of 1~nm and an update interval of 10 steps. The Lennard-Jones
+interactions were cut-off at 1~nm, whereas PME \cite{darden93,essman95} was employed for long-range electrostatics. 
+Dispersion correction was applied to both energy and pressure. All bonds were constrained with the LINCS \cite{hess97,hess07}.
+algorithm. 
 
 \subsubsection{Lipid14}
 The starting structures with varying amounts of ions were constructed using the CHARMM-GUI Membrane Builder (http://www.charmm-gui.org/) 
