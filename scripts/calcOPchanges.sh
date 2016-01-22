@@ -1,5 +1,6 @@
 awk -f calcOPchanges.awk ../Data/POPC/NaCl/CHARMM36/OPvsNACLcons.dat  > ../Data/POPC/NaCl/CHARMM36/CHARMMnaclCONSchange.dat
 awk -f calcOPchanges.awk ../Data/POPC/CaCl/CHARMM36/OPvsCACLcons.dat  > ../Data/POPC/CaCl/CHARMM36/CHARMMcaclCONSchange.dat
+awk -f calcOPchanges.awk ../Data/POPC/CaCl/CHARMM36/OPvsCACLconsSCALED.dat  > ../Data/POPC/CaCl/CHARMM36/CHARMMcaclCONSchangeSCALED.dat
 
 awk -f calcOPchanges.awk ../Data/POPC/NaCl/BERGER/OPvsNACLcons.dat  > ../Data/POPC/NaCl/BERGER/BERGERnaclCONSchange.dat
 awk -f calcOPchanges.awk ../Data/POPC/CaCl/BERGER/OPvsCACLcons.dat  > ../Data/POPC/CaCl/BERGER/BERGERcaclCONSchange.dat
@@ -13,6 +14,7 @@ awk -f calcOPchanges.awk ../Data/POPC/CaCl/LIPID14/OPvsCACLcons.dat  > ../Data/P
 awk -f calcOPchanges.awk ../Data/POPC/NaCl/SLIPID/OPvsNACLconsSD.dat  > ../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSD.dat
 awk -f calcOPchanges.awk ../Data/DPPC/NaCl/SLIPIDS/OPvsNACLconsRX.dat  > ../Data/DPPC/NaCl/SLIPIDS/SLIPIDnaclCONSchangeRX.dat
 awk -f calcOPchanges.awk ../Data/POPC/NaCl/SLIPID/OPvsNACLconsSCALED.dat  > ../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSCALED.dat
+awk -f calcOPchanges.awk ../Data/POPC/CaCl/SLIPID/OPvsCACLconsSCALED.dat  > ../Data/POPC/CaCl/SLIPID/SLIPIDcaclCONSchangeSCALED.dat
 
 awk -f calcOPchanges.awk ../Data/POPC/NaCl/ULM/OPvsNACLcons.dat  > ../Data/POPC/NaCl/ULM/ULMnaclCONSchange.dat
 

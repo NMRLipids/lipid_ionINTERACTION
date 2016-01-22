@@ -52,6 +52,8 @@
 \author{O. H. Samuli Ollila} 
 \thanks{{\bf Author to whom correspondence may be addressed. E-mail: samuli.ollila@aalto.fi.}}
 \thanks{Department of Neuroscience and Biomedical Engineering, Aalto University, Espoo, Finland}
+\author{Joona Tynkkynen}
+\thanks{Tampere University of Technology, Tampere, Finland}
 %\footnote{Author to whom correspondence may be addressed. E-mail: samuli.ollila@aalto.fi.\\}
 
 
@@ -247,6 +249,7 @@ glycerol backbone structures in different simulation models~\cite{botan15}.
   \hline
   Slipid\cite{jambeck12b}   &   POPC & 0 & 128 & 5120 & 0 & 0  & 0 & 303 & 200 & 150 &~\cite{slipidsFILESpopc}  \\
   Slipid\cite{jambeck12b}, AMBER\cite{smith94}  &  POPC & 130 (NaCl) & 200 & 9000 & 21 & 0  & 21 & 310 & 105 & 100 &~\cite{slipidsFILESpopc130mMnaclSD}  \\
+  Slipid\cite{jambeck12b}, AMBER\cite{kohagen14}  &  POPC & 450 (CaCl) & 200 & 9000  & 0 & 73  & 146 & 310 & 600 & 100 &~\cite{slipidsFILESpopc450mMcaclSCALED}  \\
   \hline
   Lipid14~\cite{dickson14}, AMBER\cite{aqvist90}  &   POPC & 0          & 128 & 5120 & 0 & 0  & 0 & 298 & 205 & 200 &~\cite{lipid14POPC0mMNaClfiles}  \\
   Lipid14~\cite{dickson14}, AMBER\cite{aqvist90}   &   POPC & 150 (NaCl) & 128 & 5120 & 12 & 0 & 12 & 298 & 205 & 200 &~\cite{lipid14POPC150mMNaClfiles}  \\
@@ -344,11 +347,14 @@ While the significant Ca$^{2+}$ binding affinity to a phosphatidylcholine bilaye
 is agreed in the literature, the estimations for lipid/Ca$^{2+}$ stoichiometry vary between 17 
 and 0.24~\cite{tatulian87,altenbach84,bockmann04}. The smallest number (0.24) indicating that one 
 Ca$^{2+}$ ion binds roughly four lipid molecules originates from simulation with Berger model~\cite{bockmann04}.
+\todo{There is something wrong in these stoichiometry numbers.}
 The direct comparison of order parameters between different simulation models and experiments in Fig.~\ref{ordPions}
 shows that Ca$^{2+}$ binding induced changes are overestimated in all tested models.
 In contrast to Na$^+$, clear correlation between Ca$^{2+}$ binding affinity and order parameter changes is not found, 
 thus the overestimation of order parameter change may arise, e.g. from overestimated binding, 
 incorrect headgroup response to penetrating divalent cation or penetration depth. 
+The ion model having scaled charges~\cite{kohagen14} used with CHARMM36 did not improve the results, see Supplementary Information.
+
 The Berger model predicts deeper penetration depth (density maxima close to $\pm$1.8 nm) compared
 to other models (density maxima close to $\pm$2 nm). The latter value is probably more realistic 
 since $^1$H NMR and neutron scattering data indicates that Ca$^{2+}$ interact mainly with the 
@@ -533,17 +539,26 @@ MSM acknowledges financial support from the Volkswagen Foundation (86110).
 
 \section{Effect of ion model and polarization}
 It has been suggested that the missing electronic polarizability 
-can be compensated by scaling the ion charge by a factor of 0.7 in 
-simulations~\cite{leontyev11}. To test if this would improve the ion 
-binding behaviour, we ran simulations with Berger-DPPC-98, BergerOPLS-DPPC-06
+can be compensated by scaling the ion charge in simulations~\cite{leontyev11}. 
+To test if this would improve the Na$^+$ ion binding behaviour, we ran simulations with Berger-DPPC-98, BergerOPLS-DPPC-06
 and Slipids with scaled Na$^+$ and Cl$^-$ ions. For Berger-DPPC-98 and BergerOPLS-DPPC-06 models 
 the ion charge in systems listed in Table~\ref{IONsystems} was simply scaled with 0.7 and
 the related files are available 
 at ~\cite{DPPCBergerNaCl150mMscaled,DPPCBergerNaCl1000mMscaled,DPPCBergerOPLS06NaCl150mMscaled,DPPCBergerOPLS06NaCl1000mMscaled}). 
-For simulations with Slipids the ion model by Kohagen et al. was used~\cite{kohagen15} and the related files are available at~\cite{slipidsFILESpopcSCALED}. The simulation parameters were identical to those employed in the simulation of POPC with 130~mM NaCl (see Methods).
+For simulations with Slipids the ion model by Kohagen et al. was used~\cite{kohagen15} and the related files are 
+available at~\cite{slipidsFILESpopcSCALED}. The simulation parameters were identical to those employed in the simulation of POPC with 130~mM NaCl (see Methods).
 The order parameter changes and Na$^+$ binding affinity are decreased by the charge scaling but 
 yet overestimated respect to the experiments as seen from Figs. \ref{OPchangesSCALED} and~\ref{NAdensitySCALED}. 
 Thus the overestimated binding affinity cannot be fixed by only scaling charges.
+
+We also tested the effect of charge scaling in the case of CaCl$_2$ with CHARMM36 model.
+The ion model by Kohagen et al.~\cite{kohagen14} was used  and the related files are 
+available at~\cite{charmmFILESpopc450mMcaclSCALED}. Figures~\ref{OPchangesSCALED} and~\ref{CAdensities}
+show that the scaling does not improve the CaCl$_2$ binding behaviour respect to the
+experiments. The same scaled model with Slipid in the main text also
+overestimated the CaCl$_2$ effect. However, the effect of scaling cannot be analyzed in this case since
+Slipid simulation was no ran with non-scaled CaCl$_2$ model.
+
 
 
 %The intuitive explanation is that by scaling the partial charges the charge discrepancy between the ion and water partial charges is decreased. This means
@@ -561,13 +576,13 @@ Thus the overestimated binding affinity cannot be fixed by only scaling charges.
 %This is because the potential from the residual charge is 'smeared in the box' and so depends on the possibly
 %fluctuating (at least in NPT conditions) volume of the simulation box. 
 
-\begin{figure}[]
+\begin{figure*}[]
   \centering
-  \includegraphics[width=8cm]{../Fig/OrderParameterIONSchangesSCALED.eps} 
+  \includegraphics[width=16cm]{../Fig/OrderParameterIONSchangesSCALED.eps} 
   \caption{\label{OPchangesSCALED}
     Order parameter changes in simulations using ion models with scaled charge. 
     }
-\end{figure}
+\end{figure*}
 
 \begin{figure}[]
   \centering
@@ -687,7 +702,9 @@ with the Parrinello-Rahman~\cite{parrinello81} barostat using a time constant of
 
 {\it POPC} The simulation without ions from~\cite{botan15}, available at \cite{slipidsFILESpopc} was used. 
 Additionally, a POPC bilayer consisting of 200 lipids, hydrated with 45 water molecules per lipid, 
-was simulated in the presence of 130 mM NaCl. The Slipids model \cite{jambeck12,jambeck12b}
+was simulated in the presence of 130 mM NaCl. 
+\todo{Details from the simulation with CaCl}
+The Slipids model \cite{jambeck12,jambeck12b}
 was employed for lipids, the tip3p model \cite{jorgensen83} for water, and the ion parameters by Smith 
 and Dang \cite{smith94} for NaCl. The system was first
 equilibrated for 5~ns with a time step of 1~fs after which a 100~ns production run was performed using
@@ -752,7 +769,7 @@ the last 100ns of each simulation was employed for the analysis.
 {\it Jukka M{\"a}{\"a}tt{\"a}}  \\
 {\it Vasily S. Oganesyan} \\
 {\it O. H. Samuli Ollila} co-designed the project with MSM and managed the work. Ran and analyzed several simulations. Wrote the manuscript. \\
-
+{\it Joona Tynkkynen } \\
 
 %\onecolumngrid
 \listoftodos
