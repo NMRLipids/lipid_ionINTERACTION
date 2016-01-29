@@ -125,8 +125,8 @@ however, positive zeta potentials can be generally reached only with multivalent
 or Li$^+$~\cite{eisenberg79,tatulian87,manyes05,manyes06,klasczyk10}. 
 The lack of significant positive electrophoretic mobility in the presence of NaCl suggests weak binding of Na$^+$; 
 however, the same data can also be explained by the effect of Cl$^-$ ions~\cite{berkowitz06,knecht13}.
-Finally, changes in bilayer elasticity and area per lipid measured with Atomistic Force Microscopy (AFM)
-can be interpreted as Na$ {+}$ binding to phospholipids~\cite{manyes05,manyes06,fukuma07,ferber11,morata12}.
+Finally, changes in bilayer hardness and area per lipid measured with Atomistic Force Microscopy (AFM)
+were interpreted as Na$ {+}$ binding to phospholipids~\cite{manyes05,manyes06,fukuma07,ferber11,morata12}.
 
 Atomistic molecular dynamics (MD) simulations are a powerful tool to interpret experimental data in terms of atomic-level interactions.
 In atomistic MD simulations, the majority of commonly used models predicts binding of Na${^+}$ ions 
@@ -144,20 +144,16 @@ compared to observations from scattering experiments~\cite{pabst07}.
 Predictions of electrophoretic mobility in the presence of NaCl yielded positive values, higher than in experiments; 
 however, this could be explained by the behaviour of Cl$^-$ ions~\cite{berkowitz06,knecht13}.
 
-In the present work we set out to solve the apparent contradictions between experiments and simulations 
-on the binding of cations to phospholipid bilayers. 
-To this aim, we use MD simulations to calculate the order parameters of the head group carbons $\alpha$ and $\beta$ 
-(see Fig. \ref{POPCstructure}) as a function of cation concentration, and then we compare simulations with experiments. 
-We perform simulations with a number of different force fields, 
-and focus on the interpretation of NMR data reported as a function of NaCl and CaCl$_2$ concentrations. 
+In the present work we set out to solve the apparent contradictions 
+by directly comparing the headgroup hydrocarbon segment
+$\alpha$ and $\beta$ (see Fig. \ref{POPCstructure}) order parameters between simulations
+and experiments as a function of cation concentration. 
 According to the ''electrometer concept'', changes in order parameters of the $\alpha$ and $\beta$ carbons 
 in the phospholipid head group can be used to measure the ion affinity to the 
 phophatidylcholine (PC) lipid bilayer~\cite{akutsu81,altenbach84,seelig87,scherer89}.
 Order parameters can be accurately measured in experiments and straightforwardly compared to 
 simulations \cite{ollila15}, therefore the electrometer concept allows the 
 comparison of binding affinity between simulations and experiments. 
-% I removed "direct" comparison because both the measures and the calculations do not yield binding affinities.
-% the comparison is direct for order parameters, not for bonding affinities.
 We show that the response of order parameters to penetrating cations 
 is qualitatively correct in simulations, but the affinity of PC bilayers for Na$ {+}$ ions 
 is significantly overestimated in several MD simulation models. 
@@ -187,7 +183,7 @@ However, more recent experiments assigned negative sign to the order parameter o
 and positive to the $\alpha$ carbon~\cite{hong95a,hong95b,gross97};
 thus both order parameter values are actually decreasing (becoming more negative) 
 as the concentration of cations increases~\cite{ollila15}. 
-Figure~\ref{ordPions} shows the head group order parameters values from H$^2$ NMR measures
+Figure~\ref{ordPions} shows the head group order parameters values from H$^2$ NMR measurement
 for DPPC and POPC bilayers~\cite{akutsu81,altenbach84},
 with correct signs~\cite{hong95a,hong95b,gross97}, as a function NaCl and CaCl$_2$ concentration. 
 Only minor decreases are measured in the presence of NaCl, 
@@ -210,6 +206,9 @@ studies~\cite{cevc90,tocanne90,binder02,pabst07,filippov09}.
     (POPC with CaCl$_2$ from \cite{altenbach84}). The signs of the experimental order parameters, taken from
     experiments without ions~\cite{hong95a,hong95b,gross97}, can be assumed to be unchanged 
     with concentrations represented here~\cite{altenbach84,ollila15}. 
+    It should be noted that none of the models used here reproduces the order parameters
+within experimental error for pure PC bilayer wihtout ions, indicating structural inaccuracies with varying severity for all
+models \cite{botan15} %this is important to say, otherwise someone might get wrong impression from this fig.
    }
 \end{figure*}
 
@@ -220,9 +219,11 @@ Details of the simulated systems are reported in Table~\ref{IONsystems} and in S
 First of all, it should be noted that none of the models used here 
 reproduces the order parameters within experimental uncertainty
 for pure PC bilayer without ions, indicating structural inaccuracies with varying severity for all models \cite{botan15}.
-% hmm, I see a little problem here: the absolute values for the order parameters are not reported here,
-% so how can we notice that they don't match the experiment? 
-% Is it worth having another figure? If not, then I will rephrase this bit above, I don't think it's very clear.
+\todo{MONTICELLI: hmm, I see a little problem here: the absolute values for the order parameters are not reported here,
+ so how can we notice that they don't match the experiment? 
+ Is it worth having another figure? If not, then I will rephrase this bit above, I don't think it's very clear. \\
+OLLILA: This is shown in the reference, i.e. in NMRlipids I paper. There is some discussion 
+in the GitHub issue if we should have figure showing the order parameter without ions or not.}
 Second, all simulation models tested here show a decrease of choline order parameters,
 hence the structural response of the lipid head groups to the presence of Na$^+$ is qualitatively correct in all simulation models.
 Third, the order parameters in Fig.~\ref{ordPions} with added NaCl show 
@@ -234,8 +235,8 @@ In the figure, simulation models are ordered according to the order parameter ch
 (reported Fig.~\ref{ordPions}), from the smallest to the largest.
 The Na$^+$ density peaks are larger for models with larger changes in order parameters,
 indicating a strong correlation between Na$^+$ binding affinities and choline order parameters
-and therefore supporting the validity of the electrometer concept~\cite{akutsu81,altenbach84,seelig87,scherer89}. 
-
+and therefore supporting the validity of the electrometer concept in simulations~\cite{akutsu81,altenbach84,seelig87,scherer89}. 
+% In experiments the concept is well validified already by Seelig et al.
 
 
 
@@ -244,11 +245,7 @@ and therefore supporting the validity of the electrometer concept~\cite{akutsu81
 \caption{List of simulations performed in this work. The ion concentrations are calculated as 
    [ion]=(N$_{\rm ion} \times$[water])/N$_{\rm w}$, where [water]=55.5M. 
    These correspond the concentrations reported in the experiments by Akutsu et al.~\cite{akutsu81}.
-   The lipid force fields are named as in our previous work~\cite{botan15}.
-   For ion force fields, specific ion parameters are cited when possible.}\label{IONsystems}
-   %
-   % it seems to me that it was always possible, as there always is a name - citation when ions are used. Am I wrong?
-   % 
+   The lipid force fields are named as in our previous work~\cite{botan15}.}\label{IONsystems}
 \begin{tabular}{c c c c c c c c c c c c}
   %\hline
   Force field (lipid, ion)& lipid & [Ion] mM & \footnote{The number of lipid molecules}N$_{\rm l}$   &  \footnote{The number of water molecules}N$_{\rm w}$   & \footnote{The number of Na$^+$ molecules}N$_{\rm Na}$  & \footnote{The number of Ca$^{2+}$ molecules}N$_{\rm Ca}$   &  \footnote{The number of Cl molecules}N$_{\rm Cl}$ & \footnote{Simulation temperature}T (K)  & \footnote{The total simulation time}t$_{{\rm sim}}$(ns) & \footnote{Time frames used in the analysis}t$_{{\rm anal}}$ (ns) & Files\\
@@ -323,6 +320,7 @@ and therefore supporting the validity of the electrometer concept~\cite{akutsu81
     Figure discussed in https://github.com/NMRLipids/lipid\_ionINTERACTION/issues/4.}
     % are you sure you want to keep this comment (last line) in the submitted paper? 
     % I would prefer to leave it out, as the paper should be self-contained as much as possible.
+    % THAT LINE WILL BE REMOVED BEFORE SUBMISSION BUT KEPT AS LONG AS THE DISCUSSION IS GOING ON.
 \end{figure}
 
 
@@ -334,17 +332,36 @@ CHARMM36 and Lipid14 models (see Figs.~\ref{ordPions}).
 These also predict the lowest Na$^+$ densities in the proximity of the membrane (see Fig.~\ref{NAdensities}). 
 While the predicted changes in order parameters for these three models are very similar,
 % is this correct? the numbers at low NaCl concentrations are difficult to read.
+% SAMULI: Almost all the points are within the error bars. One could say that CHARMM is maybe 
+% changing more than others, then there is this weird one point in ORANGE, etc. 
+% I think it is beyond the scope to start distinguish these three models since
+% in that case we should run more to get smaller error bars and do many other things
+% more carefully as well
 the ion density profiles show differences in Na$^+$ affinity, Orange having lowest affinity and CHARMM36 the highest. 
 With the achieved accuracy for the order parameters we are not able to conclude which of these three models has the most realistic 
 Na$^+$ binding affinity, especially with physiological NaCl concentrations ($\sim$ 150mM) which is relevant for most applications. 
+\todo{I DID NOT GET THIS: \\
 On one hand, it is clear that models in better agreement with experimental  data on order parameters
 show low Na$^+$ binding affinity, as reported in a number of experiments. 
 On the other hand, differences in ion binding affinities raise questions on the quantitative application 
-of the electrometer concept in molecular simulations. 
+of the electrometer concept in molecular simulations.\\
+IF YOU ARE REFERRING TO THE DIFFERENCES BETWEEN THE BEST THREE MODELS, I THINK THE
+PROBLEM TO DISINGUISH IS TOO LARGE ERROR BARS IN SIMULATIONS, NOT THE ELECTROMETER
+CONCEPT ITSELF (WHICH MAY BE THE SAME WHAT IS MENT HERE). ANYWAY, I THINK THAT THESE 
+SENTENCES ARE NOT NEEDED, UNLESS I HAVE MISSED SOMETHING IMPORTANT?
+Sorry about writing capitals. SAMULI}
 
 We notice that the choline order parameter changes with NaCl are clearly overestimated in all other tested models (see Fig.~\ref{ordPions}), 
 related to unrealistically strong Na$^+$ binding affinity to the bilayer (see Fig.~\ref{NAdensities}). 
+\todo{SUGGESTED ADDITION:\\
 Such observation raises questions on the quality of the predictions reported in a number of simulation papers... [complete with examples] 
+I THINK THE PROBLEM IS THAT THERE ARE DOZENS, IF NOT HUNDREDS, OF THESE PAPERS,
+THUS WE CANNOT LIST THEM ALL. ON THE OTHER HAND, IT WOULD BE VERY DIFFICULT TO CHOOSE
+WHICH ONES TO FAIRLY POINT OUT. FOR THIS REASON MY OPINION IS THAT THE GENERAL STATEMENT
+IN THE LAST PARAGRAPH OF CONCLUSIONS WITH CITATIONS TO RECENT PAPERS IN HIGH IMPACT JOURNALS IS ENOUGH.
+ON THE OTHER HAND, WE SHOULD NOT BE TOO LAME EITHER SO MAYBE SOME MENTION TO HERE COULD BE CONSIDERED. 
+Sorry about writing capitals. SAMULI
+}
 % I know this will piss of a bunch of people, but it seems interesting information to me.
 % Also, we already pissed off a much larger number of people with the previous paper... :-)
 
@@ -698,12 +715,6 @@ where $\theta$ is the angle between a given C--H bond and the bilayer normal and
 over all lipids and time frames. For united atom models, the positions of hydrogen atoms
 were calculated for each molecule in each frame \textit{a posteriori} by using the {\it protonate} tool in 
 Gromacs 4.0.2 \cite{gromacsMANUAL402}. 
-%%%%%%%%%%%%%%%%%%
-For statistical error estimate order parameter
-for each lipid molecule was separately calculated and the error of the mean over these 
-values was used as done also in the previous work \cite{botan15}.
-%%%%%%%%%%%%%%%%%%
-% I don't understand the sentence. Can you check if it has the same meaning as the sentence below?
 The statistical error in the order parameter was estimated by calculating the average value separately for each lipid molecule,
 and then the average and standard error of the mean over the ensemble of lipids (as done also in previous work \cite{botan15}).
 All the scripts used in analysis and the resulting data are available in the GitHub repository \cite{githubIONpaper}
@@ -781,8 +792,9 @@ extensively hydrated bilayer by replacing water molecules with ions using the Gr
 considered salt concentration, the amount of water molecules per lipid after this replacement process was still greater than 50.
 
 \subsubsection{Orange}
-\todo{Jukka Maatta and Luca Monticelli, please deliver as much details as you can.}
-I think these simulations were actually carried out by Samuli, no?
+\todo{Jukka Maatta and Luca Monticelli, please deliver as much details as you can.
+MONTICELLI:I think these simulations were actually carried out by Samuli, no?
+OLLILA: Yes, but this is unpublished model so I do not know how much I can tell about this.}
 
 \subsubsection{Slipids}
 {\it DPPC} The simulation without ions from~\cite{botan15}, available at \cite{slipidsFILES} was used. 
