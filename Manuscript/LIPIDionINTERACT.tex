@@ -104,7 +104,8 @@ suggesting stronger binding especially for Na$^{+}$ ions.
 More specifically, millimolar concentrations of NaCl have a negligible effect on the
 choline head group order parameters~\cite{akutsu81}, area per molecule~\cite{pabst07}, dipole potential~\cite{clarke99},
 and lipid lateral diffusion~\cite{filippov09}; in contrast, these properties are significantly affected by the presence
-of CaCl$_2$ or other multivalent ions. [reference to be added?]
+of CaCl$_2$ or other multivalent ions. 
+% [reference to be added?]
 In addition, water sorption isotherms are very similar for POPC/NaCl system and NaCl in pure water
 ---indicating only weak interaction between ion and lipids~\cite{binder02}.
 Further, only minor changes in POPC infrared spectra are observed in the presence of NaCl,
@@ -207,7 +208,7 @@ studies~\cite{cevc90,tocanne90,binder02,pabst07,filippov09}.
     experiments without ions~\cite{hong95a,hong95b,gross97}, can be assumed to be unchanged 
     with concentrations represented here~\cite{altenbach84,ollila15}. 
     It should be noted that none of the models used here reproduces the order parameters
-within experimental error for pure PC bilayer wihtout ions, indicating structural inaccuracies with varying severity for all
+within experimental error for pure PC bilayer without ions, indicating structural inaccuracies with varying severity in all
 models \cite{botan15} %this is important to say, otherwise someone might get wrong impression from this fig.
    }
 \end{figure*}
@@ -379,14 +380,6 @@ Altogether, these results indicate that at least lipid models need improvement t
 correctly predict the Na$^+$ binding affinity.
 
 
-%
-%		I got to this point, 29/1/16, LM
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 %The failure of Gromos ions to properly account ion--ion and ion--water binding propensities of Na$^+$ and Cl$^-$ ions has been
 % reported previously~\cite{Reif13}. The \r{A}qvist ions have been parameterized in aqueous solutions with good agreement
 % to experimental energies~\cite{Aaqvist90}. Yet, the binding affinity of ions to lipid bilayers has not been
@@ -519,31 +512,34 @@ and concomitant structural changes can be interpreted.
 
 \section{Conclusions}
 As suggested by the electrometer concept~\cite{akutsu81,altenbach84,seelig87,scherer89},
-the headgroup $\alpha$ and $\beta$ segment order parameter decrease in phosphatidylcholine lipid bilayers 
-is related to the cation binding affinity in all tested simulation models, despite of inaccuracies 
+the decrease in order parameters of $\alpha$ and $\beta$ carbons in the PC head group of lipids bilayers
+is related to cation binding  in all tested simulation models, despite of inaccuracies 
 in actual atomistic resolution structures~\cite{botan15}. The concept allows direct comparison
-of Na$^+$ binding affinity between simulations and NMR experiments by using the headgroup order parameter changes.
-The comparison reveals that most models overestimate the Na$^+$ binding, only Orange, Lipid14 and CHARMM36 
+of Na$^+$ binding affinity between simulations and NMR experiments by using changes in the head group order parameter.
+The comparison reveals that most models overestimate the Na$^+$ binding; only Orange, Lipid14, and CHARMM36 
 predict realistic binding affinity. None of the tested models has the required accuracy to interpret
-the Ca$^{2+}$/lipid stoichiometry or induced atomistic resolution structural changes.
+the Ca$^{2+}$/lipid stoichiometry or induced structural changes with atomistic resolution.
 
-In general the results support the traditional view that Na$^+$ and other monovalent ions (except Li$^+$)
-do not specifically bind to the phospholipid bilayer with mM concetrations, in contrast to Ca$^{2+}$ and other multivalent 
+In general, our results support the traditional view that Na$^+$ and other monovalent ions (except Li$^+$)
+do not specifically bind to the phospholipid bilayer at mM concentrations, in contrast to Ca$^{2+}$ and other multivalent 
 ions~\cite{eisenberg79,akutsu81,altenbach84,tatulian87,clarke99,binder02,pabst07,filippov09}.
-The contradicting results from molecular dynamics simulations~\cite{bockmann03,bockmann04}, fluorescent probe dynamics~\cite{bockmann03,vacha09a,harb13}, 
-calorimetry~\cite{bockmann03,klasczyk10} and AFM~\cite{manyes05,manyes06,fukuma07,ferber11,morata12} suggesting stronger Na$^+$ binding can be explained by simulation artefacts, 
-direct interactions between Na$^+$ and fluorescent probes~\cite{filippov09}, alternative intepretation of significance
-of small phase transition temperature shift~\cite{cevc90} and insufficient resolution of AFM for atomistic resolution interpretation.
+The contradicting results from previous molecular dynamics simulations~\cite{bockmann03,bockmann04}, 
+fluorescent probe dynamics~\cite{bockmann03,vacha09a,harb13}, 
+calorimetry~\cite{bockmann03,klasczyk10} and AFM~\cite{manyes05,manyes06,fukuma07,ferber11,morata12}, 
+suggesting stronger Na$^+$ binding, can be explained by simulation artefacts, 
+direct interactions between Na$^+$ and fluorescent probes~\cite{filippov09}, 
+alternative interpretations of the significance of small phase transition temperature shifts~\cite{cevc90}, 
+and insufficient resolution of AFM.
 
-The artificial specific Na$^+$ binding in simulations may lead to duobtful results since it leads effectively 
-positively charged phoshatidylcholine lipid bilayer even in physiological NaCl concetration.
-Such a bilayer has distinctly different interactions with charged objects compared to the more realistic
+The artificial specific Na$^+$ binding in simulations may lead to doubtful results, since it effectively leads  to
+positively charged phoshatidylcholine (PC) lipid bilayers even at physiological NaCl concentration.
+Such PC bilayer has distinctly different interactions with charged objects compared to the more realistic
 model without specific Na$^+$ binding. Furthermore, the overestimation of Na$^+$ binding affinity may
 extend also to other positively charged objects, e.g. membrane protein segments. This would affect
 lipid protein interactions and could explain contradicting results on electrostatic interactions 
 between charged protein segments and lipid bilayer \cite{arkhipov13,kaszuba15}. In conclusion, 
 more careful studies and model development on lipid bilayer--charged object interactions are
-needed to make molecular dynamics simulations straighforwardly usable in physiologically relevant
+needed to make molecular dynamics simulations directly usable in physiologically relevant
 electrostatic environment. 
 
 
@@ -723,7 +719,7 @@ All the scripts used in analysis and the resulting data are available in the Git
 
 \subsubsection{Berger}
 {\it POPC} The simulation without ions is the same as in~\cite{ferreira13} and the files are available at~\cite{bergerFILESpopc}. 
-The starting structures for simulations with ions is made by replacing water molecules with appropriate amount of ions.
+The starting structures for simulations with ions is made by replacing water molecules with appropriate amount of ions (see Table~\ref{IONsystems}).
 The Berger force field was used for the POPC~\cite{berger97}, with the dihedral potential next to the double bond 
 taken from~\cite{bachar04}. The ion parameters from ffmgx~\cite{straatsma88} were used.
 Timestep of 2~fs was used with leap-frog integrator. Covalent bond lengths were constrained with LINCS algorithm~\cite{hess97,hess07}. 
@@ -734,7 +730,7 @@ for lipids, water and ions to 298~K with the velocity-rescale method~\cite{bussi
 Pressure was semi-isotropically coupled to the athmospheric pressure with the Parrinello-Rahman barostat~\cite{parrinello81}.
 
 {\it DPPC} The simulation without ions is the same as in~\cite{botan15} and the files are available at~\cite{bergerDPPCfiles}.
-The initial configuration contains 72 DPPC lipids and 2880 SPC water molecules.
+The initial configuration contained 72 DPPC lipids and 2880 SPC water molecules.
 The standard Berger DPPC force field was used ~\cite{berger97} (simulations indicated as Berger-DPPC-97 in Table~\ref{IONsystems}). 
 The electrostatics were handled with PME~\cite{darden93,essman95}, with real-space Coulomb cut-off set at 1.0 nm. Lennard-Jones potentials were cut off 1.0 nm. The neighborlist for all non-bonded interactions was updated every 10 steps. 
 Temperature was set to 323K with the velocity-rescale method~\cite{bussi07} using a coupling constant of 0.1 ps$^{-1}$.  Semi-isotropic pressure coupling at 1 ATM was handled with the Parrinello-Rahman barostat~\cite{parrinello81} with 1 ps coupling constant. The time step was 4 fs, and coordinates were written every 10 ps. The total simulation time was 120 ns (without pre-equilibration) and last 60 ns was used in the order parameter analysis. 
@@ -781,7 +777,7 @@ Standard CHARMM-GUI mdp options were used. Particularly, h-bond lengths were con
 lipids and the solvent were separately coupled to the Nose-Hoover~\cite{nose84,hoover85} thermostat with a target temperature of 303 K and a relaxation time constant of 1.0 ps. Semi-isotropical 
 pressure coupling to 1 bar was obtained with the Parrinello-Rahman barostat~\cite{parrinello81} with a time constant of 5 ps. Equations of motion were integrated with the Verlet algorithm~\cite{pall13} 
 using a timestep of 2 fs. Long-range electrostatic interactions were calculated using the PME~\cite{darden93,essman95} method with a fourth order smoothing spline. A real space cut-off of 1.2 nm 
-was employed with grid spacing of 0.12 nm in the reciprocal space. Lennard-Jones interactions were smoothly swithced to zero between 1.0 nm and 1.2 nm. Verlet cutoff-scheme~\cite{pall13}  
+was employed with grid spacing of 0.12 nm in the reciprocal space. Lennard-Jones interactions were smoothly switched to zero between 1.0 nm and 1.2 nm. Verlet cutoff-scheme~\cite{pall13}  
 were used with the long-range neighbor list updated every 20 steps. Coordinates were written every 10 ps.
 After energy minimization and an equilibration run of 0.5 ns, 200ns simulations were ran and the last 100ns of each simulation was employed for the analysis.
 
@@ -792,9 +788,31 @@ extensively hydrated bilayer by replacing water molecules with ions using the Gr
 considered salt concentration, the amount of water molecules per lipid after this replacement process was still greater than 50.
 
 \subsubsection{Orange}
-\todo{Jukka Maatta and Luca Monticelli, please deliver as much details as you can.
-MONTICELLI:I think these simulations were actually carried out by Samuli, no?
-OLLILA: Yes, but this is unpublished model so I do not know how much I can tell about this.}
+The systems contained 72 POPC lipids and 2880 SPC water molecules, and an appropriate amount of ions as indicated in 
+Table~\ref{IONsystems}.  
+
+For the lipids, we used an unpublished force field coined Orange force field. 
+Briefly, this includes most bonded interactions from Berger lipids~\cite{berger97}, 
+except for dihedrals which were derived via \textit{ab initio} calculations on small model compounds. 
+As in Berger lipids, Lennard-Jones parameters are from OPLS.
+;;    (A) Jorgensen et al, JACS (1984), 106, 6638-6646;
+;;    (B) Jorgensen, JPC (1986), 90, 1276-1284;
+;;    (C) Jorgensen et al, JPC (1986), 90, 2174-2182;
+;;    (D) Jorgensen et al, JACS (1988), 110, 1657-1666;
+;;    (E) Briggs et al, JPC (1991), 95, 3315-3322. 
+% please insert citations in the proper format
+Partial charges were derived on the basis of \textit{ab initio} calculations. 
+In simulations with ions, the Åqvist parameters were used~\cite{aqvist90}. 
+The electrostatics were handled with PME~\cite{darden93,essman95}, with real-space Coulomb cut-off set at 1.8 nm. 
+Lennard-Jones potentials were cut off at 1.8 nm. 
+The neighborlists for the calculation of non-bonded forces were updated every 5 steps.
+
+Temperature was set to 298K with the velocity-rescale thermostat~\cite{bussi07} using a coupling constant of 0.1 ps$^{-1}$, and the pressure was set to 1 bar using the Berendsen weak coupling algorithm~\cite{berendsen84} (compressibility of 4.5*10$^-5$ bar$^-1$, time constant of 1 ps), coupling separately the x-y dimension and the z dimension to obtain a tensionless system. 
+A time step of 2 fs was used for the integration (with the leap-frog algorithm), coordinates were written every 100 ps, 
+and the total simulation time was 60 ns. 
+
+All the simulation files for pure lipid simulations are found at ~\cite{zenodo links} and for the simulations with ions at ~\cite{zenodo links}.
+
 
 \subsubsection{Slipids}
 {\it DPPC} The simulation without ions from~\cite{botan15}, available at \cite{slipidsFILES} was used. 
