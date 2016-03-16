@@ -1,16 +1,28 @@
-# Script to calculate the surface density profiles (ions/nm2) for each leaflet and to output their values at given points.
+# Script to calculate the surface charge density profiles (q/nm2) for each leaflet and to output their values at given points.
 #
-# Note, expects FOUR inputs!
+# Usage: ./calculateSurfaceDensity.sh -1.77 1.75 densityDistribution.xvg 2
 #
-# Usage: ./calculateSurfaceDensity.sh -1.77 1.75 densityDistribution.xvg surfaceDensityProfile.dat
-#
-# Markus Miettinen 17Feb2016
+# Markus Miettinen 11march2016
 
-negZ=`echo ${1} | awk '{print sqrt($1**2)}'` # (Absolute) distances from bilayer center
-posZ=`echo ${2} | awk '{print sqrt($1**2)}'` # at which the surface density will be output.
 
-densityDistributionFile=$3                   # Number density distribution (centered around bilayer center) [input]
-outFileForSDP=$4                             # Surface density profile for both leaflets [output]
+echo
+# Check the inputs:
+if [ $4 ]
+then
+    negZ=`echo ${1} | awk '{print sqrt($1**2)}'` # (Absolute) distances from bilayer center
+    posZ=`echo ${2} | awk '{print sqrt($1**2)}'` # at which the surface density will be output.
+    densityDistributionFile=$3                   # Number density distribution (centered around bilayer center) [input]
+    ionCharge=$4                                 # Charge of the ion under study.
+    echo "Output position (lower leaflet):   ${negZ}"
+    echo "Output position (upper leaflet):   ${posZ}"
+    echo "Density distribution file (input): ${densityDistributionFile}"
+    echo "Charge of the ion under study:     ${ionCharge}"
+else
+  echo "Too few inputs, exiting."
+  exit
+fi
+echo
+
 
 # Calculate bin width (as the average witdth of the 10 first bins):
 binWidth=`grep -v ^[\#,@] ${densityDistributionFile} \
@@ -26,8 +38,8 @@ grep -v ^[\#,@] $densityDistributionFile \
 #
 # Find the value at the wished point (interpolate from the neighboring points):
 negSD=`cat bar.foo \
-    | awk -v theZ=${negZ} \
-	  '{if ($1>theZ) {print oldC+(theZ-oldZ)/($1-oldZ)*($2-oldC);exit}; oldZ=$1;oldC=$2}'`
+    | awk -v theZ=${negZ} -v charge=${ionCharge} \
+	  '{if ($1>theZ) {print charge*(oldC+(theZ-oldZ)/($1-oldZ)*($2-oldC));exit}; oldZ=$1;oldC=$2}'`
 
 echo "Surface densities (per nm2) for each leaflet:"
 echo "Lower: ${negSD}"
@@ -38,25 +50,25 @@ grep -v ^[\#,@] $densityDistributionFile \
 #
 # Find the value at the wished point (interpolate from neighboring points):
 posSD=`cat foo.bar \
-    | awk -v theZ=${posZ} \
-	  '{if ($1>theZ) {print oldC+(theZ-oldZ)/($1-oldZ)*($2-oldC);exit}; oldZ=$1;oldC=$2}'`
+    | awk -v theZ=${posZ} -v charge=${ionCharge} \
+	  '{if ($1>theZ) {print charge*(oldC+(theZ-oldZ)/($1-oldZ)*($2-oldC));exit}; oldZ=$1;oldC=$2}'`
 
 echo "Upper: ${posSD}"
 echo "Mean:  `echo ${negSD} ${posSD} | awk '{print 0.5*($1+$2)}'`"
 
 ######
 # Save the surface density profiles to a file:
-echo "# Surface density profile from density distribution file ${densityDistributionFile}" \
-     > $outFileForSDP
-echo -e "# Bin width ${binWidth} nm.\n" \
-     >> $outFileForSDP
-echo "# LOWER LEAFLET -- UPPER LEAFLET --" \
-     >> $outFileForSDP
-echo "# z(nm) SD(1/nm2)  z(nm) SD(1/nm2)" \
-     >> $outFileForSDP
-
-paste bar.foo foo.bar \
-     >> $outFileForSDP
+#echo "# Surface density profile from density distribution file ${densityDistributionFile}" \
+#     > $outFileForSDP
+#echo -e "# Bin width ${binWidth} nm.\n" \
+#     >> $outFileForSDP
+#echo "# LOWER LEAFLET -- UPPER LEAFLET --" \
+#     >> $outFileForSDP
+#echo "# z(nm) SD(1/nm2)  z(nm) SD(1/nm2)" \
+#     >> $outFileForSDP
+#
+#paste bar.foo foo.bar \
+#     >> $outFileForSDP
 
 rm foo.bar bar.foo
 

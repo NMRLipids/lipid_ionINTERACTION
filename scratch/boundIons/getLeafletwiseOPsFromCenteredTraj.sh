@@ -1,15 +1,37 @@
-# Script to calculate choline order parameters for each leaflet separately
-# NOTE. Expects the trajectory to have bilayer center at box center.
+# Script to calculate C_alpha and C_beta order parameters for each leaflet separately
 #
-# Expects THREE inputs.
+# Output Files: CB-HB1.dat, CB-HB2.dat, CA-HA1.dat, and CA-HA2.dat have a column for each lipid. Each
+# row is a single time frame. "U" stands for upper and "L" for lower leaflet.
 #
-# Usage example: 
+# NOTE-1: Expects the trajectory to have bilayer center at box CENTER.
+# NOTE-2: Expects the trajectory to have explicit HYDROGENS.
+# NOTE-3: Expects the SCRIPT 'getOPsOfThisFrame.sh' to be in the same folder.
 #
-# Markus Miettinen 19Feb2016.
+# Usage example: ./getLeafletwiseOPsFromCenteredTraj.sh mappingPOPCmacrog.txt centered_macrog.xtc macrog.tpr
+#
+# Markus Miettinen 8march2016.
 
-mappingFile=$1
-centeredXTCfile=$2
-tprFile=$3
+echo
+# Check the inputs:
+if [ $3 ]
+then
+    if [ $4 ]
+    then
+	echo "Too many inputs, exiting."
+	exit
+    else
+	mappingFile=$1      # File containing the names of atoms in this FF.
+	centeredXTCfile=$2  # The input xtc-file. NOTE: Assume to be CENTERED!
+	tprFile=$3          # The input tpr-file.
+	echo "Mapping:            ${mappingFile}"
+	echo "(Centered) XTC in:  ${centeredXTCfile}"
+	echo "TPR in:             ${tprFile}"
+    fi
+else
+  echo "Too few inputs, exiting."
+  exit
+fi
+echo
 
 # Find the names of the atoms in this force field:
 betaC=`grep M_G3C5_M $mappingFile | awk '{printf("%*s",5,$2)}'`
@@ -33,8 +55,10 @@ chmod u+x getOPsOfThisFrame_TEMP.sh
 
 rm CB-HB1.dat CB-HB2.dat CA-HA1.dat CA-HA2.dat
 # Use trjconv to write each frame to a file "fileN.gro", and run "getOPsOfThisFrame_TEMP.sh" on it
+# (Note that trjconv will expect for input, advisable is to write out just the lipids.)
 gmx trjconv -sep -exec ./getOPsOfThisFrame_TEMP.sh -o file.gro \
     -f $centeredXTCfile \
     -s $tprFile
 
 rm getOPsOfThisFrame_TEMP.sh
+

@@ -1,4 +1,4 @@
-# Script to calculate total charge distribution across bilayer
+# Script to calculate cation DENSITY distribution across bilayer
 #
 # Note, expects SIX inputs!
 #
