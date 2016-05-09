@@ -183,16 +183,29 @@ PC bilayer interface induce systematic changes in choline $\beta$ and $\alpha$
 segment order parameters. Thus, the changes of these order parameters can be used
 to determine binding affinities of the charged objects. The concept is originally
 based on experimentally observed changes in choline order parameters with bound 
-cations~\cite{akutsu81,altenbach84}. Further quantification was made with 
-various positively and negatively charged objects \cite{seelig87,scherer89}.
+cations~\cite{akutsu81,altenbach84}. Further quantification with various positively 
+and negatively charged molecules showed that choline order parameters vary linearly 
+with small amount of bound charge per lipid~\cite{altenbach84,altenbach85,seelig87,macdonald87,scherer89,roux90,beschiasvili91,marassi92,rydall92}.
+Since the quadrupolar splitting is $\Delta\nu_i^{\rm{Q}}=-\frac{3}{4} \chi S_{\rm{CD}}$
+and $S_{\rm{CD}} \approx S_{\rm{CH}}$~\cite{ollila16} the relation between 
+bound charge per lipid $X^\pm$ and choline order parameters can be written as~\cite{ferreira16}
+\begin{equation}\label{electrometer_eq}
+S_{\rm{CH}}^{(i)}(X^\pm)=S_{\rm{CH}}^{(i)}(0) + \frac{4}{3}\chi^{-1}m_i X^\pm,
+\end{equation}
+where the quadrupole coupling constant $\chi$ approximately equal to 167 kHz,
+$S_{\rm{CH}}^{(i)}(0)$ is order parameter without bound charges, $m_i$
+is constant depending on valency and position of bound charge, and $i$
+refers to either $\alpha$ or $\beta$.
 In original experiments absolute values for order parameters 
 increased for $\beta$ and decreased for $\alpha$ segment with bound positive charge
-and {\it vice versa} for negative charge. However, more recent experiments showed that 
+and {\it vice versa} for negative charge~\cite{akutsu81,altenbach84,altenbach85,seelig87,scherer89,rydall92}. 
+However, more recent experiments showed that 
 $\beta$ carbon order parameter is negative while $\alpha$ carbon order parameter is 
 positive~\cite{hong95a,hong95b,gross97}. Thus, we can conclude 
 that $\beta$ and $\alpha$ segment order parameters decrease with bound positive charges 
-and increase with bound negative charge. This can be rationalized by electrostatically 
-induced changes in choline P-N dipole tilt \cite{seelig87,scherer89}. 
+and increase with bound negative charge. Consequently, values of $m_i$ are negative for
+bound positive charges and {\it vice versa}. This can be rationalized by electrostatically 
+induced changes in choline P-N dipole tilt \cite{seelig87,scherer89,seelig90}. 
 This is in line with order parameter decrease related to the P-N vector tilting more parallel to membrane plane 
 seen with decreased hydration levels~\cite{botan15}. 
 
@@ -205,11 +218,27 @@ seen with decreased hydration levels~\cite{botan15}.
 %were measured \cite{akutsu81,altenbach84,seelig87,scherer89}
 %order current knowledge on order parameter signs~\cite{hong95a,hong95b,gross97}, 
 
+Combination of atomic absorption spectra and $^2$H NMR experiments gave $m_\alpha=-20.5$ 
+and $m_\beta=-10.0$ for Ca$^{2+}$ binding in POPC bilayer~\cite{altenbach84}.
+With these values the Eq.~\ref{electrometer_eq} gives
+\begin{equation}
+\Delta S_{\rm CH}^\alpha=-0.16 X^{Ca^{2+}}
+\end{equation}
+and
+\begin{equation}
+\Delta S_{\rm CH}^\beta=-0.08 X^{Ca^{2+}},
+\end{equation}
+where $X^{Ca^{2+}}$ is the amount of bound $Ca^{2+}$ per lipid.
+The lines are drawn in Fig.~\ref{electrometer}
+\begin{figure}[]
+  \centering
+  \includegraphics[width=8.6cm]{../scratch/boundIons/dOP_vs_boundCationCharge_P.pdf}
+  \caption{\label{electrometer}
+    Changes of order parameters.
+   }
+\end{figure}
 
-The electrometer concept is best quantifie
-order parameter decrease
-has been later on quantified by measuring order parameter responses
-to 
+
 Figure~\ref{ordPions} shows the head group order parameter values from H$^2$ NMR measurement
 for DPPC and POPC bilayers~\cite{akutsu81,altenbach84},
 with correct signs~\cite{hong95a,hong95b,gross97}, as a function NaCl and CaCl$_2$ concentration. 
