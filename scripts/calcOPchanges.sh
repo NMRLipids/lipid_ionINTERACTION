@@ -1,4 +1,5 @@
 awk -f calcOPchanges.awk ../Data/POPC/NaCl/CHARMM36/OPvsNACLcons.dat  > ../Data/POPC/NaCl/CHARMM36/CHARMMnaclCONSchange.dat
+awk -f calcOPchanges.awk ../Data/POPC/NaCl/CHARMM36_no-NBFIX/OPvsNACLcons.dat  > ../Data/POPC/NaCl/CHARMM36_no-NBFIX/CHARMMnaclCONSchange.dat
 awk -f calcOPchanges.awk ../Data/POPC/CaCl/CHARMM36/OPvsCACLcons.dat  > ../Data/POPC/CaCl/CHARMM36/CHARMMcaclCONSchange.dat
 awk -f calcOPchanges.awk ../Data/POPC/CaCl/CHARMM36/OPvsCACLconsSCALED.dat  > ../Data/POPC/CaCl/CHARMM36/CHARMMcaclCONSchangeSCALED.dat
 
