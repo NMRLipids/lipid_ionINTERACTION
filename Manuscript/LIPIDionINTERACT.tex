@@ -275,7 +275,7 @@ of DPPC and POPC lipid bilayers as a function of NaCl or CaCl$_2$ concentrations
 Details of the simulated systems are reported in Table~\ref{IONsystems} and in Supplementary Information. 
 It should be noted that none of the models used here 
 reproduced the order parameters within experimental uncertainty
-for pure PC bilayer without ions on our previous study (Figure 2 in Ref. \cite{botan15}), 
+for pure PC bilayer without ions in our previous study (Figure 2 in Ref. \cite{botan15}), 
 indicating structural inaccuracies with varying severity for all models \cite{botan15}.
 %\todo{MONTICELLI: hmm, I see a little problem here: the absolute values for the order parameters are not reported here,
 % so how can we notice that they don't match the experiment? 
@@ -284,8 +284,8 @@ indicating structural inaccuracies with varying severity for all models \cite{bo
 %in the GitHub issue if we should have figure showing the order parameter without ions or not.\\
 %https://github.com/NMRLipids/lipid\_ionINTERACTION/issues/3 }
 On the other hand, the experimentally observed headgroup order parameter increase with dehydration
-was qualitatively reproduced by the models \cite{botan15}. 
-Accordingly, the presence of cations in simulations leads to the decrease 
+was qualitatively reproduced by all the tested models \cite{botan15}. 
+Accordingly, the presense of cations in simulations leads to the decrease 
 of choline order parameters in Fig. \ref{ordPions}, which is in qualitative
 agreement with experiments. However, the changes are overestimated in most
 simulation results in Fig \ref{ordPions}. 
@@ -301,8 +301,8 @@ models; especially MacRog and Orange models give relatively steep slopes and CHA
 gives gentle slope for $\alpha$ carbon. The quantitative comparison to experimental
 slopes ( $m_\alpha=-20.5$ and $m_\beta=-10.0$ for Ca$^{2+}$ binding in POPC bilayer in 
 Eq. \ref{electrometer_eq}~\cite{altenbach84}) is not straightforward since the results
-from simulations depends on the definition of bound ions, thus this is left for further
-studies.
+from simulations depends on the definition of bound ions. Thus the more detailed analysis 
+is left for further studies.
 \begin{figure}[]
   \centering
   \includegraphics[width=8.6cm]{../scratch/boundIons/dOP_vs_boundCationCharge_P.pdf}
@@ -311,20 +311,19 @@ studies.
    }
 \end{figure}
 
-
-hence the structural response of the lipid head groups to the presence of Na$^+$ is qualitatively correct in all simulation models.
-Third, the order parameters in Fig.~\ref{ordPions} with added NaCl show 
-significantly different behavior for different simulation models, 
-and such different behavior is related to differences in ion binding affinities. 
-We can clarify the relationship between order parameters and Na$^+$ binding affinities 
-by calculating Na$^+$ density profiles from the different simulation models (see Fig.~\ref{NAdensities}). 
+Figure \ref{electrometer} shows that order parameter decrease clearly correlates with
+amount of bound cations also in simulations. This is also evident from Fig.~\ref{NAdensities}
+showing Na$^+$ density profiles from the different simulation models. 
 In the figure, simulation models are ordered according to the order parameter changes 
 (reported Fig.~\ref{ordPions}), from the smallest to the largest.
 The Na$^+$ density peaks are larger for models with larger changes in order parameters,
-indicating a strong correlation between Na$^+$ binding affinities and choline order parameters
-and therefore supporting the validity of the molecular electrometer in simulations~\cite{akutsu81,altenbach84,seelig87,scherer89}. 
-% In experiments the concept is well validified already by Seelig et al.
+in line with observed correlation between cation binding and order parameter decrease in
+Fig. \ref{electrometer}.
 
+In conclusion, the observed clear correlation between bound cations and order parameter
+decrease support the validity of the molecular electrometer in simulations. Thus, the 
+choline order parameter changes can be used to directly compare the cation binding affinity
+between simulations and experiments.
 
 
 \begin{table*}[htb]
@@ -413,8 +412,9 @@ and therefore supporting the validity of the molecular electrometer in simulatio
 
 
 
-\subsection{Comparison between different simulation parameters}
-Let us now examine more in detail the response to the presence of NaCl predicted by the different simulation models tested here.
+\subsection{Cation binding in different simulation models}
+The order parameter changes and density distributions in Figs.~\ref{ordPions} and \ref{NAdensities} 
+with added NaCl show significantly different $Na^+$ binding affinities for different simulation models.
 The best agreement with experiments (i.e., lowest order parameter changes) is observed for the Orange,
 CHARMM36 and Lipid14 models (see Figs.~\ref{ordPions}).
 These also predict the lowest Na$^+$ densities in the proximity of the membrane (see Fig.~\ref{NAdensities}). 
