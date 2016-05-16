@@ -55,8 +55,8 @@ plot "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-CaClchange-T332.dat"  using 1:($2
      "../../Data/POPC/CaCl/CHARMM36/CHARMMcaclCONSchange.dat" using 1:4:5 with yerrorbars notitle  pt 5 lt 1 lc rgb 'green', "" using 1:4 with lines notitle linetype 1 lc rgb 'green',\
      "../../Data/POPC/CaCl/LIPID14/LIPID14caclCONSchange.dat" using 1:2:3 with yerrorbars notitle pt 5 lt 1 lc rgb 'yellow', "" using 1:2 with linespoint title 'POPC+CaCl_2, LIPID14, T=298K' pt 5 linetype 1 lc rgb 'yellow', \
      "../../Data/POPC/CaCl/LIPID14/LIPID14caclCONSchange.dat" using 1:4:5 with yerrorbars notitle  pt 5 lt 1 lc rgb 'yellow', "" using 1:4 with lines notitle linetype 1 lc rgb 'yellow', \
-     "../../Data/POPC/CaCl/SLIPID/SLIPIDcaclCONSchangeSCALED.dat" using 1:2:3 with yerrorbars notitle pt 5 lt 1 lc rgb 'violet', "" using 1:2 with linespoint title 'POPC+CaCl_2, SLIPID, T=310K' pt 5 linetype 1 lc rgb 'violet', \
-     "../../Data/POPC/CaCl/SLIPID/SLIPIDcaclCONSchangeSCALED.dat" using 1:4:5 with yerrorbars notitle  pt 5 lt 1 lc rgb 'violet', "" using 1:4 with lines notitle linetype 1 lc rgb 'violet'
+     "../../Data/POPC/CaCl/SLIPID/SLIPIDcaclCONSchange.dat" using 1:2:3 with yerrorbars notitle pt 5 lt 1 lc rgb 'violet', "" using 1:2 with linespoint title 'POPC+CaCl_2, SLIPID, T=310K' pt 5 linetype 1 lc rgb 'violet', \
+     "../../Data/POPC/CaCl/SLIPID/SLIPIDcaclCONSchange.dat" using 1:4:5 with yerrorbars notitle  pt 5 lt 1 lc rgb 'violet', "" using 1:4 with lines notitle linetype 1 lc rgb 'violet'
 
 #set yrange [-0.015:0.11]
 set ylabel "{/Symbol a}  {/Symbol D}S_{CH}"
@@ -107,8 +107,8 @@ plot "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-CaClchange-T332.dat"  using 1:($3
      "../../Data/POPC/CaCl/CHARMM36/CHARMMcaclCONSchange.dat" using 1:8:9  with yerrorbars notitle pt 5 lt 1 lc rgb 'green', "" using 1:8 with lines notitle linetype 1 lc rgb 'green',\
      "../../Data/POPC/CaCl/LIPID14/LIPID14caclCONSchange.dat"  using 1:6:7  with yerrorbars notitle pt 5 lt 1 lc rgb 'yellow', "" using 1:6 with lines notitle linetype 1 lc rgb 'yellow', \
      "../../Data/POPC/CaCl/LIPID14/LIPID14caclCONSchange.dat" using 1:8:9  with yerrorbars notitle pt 5 lt 1 lc rgb 'yellow', "" using 1:8 with lines notitle linetype 1 lc rgb 'yellow',\
-     "../../Data/POPC/CaCl/SLIPID/SLIPIDcaclCONSchangeSCALED.dat"  using 1:6:7  with yerrorbars notitle pt 5 lt 1 lc rgb 'violet', "" using 1:6 with lines notitle linetype 1 lc rgb 'violet', \
-     "../../Data/POPC/CaCl/SLIPID/SLIPIDcaclCONSchangeSCALED.dat" using 1:8:9  with yerrorbars notitle pt 5 lt 1 lc rgb 'violet', "" using 1:8 with lines notitle linetype 1 lc rgb 'violet'
+     "../../Data/POPC/CaCl/SLIPID/SLIPIDcaclCONSchange.dat"  using 1:6:7  with yerrorbars notitle pt 5 lt 1 lc rgb 'violet', "" using 1:6 with lines notitle linetype 1 lc rgb 'violet', \
+     "../../Data/POPC/CaCl/SLIPID/SLIPIDcaclCONSchange.dat" using 1:8:9  with yerrorbars notitle pt 5 lt 1 lc rgb 'violet', "" using 1:8 with lines notitle linetype 1 lc rgb 'violet'
 
 
 unset multiplot

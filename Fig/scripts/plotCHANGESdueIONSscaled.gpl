@@ -6,7 +6,7 @@ set multiplot  layout 2,2
 set xrange [-1:1050] 
 set ytic 0.01
 #set key above
-set key at screen 0.6,screen 0.8 maxcols 2 maxrows 6
+set key at screen 0.6,screen 0.81 maxcols 2 maxrows 8
 set key font ",13"
 
 
@@ -15,22 +15,34 @@ set ylabel "{/Symbol b}   {/Symbol D}S_{CH}"
 set origin 0,0.35
 set size 0.65, 0.35
 plot "../../scratch/EXP-Akutsu1981-DPPC-NaClchange.dat"  using 1:($2*-0.00784) title 'DPPC+NaCl, ^2H NMR, T=323K' with linespoints  linetype 1 pt 9 lc rgb 'black', \
-     "../../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchangeSCALED.dat" using 1:2:3 with yerrorbars notitle pt 7 lt 1 lc rgb 'red', "" using 1:2 with linespoint title 'DPPC+NaCl, Berger, T=323K' pt 7 linetype 1 lc rgb 'red', \
-     "../../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchangeSCALED.dat" using 1:4:5 with yerrorbars notitle  pt 7 lt 1 lc rgb 'red', "" using 1:4 with lines notitle linetype 1 lc rgb 'red',\
-     "../../Data/DPPC/NaCl/BERGERopls/BERGERoplsnaclCONSchangeSCALED.dat" using 1:2:3 with yerrorbars notitle pt 7 lt 1 lc rgb 'brown', "" using 1:2 with linespoint title 'DPPC+NaCl, Berger-OPLS, T=323K' pt 7 linetype 1 lc rgb 'brown', \
-     "../../Data/DPPC/NaCl/BERGERopls/BERGERoplsnaclCONSchangeSCALED.dat" using 1:4:5 with yerrorbars notitle  pt 7 lt 1 lc rgb 'brown', "" using 1:4 with lines notitle linetype 1 lc rgb 'brown', \
-     "../../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSCALED.dat" using 1:2:3 with yerrorbars notitle pt 7 lt 1 lc rgb 'violet', "" using 1:2 with linespoint title 'POPC+NaCl, SLIPID, T=310K' pt 7 linetype 1 lc rgb 'violet', \
-     "../../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSCALED.dat" using 1:4:5 with yerrorbars notitle  pt 7 lt 1 lc rgb 'violet', "" using 1:4 with lines notitle linetype 1 lc rgb 'violet'
+     "../../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchange.dat" using 1:2:3 with yerrorbars notitle pt 7 lt 1 lc rgb 'red', "" using 1:2 with linespoint title 'DPPC+NaCl, Berger, T=323K' pt 7 linetype 1 lc rgb 'red', \
+     "../../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchange.dat" using 1:4:5 with yerrorbars notitle  pt 7 lt 1 lc rgb 'red', "" using 1:4 with lines notitle linetype 1 lc rgb 'red',\
+     "../../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchangeSCALED.dat" using 1:2:3 with yerrorbars notitle pt 6 lt 1 lc rgb 'red', "" using 1:2 with linespoint title 'scaled ions' pt 6 linetype 1 dt 2 lc rgb 'red', \
+     "../../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchangeSCALED.dat" using 1:4:5 with yerrorbars notitle  pt 6 lt 1 lc rgb 'red', "" using 1:4 with lines notitle linetype 1 dt 2 lc rgb 'red',\
+     "../../Data/DPPC/NaCl/BERGERopls/BERGERoplsnaclCONSchange.dat" using 1:2:3 with yerrorbars notitle pt 7 lt 1 lc rgb 'brown', "" using 1:2 with linespoint title 'DPPC+NaCl, Berger-OPLS, T=323K' pt 7 linetype 1 lc rgb 'brown', \
+     "../../Data/DPPC/NaCl/BERGERopls/BERGERoplsnaclCONSchange.dat" using 1:4:5 with yerrorbars notitle  pt 7 lt 1 lc rgb 'brown', "" using 1:4 with lines notitle linetype 1 lc rgb 'brown', \
+     "../../Data/DPPC/NaCl/BERGERopls/BERGERoplsnaclCONSchangeSCALED.dat" using 1:2:3 with yerrorbars notitle pt 6 lt 1 lc rgb 'brown', "" using 1:2 with linespoint title 'scaled ions' pt 6 linetype 1 dt 2 lc rgb 'brown', \
+     "../../Data/DPPC/NaCl/BERGERopls/BERGERoplsnaclCONSchangeSCALED.dat" using 1:4:5 with yerrorbars notitle  pt 6 lt 1 lc rgb 'brown', "" using 1:4 with lines notitle linetype 1 dt 2 lc rgb 'brown', \
+     "../../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSD.dat" using 1:2:3 with yerrorbars notitle pt 7 lt 1 lc rgb 'violet', "" using 1:2 with linespoint title 'POPC+NaCl, SLIPID, T=310K' pt 7 linetype 1 lc rgb 'violet', \
+     "../../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSD.dat" using 1:4:5 with yerrorbars notitle  pt 7 lt 1 lc rgb 'violet', "" using 1:4 with lines notitle linetype 1 lc rgb 'violet',\
+     "../../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSCALED.dat" using 1:2:3 with yerrorbars notitle pt 6 lt 1 lc rgb 'violet', "" using 1:2 with linespoint title 'scaled ions' pt 6 linetype 1 dt 2 lc rgb 'violet', \
+     "../../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSCALED.dat" using 1:4:5 with yerrorbars notitle  pt 6 lt 1 lc rgb 'violet', "" using 1:4 with lines notitle linetype 1 dt 2 lc rgb 'violet'
 
-set key at screen 1.3,screen 0.78 maxcols 2 maxrows 7
+set key at screen 1.3,screen 0.83 maxcols 2 maxrows 7
 #set yrange [-0.11:0.05]
 #set ylabel "{/Symbol b}  {/Symbol D}S_{CH}"
 set origin 0.7,0.35
 set size 0.65, 0.35
 plot "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-CaClchange-T332.dat"  using 1:($2*-0.00784) title 'DPPC+CaCl_2, ^2H NMR, T=332K' with linespoints  linetype 1 pt 6 lc rgb 'black', \
      "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-CaClchange-T323.dat"  using 1:($2*-0.00784) title 'DPPC+CaCl_2, ^2H NMR, T=323K' with linespoints  linetype 1 pt 7 lc rgb 'black', \
-     "../../Data/POPC/CaCl/CHARMM36/CHARMMcaclCONSchangeSCALED.dat" using 1:2:3 with yerrorbars notitle pt 5 lt 1 lc rgb 'green', "" using 1:2 with linespoint title 'POPC+CaCl_2, CHARMM, T=310K' pt 5 linetype 1 lc rgb 'green', \
-     "../../Data/POPC/CaCl/CHARMM36/CHARMMcaclCONSchangeSCALED.dat" using 1:4:5 with yerrorbars notitle  pt 5 lt 1 lc rgb 'green', "" using 1:4 with lines notitle linetype 1 lc rgb 'green'
+     "../../Data/POPC/CaCl/CHARMM36/CHARMMcaclCONSchange.dat" using 1:2:3 with yerrorbars notitle pt 5 lt 1 lc rgb 'green', "" using 1:2 with linespoint title 'POPC+CaCl_2, CHARMM, T=310K' pt 5 linetype 1 lc rgb 'green', \
+     "../../Data/POPC/CaCl/CHARMM36/CHARMMcaclCONSchange.dat" using 1:4:5 with yerrorbars notitle  pt 5 lt 1 lc rgb 'green', "" using 1:4 with lines notitle linetype 1 lc rgb 'green', \
+     "../../Data/POPC/CaCl/CHARMM36/CHARMMcaclCONSchangeSCALED.dat" using 1:2:3 with yerrorbars notitle pt 4 lt 1 lc rgb 'green', "" using 1:2 with linespoint title "scaled ions, T=310K" pt 4 linetype 1 dt 2 lc rgb 'green', \
+     "../../Data/POPC/CaCl/CHARMM36/CHARMMcaclCONSchangeSCALED.dat" using 1:4:5 with yerrorbars notitle  pt 4 lt 1 lc rgb 'green', "" using 1:4 with lines notitle linetype 1 dt 2 lc rgb 'green', \
+     "../../Data/POPC/CaCl/SLIPID/SLIPIDcaclCONSchange.dat" using 1:2:3 with yerrorbars notitle pt 5 lt 1 lc rgb 'violet', "" using 1:2 with linespoint title "POPC+CaCl_2, SLIPID, T=310K" pt 5 linetype 1 lc rgb 'violet', \
+     "../../Data/POPC/CaCl/SLIPID/SLIPIDcaclCONSchange.dat" using 1:4:5 with yerrorbars notitle  pt 5 lt 1 lc rgb 'violet', "" using 1:4 with lines notitle linetype 1 lc rgb 'violet' ,\
+     "../../Data/POPC/CaCl/SLIPID/SLIPIDcaclCONSchangeSCALED.dat" using 1:2:3 with yerrorbars notitle pt 4 lt 1 lc rgb 'violet', "" using 1:2 with linespoint title 'scaled ions' pt 4 linetype 1 dt 2 lc rgb 'violet', \
+     "../../Data/POPC/CaCl/SLIPID/SLIPIDcaclCONSchangeSCALED.dat" using 1:4:5 with yerrorbars notitle  pt 4 lt 1 lc rgb 'violet', "" using 1:4 with lines notitle linetype 1 dt 2 lc rgb 'violet'
 
 
 
@@ -40,12 +52,18 @@ set xlabel "[NaCl] (mM)"
 set origin 0,0
 set size 0.65, 0.35
 plot "../../scratch/EXP-Akutsu1981-DPPC-NaClchange.dat"  using 1:($3*0.00784) notitle with linespoints  linetype 1 pt 9 lc rgb 'black', \
-     "../../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchangeSCALED.dat" using 1:6:7  with yerrorbars notitle pt 7 lt 1 lc rgb 'red', "" using 1:6 with lines notitle linetype 1 lc rgb 'red', \
-     "../../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchangeSCALED.dat" using 1:8:9  with yerrorbars notitle pt 7 lt 1 lc rgb 'red', "" using 1:8 with lines notitle linetype 1 lc rgb 'red',\
-     "../../Data/DPPC/NaCl/BERGERopls/BERGERoplsnaclCONSchangeSCALED.dat" using 1:6:7  with yerrorbars notitle pt 7 lt 1 lc rgb 'brown', "" using 1:6 with lines notitle linetype 1 lc rgb 'brown', \
-     "../../Data/DPPC/NaCl/BERGERopls/BERGERoplsnaclCONSchangeSCALED.dat" using 1:8:9  with yerrorbars notitle pt 7 lt 1 lc rgb 'brown', "" using 1:8 with lines notitle linetype 1 lc rgb 'brown', \
-     "../../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSCALED.dat" using 1:6:7  with yerrorbars notitle pt 7 lt 1 lc rgb 'violet', "" using 1:6 with lines notitle linetype 1 lc rgb 'violet', \
-     "../../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSCALED.dat" using 1:8:9  with yerrorbars notitle pt 7 lt 1 lc rgb 'violet', "" using 1:8 with lines notitle linetype 1 lc rgb 'violet'
+     "../../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchangeSCALED.dat" using 1:6:7  with yerrorbars notitle pt 6 lt 1 lc rgb 'red', "" using 1:6 with lines notitle linetype 1 dt 2 lc rgb 'red', \
+     "../../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchangeSCALED.dat" using 1:8:9  with yerrorbars notitle pt 6 lt 1 lc rgb 'red', "" using 1:8 with lines notitle linetype 1 dt 2 lc rgb 'red',\
+     "../../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchange.dat" using 1:6:7  with yerrorbars notitle pt 7 lt 1 lc rgb 'red', "" using 1:6 with lines notitle linetype 1 lc rgb 'red', \
+     "../../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchange.dat" using 1:8:9  with yerrorbars notitle pt 7 lt 1 lc rgb 'red', "" using 1:8 with lines notitle linetype 1 lc rgb 'red',\
+     "../../Data/DPPC/NaCl/BERGERopls/BERGERoplsnaclCONSchangeSCALED.dat" using 1:6:7  with yerrorbars notitle pt 6 lt 1 lc rgb 'brown', "" using 1:6 with lines notitle linetype 1 dt 2 lc rgb 'brown', \
+     "../../Data/DPPC/NaCl/BERGERopls/BERGERoplsnaclCONSchangeSCALED.dat" using 1:8:9  with yerrorbars notitle pt 6 lt 1 lc rgb 'brown', "" using 1:8 with lines notitle linetype 1 dt 2 lc rgb 'brown', \
+     "../../Data/DPPC/NaCl/BERGERopls/BERGERoplsnaclCONSchange.dat" using 1:6:7  with yerrorbars notitle pt 7 lt 1 lc rgb 'brown', "" using 1:6 with lines notitle linetype 1 lc rgb 'brown', \
+     "../../Data/DPPC/NaCl/BERGERopls/BERGERoplsnaclCONSchange.dat" using 1:8:9  with yerrorbars notitle pt 7 lt 1 lc rgb 'brown', "" using 1:8 with lines notitle linetype 1 lc rgb 'brown', \
+     "../../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSCALED.dat" using 1:6:7  with yerrorbars notitle pt 6 lt 1 lc rgb 'violet', "" using 1:6 with lines notitle linetype 1 dt 2 lc rgb 'violet', \
+     "../../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSCALED.dat" using 1:8:9  with yerrorbars notitle pt 6 lt 1 lc rgb 'violet', "" using 1:8 with lines notitle linetype 1  dt 2 lc rgb 'violet',\
+     "../../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSD.dat" using 1:6:7  with yerrorbars notitle pt 7 lt 1 lc rgb 'violet', "" using 1:6 with lines notitle linetype 1 lc rgb 'violet', \
+     "../../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSD.dat" using 1:8:9  with yerrorbars notitle pt 7 lt 1 lc rgb 'violet', "" using 1:8 with lines notitle linetype 1 lc rgb 'violet'
 
 
 #     "../../scratch/DPPCbergerOPLS/DPPCnacl/NACLconsOPLSscaledchange.dat" using 1:4 notitle with linespoint linetype 1 pt 9 lc rgb 'brown', \
@@ -58,8 +76,15 @@ set size 0.65, 0.35
 plot "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-CaClchange-T332.dat"  using 1:($3*0.00784) notitle with linespoints  linetype 1 pt 6 lc rgb 'black', \
      "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-CaClchange-T323.dat"  using 1:($3*0.00784) notitle with linespoints  linetype 1 pt 7 lc rgb 'black', \
      "../../Data/POPC/NaCl/EXP-Altenbach1984-POPC-CaClchange-T313.dat"  using ($1*1000):($2*0.00784) title 'POPC+CaCl_2, ^2H NMR, T=313K' with linespoints  linetype 1 pt 5 lc rgb 'black', \
-     "../../Data/POPC/CaCl/CHARMM36/CHARMMcaclCONSchangeSCALED.dat"  using 1:6:7  with yerrorbars notitle pt 5 lt 1 lc rgb 'green', "" using 1:6 with lines notitle linetype 1 lc rgb 'green', \
-     "../../Data/POPC/CaCl/CHARMM36/CHARMMcaclCONSchangeSCALED.dat" using 1:8:9  with yerrorbars notitle pt 5 lt 1 lc rgb 'green', "" using 1:8 with lines notitle linetype 1 lc rgb 'green'
+     "../../Data/POPC/CaCl/SLIPID/SLIPIDcaclCONSchange.dat"  using 1:6:7  with yerrorbars notitle pt 5 lt 1 lc rgb 'violet', "" using 1:6 with lines notitle linetype 1 lc rgb 'violet', \
+     "../../Data/POPC/CaCl/SLIPID/SLIPIDcaclCONSchange.dat" using 1:8:9  with yerrorbars notitle pt 5 lt 1 lc rgb 'violet', "" using 1:8 with lines notitle linetype 1 lc rgb 'violet',\
+     "../../Data/POPC/CaCl/SLIPID/SLIPIDcaclCONSchangeSCALED.dat"  using 1:6:7  with yerrorbars notitle pt 4 lt 1 lc rgb 'violet', "" using 1:6 with lines notitle linetype 1 dt 2 lc rgb 'violet', \
+     "../../Data/POPC/CaCl/SLIPID/SLIPIDcaclCONSchangeSCALED.dat" using 1:8:9  with yerrorbars notitle pt 4 lt 1 lc rgb 'violet', "" using 1:8 with lines notitle linetype 1 dt 2 lc rgb 'violet', \
+     "../../Data/POPC/CaCl/CHARMM36/CHARMMcaclCONSchangeSCALED.dat"  using 1:6:7  with yerrorbars notitle pt 4 lt 1 lc rgb 'green', "" using 1:6 with lines notitle linetype 1 dt 2 lc rgb 'green', \
+     "../../Data/POPC/CaCl/CHARMM36/CHARMMcaclCONSchangeSCALED.dat" using 1:8:9  with yerrorbars notitle pt 4 lt 1 lc rgb 'green', "" using 1:8 with lines notitle linetype 1 dt 2 lc rgb 'green', \
+     "../../Data/POPC/CaCl/CHARMM36/CHARMMcaclCONSchange.dat"  using 1:6:7  with yerrorbars notitle pt 5 lt 1 lc rgb 'green', "" using 1:6 with lines notitle linetype 1 lc rgb 'green', \
+     "../../Data/POPC/CaCl/CHARMM36/CHARMMcaclCONSchange.dat" using 1:8:9  with yerrorbars notitle pt 5 lt 1 lc rgb 'green', "" using 1:8 with lines notitle linetype 1 lc rgb 'green'
+
 
 
 
