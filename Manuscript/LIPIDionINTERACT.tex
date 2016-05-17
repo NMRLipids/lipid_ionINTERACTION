@@ -40,6 +40,8 @@
 \thanks{Helsinki Biophysics and Biomembrane Group, Department of Biomedical Engineering and Computational Science, Aalto University, Espoo, Finland}
 \author{Matti Javanainen}
 \thanks{Tampere University of Technology, Tampere, Finland}
+\author{Josef Melcr}
+\thanks{Prague}
 \author{Markus S. Miettinen}
 \thanks{Fachbereich Physik, Freie Universit\"at Berlin, Berlin, Germany}
 \author{Luca Monticelli}
@@ -448,16 +450,16 @@ which is relevant for most applications.
 %SENTENCES ARE NOT NEEDED, UNLESS I HAVE MISSED SOMETHING IMPORTANT?
 %Sorry about writing capitals. SAMULI}
 
-On the other hand, the choline order parameter changes with NaCl are clearly overestimated in all other tested models (see Fig.~\ref{ordPions}).
+On the other hand, the choline order parameter changes with NaCl are clearly overestimated in all the other tested models (see Fig.~\ref{ordPions}).
 This can be explained by unrealistically strong Na$^+$ binding affinity to the bilayer in these models (see Fig.~\ref{NAdensities}). 
 Such observation raises questions on the quality of the predictions from these models when NaCl is present.
 %reported in a number of simulation papers... [complete with examples] 
 \todo{It has been suggested that we should add references here. The problem is that there are a lot of them and
 it is difficult to choose which ones to pick. Any opinions?}
-Especially interactions between charged molecules and lipid bilayer are significantly
+Especially interactions between charged molecules and lipid bilayer might be significantly
 affected since strong Na$^+$ binding makes bilayer effectively positively charged.
 
-All the tested models overestimate the order parameter decrease as a function of CaCl$_2$ concentration
+As a function of CaCl$_2$ concentration all the tested models overestimate the order parameter decrease, 
 as seen in Fig.~\ref{ordPions}. According to the electrometer concept this indicates overestimated
 Ca$^{2+}$ binding. On the other hand, the result could be also explained by the oversensitivity of the
 choline structure on bound Ca$^{2+}$, i.e. too strong slopes in Fig.~\ref{electrometer}. 
@@ -490,22 +492,24 @@ charge (Fig.~\ref{electrometer}), thus the difference is not as clear in Fig.~\r
 %might not be reasonable with this model. I think we need more simulations with CHARMM36 to see how good the order parameter response
 %to the CaCl$_2$ actually is. Then we can discuss more about its structural response.} \\
 
+Significant Ca$^{2+}$ binding affinity to a phosphatidylcholine bilayer at mM concentrations  
+is agreed in the literature~\cite{akutsu81,altenbach84,cevc90,tocanne90}, however, several
+details are yet under discussion. Simulations suggest that Ca$^{2+}$ bind to lipid carbonyl
+oxygens with coordination number of 4.2~\cite{bockmann04}, while interpretation of NMR and 
+scattering experiments suggest that one Ca$^{2+}$ interacts mainly with choline 
+groups~\cite{hauser76,hauser78,herbette84} of two phospholipid molecules~\cite{altenbach84}. 
+Simulation model correctly reproducing the order parameter changes would resolve the discussion
+by giving atomistic resolution interpretation for the experiments.
 
-
-In contrast to Na$^+$, Ca$^{2+}$ binding and related order parameter decrease is seen in experiments~\cite{akutsu81,altenbach84,cevc90,tocanne90} 
-and in all tested simulation models, see Figs. \ref{ordPions} and \ref{CAdensitiesCLEAR}.
-While the significant Ca$^{2+}$ binding affinity to a phosphatidylcholine bilayer at mM concentrations  
-is agreed in the literature, the estimations for lipid/Ca$^{2+}$ stoichiometry vary between 17 
-and 0.24~\cite{tatulian87,altenbach84,bockmann04}. The smallest number (0.24) indicating that one 
-Ca$^{2+}$ ion binds roughly four lipid molecules originates from simulation with Berger model~\cite{bockmann04}.
-\todo{There is something wrong in these stoichiometry numbers.}
-The direct comparison of order parameters between different simulation models and experiments in Fig.~\ref{ordPions}
-shows that Ca$^{2+}$ binding induced changes are overestimated in all tested models.
-In contrast to Na$^+$, clear correlation between Ca$^{2+}$ binding affinity and order parameter changes is not found, 
-thus the overestimation of order parameter change may arise, e.g. from overestimated binding, 
-incorrect headgroup response to penetrating divalent cation or penetration depth. 
-The ion model having scaled charges~\cite{kohagen14} used with CHARMM36 did not improve the results, see Supplementary Information.
-
+%, the estimations for lipid/Ca$^{2+}$ stoichiometry vary between 17 
+%and 0.24~\cite{tatulian87,altenbach84,bockmann04}. The smallest number (0.24) indicating that one 
+%Ca$^{2+}$ ion binds roughly four lipid molecules originates from simulation with Berger model~\cite{bockmann04}.
+\todo{Stoichiometry discussion updated.}
+%The direct comparison of order parameters between different simulation models and experiments in Fig.~\ref{ordPions}
+%shows that Ca$^{2+}$ binding induced changes are overestimated in all tested models.
+%In contrast to Na$^+$, clear correlation between Ca$^{2+}$ binding affinity and order parameter changes is not found, 
+%thus the overestimation of order parameter change may arise, e.g. from overestimated binding, 
+%incorrect headgroup response to penetrating divalent cation or penetration depth. 
 
 
 
@@ -521,7 +525,7 @@ see Supplementary Information).
 Further, the Slipid model gives similar binding affinity with two different ion parameters. 
 Altogether, these results indicate that at least lipid models need improvement to 
 correctly predict the Na$^+$ binding affinity.
-
+The ion model having scaled charges~\cite{kohagen14} used with CHARMM36 did not improve the results, see Supplementary Information.
 
 %The failure of Gromos ions to properly account ion--ion and ion--water binding propensities of Na$^+$ and Cl$^-$ ions has been
 % reported previously~\cite{Reif13}. The \r{A}qvist ions have been parameterized in aqueous solutions with good agreement
@@ -939,6 +943,7 @@ the last 100ns of each simulation was employed for the analysis.
 {\it Andrea Catte} \\
 {\it Mykhailo Girych} ran and analyzed several simulations. Discussed the project actively with OHSO. \\
 {\it Matti Javanainen} provided data with several lipid and ion models. Discussed the project actively with OHSO. Supervised the work of JT.\\
+{\it Josef Melcr} \\
 {\it Markus S. Miettinen} \\
 {\it Luca Monticelli}  \\
 {\it Jukka M{\"a}{\"a}tt{\"a}}  \\
