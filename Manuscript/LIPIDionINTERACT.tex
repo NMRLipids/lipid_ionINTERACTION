@@ -377,6 +377,9 @@ between simulations and experiments.
   \hline
   Slipid\cite{jambeck12}   &   DPPC & 0 & 128 &3840 & 0 & 0  & 0 & 323 & 150 & 100 &~\cite{slipidsFILES}  \\
   Slipid\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   DPPC & 150 (NaCl) & 600 & 18000 & 49 & 0  & 49 & 323 & 100 & 40 &-  \\
+  Slipid\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   DPPC & 350 (NaCl) & \todo{JM, please fill these}? & ? & ? & 0  & ? & ? & ? & ? & ?  \\
+  Slipid\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   DPPC & 700 (NaCl) & ? & ? & ? & 0  & ? & ? & ? & ? & ?  \\
+  Slipid\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   DPPC & 1000 (NaCl) & ? & ? & ? & 0  & ? & ? & ? & ? & ?  \\
   \hline
   Slipid\cite{jambeck12b}   &   POPC & 0 & 128 & 5120 & 0 & 0  & 0 & 303 & 200 & 150 &~\cite{slipidsFILESpopc}  \\
   Slipid\cite{jambeck12b}, AMBER\cite{smith94}  &  POPC & 130 (NaCl) & 200 & 9000 & 21 & 0  & 21 & 310 & 105 & 100 &~\cite{slipidsFILESpopc130mMnaclSD}  \\
@@ -704,7 +707,7 @@ Slipid simulation was no ran with non-scaled CaCl$_2$ model.
   \centering
   \includegraphics[width=16cm]{../Fig/OrderParameterIONSchangesSCALED.eps} 
   \caption{\label{OPchangesSCALED}
-    Order parameter changes in simulations using ion models with scaled charge. 
+    The effect of charge scaling~\cite{leontyev11,kohagen14} and NBFIX~\cite{venable13} on order parameter changes in simulations. 
     }
 \end{figure*}
 
@@ -804,6 +807,9 @@ The neighbour list was updated every 5th step with cut-off 1.4~nm. Temperature w
 for lipids and solution to 303~K with the velocity-rescale method~\cite{bussi07} with coupling constant 0.2~ps.
 Pressure was semi-isotropically coupled to the athmospheric pressure with the Berendsen method~\cite{berendsen84}.
 
+Also simulation without NBFIX~\cite{venable13} was run to check its effect on Na$^+$ binding.
+\todo{JM, please add the details here}
+
 %CaCl_2 simulations by MYKHAILO:
 {\it POPC with CaCl$_2$}
 The starting structures with varying amounts of CaCl$_2$ ions were constructed using the CHARMM-GUI Membrane Builder (http://www.charmm-gui.org/) online tool~\cite{lee15}. 
@@ -867,6 +873,7 @@ bottom leaflets of the lipid bilayer, and for water to one of the temperatures r
 thermostat~\cite{nose84,hoover85} using a time constant of 0.5 ps. Pressure was semi-isotropically coupled to the atmospheric pressure 
 with the Parrinello-Rahman~\cite{parrinello81} barostat using a time constant of 10 ps.
 %The last 40 ns of each simulation was employed for the analysis of DPPC choline and glycerol backbone order parameters.
+\todo{JM, please add description of the new data}
 
 {\it POPC} The simulation without ions from~\cite{botan15}, available at \cite{slipidsFILESpopc} was used. 
 Additionally, a POPC bilayer consisting of 200 lipids, hydrated with 45 water molecules per lipid, 

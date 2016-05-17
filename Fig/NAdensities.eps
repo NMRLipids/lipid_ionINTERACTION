@@ -1,7 +1,7 @@
 %!PS-Adobe-2.0
 %%Title: ../NAdensities.eps
-%%Creator: gnuplot 4.4 patchlevel 3
-%%CreationDate: Thu Dec 17 10:44:55 2015
+%%Creator: gnuplot 5.0 patchlevel 3
+%%CreationDate: Tue May 17 10:24:29 2016
 %%DocumentFonts: (atend)
 %%BoundingBox: 50 50 554 842
 %%Orientation: Portrait
@@ -20,42 +20,29 @@ gnudict begin
 /Dashlength 1 def
 /Landscape false def
 /Level1 false def
+/Level3 false def
 /Rounded false def
 /ClipToBoundingBox false def
+/SuppressPDFMark false def
 /TransparentPatterns false def
 /gnulinewidth 5.000 def
 /userlinewidth gnulinewidth def
 /Gamma 1.0 def
+/BackgroundColor {-1.000 -1.000 -1.000} def
 %
 /vshift -46 def
 /dl1 {
-  10.0 Dashlength mul mul
+  10.0 Dashlength userlinewidth gnulinewidth div mul mul mul
   Rounded { currentlinewidth 0.75 mul sub dup 0 le { pop 0.01 } if } if
 } def
 /dl2 {
-  10.0 Dashlength mul mul
+  10.0 Dashlength userlinewidth gnulinewidth div mul mul mul
   Rounded { currentlinewidth 0.75 mul add } if
 } def
 /hpt_ 31.5 def
 /vpt_ 31.5 def
 /hpt hpt_ def
 /vpt vpt_ def
-Level1 {} {
-/SDict 10 dict def
-systemdict /pdfmark known not {
-  userdict /pdfmark systemdict /cleartomark get put
-} if
-SDict begin [
-  /Title (../NAdensities.eps)
-  /Subject (gnuplot plot)
-  /Creator (gnuplot 4.4 patchlevel 3)
-  /Author (samuli)
-%  /Producer (gnuplot)
-%  /Keywords ()
-  /CreationDate (Thu Dec 17 10:44:55 2015)
-  /DOCINFO pdfmark
-end
-} ifelse
 /doclip {
   ClipToBoundingBox {
     newpath 50 50 moveto 554 50 lineto 554 842 lineto 50 842 lineto closepath
@@ -63,7 +50,7 @@ end
   } if
 } def
 %
-% Gnuplot Prolog Version 4.4 (August 2010)
+% Gnuplot Prolog Version 5.1 (Oct 2015)
 %
 %/SuppressPDFMark true def
 %
@@ -80,11 +67,11 @@ end
 /vpt2 vpt 2 mul def
 /hpt2 hpt 2 mul def
 /Lshow {currentpoint stroke M 0 vshift R 
-	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
 /Rshow {currentpoint stroke M dup stringwidth pop neg vshift R
-	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
 /Cshow {currentpoint stroke M dup stringwidth pop -2 div vshift R 
-	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
 /UP {dup vpt_ mul /vpt exch def hpt_ mul /hpt exch def
   /hpt2 hpt 2 mul def /vpt2 vpt 2 mul def} def
 /DL {Color {setrgbcolor Solid {pop []} if 0 setdash}
@@ -98,7 +85,7 @@ end
 /PL {stroke userlinewidth setlinewidth
 	Rounded {1 setlinejoin 1 setlinecap} if} def
 3.8 setmiterlimit
-% Default Line colors
+% Classic Line colors (version 5.0)
 /LCw {1 1 1} def
 /LCb {0 0 0} def
 /LCa {0 0 0} def
@@ -111,19 +98,21 @@ end
 /LC6 {0 0 0} def
 /LC7 {1 0.3 0} def
 /LC8 {0.5 0.5 0.5} def
-% Default Line Types
+% Default dash patterns (version 5.0)
+/LTB {BL [] LCb DL} def
 /LTw {PL [] 1 setgray} def
-/LTb {BL [] LCb DL} def
+/LTb {PL [] LCb DL} def
 /LTa {AL [1 udl mul 2 udl mul] 0 setdash LCa setrgbcolor} def
 /LT0 {PL [] LC0 DL} def
-/LT1 {PL [4 dl1 2 dl2] LC1 DL} def
-/LT2 {PL [2 dl1 3 dl2] LC2 DL} def
-/LT3 {PL [1 dl1 1.5 dl2] LC3 DL} def
-/LT4 {PL [6 dl1 2 dl2 1 dl1 2 dl2] LC4 DL} def
-/LT5 {PL [3 dl1 3 dl2 1 dl1 3 dl2] LC5 DL} def
-/LT6 {PL [2 dl1 2 dl2 2 dl1 6 dl2] LC6 DL} def
-/LT7 {PL [1 dl1 2 dl2 6 dl1 2 dl2 1 dl1 2 dl2] LC7 DL} def
-/LT8 {PL [2 dl1 2 dl2 2 dl1 2 dl2 2 dl1 2 dl2 2 dl1 4 dl2] LC8 DL} def
+/LT1 {PL [2 dl1 3 dl2] LC1 DL} def
+/LT2 {PL [1 dl1 1.5 dl2] LC2 DL} def
+/LT3 {PL [6 dl1 2 dl2 1 dl1 2 dl2] LC3 DL} def
+/LT4 {PL [1 dl1 2 dl2 6 dl1 2 dl2 1 dl1 2 dl2] LC4 DL} def
+/LT5 {PL [4 dl1 2 dl2] LC5 DL} def
+/LT6 {PL [1.5 dl1 1.5 dl2 1.5 dl1 1.5 dl2 1.5 dl1 6 dl2] LC6 DL} def
+/LT7 {PL [3 dl1 3 dl2 1 dl1 3 dl2] LC7 DL} def
+/LT8 {PL [2 dl1 2 dl2 2 dl1 6 dl2] LC8 DL} def
+/SL {[] 0 setdash} def
 /Pnt {stroke [] 0 setdash gsave 1 setlinecap M 0 0 V stroke grestore} def
 /Dia {stroke [] 0 setdash 2 copy vpt add M
   hpt neg vpt neg V hpt vpt neg V
@@ -330,7 +319,8 @@ end
 /PatternFill {gsave /PFa [ 9 2 roll ] def
   PFa 0 get PFa 2 get 2 div add PFa 1 get PFa 3 get 2 div add translate
   PFa 2 get -2 div PFa 3 get -2 div PFa 2 get PFa 3 get Rec
-  gsave 1 setgray fill grestore clip
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+  clip
   currentlinewidth 0.5 mul setlinewidth
   /PFs PFa 2 get dup mul PFa 3 get dup mul add sqrt def
   0 0 M PFa 5 get rotate PFs -2 div dup translate
@@ -344,9 +334,14 @@ end
 %
 /languagelevel where
  {pop languagelevel} {1} ifelse
- 2 lt
-	{/InterpretLevel1 true def}
-	{/InterpretLevel1 Level1 def}
+dup 2 lt
+	{/InterpretLevel1 true def
+	 /InterpretLevel3 false def}
+	{/InterpretLevel1 Level1 def
+	 2 gt
+	    {/InterpretLevel3 Level3 def}
+	    {/InterpretLevel3 false def}
+	 ifelse }
  ifelse
 %
 % PostScript level 2 pattern fill definitions
@@ -435,16 +430,17 @@ Level1 {Level1PatternFill} {Level2PatternFill} ifelse
 /Symbol-Oblique /Symbol findfont [1 0 .167 1 0 0] makefont
 dup length dict begin {1 index /FID eq {pop pop} {def} ifelse} forall
 currentdict end definefont pop
+%
 /MFshow {
    { dup 5 get 3 ge
      { 5 get 3 eq {gsave} {grestore} ifelse }
      {dup dup 0 get findfont exch 1 get scalefont setfont
      [ currentpoint ] exch dup 2 get 0 exch R dup 5 get 2 ne {dup dup 6
-     get exch 4 get {Gshow} {stringwidth pop 0 R} ifelse }if dup 5 get 0 eq
+     get exch 4 get {textshow} {stringwidth pop 0 R} ifelse }if dup 5 get 0 eq
      {dup 3 get {2 get neg 0 exch R pop} {pop aload pop M} ifelse} {dup 5
      get 1 eq {dup 2 get exch dup 3 get exch 6 get stringwidth pop -2 div
      dup 0 R} {dup 6 get stringwidth pop -2 div 0 R 6 get
-     show 2 index {aload pop M neg 3 -1 roll neg R pop pop} {pop pop pop
+     textshow 2 index {aload pop M neg 3 -1 roll neg R pop pop} {pop pop pop
      pop aload pop M} ifelse }ifelse }ifelse }
      ifelse }
    forall} def
@@ -463,6 +459,51 @@ currentdict end definefont pop
   Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
 /XYsave    { [( ) 1 2 true false 3 ()] } bind def
 /XYrestore { [( ) 1 2 true false 4 ()] } bind def
+Level1 SuppressPDFMark or 
+{} {
+/SDict 10 dict def
+systemdict /pdfmark known not {
+  userdict /pdfmark systemdict /cleartomark get put
+} if
+SDict begin [
+  /Title (../NAdensities.eps)
+  /Subject (gnuplot plot)
+  /Creator (gnuplot 5.0 patchlevel 3)
+  /Author (ollilas1)
+%  /Producer (gnuplot)
+%  /Keywords ()
+  /CreationDate (Tue May 17 10:24:29 2016)
+  /DOCINFO pdfmark
+end
+} ifelse
+%
+% Support for boxed text - Ethan A Merritt May 2005
+%
+/InitTextBox { userdict /TBy2 3 -1 roll put userdict /TBx2 3 -1 roll put
+           userdict /TBy1 3 -1 roll put userdict /TBx1 3 -1 roll put
+	   /Boxing true def } def
+/ExtendTextBox { Boxing
+    { gsave dup false charpath pathbbox
+      dup TBy2 gt {userdict /TBy2 3 -1 roll put} {pop} ifelse
+      dup TBx2 gt {userdict /TBx2 3 -1 roll put} {pop} ifelse
+      dup TBy1 lt {userdict /TBy1 3 -1 roll put} {pop} ifelse
+      dup TBx1 lt {userdict /TBx1 3 -1 roll put} {pop} ifelse
+      grestore } if } def
+/PopTextBox { newpath TBx1 TBxmargin sub TBy1 TBymargin sub M
+               TBx1 TBxmargin sub TBy2 TBymargin add L
+	       TBx2 TBxmargin add TBy2 TBymargin add L
+	       TBx2 TBxmargin add TBy1 TBymargin sub L closepath } def
+/DrawTextBox { PopTextBox stroke /Boxing false def} def
+/FillTextBox { gsave PopTextBox 1 1 1 setrgbcolor fill grestore /Boxing false def} def
+0 0 0 0 InitTextBox
+/TBxmargin 20 def
+/TBymargin 20 def
+/Boxing false def
+/textshow { ExtendTextBox Gshow } def
+%
+% redundant definitions for compatibility with prologue.ps older than 5.0.2
+/LTB {BL [] LCb DL} def
+/LTb {PL [] LCb DL} def
 end
 %%EndProlog
 %%Page: 1 1
@@ -474,8 +515,10 @@ doclip
 0 setgray
 newpath
 (Helvetica) findfont 140 scalefont setfont
+BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {gsave BackgroundColor C clippath fill grestore} if
 1.000 UL
 LTb
+LCb setrgbcolor
 826 6904 M
 63 0 V
 3898 0 R
@@ -486,6 +529,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 826 7100 M
 63 0 V
 3898 0 R
@@ -496,6 +540,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 826 7296 M
 63 0 V
 3898 0 R
@@ -506,6 +551,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 826 7493 M
 63 0 V
 3898 0 R
@@ -516,6 +562,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1222 6904 M
 0 63 V
 0 712 R
@@ -526,6 +573,7 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 2014 6904 M
 0 63 V
 0 712 R
@@ -536,6 +584,7 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 2807 6904 M
 0 63 V
 0 712 R
@@ -546,6 +595,7 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 3599 6904 M
 0 63 V
 0 712 R
@@ -556,6 +606,7 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 4391 6904 M
 0 63 V
 0 712 R
@@ -566,14 +617,36 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1.000 UL
-LTb
+LTB
+LCb setrgbcolor
 826 7679 N
 0 -775 V
 3961 0 V
 0 775 V
 -3961 0 V
 Z stroke
+1.000 UP
+LCb setrgbcolor
+2410 7447 M
+[ [(Helvetica) 140.0 0.0 true true 0 (Orange \(POPC\))]
+] -46.7 MLshow
+LCb setrgbcolor
+4232 7067 M
+[ [(Helvetica) 140.0 0.0 true true 0 (140 mM)]
+] -46.7 MLshow
+LCb setrgbcolor
+4153 7284 M
+[ [(Helvetica) 140.0 0.0 true true 0 (510 mM)]
+] -46.7 MLshow
+LCb setrgbcolor
+4114 7454 M
+[ [(Helvetica) 140.0 0.0 true true 0 (1000 mM)]
+] -46.7 MLshow
+1.000 UL
+LTb
+LCb setrgbcolor
 LCb setrgbcolor
 112 7291 M
 currentpoint gsave translate -270 rotate 0 0 moveto
@@ -586,25 +659,10 @@ currentpoint gsave translate -270 rotate 0 0 moveto
 ] -46.7 MCshow
 grestore
 LTb
-1.000 UP
-2410 7447 M
-[ [(Helvetica) 140.0 0.0 true true 0 (Orange \(POPC\))]
-] -46.7 MLshow
-4232 7067 M
-[ [(Helvetica) 140.0 0.0 true true 0 (140 mM)]
-] -46.7 MLshow
-4153 7284 M
-[ [(Helvetica) 140.0 0.0 true true 0 (510 mM)]
-] -46.7 MLshow
-4114 7454 M
-[ [(Helvetica) 140.0 0.0 true true 0 (1000 mM)]
-] -46.7 MLshow
-1.000 UL
-LTb
 % Begin plot #1
 1.000 UL
-LT0
-1310 6976 M
+LTb
+1.00 0.00 0.00 C 1310 6976 M
 32 1 V
 32 4 V
 32 -1 V
@@ -707,6 +765,7 @@ LT0
 % End plot #1
 % Begin plot #2
 stroke
+LTb
 0.00 1.00 0.00 C 1310 6998 M
 32 1 V
 32 2 V
@@ -811,7 +870,7 @@ stroke
 % Begin plot #3
 stroke
 3.000 UL
-LT0
+LTb
 0.00 0.00 0.00 C 1310 6904 M
 32 0 V
 32 0 V
@@ -916,8 +975,8 @@ LT0
 % Begin plot #4
 stroke
 2.000 UL
-LT0
-1236 7195 M
+LTb
+1.00 0.00 0.00 C 1236 7195 M
 30 -8 V
 31 2 V
 30 -2 V
@@ -1020,6 +1079,7 @@ LT0
 % End plot #4
 % Begin plot #5
 stroke
+LTb
 0.00 1.00 0.00 C 1236 7211 M
 30 -10 V
 31 0 V
@@ -1124,7 +1184,7 @@ stroke
 % Begin plot #6
 stroke
 3.000 UL
-LT0
+LTb
 0.00 0.00 0.00 C 1236 6904 M
 30 0 V
 31 0 V
@@ -1228,8 +1288,8 @@ LT0
 % End plot #6
 % Begin plot #7
 stroke
-LT0
-1312 7556 M
+LTb
+1.00 0.00 0.00 C 1312 7556 M
 31 4 V
 31 19 V
 31 22 V
@@ -1332,6 +1392,7 @@ LT0
 % End plot #7
 % Begin plot #8
 stroke
+LTb
 0.00 1.00 0.00 C 1312 7576 M
 31 0 V
 31 32 V
@@ -1435,7 +1496,7 @@ stroke
 % End plot #8
 % Begin plot #9
 stroke
-LT0
+LTb
 0.00 0.00 0.00 C 1312 6904 M
 31 0 V
 31 0 V
@@ -1538,8 +1599,12 @@ LT0
 31 0 V
 % End plot #9
 stroke
-1.000 UL
+2.000 UL
 LTb
+LCb setrgbcolor
+1.000 UL
+LTB
+LCb setrgbcolor
 826 7679 N
 0 -775 V
 3961 0 V
@@ -1549,8 +1614,10 @@ Z stroke
 1.000 UP
 1.000 UL
 LTb
+LCb setrgbcolor
 1.000 UL
 LTb
+LCb setrgbcolor
 826 6112 M
 63 0 V
 3898 0 R
@@ -1561,6 +1628,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 826 6308 M
 63 0 V
 3898 0 R
@@ -1571,6 +1639,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 826 6504 M
 63 0 V
 3898 0 R
@@ -1581,6 +1650,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 826 6701 M
 63 0 V
 3898 0 R
@@ -1591,6 +1661,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1222 6112 M
 0 63 V
 0 712 R
@@ -1601,6 +1672,7 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 2014 6112 M
 0 63 V
 0 712 R
@@ -1611,6 +1683,7 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 2807 6112 M
 0 63 V
 0 712 R
@@ -1621,6 +1694,7 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 3599 6112 M
 0 63 V
 0 712 R
@@ -1631,6 +1705,7 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 4391 6112 M
 0 63 V
 0 712 R
@@ -1641,14 +1716,32 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1.000 UL
-LTb
+LTB
+LCb setrgbcolor
 826 6887 N
 0 -775 V
 3961 0 V
 0 775 V
 -3961 0 V
 Z stroke
+1.000 UP
+LCb setrgbcolor
+2410 6732 M
+[ [(Helvetica) 140.0 0.0 true true 0 (LIPID14 \(POPC\))]
+] -46.7 MLshow
+LCb setrgbcolor
+4232 6275 M
+[ [(Helvetica) 140.0 0.0 true true 0 (150 mM)]
+] -46.7 MLshow
+LCb setrgbcolor
+4153 6593 M
+[ [(Helvetica) 140.0 0.0 true true 0 (1000 mM)]
+] -46.7 MLshow
+1.000 UL
+LTb
+LCb setrgbcolor
 LCb setrgbcolor
 112 6499 M
 currentpoint gsave translate -270 rotate 0 0 moveto
@@ -1661,22 +1754,10 @@ currentpoint gsave translate -270 rotate 0 0 moveto
 ] -46.7 MCshow
 grestore
 LTb
-1.000 UP
-2410 6732 M
-[ [(Helvetica) 140.0 0.0 true true 0 (LIPID14 \(POPC\))]
-] -46.7 MLshow
-4232 6275 M
-[ [(Helvetica) 140.0 0.0 true true 0 (150 mM)]
-] -46.7 MLshow
-4153 6593 M
-[ [(Helvetica) 140.0 0.0 true true 0 (1000 mM)]
-] -46.7 MLshow
-1.000 UL
-LTb
 % Begin plot #1
 1.000 UL
-LT0
-1330 6181 M
+LTb
+1.00 0.00 0.00 C 1330 6181 M
 30 0 V
 30 -1 V
 29 3 V
@@ -1779,6 +1860,7 @@ LT0
 % End plot #1
 % Begin plot #2
 stroke
+LTb
 0.00 1.00 0.00 C 1330 6209 M
 30 1 V
 30 1 V
@@ -1883,7 +1965,7 @@ stroke
 % Begin plot #3
 stroke
 3.000 UL
-LT0
+LTb
 0.00 0.00 0.00 C 1330 6112 M
 30 0 V
 30 0 V
@@ -1987,8 +2069,8 @@ LT0
 % End plot #3
 % Begin plot #4
 stroke
-LT0
-1258 6667 M
+LTb
+1.00 0.00 0.00 C 1258 6667 M
 31 -5 V
 31 7 V
 31 1 V
@@ -2091,6 +2173,7 @@ LT0
 % End plot #4
 % Begin plot #5
 stroke
+LTb
 0.00 1.00 0.00 C 1258 6688 M
 31 3 V
 31 6 V
@@ -2194,7 +2277,7 @@ stroke
 % End plot #5
 % Begin plot #6
 stroke
-LT0
+LTb
 0.00 0.00 0.00 C 1258 6112 M
 31 0 V
 31 0 V
@@ -2297,8 +2380,12 @@ LT0
 31 0 V
 % End plot #6
 stroke
-1.000 UL
+2.000 UL
 LTb
+LCb setrgbcolor
+1.000 UL
+LTB
+LCb setrgbcolor
 826 6887 N
 0 -775 V
 3961 0 V
@@ -2308,28 +2395,32 @@ Z stroke
 1.000 UP
 1.000 UL
 LTb
+LCb setrgbcolor
 1.000 UL
 LTb
-826 5319 M
+LCb setrgbcolor
+826 5320 M
 63 0 V
 3898 0 R
 -63 0 V
 stroke
-742 5319 M
+742 5320 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( 0)]
 ] -46.7 MRshow
 1.000 UL
 LTb
-826 5515 M
+LCb setrgbcolor
+826 5516 M
 63 0 V
 3898 0 R
 -63 0 V
 stroke
-742 5515 M
+742 5516 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( 0.2)]
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 826 5712 M
 63 0 V
 3898 0 R
@@ -2340,74 +2431,102 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
-826 5908 M
+LCb setrgbcolor
+826 5909 M
 63 0 V
 3898 0 R
 -63 0 V
 stroke
-742 5908 M
+742 5909 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( 0.6)]
 ] -46.7 MRshow
 1.000 UL
 LTb
-1222 5319 M
+LCb setrgbcolor
+1222 5320 M
 0 63 V
-0 713 R
+0 712 R
 0 -63 V
 stroke
-1222 5179 M
+1222 5180 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( )]
 ] -46.7 MCshow
 1.000 UL
 LTb
-2014 5319 M
+LCb setrgbcolor
+2014 5320 M
 0 63 V
-0 713 R
+0 712 R
 0 -63 V
 stroke
-2014 5179 M
+2014 5180 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( )]
 ] -46.7 MCshow
 1.000 UL
 LTb
-2807 5319 M
+LCb setrgbcolor
+2807 5320 M
 0 63 V
-0 713 R
+0 712 R
 0 -63 V
 stroke
-2807 5179 M
+2807 5180 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( )]
 ] -46.7 MCshow
 1.000 UL
 LTb
-3599 5319 M
+LCb setrgbcolor
+3599 5320 M
 0 63 V
-0 713 R
+0 712 R
 0 -63 V
 stroke
-3599 5179 M
+3599 5180 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( )]
 ] -46.7 MCshow
 1.000 UL
 LTb
-4391 5319 M
+LCb setrgbcolor
+4391 5320 M
 0 63 V
-0 713 R
+0 712 R
 0 -63 V
 stroke
-4391 5179 M
+4391 5180 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( )]
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1.000 UL
-LTb
+LTB
+LCb setrgbcolor
 826 6095 N
-0 -776 V
+0 -775 V
 3961 0 V
-0 776 V
+0 775 V
 -3961 0 V
 Z stroke
+1.000 UP
+LCb setrgbcolor
+2212 5940 M
+[ [(Helvetica) 140.0 0.0 true true 0 (CHARMM36 \(POPC\))]
+] -46.7 MLshow
+LCb setrgbcolor
+4114 5514 M
+[ [(Helvetica) 140.0 0.0 true true 0 (350 mM)]
+] -46.7 MLshow
+LCb setrgbcolor
+4114 5746 M
+[ [(Helvetica) 140.0 0.0 true true 0 (690 mM)]
+] -46.7 MLshow
+LCb setrgbcolor
+4114 5948 M
+[ [(Helvetica) 140.0 0.0 true true 0 (950 mM)]
+] -46.7 MLshow
+1.000 UL
+LTb
+LCb setrgbcolor
 LCb setrgbcolor
 112 5707 M
 currentpoint gsave translate -270 rotate 0 0 moveto
@@ -2420,36 +2539,21 @@ currentpoint gsave translate -270 rotate 0 0 moveto
 ] -46.7 MCshow
 grestore
 LTb
-1.000 UP
-2212 5940 M
-[ [(Helvetica) 140.0 0.0 true true 0 (CHARMM36 \(POPC\))]
-] -46.7 MLshow
-4114 5513 M
-[ [(Helvetica) 140.0 0.0 true true 0 (350 mM)]
-] -46.7 MLshow
-4114 5746 M
-[ [(Helvetica) 140.0 0.0 true true 0 (690 mM)]
-] -46.7 MLshow
-4114 5948 M
-[ [(Helvetica) 140.0 0.0 true true 0 (950 mM)]
-] -46.7 MLshow
-1.000 UL
-LTb
 % Begin plot #1
 1.000 UL
-LT0
-1438 5480 M
-27 4 V
+LTb
+1.00 0.00 0.00 C 1438 5481 M
+27 3 V
 26 -1 V
 27 -6 V
-26 2 V
+26 3 V
 27 -3 V
-27 1 V
-26 -6 V
+27 0 V
+26 -5 V
 27 11 V
 26 -1 V
-27 3 V
-26 -11 V
+27 2 V
+26 -10 V
 27 4 V
 27 -8 V
 26 -10 V
@@ -2457,13 +2561,13 @@ LT0
 26 2 V
 27 -10 V
 26 6 V
-27 2 V
-27 5 V
-26 -1 V
+27 1 V
+27 6 V
+26 -2 V
 27 0 V
 26 -7 V
 27 -8 V
-26 -26 V
+26 -25 V
 27 -17 V
 27 -13 V
 26 -9 V
@@ -2514,25 +2618,25 @@ LT0
 27 14 V
 26 4 V
 27 -2 V
-26 5 V
-27 -4 V
+26 4 V
+27 -3 V
 27 -3 V
 26 8 V
 27 5 V
 26 3 V
 27 3 V
-26 4 V
-27 -1 V
-26 1 V
-27 1 V
+26 3 V
+27 0 V
+26 0 V
+27 2 V
 27 4 V
 26 -2 V
 27 -8 V
-26 12 V
-27 0 V
+26 11 V
+27 1 V
 26 10 V
-27 4 V
-27 5 V
+27 3 V
+27 6 V
 26 -8 V
 27 -5 V
 26 9 V
@@ -2541,21 +2645,22 @@ LT0
 % End plot #1
 % Begin plot #2
 stroke
-0.00 1.00 0.00 C 1438 5616 M
+LTb
+0.00 1.00 0.00 C 1438 5617 M
 27 -1 V
-26 0 V
+26 -1 V
 27 -8 V
-26 8 V
+26 9 V
 27 -1 V
 27 -19 V
-26 -2 V
-27 -3 V
-26 -19 V
-27 -1 V
+26 -3 V
+27 -2 V
+26 -20 V
+27 0 V
 26 -35 V
 27 -17 V
-27 -39 V
-26 -21 V
+27 -40 V
+26 -20 V
 27 -26 V
 26 -26 V
 27 -19 V
@@ -2629,24 +2734,24 @@ stroke
 26 21 V
 27 34 V
 27 26 V
-26 31 V
-27 31 V
+26 30 V
+27 32 V
 26 20 V
-27 10 V
-26 8 V
-27 12 V
-27 7 V
-26 12 V
-27 1 V
-26 -13 V
 27 9 V
-26 -15 V
+26 8 V
+27 13 V
+27 7 V
+26 11 V
+27 2 V
+26 -13 V
+27 8 V
+26 -14 V
 % End plot #2
 % Begin plot #3
 stroke
 3.000 UL
-LT0
-0.00 0.00 0.00 C 1438 5320 M
+LTb
+0.00 0.00 0.00 C 1438 5321 M
 27 0 V
 26 1 V
 27 1 V
@@ -2663,49 +2768,49 @@ LT0
 26 26 V
 27 27 V
 26 28 V
-27 27 V
-26 24 V
+27 26 V
+26 25 V
 27 23 V
 27 21 V
 26 20 V
-27 19 V
-26 19 V
 27 18 V
+26 20 V
+27 17 V
 26 16 V
+27 16 V
 27 15 V
-27 15 V
-26 14 V
+26 13 V
 27 16 V
 26 17 V
 27 12 V
 26 12 V
-27 11 V
+27 12 V
 27 9 V
-26 6 V
+26 5 V
 27 4 V
 26 3 V
 27 1 V
 26 -1 V
-27 -4 V
-26 -6 V
-27 -7 V
-27 -9 V
+27 -3 V
+26 -7 V
+27 -6 V
+27 -10 V
+26 -9 V
+27 -10 V
 26 -10 V
 27 -9 V
-26 -10 V
-27 -9 V
-26 -8 V
+26 -7 V
 27 -4 V
-27 0 V
+27 -1 V
 26 4 V
 27 6 V
 26 8 V
-27 8 V
+27 9 V
 26 9 V
 27 8 V
-27 7 V
-26 6 V
-27 7 V
+27 6 V
+26 7 V
+27 6 V
 26 6 V
 27 4 V
 26 4 V
@@ -2718,17 +2823,17 @@ LT0
 26 -15 V
 27 -14 V
 27 -19 V
-26 -18 V
-27 -17 V
-26 -18 V
-27 -14 V
+26 -17 V
+27 -18 V
+26 -17 V
+27 -15 V
 26 -16 V
 27 -16 V
-27 -17 V
+27 -16 V
 26 -18 V
-27 -18 V
+27 -19 V
 26 -23 V
-27 -24 V
+27 -23 V
 26 -27 V
 27 -28 V
 26 -29 V
@@ -2750,35 +2855,35 @@ LT0
 % Begin plot #4
 stroke
 2.000 UL
-LT0
-1355 5702 M
+LTb
+1.00 0.00 0.00 C 1355 5702 M
 27 -10 V
-27 -4 V
-27 1 V
+27 -3 V
+27 0 V
 28 -1 V
 27 -8 V
 27 -8 V
-27 -20 V
-27 5 V
+27 -19 V
+27 4 V
 28 -37 V
 27 5 V
 27 -4 V
 27 -13 V
 27 -12 V
-28 5 V
+28 6 V
 27 -18 V
 27 -5 V
 27 -5 V
-27 -11 V
+27 -12 V
 28 11 V
-27 14 V
+27 15 V
 27 13 V
 27 17 V
 27 1 V
 28 -15 V
-27 -34 V
+27 -35 V
 27 -30 V
-27 -26 V
+27 -25 V
 27 -28 V
 27 -20 V
 28 -21 V
@@ -2822,8 +2927,8 @@ LT0
 27 6 V
 27 12 V
 27 22 V
-28 31 V
-27 18 V
+28 30 V
+27 19 V
 27 -1 V
 27 14 V
 27 17 V
@@ -2831,33 +2936,34 @@ LT0
 27 36 V
 27 17 V
 27 23 V
-27 28 V
+27 27 V
 28 -7 V
 27 -7 V
 27 10 V
-27 0 V
+27 1 V
 27 9 V
 28 -6 V
-27 -3 V
-27 6 V
-27 8 V
-27 18 V
-28 6 V
-27 18 V
+27 -4 V
+27 7 V
+27 7 V
+27 19 V
+28 5 V
+27 19 V
 27 9 V
-27 3 V
-27 13 V
-28 -6 V
+27 2 V
+27 14 V
+28 -7 V
 27 10 V
 27 17 V
 27 7 V
 % End plot #4
 % Begin plot #5
 stroke
-0.00 1.00 0.00 C 1355 5815 M
-27 10 V
-27 -14 V
-27 10 V
+LTb
+0.00 1.00 0.00 C 1355 5816 M
+27 9 V
+27 -13 V
+27 9 V
 28 -12 V
 27 16 V
 27 11 V
@@ -2867,13 +2973,13 @@ stroke
 27 5 V
 27 -28 V
 27 -27 V
-27 -21 V
-28 -29 V
-27 -43 V
+27 -20 V
+28 -30 V
+27 -42 V
 27 -51 V
 27 -63 V
-27 -35 V
-28 -51 V
+27 -36 V
+28 -50 V
 27 -51 V
 27 -44 V
 27 -28 V
@@ -2939,27 +3045,27 @@ stroke
 27 28 V
 27 33 V
 27 37 V
-27 33 V
+27 32 V
 28 48 V
-27 44 V
+27 45 V
 27 48 V
 27 43 V
-27 45 V
-28 12 V
-27 47 V
-27 20 V
-27 -7 V
+27 44 V
+28 13 V
+27 46 V
+27 21 V
+27 -8 V
 27 9 V
 28 7 V
 27 -1 V
-27 1 V
-27 -17 V
+27 2 V
+27 -18 V
 % End plot #5
 % Begin plot #6
 stroke
 3.000 UL
-LT0
-0.00 0.00 0.00 C 1355 5321 M
+LTb
+0.00 0.00 0.00 C 1355 5322 M
 27 -1 V
 27 0 V
 27 -1 V
@@ -2976,78 +3082,78 @@ LT0
 28 21 V
 27 24 V
 27 27 V
-27 27 V
-27 27 V
+27 26 V
+27 28 V
 28 28 V
 27 25 V
 27 23 V
 27 22 V
 27 20 V
-28 18 V
-27 15 V
-27 17 V
-27 17 V
-27 18 V
-27 18 V
 28 17 V
+27 16 V
+27 17 V
+27 16 V
+27 18 V
+27 19 V
+28 16 V
 27 17 V
 27 15 V
 27 13 V
 27 10 V
-28 10 V
-27 9 V
+28 11 V
+27 8 V
 27 6 V
 27 5 V
 27 5 V
-28 0 V
-27 2 V
+28 1 V
+27 1 V
 27 -1 V
-27 -3 V
-27 -3 V
+27 -2 V
+27 -4 V
 28 -5 V
 27 -5 V
 27 -7 V
-27 -7 V
-27 -5 V
-28 -4 V
-27 0 V
+27 -6 V
+27 -6 V
+28 -3 V
+27 -1 V
 27 1 V
 27 1 V
-27 4 V
-28 5 V
-27 4 V
+27 5 V
+28 4 V
+27 5 V
 27 7 V
 27 4 V
-27 5 V
+27 4 V
 28 3 V
 27 3 V
-27 3 V
+27 4 V
+27 0 V
 27 1 V
-27 1 V
-27 -2 V
-28 -2 V
-27 -5 V
-27 -6 V
+27 -1 V
+28 -3 V
+27 -4 V
+27 -7 V
 27 -9 V
 27 -10 V
-28 -12 V
-27 -12 V
-27 -15 V
+28 -11 V
+27 -13 V
+27 -14 V
 27 -17 V
 27 -17 V
-28 -17 V
+28 -18 V
 27 -18 V
 27 -20 V
-27 -20 V
-27 -20 V
-28 -22 V
+27 -19 V
 27 -21 V
-27 -23 V
+28 -21 V
+27 -22 V
+27 -22 V
 27 -23 V
 27 -23 V
 28 -24 V
-27 -24 V
 27 -25 V
+27 -24 V
 27 -23 V
 27 -22 V
 28 -18 V
@@ -3062,32 +3168,32 @@ LT0
 % End plot #6
 % Begin plot #7
 stroke
-LT0
-1439 5932 M
-27 -8 V
-27 -13 V
+LTb
+1.00 0.00 0.00 C 1439 5932 M
+27 -7 V
+27 -14 V
 27 -9 V
 27 -10 V
 27 -3 V
-27 -36 V
-27 -29 V
+27 -35 V
+27 -30 V
 27 8 V
 27 -27 V
 27 -28 V
-27 -24 V
-27 -26 V
+27 -23 V
+27 -27 V
 27 -29 V
 27 2 V
-27 -19 V
+27 -18 V
 27 -24 V
-27 -1 V
-27 -15 V
+27 -2 V
+27 -14 V
 27 -15 V
 27 3 V
 27 2 V
-27 -6 V
+27 -7 V
 27 -8 V
-27 -35 V
+27 -34 V
 27 -31 V
 26 -42 V
 27 -24 V
@@ -3146,26 +3252,27 @@ LT0
 27 18 V
 27 35 V
 27 28 V
-27 3 V
-27 14 V
+27 2 V
+27 15 V
 27 8 V
 27 12 V
-27 16 V
-27 24 V
 27 15 V
+27 25 V
+27 14 V
 27 8 V
 27 27 V
-27 21 V
+27 22 V
 27 15 V
 27 15 V
-27 28 V
-27 10 V
-27 -4 V
+27 27 V
+27 11 V
+27 -5 V
 26 29 V
-27 2 V
+27 3 V
 % End plot #7
 % Begin plot #8
 stroke
+LTb
 0.00 1.00 0.00 C 1439 6029 M
 27 14 V
 27 -10 V
@@ -3179,13 +3286,13 @@ stroke
 27 -25 V
 27 -43 V
 27 -53 V
-27 -83 V
-27 -84 V
-27 -79 V
+27 -82 V
 27 -85 V
+27 -79 V
+27 -84 V
 27 -61 V
-27 -58 V
-27 -45 V
+27 -59 V
+27 -44 V
 27 -38 V
 27 -21 V
 27 -17 V
@@ -3247,10 +3354,10 @@ stroke
 27 24 V
 27 36 V
 27 38 V
-27 53 V
-27 60 V
+27 52 V
+27 61 V
 27 87 V
-27 70 V
+27 69 V
 27 49 V
 27 72 V
 27 65 V
@@ -3261,16 +3368,16 @@ stroke
 27 11 V
 27 -1 V
 27 17 V
-27 -6 V
-27 -18 V
+27 -5 V
+27 -19 V
 27 -13 V
 26 0 V
 27 14 V
 % End plot #8
 % Begin plot #9
 stroke
-LT0
-0.00 0.00 0.00 C 1439 5320 M
+LTb
+0.00 0.00 0.00 C 1439 5321 M
 27 0 V
 27 0 V
 27 1 V
@@ -3285,77 +3392,77 @@ LT0
 27 22 V
 27 24 V
 27 27 V
-27 29 V
 27 28 V
 27 29 V
-27 28 V
+27 29 V
+27 27 V
 27 24 V
 27 22 V
 27 18 V
 27 16 V
 27 15 V
+27 16 V
 27 15 V
-27 15 V
-26 17 V
+26 16 V
 27 16 V
 27 18 V
-27 17 V
-27 16 V
+27 18 V
+27 15 V
 27 13 V
 27 11 V
-27 9 V
-27 8 V
+27 10 V
+27 7 V
 27 5 V
-27 2 V
-27 1 V
+27 3 V
+27 0 V
+27 -1 V
 27 -2 V
 27 -2 V
-27 -2 V
-27 -5 V
 27 -6 V
 27 -5 V
-27 -9 V
 27 -6 V
-27 -7 V
+27 -8 V
+27 -6 V
+27 -8 V
 27 -5 V
 27 -5 V
 27 -2 V
 27 1 V
 27 3 V
-27 5 V
-27 5 V
-27 5 V
-27 7 V
-27 5 V
+27 6 V
+27 4 V
+27 6 V
 27 6 V
 27 5 V
-27 4 V
+27 6 V
+27 6 V
+27 3 V
 27 2 V
 27 2 V
 26 2 V
 27 -1 V
-27 -3 V
+27 -2 V
 27 -5 V
 27 -8 V
-27 -11 V
 27 -12 V
+27 -11 V
 27 -13 V
 27 -15 V
 27 -16 V
-27 -15 V
+27 -16 V
+27 -16 V
+27 -17 V
+27 -16 V
 27 -16 V
 27 -18 V
-27 -16 V
-27 -15 V
-27 -18 V
-27 -21 V
+27 -20 V
 27 -24 V
-27 -22 V
-27 -27 V
+27 -23 V
+27 -26 V
 27 -27 V
 27 -25 V
-27 -26 V
-27 -26 V
+27 -27 V
+27 -25 V
 27 -25 V
 27 -22 V
 27 -20 V
@@ -3372,39 +3479,47 @@ LT0
 27 0 V
 % End plot #9
 stroke
-1.000 UL
+2.000 UL
 LTb
+LCb setrgbcolor
+1.000 UL
+LTB
+LCb setrgbcolor
 826 6095 N
-0 -776 V
+0 -775 V
 3961 0 V
-0 776 V
+0 775 V
 -3961 0 V
 Z stroke
 1.000 UP
 1.000 UL
 LTb
+LCb setrgbcolor
 1.000 UL
 LTb
-826 4527 M
+LCb setrgbcolor
+826 4528 M
 63 0 V
 3898 0 R
 -63 0 V
 stroke
-742 4527 M
+742 4528 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( 0)]
 ] -46.7 MRshow
 1.000 UL
 LTb
-826 4723 M
+LCb setrgbcolor
+826 4724 M
 63 0 V
 3898 0 R
 -63 0 V
 stroke
-742 4723 M
+742 4724 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( 0.2)]
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 826 4920 M
 63 0 V
 3898 0 R
@@ -3415,74 +3530,98 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
-826 5116 M
+LCb setrgbcolor
+826 5117 M
 63 0 V
 3898 0 R
 -63 0 V
 stroke
-742 5116 M
+742 5117 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( 0.6)]
 ] -46.7 MRshow
 1.000 UL
 LTb
-1222 4527 M
+LCb setrgbcolor
+1222 4528 M
 0 63 V
-0 713 R
+0 712 R
 0 -63 V
 stroke
-1222 4387 M
+1222 4388 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( )]
 ] -46.7 MCshow
 1.000 UL
 LTb
-2014 4527 M
+LCb setrgbcolor
+2014 4528 M
 0 63 V
-0 713 R
+0 712 R
 0 -63 V
 stroke
-2014 4387 M
+2014 4388 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( )]
 ] -46.7 MCshow
 1.000 UL
 LTb
-2807 4527 M
+LCb setrgbcolor
+2807 4528 M
 0 63 V
-0 713 R
+0 712 R
 0 -63 V
 stroke
-2807 4387 M
+2807 4388 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( )]
 ] -46.7 MCshow
 1.000 UL
 LTb
-3599 4527 M
+LCb setrgbcolor
+3599 4528 M
 0 63 V
-0 713 R
+0 712 R
 0 -63 V
 stroke
-3599 4387 M
+3599 4388 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( )]
 ] -46.7 MCshow
 1.000 UL
 LTb
-4391 4527 M
+LCb setrgbcolor
+4391 4528 M
 0 63 V
-0 713 R
+0 712 R
 0 -63 V
 stroke
-4391 4387 M
+4391 4388 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( )]
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1.000 UL
-LTb
+LTB
+LCb setrgbcolor
 826 5303 N
-0 -776 V
+0 -775 V
 3961 0 V
-0 776 V
+0 775 V
 -3961 0 V
 Z stroke
+1.000 UP
+LCb setrgbcolor
+2014 5148 M
+[ [(Helvetica) 140.0 0.0 true true 0 (ULMSCHNEIDER \(POPC\))]
+] -46.7 MLshow
+LCb setrgbcolor
+4193 4691 M
+[ [(Helvetica) 140.0 0.0 true true 0 (150 mM)]
+] -46.7 MLshow
+LCb setrgbcolor
+4114 4931 M
+[ [(Helvetica) 140.0 0.0 true true 0 (1000 mM)]
+] -46.7 MLshow
+1.000 UL
+LTb
+LCb setrgbcolor
 LCb setrgbcolor
 112 4915 M
 currentpoint gsave translate -270 rotate 0 0 moveto
@@ -3495,22 +3634,10 @@ currentpoint gsave translate -270 rotate 0 0 moveto
 ] -46.7 MCshow
 grestore
 LTb
-1.000 UP
-2014 5148 M
-[ [(Helvetica) 140.0 0.0 true true 0 (ULMSCHNEIDER \(POPC\))]
-] -46.7 MLshow
-4193 4690 M
-[ [(Helvetica) 140.0 0.0 true true 0 (150 mM)]
-] -46.7 MLshow
-4114 4931 M
-[ [(Helvetica) 140.0 0.0 true true 0 (1000 mM)]
-] -46.7 MLshow
-1.000 UL
-LTb
 % Begin plot #1
 1.000 UL
-LT0
-1233 4571 M
+LTb
+1.00 0.00 0.00 C 1233 4572 M
 32 -1 V
 32 1 V
 33 -1 V
@@ -3519,8 +3646,8 @@ LT0
 32 0 V
 33 -2 V
 32 0 V
-32 0 V
-33 -1 V
+32 -1 V
+33 0 V
 32 -2 V
 33 0 V
 32 -1 V
@@ -3531,8 +3658,8 @@ LT0
 32 5 V
 33 9 V
 32 12 V
-33 12 V
-32 12 V
+33 11 V
+32 13 V
 33 17 V
 32 9 V
 32 -3 V
@@ -3603,8 +3730,8 @@ LT0
 32 2 V
 33 0 V
 32 0 V
-33 0 V
-32 1 V
+33 -1 V
+32 2 V
 33 0 V
 32 0 V
 32 -1 V
@@ -3613,17 +3740,18 @@ LT0
 % End plot #1
 % Begin plot #2
 stroke
-0.00 1.00 0.00 C 1233 4617 M
+LTb
+0.00 1.00 0.00 C 1233 4618 M
 32 0 V
 32 -2 V
 33 4 V
 32 4 V
-33 1 V
-32 2 V
+33 0 V
+32 3 V
 33 2 V
 32 4 V
-32 2 V
-33 -3 V
+32 1 V
+33 -2 V
 32 -3 V
 33 -3 V
 32 -3 V
@@ -3686,8 +3814,8 @@ stroke
 33 0 V
 32 1 V
 33 1 V
-32 2 V
-33 2 V
+32 1 V
+33 3 V
 32 5 V
 32 6 V
 33 7 V
@@ -3702,13 +3830,13 @@ stroke
 33 2 V
 32 4 V
 33 -3 V
-32 3 V
-32 -7 V
+32 2 V
+32 -6 V
 33 1 V
 32 -5 V
 33 -1 V
-32 -4 V
-33 -2 V
+32 -5 V
+33 -1 V
 32 -1 V
 32 0 V
 33 -2 V
@@ -3717,8 +3845,8 @@ stroke
 % Begin plot #3
 stroke
 3.000 UL
-LT0
-0.00 0.00 0.00 C 1233 4527 M
+LTb
+0.00 0.00 0.00 C 1233 4528 M
 32 0 V
 32 0 V
 33 0 V
@@ -3742,9 +3870,9 @@ LT0
 33 17 V
 32 18 V
 33 18 V
-32 16 V
+32 15 V
 32 14 V
-33 11 V
+33 12 V
 32 9 V
 33 6 V
 32 5 V
@@ -3757,33 +3885,33 @@ LT0
 32 -2 V
 33 -3 V
 32 -2 V
-32 -2 V
-33 -3 V
+32 -3 V
+33 -2 V
 32 -4 V
 33 -4 V
 32 -5 V
 33 -6 V
 32 -6 V
 32 -6 V
-33 -4 V
-32 -3 V
+33 -5 V
+32 -2 V
 33 0 V
 32 2 V
 33 4 V
 32 5 V
 32 6 V
-33 6 V
-32 5 V
+33 5 V
+32 6 V
 33 4 V
 32 4 V
 33 3 V
 32 3 V
-32 3 V
+32 2 V
 33 2 V
-32 1 V
+32 2 V
 33 2 V
-32 3 V
-33 2 V
+32 2 V
+33 3 V
 32 1 V
 33 0 V
 32 -2 V
@@ -3793,8 +3921,8 @@ LT0
 33 -11 V
 32 -12 V
 33 -15 V
-32 -16 V
-32 -18 V
+32 -17 V
+32 -17 V
 33 -18 V
 32 -18 V
 33 -17 V
@@ -3821,45 +3949,45 @@ LT0
 % End plot #3
 % Begin plot #4
 stroke
-LT0
-1206 5002 M
+LTb
+1.00 0.00 0.00 C 1206 5002 M
 33 2 V
-32 1 V
+32 2 V
 33 11 V
 32 -3 V
-33 1 V
+33 0 V
 33 -6 V
-32 -6 V
+32 -5 V
 33 -9 V
 32 -18 V
-33 -15 V
+33 -16 V
 33 -22 V
 32 -28 V
-33 -30 V
-32 -20 V
+33 -29 V
+32 -21 V
 33 -23 V
-33 -24 V
-32 -15 V
-33 -9 V
+33 -23 V
+32 -16 V
+33 -8 V
 32 -2 V
-33 8 V
-33 8 V
+33 7 V
+33 9 V
 32 6 V
 33 6 V
 32 -3 V
 33 -3 V
 32 4 V
-33 -4 V
+33 -5 V
 33 -26 V
-32 -32 V
+32 -31 V
 33 -32 V
 32 -40 V
 33 -40 V
 33 -31 V
 32 -27 V
 33 -19 V
-32 -11 V
-33 -10 V
+32 -12 V
+33 -9 V
 33 -7 V
 32 -2 V
 33 -3 V
@@ -3887,48 +4015,49 @@ LT0
 33 12 V
 32 13 V
 33 19 V
-33 23 V
-32 36 V
+33 22 V
+32 37 V
 33 52 V
 32 52 V
 33 41 V
-33 28 V
-32 9 V
-33 -7 V
-32 -13 V
+33 27 V
+32 10 V
+33 -8 V
+32 -12 V
 33 -4 V
 33 -5 V
 32 -5 V
 33 0 V
 32 3 V
-33 11 V
+33 10 V
 33 19 V
 32 20 V
 33 25 V
-32 26 V
+32 27 V
+33 22 V
 33 23 V
-33 23 V
-32 22 V
+32 23 V
+33 10 V
+32 12 V
 33 11 V
-32 11 V
-33 12 V
 33 4 V
 32 -2 V
 33 2 V
-32 -8 V
-33 -3 V
-33 -6 V
-32 -10 V
+32 -7 V
+33 -4 V
+33 -5 V
+32 -11 V
 33 5 V
 32 -3 V
-33 1 V
+33 2 V
 % End plot #4
 % Begin plot #5
 stroke
+LTb
 0.00 1.00 0.00 C 1206 5026 M
 33 5 V
-32 16 V
-33 21 V
+32 17 V
+33 20 V
 32 16 V
 33 14 V
 33 12 V
@@ -3945,7 +4074,7 @@ stroke
 32 -56 V
 33 -54 V
 32 -66 V
-33 -50 V
+33 -49 V
 33 -53 V
 32 -44 V
 33 -31 V
@@ -4000,36 +4129,36 @@ stroke
 33 20 V
 32 23 V
 33 31 V
-33 43 V
-32 52 V
+33 42 V
+32 53 V
 33 60 V
 32 62 V
 33 63 V
-33 64 V
+33 63 V
 32 45 V
-33 43 V
+33 44 V
 32 30 V
-33 14 V
-33 4 V
-32 4 V
+33 13 V
+33 5 V
+32 3 V
 33 -4 V
 32 -12 V
 33 -13 V
-33 -10 V
-32 -16 V
+33 -9 V
+32 -17 V
 33 -13 V
 32 -19 V
-33 -12 V
-33 -10 V
-32 -11 V
-33 -5 V
+33 -11 V
+33 -11 V
+32 -10 V
+33 -6 V
 32 0 V
-33 1 V
+33 2 V
 % End plot #5
 % Begin plot #6
 stroke
-LT0
-0.00 0.00 0.00 C 1206 4527 M
+LTb
+0.00 0.00 0.00 C 1206 4528 M
 33 0 V
 32 0 V
 33 0 V
@@ -4055,57 +4184,57 @@ LT0
 33 15 V
 32 15 V
 33 14 V
-32 11 V
-33 7 V
+32 10 V
+33 8 V
 33 6 V
 32 5 V
 33 4 V
 32 2 V
 33 0 V
-33 0 V
-32 -2 V
-33 -2 V
-32 -3 V
-33 -3 V
-33 -2 V
-32 -2 V
-33 -3 V
-32 -3 V
-33 -4 V
-33 -5 V
-32 -4 V
-33 -5 V
-32 -3 V
-33 -2 V
-33 0 V
-32 2 V
-33 2 V
-32 3 V
-33 4 V
-33 4 V
-32 4 V
-33 3 V
-32 3 V
-33 3 V
-33 3 V
-32 2 V
-33 2 V
-32 3 V
-33 2 V
-32 1 V
-33 1 V
-33 0 V
+33 -1 V
 32 -1 V
 33 -3 V
+32 -2 V
+33 -3 V
+33 -2 V
+32 -2 V
+33 -3 V
+32 -4 V
+33 -4 V
+33 -4 V
+32 -5 V
+33 -4 V
+32 -3 V
+33 -2 V
+33 0 V
+32 1 V
+33 3 V
+32 3 V
+33 4 V
+33 4 V
+32 3 V
+33 3 V
+32 4 V
+33 2 V
+33 3 V
+32 3 V
+33 2 V
+32 2 V
+33 2 V
+32 2 V
+33 1 V
+33 -1 V
+32 -1 V
+33 -2 V
 32 -4 V
 33 -6 V
 33 -9 V
-32 -10 V
-33 -14 V
+32 -11 V
+33 -13 V
 32 -14 V
 33 -16 V
-33 -16 V
-32 -17 V
+33 -17 V
+32 -16 V
 33 -17 V
 32 -15 V
 33 -14 V
@@ -4131,39 +4260,47 @@ LT0
 33 0 V
 % End plot #6
 stroke
-1.000 UL
+2.000 UL
 LTb
+LCb setrgbcolor
+1.000 UL
+LTB
+LCb setrgbcolor
 826 5303 N
-0 -776 V
+0 -775 V
 3961 0 V
-0 776 V
+0 775 V
 -3961 0 V
 Z stroke
 1.000 UP
 1.000 UL
 LTb
+LCb setrgbcolor
 1.000 UL
 LTb
-826 3735 M
+LCb setrgbcolor
+826 3736 M
 63 0 V
 3898 0 R
 -63 0 V
 stroke
-742 3735 M
+742 3736 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( 0)]
 ] -46.7 MRshow
 1.000 UL
 LTb
-826 3931 M
+LCb setrgbcolor
+826 3932 M
 63 0 V
 3898 0 R
 -63 0 V
 stroke
-742 3931 M
+742 3932 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( 0.2)]
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 826 4128 M
 63 0 V
 3898 0 R
@@ -4174,74 +4311,98 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
-826 4324 M
+LCb setrgbcolor
+826 4325 M
 63 0 V
 3898 0 R
 -63 0 V
 stroke
-742 4324 M
+742 4325 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( 0.6)]
 ] -46.7 MRshow
 1.000 UL
 LTb
-1222 3735 M
+LCb setrgbcolor
+1222 3736 M
 0 63 V
-0 713 R
+0 712 R
 0 -63 V
 stroke
-1222 3595 M
+1222 3596 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( )]
 ] -46.7 MCshow
 1.000 UL
 LTb
-2014 3735 M
+LCb setrgbcolor
+2014 3736 M
 0 63 V
-0 713 R
+0 712 R
 0 -63 V
 stroke
-2014 3595 M
+2014 3596 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( )]
 ] -46.7 MCshow
 1.000 UL
 LTb
-2807 3735 M
+LCb setrgbcolor
+2807 3736 M
 0 63 V
-0 713 R
+0 712 R
 0 -63 V
 stroke
-2807 3595 M
+2807 3596 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( )]
 ] -46.7 MCshow
 1.000 UL
 LTb
-3599 3735 M
+LCb setrgbcolor
+3599 3736 M
 0 63 V
-0 713 R
+0 712 R
 0 -63 V
 stroke
-3599 3595 M
+3599 3596 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( )]
 ] -46.7 MCshow
 1.000 UL
 LTb
-4391 3735 M
+LCb setrgbcolor
+4391 3736 M
 0 63 V
-0 713 R
+0 712 R
 0 -63 V
 stroke
-4391 3595 M
+4391 3596 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( )]
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1.000 UL
-LTb
+LTB
+LCb setrgbcolor
 826 4511 N
-0 -776 V
+0 -775 V
 3961 0 V
-0 776 V
+0 775 V
 -3961 0 V
 Z stroke
+1.000 UP
+LCb setrgbcolor
+2014 4356 M
+[ [(Helvetica) 140.0 0.0 true true 0 (Berger-OPLS \(DPPC\))]
+] -46.7 MLshow
+LCb setrgbcolor
+4193 3899 M
+[ [(Helvetica) 140.0 0.0 true true 0 (150 mM)]
+] -46.7 MLshow
+LCb setrgbcolor
+4074 4410 M
+[ [(Helvetica) 140.0 0.0 true true 0 (1000 mM)]
+] -46.7 MLshow
+1.000 UL
+LTb
+LCb setrgbcolor
 LCb setrgbcolor
 112 4123 M
 currentpoint gsave translate -270 rotate 0 0 moveto
@@ -4254,792 +4415,10 @@ currentpoint gsave translate -270 rotate 0 0 moveto
 ] -46.7 MCshow
 grestore
 LTb
-1.000 UP
-2608 4379 M
-[ [(Helvetica) 140.0 0.0 true true 0 (Slipid)]
-] -46.7 MLshow
-1.000 UL
-LTb
-% Begin plot #1
-2.000 UL
-LT1
-1.00 0.00 0.00 C LCb setrgbcolor
-4220 4402 M
-[ [(Helvetica) 100.0 0.0 true true 0 (DPPC, 150mM NaCl)]
-] -33.3 MRshow
-LT1
-1.00 0.00 0.00 C 4304 4402 M
-399 0 V
-1394 3759 M
-29 -2 V
-28 0 V
-28 1 V
-28 0 V
-29 -2 V
-28 0 V
-28 -1 V
-28 -1 V
-28 2 V
-29 -2 V
-28 0 V
-28 2 V
-28 -1 V
-29 5 V
-28 3 V
-28 5 V
-28 8 V
-28 9 V
-29 10 V
-28 13 V
-28 15 V
-28 8 V
-29 15 V
-28 8 V
-28 -5 V
-28 -7 V
-28 -11 V
-29 -16 V
-28 -14 V
-28 -17 V
-28 -16 V
-29 -10 V
-28 -9 V
-28 -5 V
-28 -4 V
-28 -2 V
-29 -1 V
-28 -1 V
-28 -1 V
-28 0 V
-28 0 V
-29 0 V
-28 0 V
-28 0 V
-28 0 V
-29 0 V
-28 0 V
-28 0 V
-28 0 V
-28 0 V
-29 0 V
-28 0 V
-28 0 V
-28 0 V
-29 0 V
-28 0 V
-28 0 V
-28 0 V
-28 1 V
-29 1 V
-28 1 V
-28 1 V
-28 3 V
-29 5 V
-28 7 V
-28 11 V
-28 17 V
-28 16 V
-29 22 V
-28 21 V
-28 19 V
-28 22 V
-28 13 V
-29 5 V
-28 -7 V
-28 -21 V
-28 -12 V
-29 -13 V
-28 -20 V
-28 -17 V
-28 -15 V
-28 -14 V
-29 -9 V
-28 -8 V
-28 -6 V
-28 -2 V
-29 0 V
-28 -1 V
-28 -1 V
-28 0 V
-28 0 V
-29 2 V
-28 -2 V
-28 2 V
-28 -2 V
-29 3 V
-28 0 V
-28 0 V
-28 2 V
-% End plot #1
-% Begin plot #2
-stroke
-LT1
-0.00 1.00 0.00 C 1394 3843 M
-29 1 V
-28 -1 V
-28 3 V
-28 2 V
-29 -6 V
-28 3 V
-28 1 V
-28 0 V
-28 -6 V
-29 3 V
-28 -12 V
-28 -7 V
-28 -11 V
-29 -10 V
-28 -9 V
-28 -12 V
-28 -12 V
-28 -6 V
-29 -9 V
-28 -4 V
-28 -6 V
-28 -4 V
-29 -2 V
-28 -1 V
-28 -2 V
-28 0 V
-28 -1 V
-29 0 V
-28 0 V
-28 0 V
-28 0 V
-29 0 V
-28 0 V
-28 0 V
-28 0 V
-28 0 V
-29 0 V
-28 0 V
-28 0 V
-28 0 V
-28 0 V
-29 0 V
-28 0 V
-28 0 V
-28 0 V
-29 0 V
-28 0 V
-28 0 V
-28 0 V
-28 0 V
-29 0 V
-28 0 V
-28 0 V
-28 0 V
-29 0 V
-28 0 V
-28 0 V
-28 0 V
-28 0 V
-29 0 V
-28 0 V
-28 0 V
-28 0 V
-29 0 V
-28 0 V
-28 0 V
-28 0 V
-28 0 V
-29 0 V
-28 0 V
-28 0 V
-28 1 V
-28 0 V
-29 1 V
-28 2 V
-28 2 V
-28 4 V
-29 3 V
-28 9 V
-28 9 V
-28 10 V
-28 12 V
-29 14 V
-28 13 V
-28 10 V
-28 14 V
-29 8 V
-28 6 V
-28 1 V
-28 0 V
-28 7 V
-29 -7 V
-28 1 V
-28 -6 V
-28 -2 V
-29 1 V
-28 -2 V
-28 -2 V
-28 -6 V
-% End plot #2
-% Begin plot #3
-stroke
-3.000 UL
-LT1
-0.00 0.00 0.00 C 1394 3735 M
-29 0 V
-28 0 V
-28 0 V
-28 1 V
-29 1 V
-28 2 V
-28 3 V
-28 5 V
-28 7 V
-29 10 V
-28 14 V
-28 17 V
-28 21 V
-29 25 V
-28 27 V
-28 30 V
-28 30 V
-28 29 V
-29 29 V
-28 27 V
-28 24 V
-28 24 V
-29 20 V
-28 19 V
-28 18 V
-28 18 V
-28 17 V
-29 16 V
-28 17 V
-28 14 V
-28 13 V
-29 12 V
-28 10 V
-28 8 V
-28 7 V
-28 5 V
-29 2 V
-28 2 V
-28 -1 V
-28 -3 V
-28 -3 V
-29 -5 V
-28 -5 V
-28 -8 V
-28 -7 V
-29 -8 V
-28 -7 V
-28 -5 V
-28 -2 V
-28 1 V
-29 4 V
-28 5 V
-28 8 V
-28 7 V
-29 8 V
-28 7 V
-28 5 V
-28 4 V
-28 3 V
-29 1 V
-28 0 V
-28 -2 V
-28 -3 V
-29 -6 V
-28 -7 V
-28 -9 V
-28 -11 V
-28 -14 V
-29 -14 V
-28 -15 V
-28 -16 V
-28 -17 V
-28 -17 V
-29 -17 V
-28 -19 V
-28 -19 V
-28 -21 V
-29 -24 V
-28 -25 V
-28 -27 V
-28 -29 V
-28 -30 V
-29 -30 V
-28 -29 V
-28 -27 V
-28 -23 V
-29 -20 V
-28 -16 V
-28 -12 V
-28 -9 V
-28 -6 V
-29 -4 V
-28 -2 V
-28 -1 V
-28 -1 V
-29 -1 V
-28 0 V
-28 0 V
-28 0 V
-% End plot #3
-% Begin plot #4
-stroke
-1.000 UL
-LT0
-LCb setrgbcolor
-4220 4262 M
-[ [(Helvetica) 100.0 0.0 true true 0 (POPC, 130mM NaCl)]
-] -33.3 MRshow
-LT0
-4304 4262 M
-399 0 V
-1228 3790 M
-30 -10 V
-31 11 V
-30 -7 V
-30 -6 V
-31 11 V
-30 -1 V
-30 -10 V
-30 7 V
-31 -4 V
-30 -1 V
-30 -4 V
-31 2 V
-30 -3 V
-30 3 V
-31 -2 V
-30 0 V
-30 -4 V
-31 -2 V
-30 3 V
-30 2 V
-30 11 V
-31 1 V
-30 12 V
-30 13 V
-31 9 V
-30 8 V
-30 3 V
-31 8 V
-30 6 V
-30 -12 V
-31 -16 V
-30 -22 V
-30 -17 V
-31 -12 V
-30 -11 V
-30 -6 V
-30 -4 V
-31 -3 V
-30 1 V
-30 -7 V
-31 0 V
-30 -1 V
-30 -1 V
-31 0 V
-30 0 V
-30 0 V
-31 0 V
-30 0 V
-30 0 V
-31 0 V
-30 0 V
-30 0 V
-30 0 V
-31 0 V
-30 0 V
-30 0 V
-31 0 V
-30 1 V
-30 0 V
-31 3 V
-30 4 V
-30 4 V
-31 9 V
-30 2 V
-30 15 V
-30 10 V
-31 12 V
-30 10 V
-30 22 V
-31 1 V
-30 -8 V
-30 2 V
-31 -23 V
-30 -2 V
-30 -13 V
-31 4 V
-30 -10 V
-30 -2 V
-31 0 V
-30 -6 V
-30 7 V
-30 -9 V
-31 2 V
-30 6 V
-30 -5 V
-31 3 V
-30 6 V
-30 -3 V
-31 2 V
-30 0 V
-30 5 V
-31 -3 V
-30 9 V
-30 0 V
-31 2 V
-30 -2 V
-30 0 V
-30 -6 V
-31 3 V
-% End plot #4
-% Begin plot #5
-stroke
-0.00 1.00 0.00 C 1228 3815 M
-30 0 V
-31 0 V
-30 1 V
-30 2 V
-31 10 V
-30 2 V
-30 -7 V
-30 1 V
-31 3 V
-30 3 V
-30 9 V
-31 -5 V
-30 3 V
-30 -6 V
-31 4 V
-30 -11 V
-30 -4 V
-31 -4 V
-30 -13 V
-30 -3 V
-30 -10 V
-31 -15 V
-30 -9 V
-30 -9 V
-31 -3 V
-30 -9 V
-30 0 V
-31 -6 V
-30 -1 V
-30 -1 V
-31 -1 V
-30 0 V
-30 -1 V
-31 0 V
-30 0 V
-30 0 V
-30 0 V
-31 0 V
-30 0 V
-30 0 V
-31 0 V
-30 0 V
-30 0 V
-31 0 V
-30 0 V
-30 0 V
-31 0 V
-30 0 V
-30 0 V
-31 0 V
-30 0 V
-30 0 V
-30 0 V
-31 0 V
-30 0 V
-30 0 V
-31 0 V
-30 0 V
-30 0 V
-31 0 V
-30 0 V
-30 0 V
-31 0 V
-30 0 V
-30 0 V
-30 0 V
-31 0 V
-30 1 V
-30 0 V
-31 1 V
-30 0 V
-30 3 V
-31 3 V
-30 7 V
-30 6 V
-31 7 V
-30 6 V
-30 10 V
-31 11 V
-30 13 V
-30 2 V
-30 11 V
-31 15 V
-30 -8 V
-30 6 V
-31 7 V
-30 -13 V
-30 12 V
-31 -4 V
-30 -12 V
-30 5 V
-31 -2 V
-30 4 V
-30 -14 V
-31 12 V
-30 -15 V
-30 4 V
-30 -2 V
-31 8 V
-% End plot #5
-% Begin plot #6
-stroke
-3.000 UL
-LT0
-0.00 0.00 0.00 C 1228 3735 M
-30 0 V
-31 0 V
-30 0 V
-30 0 V
-31 0 V
-30 0 V
-30 0 V
-30 0 V
-31 1 V
-30 1 V
-30 1 V
-31 3 V
-30 4 V
-30 6 V
-31 9 V
-30 12 V
-30 17 V
-31 20 V
-30 24 V
-30 27 V
-30 30 V
-31 31 V
-30 31 V
-30 30 V
-31 29 V
-30 26 V
-30 26 V
-31 22 V
-30 22 V
-30 22 V
-31 22 V
-30 19 V
-30 21 V
-31 16 V
-30 17 V
-30 10 V
-30 8 V
-31 8 V
-30 1 V
-30 4 V
-31 0 V
-30 -3 V
-30 -2 V
-31 -5 V
-30 -1 V
-30 -4 V
-31 -5 V
-30 -2 V
-30 -3 V
-31 0 V
-30 2 V
-30 2 V
-30 3 V
-31 5 V
-30 4 V
-30 3 V
-31 2 V
-30 2 V
-30 0 V
-31 -2 V
-30 -2 V
-30 -7 V
-31 -9 V
-30 -11 V
-30 -14 V
-30 -16 V
-31 -19 V
-30 -21 V
-30 -20 V
-31 -24 V
-30 -23 V
-30 -25 V
-31 -25 V
-30 -26 V
-30 -29 V
-31 -29 V
-30 -30 V
-30 -32 V
-31 -29 V
-30 -28 V
-30 -25 V
-30 -19 V
-31 -17 V
-30 -11 V
-30 -9 V
-31 -6 V
-30 -4 V
-30 -2 V
-31 -2 V
-30 -1 V
-30 0 V
-31 -1 V
-30 0 V
-30 0 V
-31 0 V
-30 0 V
-30 0 V
-30 0 V
-31 0 V
-% End plot #6
-stroke
-1.000 UL
-LTb
-826 4511 N
-0 -776 V
-3961 0 V
-0 776 V
--3961 0 V
-Z stroke
-1.000 UP
-1.000 UL
-LTb
-1.000 UL
-LTb
-826 2944 M
-63 0 V
-3898 0 R
--63 0 V
-stroke
-742 2944 M
-[ [(Helvetica) 140.0 0.0 true true 0 ( 0)]
-] -46.7 MRshow
-1.000 UL
-LTb
-826 3140 M
-63 0 V
-3898 0 R
--63 0 V
-stroke
-742 3140 M
-[ [(Helvetica) 140.0 0.0 true true 0 ( 0.2)]
-] -46.7 MRshow
-1.000 UL
-LTb
-826 3336 M
-63 0 V
-3898 0 R
--63 0 V
-stroke
-742 3336 M
-[ [(Helvetica) 140.0 0.0 true true 0 ( 0.4)]
-] -46.7 MRshow
-1.000 UL
-LTb
-826 3533 M
-63 0 V
-3898 0 R
--63 0 V
-stroke
-742 3533 M
-[ [(Helvetica) 140.0 0.0 true true 0 ( 0.6)]
-] -46.7 MRshow
-1.000 UL
-LTb
-1222 2944 M
-0 63 V
-0 712 R
-0 -63 V
-stroke
-1222 2804 M
-[ [(Helvetica) 140.0 0.0 true true 0 ( )]
-] -46.7 MCshow
-1.000 UL
-LTb
-2014 2944 M
-0 63 V
-0 712 R
-0 -63 V
-stroke
-2014 2804 M
-[ [(Helvetica) 140.0 0.0 true true 0 ( )]
-] -46.7 MCshow
-1.000 UL
-LTb
-2807 2944 M
-0 63 V
-0 712 R
-0 -63 V
-stroke
-2807 2804 M
-[ [(Helvetica) 140.0 0.0 true true 0 ( )]
-] -46.7 MCshow
-1.000 UL
-LTb
-3599 2944 M
-0 63 V
-0 712 R
-0 -63 V
-stroke
-3599 2804 M
-[ [(Helvetica) 140.0 0.0 true true 0 ( )]
-] -46.7 MCshow
-1.000 UL
-LTb
-4391 2944 M
-0 63 V
-0 712 R
-0 -63 V
-stroke
-4391 2804 M
-[ [(Helvetica) 140.0 0.0 true true 0 ( )]
-] -46.7 MCshow
-1.000 UL
-LTb
-1.000 UL
-LTb
-826 3719 N
-0 -775 V
-3961 0 V
-0 775 V
--3961 0 V
-Z stroke
-LCb setrgbcolor
-112 3331 M
-currentpoint gsave translate -270 rotate 0 0 moveto
-[ [(Helvetica) 140.0 0.0 true true 0 (Number)]
-] -46.7 MCshow
-grestore
-252 3331 M
-currentpoint gsave translate -270 rotate 0 0 moveto
-[ [(Helvetica) 140.0 0.0 true true 0 (Density)]
-] -46.7 MCshow
-grestore
-LTb
-1.000 UP
-2014 3564 M
-[ [(Helvetica) 140.0 0.0 true true 0 (Berger-OPLS \(DPPC\))]
-] -46.7 MLshow
-4193 3107 M
-[ [(Helvetica) 140.0 0.0 true true 0 (150 mM)]
-] -46.7 MLshow
-4074 3618 M
-[ [(Helvetica) 140.0 0.0 true true 0 (1000 mM)]
-] -46.7 MLshow
-1.000 UL
-LTb
 % Begin plot #1
 1.000 UL
-LT0
-1383 2987 M
+LTb
+1.00 0.00 0.00 C 1383 3779 M
 29 -3 V
 29 1 V
 29 -1 V
@@ -5142,7 +4521,8 @@ LT0
 % End plot #1
 % Begin plot #2
 stroke
-0.00 1.00 0.00 C 1383 3043 M
+LTb
+0.00 1.00 0.00 C 1383 3835 M
 29 1 V
 29 -2 V
 29 7 V
@@ -5246,8 +4626,8 @@ stroke
 % Begin plot #3
 stroke
 3.000 UL
-LT0
-0.00 0.00 0.00 C 1383 2944 M
+LTb
+0.00 0.00 0.00 C 1383 3736 M
 29 0 V
 29 0 V
 29 0 V
@@ -5350,8 +4730,8 @@ LT0
 % End plot #3
 % Begin plot #4
 stroke
-LT0
-1237 3511 M
+LTb
+1.00 0.00 0.00 C 1237 4303 M
 33 25 V
 33 16 V
 33 -8 V
@@ -5454,7 +4834,8 @@ LT0
 % End plot #4
 % Begin plot #5
 stroke
-0.00 1.00 0.00 C 1237 3560 M
+LTb
+0.00 1.00 0.00 C 1237 4352 M
 33 -3 V
 33 12 V
 33 14 V
@@ -5557,8 +4938,8 @@ stroke
 % End plot #5
 % Begin plot #6
 stroke
-LT0
-0.00 0.00 0.00 C 1237 2944 M
+LTb
+0.00 0.00 0.00 C 1237 3736 M
 33 0 V
 33 0 V
 33 0 V
@@ -5660,8 +5041,803 @@ LT0
 33 0 V
 % End plot #6
 stroke
+2.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTB
+LCb setrgbcolor
+826 4511 N
+0 -775 V
+3961 0 V
+0 775 V
+-3961 0 V
+Z stroke
+1.000 UP
 1.000 UL
 LTb
+LCb setrgbcolor
+1.000 UL
+LTb
+LCb setrgbcolor
+826 2944 M
+63 0 V
+3898 0 R
+-63 0 V
+stroke
+742 2944 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0)]
+] -46.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+826 3140 M
+63 0 V
+3898 0 R
+-63 0 V
+stroke
+742 3140 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.2)]
+] -46.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+826 3336 M
+63 0 V
+3898 0 R
+-63 0 V
+stroke
+742 3336 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.4)]
+] -46.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+826 3533 M
+63 0 V
+3898 0 R
+-63 0 V
+stroke
+742 3533 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.6)]
+] -46.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1222 2944 M
+0 63 V
+0 712 R
+0 -63 V
+stroke
+1222 2804 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( )]
+] -46.7 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+2014 2944 M
+0 63 V
+0 712 R
+0 -63 V
+stroke
+2014 2804 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( )]
+] -46.7 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+2807 2944 M
+0 63 V
+0 712 R
+0 -63 V
+stroke
+2807 2804 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( )]
+] -46.7 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+3599 2944 M
+0 63 V
+0 712 R
+0 -63 V
+stroke
+3599 2804 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( )]
+] -46.7 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+4391 2944 M
+0 63 V
+0 712 R
+0 -63 V
+stroke
+4391 2804 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( )]
+] -46.7 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTB
+LCb setrgbcolor
+826 3719 N
+0 -775 V
+3961 0 V
+0 775 V
+-3961 0 V
+Z stroke
+1.000 UP
+LCb setrgbcolor
+2608 3587 M
+[ [(Helvetica) 140.0 0.0 true true 0 (Slipid)]
+] -46.7 MLshow
+1.000 UL
+LTb
+LCb setrgbcolor
+LCb setrgbcolor
+112 3331 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (Number)]
+] -46.7 MCshow
+grestore
+252 3331 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (Density)]
+] -46.7 MCshow
+grestore
+LTb
+% Begin plot #1
+2.000 UL
+LTb
+1.00 0.00 0.00 C LCb setrgbcolor
+4364 3630 M
+[ [(Helvetica) 100.0 0.0 true true 0 (DPPC, 150mM NaCl)]
+] -33.3 MRshow
+2.000 UL
+LTb
+1.00 0.00 0.00 C 4424 3630 M
+303 0 V
+1394 2968 M
+29 -2 V
+28 0 V
+28 1 V
+28 0 V
+29 -2 V
+28 0 V
+28 -1 V
+28 -1 V
+28 2 V
+29 -2 V
+28 0 V
+28 2 V
+28 -1 V
+29 5 V
+28 3 V
+28 5 V
+28 8 V
+28 9 V
+29 10 V
+28 13 V
+28 15 V
+28 8 V
+29 15 V
+28 8 V
+28 -5 V
+28 -7 V
+28 -11 V
+29 -17 V
+28 -13 V
+28 -17 V
+28 -16 V
+29 -10 V
+28 -9 V
+28 -5 V
+28 -4 V
+28 -2 V
+29 -1 V
+28 -1 V
+28 -1 V
+28 0 V
+28 0 V
+29 0 V
+28 0 V
+28 0 V
+28 0 V
+29 0 V
+28 0 V
+28 0 V
+28 0 V
+28 0 V
+29 0 V
+28 0 V
+28 0 V
+28 0 V
+29 0 V
+28 0 V
+28 0 V
+28 0 V
+28 1 V
+29 1 V
+28 1 V
+28 1 V
+28 3 V
+29 5 V
+28 7 V
+28 11 V
+28 17 V
+28 16 V
+29 21 V
+28 22 V
+28 19 V
+28 22 V
+28 13 V
+29 5 V
+28 -7 V
+28 -21 V
+28 -12 V
+29 -13 V
+28 -20 V
+28 -17 V
+28 -15 V
+28 -14 V
+29 -9 V
+28 -8 V
+28 -6 V
+28 -2 V
+29 0 V
+28 -1 V
+28 -1 V
+28 0 V
+28 0 V
+29 2 V
+28 -2 V
+28 2 V
+28 -2 V
+29 3 V
+28 0 V
+28 0 V
+28 2 V
+% End plot #1
+% Begin plot #2
+stroke
+LTb
+0.00 1.00 0.00 C 1394 3052 M
+29 1 V
+28 -1 V
+28 3 V
+28 2 V
+29 -6 V
+28 3 V
+28 0 V
+28 0 V
+28 -5 V
+29 3 V
+28 -13 V
+28 -6 V
+28 -11 V
+29 -10 V
+28 -10 V
+28 -11 V
+28 -12 V
+28 -6 V
+29 -9 V
+28 -4 V
+28 -6 V
+28 -4 V
+29 -2 V
+28 -1 V
+28 -2 V
+28 0 V
+28 -1 V
+29 0 V
+28 0 V
+28 0 V
+28 0 V
+29 0 V
+28 0 V
+28 0 V
+28 0 V
+28 0 V
+29 0 V
+28 0 V
+28 0 V
+28 0 V
+28 0 V
+29 0 V
+28 0 V
+28 0 V
+28 0 V
+29 0 V
+28 0 V
+28 0 V
+28 0 V
+28 0 V
+29 0 V
+28 0 V
+28 0 V
+28 0 V
+29 0 V
+28 0 V
+28 0 V
+28 0 V
+28 0 V
+29 0 V
+28 0 V
+28 0 V
+28 0 V
+29 0 V
+28 0 V
+28 0 V
+28 0 V
+28 0 V
+29 0 V
+28 0 V
+28 0 V
+28 1 V
+28 0 V
+29 1 V
+28 2 V
+28 2 V
+28 4 V
+29 3 V
+28 9 V
+28 9 V
+28 10 V
+28 12 V
+29 14 V
+28 13 V
+28 10 V
+28 14 V
+29 8 V
+28 6 V
+28 1 V
+28 0 V
+28 7 V
+29 -7 V
+28 1 V
+28 -6 V
+28 -2 V
+29 1 V
+28 -2 V
+28 -2 V
+28 -6 V
+% End plot #2
+% Begin plot #3
+stroke
+3.000 UL
+LTb
+0.00 0.00 0.00 C 1394 2944 M
+29 0 V
+28 0 V
+28 0 V
+28 1 V
+29 1 V
+28 2 V
+28 3 V
+28 5 V
+28 7 V
+29 10 V
+28 14 V
+28 17 V
+28 21 V
+29 25 V
+28 27 V
+28 29 V
+28 30 V
+28 30 V
+29 29 V
+28 26 V
+28 25 V
+28 23 V
+29 20 V
+28 20 V
+28 18 V
+28 18 V
+28 17 V
+29 16 V
+28 16 V
+28 15 V
+28 12 V
+29 13 V
+28 10 V
+28 7 V
+28 7 V
+28 5 V
+29 2 V
+28 2 V
+28 -1 V
+28 -2 V
+28 -3 V
+29 -5 V
+28 -6 V
+28 -7 V
+28 -8 V
+29 -8 V
+28 -7 V
+28 -4 V
+28 -3 V
+28 1 V
+29 4 V
+28 6 V
+28 7 V
+28 7 V
+29 8 V
+28 7 V
+28 5 V
+28 5 V
+28 3 V
+29 1 V
+28 0 V
+28 -2 V
+28 -3 V
+29 -6 V
+28 -8 V
+28 -8 V
+28 -12 V
+28 -14 V
+29 -13 V
+28 -15 V
+28 -17 V
+28 -16 V
+28 -17 V
+29 -18 V
+28 -18 V
+28 -20 V
+28 -21 V
+29 -23 V
+28 -25 V
+28 -27 V
+28 -29 V
+28 -30 V
+29 -31 V
+28 -28 V
+28 -27 V
+28 -23 V
+29 -20 V
+28 -16 V
+28 -12 V
+28 -9 V
+28 -6 V
+29 -4 V
+28 -2 V
+28 -2 V
+28 0 V
+29 -1 V
+28 0 V
+28 0 V
+28 0 V
+% End plot #3
+% Begin plot #4
+stroke
+1.000 UL
+LTb
+1.00 0.00 0.00 C LCb setrgbcolor
+4364 3530 M
+[ [(Helvetica) 100.0 0.0 true true 0 (POPC, 130mM NaCl)]
+] -33.3 MRshow
+1.000 UL
+LTb
+1.00 0.00 0.00 C 4424 3530 M
+303 0 V
+1228 2999 M
+30 -10 V
+31 10 V
+30 -6 V
+30 -6 V
+31 11 V
+30 -1 V
+30 -10 V
+30 7 V
+31 -4 V
+30 -1 V
+30 -4 V
+31 2 V
+30 -3 V
+30 3 V
+31 -2 V
+30 0 V
+30 -4 V
+31 -2 V
+30 3 V
+30 2 V
+30 11 V
+31 0 V
+30 13 V
+30 13 V
+31 9 V
+30 8 V
+30 3 V
+31 8 V
+30 5 V
+30 -11 V
+31 -16 V
+30 -22 V
+30 -17 V
+31 -12 V
+30 -11 V
+30 -6 V
+30 -4 V
+31 -3 V
+30 1 V
+30 -7 V
+31 0 V
+30 -1 V
+30 -1 V
+31 0 V
+30 0 V
+30 0 V
+31 0 V
+30 0 V
+30 0 V
+31 0 V
+30 0 V
+30 0 V
+30 0 V
+31 0 V
+30 0 V
+30 0 V
+31 0 V
+30 1 V
+30 0 V
+31 3 V
+30 4 V
+30 4 V
+31 9 V
+30 2 V
+30 15 V
+30 10 V
+31 12 V
+30 10 V
+30 22 V
+31 1 V
+30 -8 V
+30 2 V
+31 -23 V
+30 -2 V
+30 -13 V
+31 4 V
+30 -10 V
+30 -2 V
+31 0 V
+30 -6 V
+30 7 V
+30 -9 V
+31 2 V
+30 6 V
+30 -5 V
+31 2 V
+30 7 V
+30 -4 V
+31 3 V
+30 0 V
+30 5 V
+31 -3 V
+30 9 V
+30 0 V
+31 2 V
+30 -2 V
+30 0 V
+30 -6 V
+31 3 V
+% End plot #4
+% Begin plot #5
+stroke
+LTb
+0.00 1.00 0.00 C 1228 3024 M
+30 0 V
+31 0 V
+30 1 V
+30 2 V
+31 10 V
+30 2 V
+30 -7 V
+30 1 V
+31 2 V
+30 4 V
+30 9 V
+31 -5 V
+30 3 V
+30 -6 V
+31 4 V
+30 -11 V
+30 -4 V
+31 -4 V
+30 -13 V
+30 -3 V
+30 -10 V
+31 -15 V
+30 -9 V
+30 -9 V
+31 -3 V
+30 -9 V
+30 0 V
+31 -6 V
+30 -1 V
+30 -1 V
+31 -1 V
+30 0 V
+30 -1 V
+31 0 V
+30 0 V
+30 0 V
+30 0 V
+31 0 V
+30 0 V
+30 0 V
+31 0 V
+30 0 V
+30 0 V
+31 0 V
+30 0 V
+30 0 V
+31 0 V
+30 0 V
+30 0 V
+31 0 V
+30 0 V
+30 0 V
+30 0 V
+31 0 V
+30 0 V
+30 0 V
+31 0 V
+30 0 V
+30 0 V
+31 0 V
+30 0 V
+30 0 V
+31 0 V
+30 0 V
+30 0 V
+30 0 V
+31 0 V
+30 1 V
+30 0 V
+31 1 V
+30 0 V
+30 3 V
+31 3 V
+30 7 V
+30 6 V
+31 7 V
+30 6 V
+30 10 V
+31 11 V
+30 13 V
+30 2 V
+30 11 V
+31 15 V
+30 -8 V
+30 6 V
+31 7 V
+30 -13 V
+30 12 V
+31 -5 V
+30 -11 V
+30 5 V
+31 -2 V
+30 4 V
+30 -14 V
+31 12 V
+30 -15 V
+30 4 V
+30 -2 V
+31 8 V
+% End plot #5
+% Begin plot #6
+stroke
+3.000 UL
+LTb
+0.00 0.00 0.00 C 1228 2944 M
+30 0 V
+31 0 V
+30 0 V
+30 0 V
+31 0 V
+30 0 V
+30 0 V
+30 0 V
+31 1 V
+30 1 V
+30 1 V
+31 3 V
+30 4 V
+30 6 V
+31 9 V
+30 12 V
+30 17 V
+31 19 V
+30 25 V
+30 27 V
+30 30 V
+31 31 V
+30 31 V
+30 30 V
+31 29 V
+30 26 V
+30 25 V
+31 22 V
+30 23 V
+30 22 V
+31 21 V
+30 20 V
+30 21 V
+31 15 V
+30 18 V
+30 9 V
+30 9 V
+31 7 V
+30 2 V
+30 3 V
+31 0 V
+30 -3 V
+30 -2 V
+31 -4 V
+30 -2 V
+30 -3 V
+31 -5 V
+30 -3 V
+30 -3 V
+31 1 V
+30 1 V
+30 3 V
+30 3 V
+31 5 V
+30 3 V
+30 4 V
+31 1 V
+30 3 V
+30 -1 V
+31 -2 V
+30 -2 V
+30 -7 V
+31 -9 V
+30 -10 V
+30 -15 V
+30 -15 V
+31 -20 V
+30 -20 V
+30 -21 V
+31 -23 V
+30 -24 V
+30 -24 V
+31 -25 V
+30 -26 V
+30 -29 V
+31 -29 V
+30 -31 V
+30 -31 V
+31 -29 V
+30 -28 V
+30 -25 V
+30 -20 V
+31 -16 V
+30 -11 V
+30 -9 V
+31 -6 V
+30 -4 V
+30 -2 V
+31 -2 V
+30 -1 V
+30 0 V
+31 -1 V
+30 0 V
+30 0 V
+31 0 V
+30 0 V
+30 0 V
+30 0 V
+31 0 V
+% End plot #6
+stroke
+2.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTB
+LCb setrgbcolor
 826 3719 N
 0 -775 V
 3961 0 V
@@ -5671,8 +5847,10 @@ Z stroke
 1.000 UP
 1.000 UL
 LTb
+LCb setrgbcolor
 1.000 UL
 LTb
+LCb setrgbcolor
 826 2151 M
 63 0 V
 3898 0 R
@@ -5683,6 +5861,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 826 2348 M
 63 0 V
 3898 0 R
@@ -5693,6 +5872,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 826 2544 M
 63 0 V
 3898 0 R
@@ -5703,6 +5883,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 826 2741 M
 63 0 V
 3898 0 R
@@ -5713,6 +5894,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1222 2151 M
 0 63 V
 0 714 R
@@ -5723,6 +5905,7 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 2014 2151 M
 0 63 V
 0 714 R
@@ -5733,6 +5916,7 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 2807 2151 M
 0 63 V
 0 714 R
@@ -5743,6 +5927,7 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 3599 2151 M
 0 63 V
 0 714 R
@@ -5753,6 +5938,7 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 4391 2151 M
 0 63 V
 0 714 R
@@ -5763,14 +5949,24 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1.000 UL
-LTb
+LTB
+LCb setrgbcolor
 826 2928 N
 0 -777 V
 3961 0 V
 0 777 V
 -3961 0 V
 Z stroke
+1.000 UP
+LCb setrgbcolor
+2014 2773 M
+[ [(Helvetica) 140.0 0.0 true true 0 (Berger \(POPC, 340 mM NaCl\))]
+] -46.7 MLshow
+1.000 UL
+LTb
+LCb setrgbcolor
 LCb setrgbcolor
 112 2539 M
 currentpoint gsave translate -270 rotate 0 0 moveto
@@ -5783,22 +5979,17 @@ currentpoint gsave translate -270 rotate 0 0 moveto
 ] -46.7 MCshow
 grestore
 LTb
-1.000 UP
-2014 2773 M
-[ [(Helvetica) 140.0 0.0 true true 0 (Berger \(POPC, 340 mM NaCl\))]
-] -46.7 MLshow
-1.000 UL
-LTb
 % Begin plot #1
 2.000 UL
-LT0
-LCb setrgbcolor
-1490 7777 M
+LTb
+1.00 0.00 0.00 C LCb setrgbcolor
+3641 2839 M
 [ [(Helvetica) 100.0 0.0 true true 0 (Na)]
 ] -33.3 MRshow
-LT0
-1574 7777 M
-399 0 V
+2.000 UL
+LTb
+1.00 0.00 0.00 C 3701 2839 M
+303 0 V
 1044 2290 M
 39 -2 V
 38 2 V
@@ -5900,13 +6091,15 @@ LT0
 % End plot #1
 % Begin plot #2
 stroke
+LTb
 0.00 1.00 0.00 C LCb setrgbcolor
-2477 7777 M
+3641 2739 M
 [ [(Helvetica) 100.0 0.0 true true 0 (Cl)]
 ] -33.3 MRshow
-LT0
-0.00 1.00 0.00 C 2561 7777 M
-399 0 V
+2.000 UL
+LTb
+0.00 1.00 0.00 C 3701 2739 M
+303 0 V
 1044 2309 M
 39 -1 V
 38 1 V
@@ -6009,14 +6202,15 @@ LT0
 % Begin plot #3
 stroke
 3.000 UL
-LT0
+LTb
 0.00 0.00 0.00 C LCb setrgbcolor
-3464 7777 M
+4364 2839 M
 [ [(Helvetica) 100.0 0.0 true true 0 (Lipid)]
 ] -33.3 MRshow
-LT0
-0.00 0.00 0.00 C 3548 7777 M
-399 0 V
+3.000 UL
+LTb
+0.00 0.00 0.00 C 4424 2839 M
+303 0 V
 1044 2151 M
 39 0 V
 38 0 V
@@ -6117,8 +6311,12 @@ LT0
 9 0 V
 % End plot #3
 stroke
-1.000 UL
+2.000 UL
 LTb
+LCb setrgbcolor
+1.000 UL
+LTB
+LCb setrgbcolor
 826 2928 N
 0 -777 V
 3961 0 V
@@ -6128,8 +6326,10 @@ Z stroke
 1.000 UP
 1.000 UL
 LTb
+LCb setrgbcolor
 1.000 UL
 LTb
+LCb setrgbcolor
 826 1360 M
 63 0 V
 3898 0 R
@@ -6140,6 +6340,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 826 1534 M
 63 0 V
 3898 0 R
@@ -6150,6 +6351,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 826 1709 M
 63 0 V
 3898 0 R
@@ -6160,6 +6362,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 826 1883 M
 63 0 V
 3898 0 R
@@ -6170,6 +6373,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 826 2058 M
 63 0 V
 3898 0 R
@@ -6180,6 +6384,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1222 1360 M
 0 63 V
 0 713 R
@@ -6190,6 +6395,7 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 2014 1360 M
 0 63 V
 0 713 R
@@ -6200,6 +6406,7 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 2807 1360 M
 0 63 V
 0 713 R
@@ -6210,6 +6417,7 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 3599 1360 M
 0 63 V
 0 713 R
@@ -6220,6 +6428,7 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 4391 1360 M
 0 63 V
 0 713 R
@@ -6230,14 +6439,32 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1.000 UL
-LTb
+LTB
+LCb setrgbcolor
 826 2136 N
 0 -776 V
 3961 0 V
 0 776 V
 -3961 0 V
 Z stroke
+1.000 UP
+LCb setrgbcolor
+2292 1981 M
+[ [(Helvetica) 140.0 0.0 true true 0 (Berger \(DPPC\))]
+] -46.7 MLshow
+LCb setrgbcolor
+4193 1523 M
+[ [(Helvetica) 140.0 0.0 true true 0 (150 mM)]
+] -46.7 MLshow
+LCb setrgbcolor
+4114 1880 M
+[ [(Helvetica) 140.0 0.0 true true 0 (1000 mM)]
+] -46.7 MLshow
+1.000 UL
+LTb
+LCb setrgbcolor
 LCb setrgbcolor
 112 1748 M
 currentpoint gsave translate -270 rotate 0 0 moveto
@@ -6250,22 +6477,10 @@ currentpoint gsave translate -270 rotate 0 0 moveto
 ] -46.7 MCshow
 grestore
 LTb
-1.000 UP
-2292 1981 M
-[ [(Helvetica) 140.0 0.0 true true 0 (Berger \(DPPC\))]
-] -46.7 MLshow
-4193 1523 M
-[ [(Helvetica) 140.0 0.0 true true 0 (150 mM)]
-] -46.7 MLshow
-4114 1880 M
-[ [(Helvetica) 140.0 0.0 true true 0 (1000 mM)]
-] -46.7 MLshow
-1.000 UL
-LTb
 % Begin plot #1
 2.000 UL
-LT0
-1398 1373 M
+LTb
+1.00 0.00 0.00 C 1398 1373 M
 31 -1 V
 31 -2 V
 31 1 V
@@ -6368,6 +6583,7 @@ LT0
 % End plot #1
 % Begin plot #2
 stroke
+LTb
 0.00 1.00 0.00 C 1398 1447 M
 31 0 V
 31 9 V
@@ -6472,7 +6688,7 @@ stroke
 % Begin plot #3
 stroke
 3.000 UL
-LT0
+LTb
 0.00 0.00 0.00 C 1398 1360 M
 31 1 V
 31 0 V
@@ -6577,8 +6793,8 @@ LT0
 % Begin plot #4
 stroke
 2.000 UL
-LT0
-1238 1768 M
+LTb
+1.00 0.00 0.00 C 1238 1768 M
 33 -26 V
 34 -6 V
 33 -2 V
@@ -6682,6 +6898,7 @@ LT0
 % End plot #4
 % Begin plot #5
 stroke
+LTb
 0.00 1.00 0.00 C 1238 1764 M
 33 7 V
 34 5 V
@@ -6786,7 +7003,7 @@ stroke
 % Begin plot #6
 stroke
 3.000 UL
-LT0
+LTb
 0.00 0.00 0.00 C 1238 1360 M
 33 0 V
 34 0 V
@@ -6889,8 +7106,12 @@ LT0
 34 0 V
 % End plot #6
 stroke
-1.000 UL
+2.000 UL
 LTb
+LCb setrgbcolor
+1.000 UL
+LTB
+LCb setrgbcolor
 826 2136 N
 0 -776 V
 3961 0 V
@@ -6900,8 +7121,10 @@ Z stroke
 1.000 UP
 1.000 UL
 LTb
+LCb setrgbcolor
 1.000 UL
 LTb
+LCb setrgbcolor
 826 448 M
 63 0 V
 3898 0 R
@@ -6912,6 +7135,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 826 675 M
 63 0 V
 3898 0 R
@@ -6922,6 +7146,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 826 902 M
 63 0 V
 3898 0 R
@@ -6932,6 +7157,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 826 1129 M
 63 0 V
 3898 0 R
@@ -6942,6 +7168,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1222 448 M
 0 63 V
 0 833 R
@@ -6952,6 +7179,7 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 2014 448 M
 0 63 V
 0 833 R
@@ -6962,6 +7190,7 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 2807 448 M
 0 63 V
 0 833 R
@@ -6972,6 +7201,7 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 3599 448 M
 0 63 V
 0 833 R
@@ -6982,6 +7212,7 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 4391 448 M
 0 63 V
 0 833 R
@@ -6992,14 +7223,24 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1.000 UL
-LTb
+LTB
+LCb setrgbcolor
 826 1344 N
 0 -896 V
 3961 0 V
 0 896 V
 -3961 0 V
 Z stroke
+1.000 UP
+LCb setrgbcolor
+1618 1165 M
+[ [(Helvetica) 140.0 0.0 true true 0 (MacRog \(POPC\))]
+] -46.7 MLshow
+1.000 UL
+LTb
+LCb setrgbcolor
 LCb setrgbcolor
 112 896 M
 currentpoint gsave translate -270 rotate 0 0 moveto
@@ -7017,22 +7258,17 @@ LCb setrgbcolor
 [ [(Helvetica) 140.0 0.0 true true 0 (z \(nm\))]
 ] -46.7 MCshow
 LTb
-1.000 UP
-1618 1165 M
-[ [(Helvetica) 140.0 0.0 true true 0 (MacRog \(POPC\))]
-] -46.7 MLshow
-1.000 UL
-LTb
 % Begin plot #1
 1.000 UL
-LT0
-LCb setrgbcolor
-3109 1265 M
+LTb
+1.00 0.00 0.00 C LCb setrgbcolor
+3541 1285 M
 [ [(Helvetica) 100.0 0.0 true true 0 (100 mM)]
 ] -33.3 MRshow
-LT0
-3193 1265 M
-399 0 V
+1.000 UL
+LTb
+1.00 0.00 0.00 C 3601 1285 M
+303 0 V
 1208 488 M
 32 6 V
 33 -6 V
@@ -7136,6 +7372,7 @@ LT0
 % End plot #1
 % Begin plot #2
 stroke
+LTb
 0.00 1.00 0.00 C 1208 513 M
 32 4 V
 33 -4 V
@@ -7240,7 +7477,7 @@ stroke
 % Begin plot #3
 stroke
 3.000 UL
-LT0
+LTb
 0.00 0.00 0.00 C 1208 448 M
 32 0 V
 33 0 V
@@ -7345,14 +7582,15 @@ LT0
 % Begin plot #4
 stroke
 2.000 UL
-LT0
-LCb setrgbcolor
-3109 1125 M
+LTb
+1.00 0.00 0.00 C LCb setrgbcolor
+3541 1185 M
 [ [(Helvetica) 100.0 0.0 true true 0 (210 mM)]
 ] -33.3 MRshow
-LT0
-3193 1125 M
-399 0 V
+2.000 UL
+LTb
+1.00 0.00 0.00 C 3601 1185 M
+303 0 V
 1177 538 M
 33 1 V
 33 4 V
@@ -7456,6 +7694,7 @@ LT0
 % End plot #4
 % Begin plot #5
 stroke
+LTb
 0.00 1.00 0.00 C 1177 581 M
 33 7 V
 33 8 V
@@ -7560,7 +7799,7 @@ stroke
 % Begin plot #6
 stroke
 3.000 UL
-LT0
+LTb
 0.00 0.00 0.00 C 1177 448 M
 33 0 V
 33 0 V
@@ -7664,14 +7903,15 @@ LT0
 % End plot #6
 % Begin plot #7
 stroke
-LT0
-LCb setrgbcolor
-4180 1265 M
+LTb
+1.00 0.00 0.00 C LCb setrgbcolor
+4324 1285 M
 [ [(Helvetica) 100.0 0.0 true true 0 (310 mM)]
 ] -33.3 MRshow
-LT0
-4264 1265 M
-399 0 V
+3.000 UL
+LTb
+1.00 0.00 0.00 C 4384 1285 M
+303 0 V
 1164 624 M
 34 18 V
 33 0 V
@@ -7775,6 +8015,7 @@ LT0
 % End plot #7
 % Begin plot #8
 stroke
+LTb
 0.00 1.00 0.00 C 1164 656 M
 34 2 V
 33 -2 V
@@ -7878,7 +8119,7 @@ stroke
 % End plot #8
 % Begin plot #9
 stroke
-LT0
+LTb
 0.00 0.00 0.00 C 1164 448 M
 34 0 V
 33 0 V
@@ -7983,14 +8224,15 @@ LT0
 % Begin plot #10
 stroke
 4.000 UL
-LT0
-LCb setrgbcolor
-4180 1125 M
+LTb
+1.00 0.00 0.00 C LCb setrgbcolor
+4324 1185 M
 [ [(Helvetica) 100.0 0.0 true true 0 (420 mM)]
 ] -33.3 MRshow
-LT0
-4264 1125 M
-399 0 V
+4.000 UL
+LTb
+1.00 0.00 0.00 C 4384 1185 M
+303 0 V
 1174 707 M
 33 -17 V
 34 34 V
@@ -8094,6 +8336,7 @@ LT0
 % End plot #10
 % Begin plot #11
 stroke
+LTb
 0.00 1.00 0.00 C 1174 746 M
 33 -17 V
 34 -5 V
@@ -8198,7 +8441,7 @@ stroke
 % Begin plot #12
 stroke
 1.000 UL
-LT0
+LTb
 0.00 0.00 0.00 C 1174 448 M
 33 0 V
 34 0 V
@@ -8301,7 +8544,12 @@ LT0
 33 0 V
 % End plot #12
 stroke
+2.000 UL
 LTb
+LCb setrgbcolor
+1.000 UL
+LTB
+LCb setrgbcolor
 826 1344 N
 0 -896 V
 3961 0 V
@@ -8311,6 +8559,7 @@ Z stroke
 1.000 UP
 1.000 UL
 LTb
+LCb setrgbcolor
 stroke
 grestore
 end
