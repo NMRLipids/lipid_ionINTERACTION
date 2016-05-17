@@ -84,7 +84,6 @@ unset label
 
 set origin 0,0.48
 set size 1.0, 0.17
-set key at screen 0.8,screen 1.09 maxcols 3 maxrows 1
 set label at graph 0.3,graph 0.8 "Berger-OPLS (DPPC)"
 set label at graph 0.85,graph 0.21 "150 mM" 
 set label at graph 0.82,graph 0.87 "1000 mM" 
@@ -95,7 +94,7 @@ plot  "../../Data/DPPC/NaCl/BERGERopls/8na/LIPIDdensity.xvg" using 1:3 notitle w
       "../../Data/DPPC/NaCl/BERGERopls/51na/LIPIDdensity.xvg" using 1:4 notitle with lines linetype 1 lw 3 lc rgb 'green', \
       "../../Data/DPPC/NaCl/BERGERopls/51na/LIPIDdensity.xvg" using 1:($2/100) notitle with lines linetype 1 lc rgb 'black' lw 3
 unset label
-unset key
+
 
 set origin 0,0.37
 set size 1.0, 0.17
@@ -112,9 +111,11 @@ plot "../../Data/DPPC/NaCl/SLIPIDS/150mM/pd_323k.xvg" using 1:3 title 'DPPC, 150
      "../../Data/POPC/NaCl/SLIPID/130mMsd/LIPIDdensity.xvg" using 1:4 notitle with lines linetype 1 lw 1 lc rgb 'green', \
      "../../Data/POPC/NaCl/SLIPID/130mMsd/LIPIDdensity.xvg" using 1:($2/200) notitle with lines linetype 1 lc rgb 'black'  lw 3
 unset label
+unset key
 
 set origin 0,0.26
 set size 1.0, 0.17
+set key at screen 0.8,screen 1.09 maxcols 3 maxrows 1
 set label at graph 0.3,graph 0.8 "Berger (POPC, 340 mM NaCl)"
 plot  "../../Data/POPC/NaCl/BERGER/44na/LIPIDdensity.xvg" using 1:3 title 'Na' with lines linetype 1 lw 2 lc rgb 'red', \
       "../../Data/POPC/NaCl/BERGER/44na/LIPIDdensity.xvg" using 1:4 title 'Cl' with lines linetype 1 lw 2 lc rgb 'green', \
