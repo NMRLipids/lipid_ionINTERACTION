@@ -11,7 +11,7 @@ set key font ",13"
 
 
 set yrange [-0.08:0.01]
-set ylabel "{/Symbol b}   {/Symbol D}S_{CH}"
+set ylabel "{/Symbol D}S_{CH}^{/Symbol b}"
 set origin 0,0.35
 set size 0.65, 0.35
 plot "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-NaClchange.dat"  using 1:($2*-0.00784) title 'DPPC+NaCl, ^2H NMR, T=323K' with linespoints  linetype 1 pt 7 lc rgb 'black', \
@@ -61,7 +61,7 @@ plot "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-CaClchange-T332.dat"  using 1:($2
      "../../Data/POPC/CaCl/SLIPID/SLIPIDcaclCONSchange.dat" using 1:4:5 with yerrorbars notitle  pt 5 lt 1 lc rgb 'violet', "" using 1:4 with lines notitle linetype 1 lc rgb 'violet'
 
 #set yrange [-0.015:0.11]
-set ylabel "{/Symbol a}  {/Symbol D}S_{CH}"
+set ylabel "{/Symbol D}S_{CH}^{/Symbol a}"
 set xlabel "[NaCl] (mM)"
 set origin 0,0
 set size 0.65, 0.35

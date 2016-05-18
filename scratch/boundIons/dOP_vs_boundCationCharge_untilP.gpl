@@ -49,7 +49,7 @@ set xtics format '' 0.1
 set mxtics 2
 set ytics format "%3.2f" 0.02
 set mytics 2
-set ylabel "change of C-H order parameter from salt-free solution" offset 0.8,-9
+set ylabel "change of C-H order parameter from salt-free solution ({/Symbol D}S_{CH}^{/Symbol i})" offset 0.8,-9
 set label 100 "{/Symbol b}" at graph 0.06, 0.11 font ",25"
 plot [:][-0.17:0.03] \
   "boundDensity_vs_dOP_untilP.orange"        u ($1):($4-$2+$3+$5):($4-$2-$3-$5) ev :::::1 w filledcurves ls ls_orange t "", \
