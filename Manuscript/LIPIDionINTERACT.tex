@@ -389,15 +389,13 @@ affected by both, cation binding affinity and choline structural response.
   CHARMM36\cite{klauda10}, CHARMM36\cite{venable13} & POPC & 350 (NaCl)  & 72 & 2085 & 13  & 0 & 13 & 303  & 80 & 60 & \cite{charmmPOPC350mMNaClfiles} \\
   CHARMM36\cite{klauda10}, CHARMM36\cite{venable13} & POPC & 690 (NaCl)  & 72 & 2085 & 26  & 0 & 26 & 303  & 73 & 60 & \cite{charmmPOPC690mMNaClfiles}   \\
   CHARMM36\cite{klauda10}, CHARMM36\cite{venable13}  & POPC & 950 (NaCl)  & 72 & 2168 & 37  & 0 & 37 & 303  & 80 & 60 &\cite{charmmPOPC950mMNaClfiles}  \\
-  %CHARMM36\cite{klauda10}, ionFF~\cite{??}\todoi{Appropriate reference for the ion model?}  & POPC & 1380 (NaCl)  & 72 & 2085 & 52  & 0 & 52 & 303  & 80 & 60 &?\todoi{Samuli put to Zenodo} \\
-  %CHARMM36\cite{klauda10}, ionFF~\cite{??}\todoi{Appropriate reference for the ion model?}   & POPC & 2080  (NaCl)  & 72 & 2085 & 78  & 0 & 78 & 303  & 73 & 60 &?\todoi{Samuli put to Zenodo} \\
   CHARMM36\cite{klauda10}, CHARMM36 & POPC &  350 (CaCl$_2$)  & 128 & 6400 & 0& 35 & 70 & 303  & 200  & 100 & \cite{charmmPOPC350mMCaClfiles}  \\
   CHARMM36\cite{klauda10}, CHARMM36 & POPC &  450 (CaCl$_2$)  & 200 & 9000 & 0& 73 & 146 & 310  & 2000  & 100 & \cite{charmmPOPC450mMCaClfiles}  \\
   CHARMM36\cite{klauda10}, CHARMM36 & POPC &  670 (CaCl$_2$)  & 128 & 6400 & 0& 67 & 134 & 303  & 200  & 120 & \cite{charmmPOPC670mMCaClfiles}  \\  
   CHARMM36\cite{klauda10}, CHARMM36 & POPC &  1000 (CaCl$_2$) & 128 & 6400 & 0& 100 & 200 & 303 & 200  & 100 & \cite{charmmPOPC1000mMCaClfiles}  \\
   \hline
-  CHARMM36\cite{klauda10}, \cite{}  & DPPC & 430 (CaCl$_2$)  & 128 & 7760 & 60  & 0 & 120 & 323  & 200 & ? &todo  \\
-  CHARMM36\cite{klauda10}, \cite{}  & DPPC & 886 (CaCl$_2$)  & 128 & 7520 & 120  & 0 & 240 & 323  & 200 & ? &todo  \\
+  CHARMM36\cite{klauda10}, Yoo\cite{yoo16}  & DPPC & 430 (CaCl$_2$)  & 128 & 7760 & 60  & 0 & 120 & 323  & 200 & 170 &todo  \\
+  CHARMM36\cite{klauda10}, Yoo\cite{yoo16}  & DPPC & 886 (CaCl$_2$)  & 128 & 7520 & 120  & 0 & 240 & 323  & 200 & 170 &todo  \\
   \hline
   MacRog\cite{maciejewski14}  & POPC & 0 & 288 & 14400 & 0 & 0 & 0 & 310 & 90&40  &~\cite{macrogdehydFILES}  \\
   MacRog\cite{maciejewski14}, OPLS\cite{aqvist90}  & POPC & 100 (NaCl) & 288 & 14554 & 27 & 0 & 27 & 310 & 90&50  & \cite{macrogIONfiles} \\
@@ -867,43 +865,24 @@ After energy minimization and an equilibration run of 0.5 ns, 200ns simulations 
 The systems contained 128 DPPC lipids and about 7600 TIP3P water molecules,
 and an appropriate amount of ions as indicated in  Table~\ref{IONsystems}.  
 We have used CHARMM36 additive force field parameters for lipids~\cite{klauda10}. 
-The calcium model was developped recently by Yoo et al. in \cite{yoo16}. 
-%@article{yoo16,
-%author = {Yoo, Jejoong and Wilson, James and Aksimentiev, Aleksei},
-%title = {{Improved model of hydrated calcium ion for molecular dynamics simulations using classical biomolecular force fields}},
-%journal = {Biopolymers},
-%year = {2016},
-%month = may
-%}
-Each calcium cation is decorated by seven hydrating water molecules with different charges from the usual TIP3P,
+In the calcium model developed recently by Yoo et al. in \cite{yoo16}, 
+each cation is decorated by seven hydrating water molecules (with different charges from the usual TIP3P),
 which are constrainted to remain in its vincinity. The associated parameter files was available
 on http://bionano.physics.illinois.edu/CUFIX. The constraint on the Calcium-Oxygen distances
 was imposed by adding extrabonds through a harmonic potential $V(r) = k*(r-r_0)^2$, 
 with $r_0=2.25$~\AA and $k=10$~kcal$\cdot$mol$^{-1}$$\cdot$\AA$^{-2}$.
 
 The starting  configuration of hydrated lipidic bilayers were constructed using packmol 
-package with a large area par lipid (74\AA$^{2}$). Then, varying amounts of CaCl$_2$ ions were added 
-using the autoionize plugin of vmd package \cite{HUMP96},
-%@article{HUMP96,
-%  author={William Humphrey and Andrew Dalke and Klaus Schulten},
-%  title={{VMD} -- {V}isual {M}olecular {D}ynamics},
-%  journal={Journal of Molecular Graphics},
-%  year=1996,
-%  volume=14,
-%  pages={33-38}
-%}
+package \cite{packmol} with a large area par lipid (74\AA$^{2}$). 
+Then, varying amounts of CaCl$_2$ ions were added 
+using the autoionize plugin of vmd package \cite{hump96},
 mentionning explicitely the number of ions required.
 Ion placement is random, with the constraint of  minimum 5 \AA between ions and lipids,
 as well as between any two ions.
 
 All the minimizations and dynamics were conducted using the NAMD package developed 
-by the Theoretical and Computational Biophysics Group at the University of Illinois at Urbana-Champaign.
-% \cite{NAMD,abraham15}
-%J. C. Phillips, R. Braun, W. Wang, J. Gumbart, E. Tajkhorshid, E. Villa, C. Chipot, R. D. Skeel, L. Kalé and K. Schulten, J. Comput. Chem., 2005, 26, 1781–1802
-%
-
-The temperature of the whole system was controled
-thanks to a Langevin  thermostat with a target temperature of 323~K 
+by the Theoretical and Computational Biophysics Group at the University of Illinois at Urbana-Champaign \cite{NAMD}.
+The temperature of the whole system was controled thanks to a Langevin  thermostat with a target temperature of 323~K 
 and a relaxation time constant of 1~ps.  The modified NAMD version of the Nose–Hoover barostat with Langevin dynamics
 (piston period of 0.1~ps and piston decay time of 0.05~ps) was used semi-isotropically
 to reach the averaged target pressure of 1 bar and an averaged zero surface tension. 
@@ -919,10 +898,57 @@ lists with a radius of 1.4~nm were updated every 10 timesteps.
 The temperature was kept at 323~K with a Langevin thermostat with a damping coeffi-
 cient of 5~ps.  Coordinates were written every 20~ps.
 After energy minimization, a run of  200~ns simulations was performed. 
-About 30~ns of trajectory  was eliminated because of lack of equilibration, 
-and the last $\sim$ 170~ns of  trajectory was employed for the analysis.
+About 30~ns of trajectory was eliminated, and the last $\sim$ 170~ns of  trajectory was employed for the analysis.
 Error bars are defined by +/- the standard error of the mean, 
 taking into account the correlation time of the average order parameters ( about ... ps). 
+
+
+% tex file associated
+%
+%@article{hump96,
+%  author={William Humphrey and Andrew Dalke and Klaus Schulten},
+%  title={{VMD} -- {V}isual {M}olecular {D}ynamics},
+%  journal={Journal of Molecular Graphics},
+%  year=1996,
+%  volume=14,
+%  pages={33-38}
+%}
+%
+%@article{yoo16,
+%author = {Yoo, Jejoong and Wilson, James and Aksimentiev, Aleksei},
+%title = {{Improved model of hydrated calcium ion for molecular dynamics simulations using classical biomolecular force fields}},
+%journal = {Biopolymers},
+%year = {2016},
+%month = may
+%}
+%
+%@article{NAMD,
+%author = {Phillips, James C. and Braun, Rosemary and Wang, Wei and Gumbart, James and Tajkhorshid, Emad and Villa, Elizabeth and Chipot, Christophe and Skeel, Robert D and Kal{\'e}, Laxmikant and Schulten, Klaus},
+%title = {{Scalable molecular dynamics with NAMD}},
+%journal = {J. Comput. Chem.},
+%year = {2005},
+%volume = {26},
+%number = {16},
+%pages = {1781--1802}
+%}
+%
+%@article{packmol,
+%author = {Mart{\'\i}nez, L and Andrade, R and Birgin, E G and Mart{\'\i}nez, J M},
+%title = {{PACKMOL: A package for building initial configurations for molecular dynamics simulations}},
+%journal = {J. Comput. Chem.},
+%year = {2009},
+%volume = {30},
+%number = {13},
+%pages = {2157--2164},
+%month = oct
+%}
+
+
+
+
+
+
+
 
 \subsubsection{MacRog}
 The simulation parameters are identical to those employed in our earlier study~\cite{botan15} for the full 
