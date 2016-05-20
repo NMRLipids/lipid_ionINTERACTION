@@ -874,11 +874,12 @@ with $r_0=2.25$~\AA and $k=10$~kcal$\cdot$mol$^{-1}$$\cdot$\AA$^{-2}$.
 
 The starting  configuration of hydrated lipidic bilayers were constructed using packmol 
 package \cite{packmol} with a large area par lipid (74~\AA$^{2}$). 
-Then, varying amounts of CaCl$_2$ ions were added 
+After a first energy minimization (5000 steps),
+varying amounts of CaCl$_2$ ions were added  by replacing water molecules,
 using the autoionize plugin of vmd package \cite{hump96},
 mentionning explicitely the number of ions required.
 Ion placement is random, with the constraint of  minimum 5~\AA between ions and lipids,
-as well as between any two ions.
+as well as between any two ions. A second energy minimization was performed after inserting the ions.
 
 All the minimizations and dynamics were conducted using the NAMD package developed 
 by the Theoretical and Computational Biophysics Group at the University of Illinois at Urbana-Champaign \cite{NAMD}.
