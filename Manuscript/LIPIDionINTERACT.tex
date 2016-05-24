@@ -896,53 +896,14 @@ with a 4-th order smoothing spline and a grid spacing of about 0.1~nm.
  A cut-off of 1.2~nm was employed for the Lennard-Jones
 interactions, with a force-based switching function for distances beyond 1~nm. Neighbor
 lists with a radius of 1.4~nm were updated every 10 timesteps.
-The temperature was kept at 323~K with a Langevin thermostat with a damping coefficient of 5~ps.  Coordinates were written every 20~ps.
+The temperature was kept at 323~K with a Langevin thermostat with 
+a damping coefficient of 5~ps.  Coordinates were written every 20~ps.
 After energy minimization, a run of  200~ns simulations was performed. 
-About 30~ns of trajectory was eliminated, and the last $\sim$ 170~ns of  trajectory was employed for the analysis.
+About 30~ns of trajectory was eliminated, and the last $\sim$ 170~ns 
+of  trajectory was employed for the analysis.
 Error bars are defined by +/- the standard error of the mean, 
 taking into account the correlation time of the average order parameters 
 (200~ps for 430~mM and 400~ps for 890~mM). 
-
-
-% bibtex file associated
-%
-%@article{hump96,
-%  author={William Humphrey and Andrew Dalke and Klaus Schulten},
-%  title={{VMD} -- {V}isual {M}olecular {D}ynamics},
-%  journal={Journal of Molecular Graphics},
-%  year=1996,
-%  volume=14,
-%  pages={33-38}
-%}
-%
-%@article{yoo16,
-%author = {Yoo, Jejoong and Wilson, James and Aksimentiev, Aleksei},
-%title = {{Improved model of hydrated calcium ion for molecular dynamics simulations using classical biomolecular force fields}},
-%journal = {Biopolymers},
-%year = {2016},
-%month = may
-%}
-%
-%@article{NAMD,
-%author = {Phillips, James C. and Braun, Rosemary and Wang, Wei and Gumbart, James and Tajkhorshid, Emad and Villa, Elizabeth and Chipot, Christophe and Skeel, Robert D and Kal{\'e}, Laxmikant and Schulten, Klaus},
-%title = {{Scalable molecular dynamics with NAMD}},
-%journal = {J. Comput. Chem.},
-%year = {2005},
-%volume = {26},
-%number = {16},
-%pages = {1781--1802}
-%}
-%
-%@article{packmol,
-%author = {Mart{\'\i}nez, L and Andrade, R and Birgin, E G and Mart{\'\i}nez, J M},
-%title = {{PACKMOL: A package for building initial configurations for molecular dynamics simulations}},
-%journal = {J. Comput. Chem.},
-%year = {2009},
-%volume = {30},
-%number = {13},
-%pages = {2157--2164},
-%month = oct
-%}
 
 \subsubsection{MacRog}
 The simulation parameters are identical to those employed in our earlier study~\cite{botan15} for the full 
