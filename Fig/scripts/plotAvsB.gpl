@@ -1,49 +1,66 @@
 #set term postscript enhanced color  
 set terminal postscript portrait enhanced color dashed lw 1 "Helvetica" 14 
 set output "../OrderParameterAvsB.eps"
-set size 1.4, 0.89
+set size 1.5, 0.89
 #set multiplot  layout 2,2
 set ytic 0.01
 set key above
 #set key at screen 0.6,screen 0.885 maxcols 1 maxrows 11	
 #set key font ",13"
+set tic font ",20"
+set key font ",22"
 
 set object 200 rectangle center graph 0.29, graph 0.88 size graph 0.34, graph 0.1 fs solid noborder
 set object 201 rectangle center graph 0.29, graph 0.86 size graph 0.34, graph 0.25 fs empty
-set label 1 at graph 0.135, graph 0.86 "POPC"
-set label 2 at graph 0.135, graph 0.78 "DPPC"
-set label 3 at graph 0.235, graph 0.94 "NaCl"
-set label 4 at graph 0.355, graph 0.94 "CaCl_2"
+set label 1 at graph 0.135, graph 0.86 "POPC"  font ",22"
+set label 2 at graph 0.135, graph 0.78 "DPPC"  font ",22"
+set label 3 at graph 0.235, graph 0.94 "NaCl"  font ",22"
+set label 4 at graph 0.355, graph 0.94 "CaCl_2"  font ",22"
 
+set pointsize 1.65
 pt_DPPC_Na = 4
 pt_POPC_Na = 6
 pt_POPC_Ca = 7
 ls_forKey = 10
 
+#set style line ls_forKey lt 1 ps 1.5*r lc rgb "black"
+#set style line ls_berger lt 1 dt 1 lw w lc rgb "#D70039"
+#set style line ls_beOPLS lt 1 dt 3 lw w lc rgb "#D70039"
+#set style line ls_chrm36 lt 1 dt 1 lw w lc rgb "#0088BF"
+#set style line ls_lipd14 lt 1 dt 1 lw w lc rgb "#FFD300"
+#set style line ls_macrog lt 1 dt 1 lw w lc rgb "#00A368"
+#set style line ls_orange lt 1 dt 1 lw w lc rgb "#FF6600"
+#set style line ls_ulmsch lt 1 dt 1 lw w lc rgb "#FFA0A3"
+#set style line ls_slipid lt 1 dt 1 lw w lc rgb "#7AEE9E"
+
+set lmargin at screen 0.37
 #set key at screen 1.3,screen 0.87 maxcols 2 maxrows 8
 set xrange [-0.12:-0.0001] 
-set xlabel '{/Symbol D}S_{CH}^{/Symbol a}'
+set xlabel '{/Symbol D}S_{CH}^{/Symbol a}' font ",27"
 #set yrange [-0.11:0.05]
-set ylabel "{/Symbol D}S_{CH}^{/Symbol b}"
-#set origin 0.7,0.35
+set ylabel "{/Symbol D}S_{CH}^{/Symbol b}" font ",27"
+set origin 0.2,0
 #set size 0.65, 0.35
 plot "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-CaClchange-T332.dat"  using ($3*0.00784):($2*-0.00784) title '^2H NMR' with points  linetype 1 pt 5 lc rgb 'black', \
      "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-CaClchange-T323.dat"  using ($3*0.00784):($2*-0.00784) notitle with points  linetype 1 pt 5 lc rgb 'black', \
-     "../../Data/POPC/CaCl/BERGER/BERGERcaclCONSchange.dat" using (($6+$8)/2):(($2+$4)/2) with point title 'Berger' pt 7 linetype 1 lc rgb 'red', \
-     "../../Data/POPC/CaCl/ORANGE/ORANGEcaclCONSchange.dat" using (($6+$8)/2):(($2+$4)/2) with point title 'Orange' pt 7 linetype 1 lc rgb 'orange', \
-     "../../Data/POPC/CaCl/CHARMM36/CHARMMcaclCONSchange.dat" using (($6+$8)/2):(($2+$4)/2) with point title 'CHARMM36' pt 7 linetype 1 lc rgb 'green', \
-      "../../Data/DPPC/CaCl/CHARMM36/CHARMMcaclCONSchangeYOO.dat" using (($6+$8)/2):(($2+$4)/2) with point title 'CHARMM36 YOO' pt 5 linetype 1 lc rgb 'green', \
-     "../../Data/POPC/CaCl/LIPID14/LIPID14caclCONSchange.dat" using (($6+$8)/2):(($2+$4)/2) with point title 'Lipid14' pt 7 linetype 1 lc rgb 'yellow', \
-     "../../Data/POPC/CaCl/SLIPID/SLIPIDcaclCONSchange.dat" using (($6+$8)/2):(($2+$4)/2) with point title 'Slipid' pt 7 linetype 1 lc rgb 'violet', \
-     "../../scratch/MACROGnaclCONSchange.dat" using (($4+$5)/2):(($2+$3)/2) with point title 'MacRog' linetype 1 pt 6 lc rgb 'blue', \
-     "../../Data/POPC/NaCl/CHARMM36/CHARMMnaclCONSchange.dat" using (($6+$8)/2):(($2+$4)/2) with point notitle  pt 6 linetype 1 lc rgb 'green', \
-     "../../Data/POPC/NaCl/ORANGE/ORANGEnaclCONSchange.dat" using (($6+$8)/2):(($2+$4)/2) with point notitle  pt 6 linetype 1 lc rgb 'orange', \
-     "../../Data/POPC/NaCl/LIPID14/LIPID14naclCONSchange.dat" using (($6+$8)/2):(($2+$4)/2) with point notitle  pt 6 linetype 1 lc rgb 'yellow', \
-     "../../Data/POPC/NaCl/ULM/ULMnaclCONSchange.dat" using (($6+$8)/2):(($2+$4)/2) with point title 'Ulmschneiders'  pt 6 linetype 1 lc rgb 'pink', \
-     "../../Data/DPPC/NaCl/BERGERopls/BERGERoplsnaclCONSchange.dat" using (($6+$8)/2):(($2+$4)/2) with point title 'Berger-OPLS'  pt 4 linetype 1 lc rgb 'brown', \
-     "../../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSD.dat" using (($6+$8)/2):(($2+$4)/2) with point notitle pt 6 linetype 1 lc rgb 'violet', \
-     "../../Data/DPPC/NaCl/SLIPIDS/SLIPIDnaclCONSchangeRX.dat" using (($6+$8)/2):(($2+$4)/2) with point notitle pt 4 linetype 1 lc rgb 'violet', \
-     "../../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchange.dat" using (($6+$8)/2):(($2+$4)/2) with point notitle pt 4  lc rgb 'red', \
+     "../../Data/POPC/CaCl/BERGER/BERGERcaclCONSchange.dat" using (($6+$8)/2):(($2+$4)/2) with point title 'Berger' pt 7 linetype 1 lc rgb '#D70039', \
+     "../../Data/POPC/CaCl/ORANGE/ORANGEcaclCONSchange.dat" using (($6+$8)/2):(($2+$4)/2) with point title 'orange' pt 7 linetype 1 lc rgb '#FF6600', \
+     "../../Data/POPC/CaCl/CHARMM36/CHARMMcaclCONSchange.dat" using (($6+$8)/2):(($2+$4)/2) with point title 'CHARMM36' pt 7 linetype 1 lc rgb '#0088BF', \
+      "../../Data/DPPC/CaCl/CHARMM36/CHARMMcaclCONSchangeYOO.dat" using (($6+$8)/2):(($2+$4)/2) with point title 'CHARMM36 YOO' pt 5 linetype 1 lc rgb '#0088BF', \
+     "../../Data/POPC/CaCl/LIPID14/LIPID14caclCONSchange.dat" using (($6+$8)/2):(($2+$4)/2) with point title 'Lipid14' pt 7 linetype 1 lc rgb '#FFD300', \
+     "../../Data/POPC/CaCl/SLIPID/SLIPIDcaclCONSchange.dat" using (($6+$8)/2):(($2+$4)/2) with point title 'Slipid' pt 7 linetype 1 lc rgb '#7AEE9E', \
+     "../../scratch/MACROGnaclCONSchange.dat" ev :::0::0 with point title 'MacRog' linetype 1 pt 7 lc rgb '#00A368', \
+     "../../scratch/MACROGnaclCONSchange.dat" using (($4+$5)/2):(($2+$3)/2) with point notitle linetype 1 pt 6 lc rgb '#00A368', \
+     "../../Data/POPC/NaCl/CHARMM36/CHARMMnaclCONSchange.dat" using (($6+$8)/2):(($2+$4)/2) with point notitle  pt 6 linetype 1 lc rgb '#0088BF', \
+     "../../Data/POPC/NaCl/ORANGE/ORANGEnaclCONSchange.dat" using (($6+$8)/2):(($2+$4)/2) with point notitle  pt 6 linetype 1 lc rgb '#FF6600', \
+     "../../Data/POPC/NaCl/LIPID14/LIPID14naclCONSchange.dat" using (($6+$8)/2):(($2+$4)/2) with point notitle  pt 6 linetype 1 lc rgb '#FFD300', \
+     "../../Data/POPC/NaCl/ULM/ULMnaclCONSchange.dat" ev :::0::0 with point title 'Ulmschneiders'  pt 7 linetype 1 lc rgb '#FFA0A3', \
+     "../../Data/POPC/NaCl/ULM/ULMnaclCONSchange.dat" using (($6+$8)/2):(($2+$4)/2) with point notitle pt 6 linetype 1 lc rgb '#FFA0A3', \
+     "../../Data/DPPC/NaCl/BERGERopls/BERGERoplsnaclCONSchange.dat"  ev :::0::0 with point title 'Berger-OPLS'  pt 7 linetype 1 lc rgb 'brown', \
+     "../../Data/DPPC/NaCl/BERGERopls/BERGERoplsnaclCONSchange.dat" using (($6+$8)/2):(($2+$4)/2) with point notitle pt 4 linetype 1 lc rgb 'brown', \
+     "../../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSD.dat" using (($6+$8)/2):(($2+$4)/2) with point notitle pt 6 linetype 1 lc rgb '#7AEE9E', \
+     "../../Data/DPPC/NaCl/SLIPIDS/SLIPIDnaclCONSchangeRX.dat" using (($6+$8)/2):(($2+$4)/2) with point notitle pt 4 linetype 1 lc rgb '#7AEE9E', \
+     "../../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchange.dat" using (($6+$8)/2):(($2+$4)/2) with point notitle pt 4  lc rgb '#D70039', \
      "../../Data/POPC/CaCl/LIPID14/LIPID14caclCONSchange.dat" using (($6+$8)/2):(0.43*($6+$8)/2) with lines notitle linetype 1 lc rgb 'black', \
      "forKeyAvsB.dat" ev :::0::0 notitle pt 6 lc rgb 'black', \
      "forKeyAvsB.dat" ev :::1::1 notitle pt 4 lc rgb 'black',\
