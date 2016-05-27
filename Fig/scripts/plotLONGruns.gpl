@@ -1,0 +1,34 @@
+#set term postscript enhanced color  
+set terminal postscript portrait enhanced color dashed lw 1 "Helvetica" 14 
+set output "../bindingINlongRUNS.eps"
+set size 1.5, 0.89
+#set multiplot  layout 2,2
+#set ytic 0.01
+set key above
+#set key at screen 0.6,screen 0.885 maxcols 1 maxrows 11	
+#set key font ",13"
+set tic font ",16"
+set key font ",22"
+
+set pointsize 1.65
+
+#set style line ls_forKey lt 1 ps 1.5*r lc rgb "black"
+#set style line ls_berger lt 1 dt 1 lw w lc rgb "#D70039"
+#set style line ls_beOPLS lt 1 dt 3 lw w lc rgb "#D70039"
+#set style line ls_chrm36 lt 1 dt 1 lw w lc rgb "#0088BF"
+#set style line ls_lipd14 lt 1 dt 1 lw w lc rgb "#FFD300"
+#set style line ls_macrog lt 1 dt 1 lw w lc rgb "#00A368"
+#set style line ls_orange lt 1 dt 1 lw w lc rgb "#FF6600"
+#set style line ls_ulmsch lt 1 dt 1 lw w lc rgb "#FFA0A3"
+#set style line ls_slipid lt 1 dt 1 lw w lc rgb "#7AEE9E"
+
+set lmargin at screen 0.37
+#set key at screen 1.3,screen 0.87 maxcols 2 maxrows 8
+#set xrange [-0.12:-0.0001] 
+set xlabel 'Simulation time (ns)' font ",22"
+#set yrange [-0.11:0.05]
+set ylabel "Numer of ions within 0.325nm\n distance from any lipid oxygen" font ",22"
+set origin 0.2,0
+#set size 0.65, 0.35
+plot "../../Data/POPC/CaCl/CHARMM36/450mMlong/contacts_ca_charmm36.txt"  using ($1/1000):($2) title 'CHARMM36 (POPC with 450mM CaCl_2)' with line linetype 1 lw 2 lc rgb '#0088BF', \
+     "../../Data/POPC/CaCl/SLIPID/450mM/contacts_ca_slipids.txt"  using ($1/1000):($2) title 'Slipids (POPC with 450mM CaCl_2)' with line linetype 1 lw 2 lc rgb '#7AEE9E', \
