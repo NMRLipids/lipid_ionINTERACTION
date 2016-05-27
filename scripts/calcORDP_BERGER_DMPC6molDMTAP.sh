@@ -1,30 +1,30 @@
 #!/bin/bash
-tmpDIRname=BERGER_44na_OPtmp
+tmpDIRname=BERGER_DMPC6molDMTAP_OPtmp
 mkdir $tmpDIRname
 cd $tmpDIRname
-cp ../calcORDPberger.sh ./
+cp ../calcORDPbergerDMPC.sh ./
 cp ../gro_OP.awk ./
-trajname=/m/nbe/work/ollilas1/IONS/run2.trr
-tprname=/m/nbe/work/ollilas1/IONS/run2.tpr
-tprname402=/m/nbe/work/ollilas1/IONS/run407.tpr
-hdbfile=/m/nbe/work/ollilas1/IONS/ffgmx2.hdb
+trajname=/m/nbe/work/ollilas1/DMPCdata/DMPCberger/DMPC_DMTAP/6molDMTAP/tap06W_32-141ns.xtc
+tprname=/m/nbe/work/ollilas1/DMPCdata/DMPCberger/DMPC_DMTAP/6molDMTAP/tap06W.tpr
+tprname402=/m/nbe/work/ollilas1/DMPCdata/DMPCberger/DMPC_DMTAP/6molDMTAP/tap06W.tpr
+hdbfile=/m/nbe/work/ollilas1/DMPCdata/ffgmx2.hdb
 cp $hdbfile ./
 starttime=0
-numberOFlipids=128
-outFILE=../../Data/POPC/NaCl/BERGER/44na/OrderParameters.dat
+numberOFlipids=120
+outFILE=../../Data/DMPC/DMPC_DMTAP/6molDMTAP/OrderParameters.dat
 #Calculate order parameter for each lipid separately
 echo 'q
-' | make_ndx -f $tprname
-echo 0 | trjconv -f $trajname -s $tprname -o trjtmpINBOX.xtc -n index.ndx -pbc res -b $starttime
-echo 'keep 2
+' | /m/nbe/home/ollilas1/gromacs/gromacs334/bin/make_ndx -f $tprname
+echo 0 | /m/nbe/home/ollilas1/gromacs/gromacs334/bin/trjconv -f $trajname -s $tprname -o trjtmpINBOX.xtc -n index.ndx -pbc res -b $starttime
+echo 'keep 1
 splitres 0
 q
-' | make_ndx -f $tprname
+' | /m/nbe/home/ollilas1/gromacs/gromacs334/bin/make_ndx -f $tprname
 for((  j = 1 ;  j <= $numberOFlipids;  j=j+1  ))
 do
     rm runPROT.gro
     echo "$j" | /m/nbe/home/ollilas1/gromacs/gromacs402/bin/protonate -f trjtmpINBOX.xtc -s $tprname402 -o runPROT.gro -n index.ndx
-    sh calcORDPberger.sh > OrderParameters_"$j".dat
+    sh calcORDPbergerDMPC.sh > OrderParameters_"$j".dat
 done
 #Calculate average and the error of the mean of order parameters over lipids.
 echo '0

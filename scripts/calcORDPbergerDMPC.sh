@@ -5,5 +5,5 @@ awk -v Cname="   C6" -v Hname="  H62" -f gro_OP.awk runPROT.gro
 awk -v Cname="  C12" -v Hname=" H121" -f gro_OP.awk runPROT.gro
 awk -v Cname="  C12" -v Hname=" H122" -f gro_OP.awk runPROT.gro
 awk -v Cname="  C13" -v Hname=" H131" -f gro_OP.awk runPROT.gro
-awk -v Cname="  C32" -v Hname=" H321" -f gro_OP.awk runPROT.gro
-awk -v Cname="  C32" -v Hname=" H322" -f gro_OP.awk runPROT.gro
+awk -v Cname="  C30" -v Hname=" H301" -f gro_OP.awk runPROT.gro
+awk -v Cname="  C30" -v Hname=" H302" -f gro_OP.awk runPROT.gro
