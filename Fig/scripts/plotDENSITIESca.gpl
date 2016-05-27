@@ -1,25 +1,29 @@
 #set term postscript enhanced color  
-set size 1, 1.05
+set size 1, 1.08
 set terminal postscript portrait enhanced color dashed lw 1 "Helvetica" 14 
 #set terminal png enhanced color dashed lw 1 "Helvetica" 14 
 #set terminal png size 555,880 enhanced font "Helvetica,20"
 set output "../CAdensities.eps"
-set multiplot  layout 6,1
+set multiplot  layout 7,1
 #set size 1.0, 0.25
-set yrange [0:0.8]
+set yrange [0:0.79]
 set xrange [-5:5] 
 set ytic 0.2
 #set key box
 #set key above
-set key at screen 0.8,screen 1.01 maxcols 3 maxrows 1
 
-set ylabel "Number\nDensity"
+
+set size 1.0, 0.205
+set xtics format " "
+set ylabel " "
 set label at graph 0.25, graph 0.84 "Orange (510 mM CaCl_2)"
 plot  "../../Data/POPC/CaCl/ORANGE/26ca/LIPIDdensity.xvg" using 1:3 notitle with lines linetype 1 lw 2 lc rgb 'red', \
       "../../Data/POPC/CaCl/ORANGE/26ca/LIPIDdensity.xvg" using 1:($4/2) notitle with lines linetype 1 lw 2 lc rgb 'green', \
       "../../Data/POPC/CaCl/ORANGE/26ca/LIPIDdensity.xvg" using 1:($2/100) notitle with lines linetype 1 lc rgb 'black' lw 3
 unset label
 
+set size 1.0, 0.205
+set ylabel " "
 set label at graph 0.44, graph 0.84 "LIPID14"
 set label at graph 0.85,graph 0.26 "350 mM" 
 set label at graph 0.83,graph 0.66 "1000 mM" 
@@ -31,6 +35,22 @@ plot  "../../Data/POPC/CaCl/LIPID14/35ca/LIPIDdensity_last100ns.xvg" using 1:3 n
       "../../Data/POPC/CaCl/LIPID14/100ca/LIPIDdensity_last100ns.xvg" using 1:($2/200) notitle with lines linetype 1 lc rgb 'black' lw 3
 unset label
 
+set size 1.0, 0.205
+set ylabel " "
+set label at graph 0.3, graph 0.87 "CHARMM36 with Yoo ions"
+#set label at graph 0.36, graph 0.75 "(430 mM CaCl_2)"
+set label at graph 0.85,graph 0.39 "430 mM" 
+set label at graph 0.83,graph 0.79 "886 mM" 
+plot  "../../Data/POPC/CaCl/CHARMM36/430mMyoo/atom_density_DPPC_CaCl2_429mM_CHARMM36_YOO.out" using 1:3 notitle  with lines linetype 1 lw 2 lc rgb 'red' ,\
+      "../../Data/POPC/CaCl/CHARMM36/430mMyoo/atom_density_DPPC_CaCl2_429mM_CHARMM36_YOO.out" using 1:($4/2) notitle with lines linetype 1 lw 2 lc rgb 'green', \
+      "../../Data/POPC/CaCl/CHARMM36/430mMyoo/atom_density_DPPC_CaCl2_429mM_CHARMM36_YOO.out" using 1:($2/200) notitle with lines linetype 1 lc rgb 'black' lw 3,\
+      "../../Data/POPC/CaCl/CHARMM36/886mMyoo/atom_density_DPPC_CaCl2_886mM_CHARMM36_YOO.out" using 1:3 notitle  with lines linetype 1 lw 2 lc rgb 'red' ,\
+      "../../Data/POPC/CaCl/CHARMM36/886mMyoo/atom_density_DPPC_CaCl2_886mM_CHARMM36_YOO.out" using 1:($4/2) notitle with lines linetype 1 lw 2 lc rgb 'green', \
+      "../../Data/POPC/CaCl/CHARMM36/886mMyoo/atom_density_DPPC_CaCl2_886mM_CHARMM36_YOO.out" using 1:($2/200) notitle with lines linetype 1 lc rgb 'black' lw 3
+unset label
+
+set size 1.0, 0.205
+set ylabel "Number Density (nm^{-3})" font ",20"
 set label at graph 0.4, graph 0.84 "CHARMM36"
 set label at graph 0.85,graph 0.21 "350 mM" 
 set label at graph 0.87,graph 0.43 "670 mM" 
@@ -45,7 +65,10 @@ plot  "../../Data/POPC/CaCl/CHARMM36/35ca/LIPIDdensity_last100ns.xvg" using 1:3 
       "../../Data/POPC/CaCl/CHARMM36/100ca/LIPIDdensity_last100ns.xvg" using 1:($4/2) notitle with lines linetype 1 lw 3 lc rgb 'green', \
       "../../Data/POPC/CaCl/CHARMM36/100ca/LIPIDdensity_last100ns.xvg" using 1:($2/200) notitle with lines linetype 1 lc rgb 'black' lw 3
 unset label
+unset ylabel
 
+set size 1.0, 0.205
+set ylabel " "
 set label at graph 0.4, graph 0.84 "CHARMM36"
 #set label at graph 0.4, graph 0.47 "Scaled Ions"
 set label at graph 0.42, graph 0.47 "(450 mM)"
@@ -58,6 +81,8 @@ plot  "../../Data/POPC/CaCl/CHARMM36/73caSCALED/LIPIDdensity.xvg" using 1:3 titl
       "../../Data/POPC/CaCl/CHARMM36/450mMlong/LIPIDdensity.xvg" using 1:($2/200) notitle with lines linetype 1 lc rgb 'black' lw 3
 unset label
 
+set size 1.0, 0.205
+set ylabel " "
 set label at graph 0.44, graph 0.84 "SLIPID"
 set label at graph 0.42,graph 0.47 "(450 mM)" 
 plot  "../../Data/POPC/CaCl/SLIPID/450mMscaled/LIPIDdensity.xvg" using 1:3 title "scaled \nions"  with lines linetype 1 dashtype 2  lw 2 lc rgb 'red',\
@@ -68,6 +93,10 @@ plot  "../../Data/POPC/CaCl/SLIPID/450mMscaled/LIPIDdensity.xvg" using 1:3 title
       "../../Data/POPC/CaCl/SLIPID/450mM/LIPIDdensity.xvg" using 1:($2/200) notitle with lines linetype 1 lc rgb 'black' lw 3
 unset label
 
+set size 1.0, 0.205
+set ylabel " "
+set key at screen 0.8,screen 1.07 maxcols 3 maxrows 1
+set xtics format "%G"
 set xlabel "z (nm)"
 set label at graph 0.3, graph 0.84 "Berger (340 mM CaCl_2)"
 #set yrange [0.01:0.16]
