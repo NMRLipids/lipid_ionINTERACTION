@@ -155,13 +155,28 @@ whereas NaCl increases the (initially negative) zeta potential to only about zer
 This lack of significant positive electrophoretic mobility in the presence of NaCl suggested weak binding of Na$^+$; 
 however, the same data has also been explained by an effect of the Cl$^-$ ions~\cite{berkowitz06,knecht13}.
 
-In the present work we set out to solve the apparent contradictions
-between the pre-2000 and post-2000 views
-by directly comparing the headgroup hydrocarbon segment
-$\alpha$ and $\beta$ (see Fig. \ref{POPCstructure}) order parameters between simulations
-and experiments as a function of cation concentration. 
-According to the 'molecular electrometer' concept, changes in order parameters of the $\alpha$ and $\beta$ carbons 
-in the phospholipid head group can be used to measure the ion affinity to the 
+%In the present work we set out to solve the apparent contradictions
+%between the pre-2000 and post-2000 views
+%by directly comparing the headgroup hydrocarbon segment
+%$\alpha$ and $\beta$ (see Fig. \ref{POPCstructure}) order parameters between simulations
+%and experiments as a function of cation concentration. 
+%
+% CL: I think this previous sentence could be interprated as a bit too extreme, as we cannot explain with this work how to
+% reinterpret all the experimental  data which seemed to sustain the Na+ binding. 
+% One tries to resolve the contradiction for MD results only.
+% One could be more precise in the different ideas in the article. As far as I see it, the path is 
+% 1) use the electrometer concept to define the NMR data as an absolute experimental reference of ion binding.
+% 2) explain which simulation results can be relyed on or not, and signal the need to reinterpret the data of previous publication.
+% => the electrometer concept is reproduced in MD for Na+, not really for Ca2+
+% => the binding constant are not right for Ca2+
+% => the binding constant are not right for many FF of Na+, for three best, they have different binding constant  and different molecular binding mechanism. Different FF may give acceptable results in term of NMR data, therefore any molecular interpretation should be done with great care.
+% therefore I suggest something a bit less ambitious like :
+
+In the present work, we set out to solve several apparent contradictions
+between the pre-2000 and post-2000 views by critically analysing a broad set of MD simulations
+in the light of the 'molecular electrometer' concept. 
+Indeed, it has been shown experimentally that changes in order parameters of the $\alpha$ and $\beta$ carbons 
+in the phospholipid head group (see Fig. \ref{POPCstructure})  can be used to measure the ion affinity to the 
 phophatidylcholine (PC) lipid bilayer~\cite{akutsu81,altenbach84,seelig87,scherer89}.
 Order parameters can be accurately measured in experiments and straightforwardly compared to 
 simulations \cite{ollila16}, therefore the molecular electrometer allows the 
@@ -528,7 +543,8 @@ affected by the strong Na$^+$ binding which makes bilayer effectively positively
 
 
 As a function of CaCl$_2$ concentration, almost all the tested models overestimate the order parameter decrease,
-as seen in Fig.~\ref{ordPions}. The exception is the CHARMM36 with recent ion model by Yoo et al.~\cite{yoo16}.
+as seen in Fig.~\ref{ordPions}. The exception is the CHARMM36 with recent ion model by Yoo et al.~\cite{yoo16} which is a selected
+part of CUFIX (Champain-Urbana non-bonded FIX parameters for the CHARMM and AMBER force fields).
 According to the electrometer concept, the overestimated order parameter decrease indicates overestimated Ca$^{2+}$ binding. 
 This is the most likely scenario for the models where changes in both order parameters were overestimated,
 however, in the case of CaCl$_2$ we cannot exclude the explanation that the headgroup response is too sensitive for
@@ -660,13 +676,13 @@ the Ca$^{2+}$/lipid stoichiometry or induced structural changes with atomistic r
 In general, our results support the traditional (pre-2000) view that Na$^+$ and other monovalent ions (bar Li$^+$)
 do not specifically bind to the phospholipid bilayer at mM concentrations, in contrast to Ca$^{2+}$ and other multivalent 
 ions~\cite{eisenberg79,akutsu81,altenbach84,tatulian87,clarke99,binder02,pabst07,filippov09}.
-The contradicting results from previous molecular dynamics simulations~\cite{bockmann03,bockmann04}, 
+The apparent contradictions in the results from previous molecular dynamics simulations~\cite{bockmann03,bockmann04}, 
 fluorescent probe dynamics~\cite{bockmann03,vacha09a,harb13}, 
 calorimetry~\cite{bockmann03,klasczyk10} and AFM~\cite{manyes05,manyes06,fukuma07,ferber11,morata12}, 
-suggesting stronger Na$^+$ binding, can be explained by simulation artefacts, 
-direct interactions between Na$^+$ and fluorescent probes~\cite{filippov09}, 
-alternative interpretations of the significance of small phase transition temperature shifts~\cite{cevc90}, 
-and insufficient resolution of AFM.
+suggesting stronger Na$^+$ binding, should be reinterpreted taking into account force-field inaccuracies emphasized in this work.
+% direct interactions between Na$^+$ and fluorescent probes~\cite{filippov09}, 
+%alternative interpretations of the significance of small phase transition temperature shifts~\cite{cevc90}, 
+%or insufficient resolution of AFM.
 
 The artificial specific Na$^+$ binding in simulations may lead to doubtful results, since it effectively leads  to
 positively charged phoshatidylcholine (PC) lipid bilayers even at physiological NaCl concentration.
@@ -984,8 +1000,8 @@ In the calcium model developed recently by Yoo et al. in \cite{yoo16},
 each cation is decorated by seven hydrating water molecules (with different charges from the usual TIP3P),
 which are constrainted to remain in its vincinity. The associated parameter files was available
 on http://bionano.physics.illinois.edu/CUFIX. The constraint on the Calcium-Oxygen distances
-was imposed by adding extrabonds through a harmonic potential $V(r) = k*(r-r_0)^2$, 
-with $r_0=2.25$~\AA and $k=10$~kcal$\cdot$mol$^{-1}$$\cdot$\AA$^{-2}$.
+was imposed by adding extrabonds through a harmonic potential $V(r) = k(r-r_0)^2$, 
+with $r_0=2.25$~\AA~ and $k=10$~kcal$\cdot$mol$^{-1}$$\cdot$\AA$^{-2}$.
  
 The starting  configuration of hydrated lipidic bilayers were constructed using packmol 
 package \cite{packmol} with a large area par lipid (74~\AA$^{2}$). 
@@ -993,7 +1009,7 @@ After a first energy minimization (5000 steps),
 varying amounts of CaCl$_2$ ions were added  by replacing water molecules,
 using the autoionize plugin of vmd package \cite{hump96},
 mentionning explicitely the number of ions required.
-Ion placement is random, with the constraint of  minimum 5~\AA between ions and lipids,
+Ion placement is random, with the constraint of  minimum 5~\AA~ between ions and lipids,
 as well as between any two ions. A second energy minimization was performed after inserting the ions.
  
 All the minimizations and dynamics were conducted using the NAMD package developed 
@@ -1011,12 +1027,10 @@ with a 4-th order smoothing spline and a grid spacing of about 0.1~nm.
 A cut-off of 1.2~nm was employed for the Lennard-Jones
 interactions, with a force-based switching function for distances beyond 1~nm. Neighbor
 lists with a radius of 1.4~nm were updated every 10 timesteps.
-The temperature was kept at 323~K with a Langevin thermostat with 
-a damping coefficient of 5~ps.  Coordinates were written every 20~ps.
-After energy minimization, a run of  200~ns simulations was performed. 
-About 30~ns of trajectory was eliminated, and the last $\sim$ 170~ns 
+Coordinates were written every 20~ps. After energy minimization, a run of  200~ns simulations was performed,
+and the last $\sim$ 170~ns 
 of  trajectory was employed for the analysis.
-Error bars are defined by +/- the standard error of the mean, 
+Error bars are defined by $\pm$ the standard error of the mean, 
 taking into account the correlation time of the average order parameters 
 (200~ps for 430~mM and 400~ps for 890~mM). 
 
@@ -1143,7 +1157,7 @@ the last 100ns of each simulation was employed for the analysis.
 {\it Andrea Catte} \\
 {\it Mykhailo Girych} ran and analyzed several simulations. Discussed the project actively with OHSO. \\
 {\it Matti Javanainen} provided data with several lipid and ion models. Discussed the project actively with OHSO. Supervised the work of JT.\\
-{\it Claire Loison} \\
+{\it Claire Loison provided results for CHARMM36 DPPC+CaCl_{2} with Yoo's model.} \\
 {\it Josef Melcr} \\
 {\it Markus S. Miettinen} \\
 {\it Luca Monticelli}  \\
@@ -1151,7 +1165,7 @@ the last 100ns of each simulation was employed for the analysis.
 {\it Vasily S. Oganesyan} \\
 {\it O. H. Samuli Ollila} co-designed the project with MSM and managed the work. Ran and analyzed several simulations. Wrote the manuscript. \\
 {\it Joona Tynkkynen } \\
-{\it Sergey Vilov} \\
+{\it Sergey Vilov provided results for CHARMM36 DPPC+CaCl_{2} with Yoo's model.} \\
 
 %\onecolumngrid
 \listoftodos
