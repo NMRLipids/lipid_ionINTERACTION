@@ -52,7 +52,7 @@ plot "../../Data/POPC/NaCl/BERGER/BERGERnaclCONSchange.dat" using 1:2:3 with yer
      "../../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchange.dat" using 1:4:5 with yerrorbars notitle  pt 5 lt 1 lc rgb '#D70039', "" using 1:4 with lines notitle linetype 1 lc rgb '#D70039',\
      "../../Data/POPC/NaCl/CHARMM36/CHARMMnaclCONSchange.dat" using 1:2:3 with yerrorbars notitle pt 7 lt 1 lc rgb '#0088BF', "" using 1:2 with linespoint title 'CHARMM36' pt 7 linetype 1 lc rgb '#0088BF', \
      "../../Data/POPC/NaCl/CHARMM36/CHARMMnaclCONSchange.dat" using 1:4:5 with yerrorbars notitle  pt 7 lt 1 lc rgb '#0088BF', "" using 1:4 with lines notitle linetype 1 lc rgb '#0088BF', \
-     "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-NaClchange.dat"  using 1:($2*-0.00784) notitle  with linespoints  linetype 1 pt 5 lc rgb 'black'
+     "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-NaClchange.dat"  using 1:($2*-0.00784) notitle  with linespoints lw 5 linetype 1 pt 5 lc rgb 'black'
 
 
 set xtics format " "			
@@ -76,8 +76,8 @@ plot "../../Data/POPC/CaCl/BERGER/BERGERcaclCONSchange.dat" using 1:2:3 with yer
      "../../Data/POPC/CaCl/LIPID14/LIPID14caclCONSchange.dat" using 1:4:5 with yerrorbars notitle  pt 7 lt 1 lc rgb '#FFD300', "" using 1:4 with lines notitle linetype 1 lc rgb '#FFD300', \
      "../../Data/POPC/CaCl/SLIPID/SLIPIDcaclCONSchange.dat" using 1:2:3 with yerrorbars notitle pt 7 lt 1 lc rgb '#7AEE9E', "" using 1:2 with linespoint notitle pt 7 linetype 1 lc rgb '#7AEE9E', \
      "../../Data/POPC/CaCl/SLIPID/SLIPIDcaclCONSchange.dat" using 1:4:5 with yerrorbars notitle  pt 7 lt 1 lc rgb '#7AEE9E', "" using 1:4 with lines notitle linetype 1 lc rgb '#7AEE9E',\
-     "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-CaClchange-T332.dat"  using 1:($2*-0.00784) notitle  with linespoints  linetype 1 pt 4 lc rgb 'black', \
-     "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-CaClchange-T323.dat"  using 1:($2*-0.00784) notitle with linespoints  linetype 1 pt 5 lc rgb 'black', \
+     "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-CaClchange-T332.dat"  using 1:($2*-0.00784) notitle  with linespoints  lw 5 linetype 1 pt 4 lc rgb 'black', \
+     "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-CaClchange-T323.dat"  using 1:($2*-0.00784) notitle with linespoints  lw 5 linetype 1 pt 5 lc rgb 'black', \
      "forKeyOPfig.dat" ev :::0::0 notitle pt 7 lc rgb 'black', \
      "forKeyOPfig.dat" ev :::1::1 notitle pt 5 lc rgb 'black',\
 #     "forKeyOPfig.dat" ev :::2::2 notitle pt 7 lc rgb 'black', \
@@ -111,7 +111,7 @@ plot "../../Data/POPC/NaCl/BERGER/BERGERnaclCONSchange.dat" using 1:6:7  with ye
      "../../Data/DPPC/NaCl/SLIPIDS/SLIPIDnaclCONSchangeRX.dat" using 1:8:9  with yerrorbars notitle pt 7 lt 1 lc rgb '#7AEE9E', "" using 1:8 with lines notitle linetype 1 lc rgb '#7AEE9E',\
      "../../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchange.dat" using 1:6:7  with yerrorbars notitle pt 7 lt 1 lc rgb '#D70039', "" using 1:6 with lines notitle linetype 1 lc rgb '#D70039', \
      "../../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchange.dat" using 1:8:9  with yerrorbars notitle pt 7 lt 1 lc rgb '#D70039', "" using 1:8 with lines notitle linetype 1 lc rgb '#D70039', \
-     "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-NaClchange.dat"  using 1:($3*0.00784) notitle with linespoints  linetype 1 pt 5 lc rgb 'black'
+     "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-NaClchange.dat"  using 1:($3*0.00784) notitle with linespoints  lw 5 linetype 1 pt 5 lc rgb 'black'
 
 
 #     "SLIPIDSnaclCONSchangePOPC.dat" using 1:4 notitle with linespoint linetype 1 pt 9 lc rgb '#7AEE9E', \
@@ -133,15 +133,15 @@ plot "../../Data/POPC/CaCl/BERGER/BERGERcaclCONSchange.dat" using 1:6:7 with yer
      "../../Data/POPC/CaCl/ORANGE/ORANGEcaclCONSchange.dat" using 1:8:9 with yerrorbars notitle pt 7 lt 1 lc rgb '#FF6600', "" using 1:8 with lines notitle linetype 1 lc rgb '#FF6600',\
      "../../Data/POPC/CaCl/CHARMM36/CHARMMcaclCONSchange.dat"  using 1:6:7  with yerrorbars notitle pt 7 lt 1 lc rgb '#0088BF', "" using 1:6 with lines notitle linetype 1 lc rgb '#0088BF', \
      "../../Data/POPC/CaCl/CHARMM36/CHARMMcaclCONSchange.dat" using 1:8:9  with yerrorbars notitle pt 7 lt 1 lc rgb '#0088BF', "" using 1:8 with lines notitle linetype 1 lc rgb '#0088BF',\
-     "../../Data/DPPC/CaCl/CHARMM36/CHARMMcaclCONSchangeYOO.dat"  using 1:6:7  with yerrorbars notitle pt 6 lt 1 lc rgb '#0088BF', "" using 1:6 with lines notitle linetype 1 lc rgb '#0088BF', \
-     "../../Data/DPPC/CaCl/CHARMM36/CHARMMcaclCONSchangeYOO.dat" using 1:8:9  with yerrorbars notitle pt 6 lt 1 lc rgb '#0088BF', "" using 1:8 with lines notitle linetype 1 lc rgb '#0088BF',\
+     "../../Data/DPPC/CaCl/CHARMM36/CHARMMcaclCONSchangeYOO.dat"  using 1:6:7  with yerrorbars notitle pt 4 lt 1 lc rgb '#0088BF', "" using 1:6 with lines notitle linetype 1 lc rgb '#0088BF', \
+     "../../Data/DPPC/CaCl/CHARMM36/CHARMMcaclCONSchangeYOO.dat" using 1:8:9  with yerrorbars notitle pt 4 lt 1 lc rgb '#0088BF', "" using 1:8 with lines notitle linetype 1 lc rgb '#0088BF',\
      "../../Data/POPC/CaCl/LIPID14/LIPID14caclCONSchange.dat"  using 1:6:7  with yerrorbars notitle pt 7 lt 1 lc rgb '#FFD300', "" using 1:6 with lines notitle linetype 1 lc rgb '#FFD300', \
      "../../Data/POPC/CaCl/LIPID14/LIPID14caclCONSchange.dat" using 1:8:9  with yerrorbars notitle pt 7 lt 1 lc rgb '#FFD300', "" using 1:8 with lines notitle linetype 1 lc rgb '#FFD300',\
      "../../Data/POPC/CaCl/SLIPID/SLIPIDcaclCONSchange.dat"  using 1:6:7  with yerrorbars notitle pt 7 lt 1 lc rgb '#7AEE9E', "" using 1:6 with lines notitle linetype 1 lc rgb '#7AEE9E', \
      "../../Data/POPC/CaCl/SLIPID/SLIPIDcaclCONSchange.dat" using 1:8:9  with yerrorbars notitle pt 7 lt 1 lc rgb '#7AEE9E', "" using 1:8 with lines notitle linetype 1 lc rgb '#7AEE9E',\
-     "../../Data/POPC/NaCl/EXP-Altenbach1984-POPC-CaClchange-T313.dat"  using ($1*1000):($2*0.00784) title '^2H NMR (T=313K)' with linespoints  linetype 1 pt 7 lc rgb 'black', \
-     "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-CaClchange-T332.dat"  using 1:($3*0.00784) title '^2H NMR (T=332K)' with linespoints  linetype 1 pt 4 lc rgb 'black', \
-     "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-CaClchange-T323.dat"  using 1:($3*0.00784) title '^2H NMR (T=323K)' with linespoints  linetype 1 pt 5 lc rgb 'black', \
+     "../../Data/POPC/NaCl/EXP-Altenbach1984-POPC-CaClchange-T313.dat"  using ($1*1000):($2*0.00784) title '^2H NMR (T=313K)' with linespoints  lw 5 linetype 1 pt 7 lc rgb 'black', \
+     "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-CaClchange-T332.dat"  using 1:($3*0.00784) title '^2H NMR (T=332K)' with linespoints  lw 5 linetype 1 pt 4 lc rgb 'black', \
+     "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-CaClchange-T323.dat"  using 1:($3*0.00784) title '^2H NMR (T=323K)' with linespoints  lw 5 linetype 1 pt 5 lc rgb 'black', \
 
 
 
