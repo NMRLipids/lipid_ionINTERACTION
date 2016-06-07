@@ -839,15 +839,24 @@ and zwitterionic (neutral) dimyristoylphosphatidylcholine (DMPC)~\cite{miettinen
 simulated with Berger based model. This is compared to experimental data from binary mixtures of POPC and
 various cationic amphiphiles~\cite{scherer89,franzin98}.
 
-The order parameter changes from simulations are in good agreement with experimental line from various amphiphiles
-measured by Scherer et al.~\cite{scherer89} but overestimate the changes measured from DMPC/DOTAP mixtures~\cite{franzin98},
-especially with larger amphiphile concentrations. It is not clear if the overestimation comes from too sensitive headgroup, 
-differences in the location of charge in bilayer or difference between DMTAP and DOTAP (DOTAP has two double bonds in acyl chains
-while DMTAP has two saturated chains). Assuming area per lipid 0.68~nm$^2$ and estimating the maximum amount of bound 
-charge per lipid in simulations from Fig.~\ref{electrometer} 
-($X^+_{\rm max}=0.5\frac{\rm q}{\rm nm^2}\cdot 0.68{\rm nm}^2=0.34\frac{\rm q}{\rm lipid}$) gives maximum
-overestimations of $\approx$0.04 and $\approx$0.06 for $\beta$ and $\alpha$ order parameter changes, respectively, with largest amount of bound
-cations in simulations. The numbers are smaller with less amount of bound cations. In principle,
+The order parameter changes from simulations overestimate the changes measured from DMPC/DOTAP mixtures~\cite{franzin98} 
+especially with larger amphiphile concentrations, but are in good agreement with experimental line from various amphiphiles
+with saturated acyl chains measured by Scherer et al.~\cite{scherer89}. The origin of the difference in order parameter 
+changes between DOTAP and amphihiles with saturated chains is not known. It may arise from the differecens in acyl chain saturation level or 
+from differences in headgroup. In the used simulation data the acyl chains are similar to data from~\cite{scherer89} but the headgroup is 
+similar to the data from~\cite{franzin98}. Also Cl$^-$ binding affinity may affect the comparison.
+Thus we cannot fully conclude how well the headgroup response to bound charge is reproduced in simulation. 
+% is which one should be used as a reference.
+%It is not clear if the overestimation comes from too sensitive headgroup, 
+%differences in the location of charge in bilayer or difference between DMTAP and DOTAP (DOTAP has two double bonds in acyl chains while DMTAP has two saturated chains). 
+
+To estimate the maximum error we take the maximum amount of bound charge from Fig.~\ref{electrometer} ($\approx 0.5\frac{\rm q}{\rm nm^2}$)
+and assume the area per lipid of 0.68~nm$^2$. This gives for maximum amount of bound 
+charge per lipid $X^+_{\rm max}=0.5\frac{\rm q}{\rm nm^2}\cdot 0.68{\rm nm}^2=0.34\frac{\rm q}{\rm lipid}$,
+which is shown as dashed line in Fig.~\ref{DMPC_DMTAP}. The maximum
+overestimations of order parameter decrease with this amount of bound charge per lipid are $\approx$0.04 and $\approx$0.06 for $\beta$ and $\alpha$ order parameter changes, respectively.
+% with largest amount of bound cations in simulations. 
+The numbers are smaller with less amount of bound cations. In principle,
 these value could explain the overestimated order parameter change due to the presence of CaCl$_2$ in Berger model but not in the presence
 of NaCl (see Fig.~\ref{ordPions}).
 
@@ -1120,7 +1129,7 @@ algorithm. \\
 {\it POPC with CaCl$_2$} A POPC bilayer consisting of 200 lipids, hydrated with 45 water molecules per lipid, 
 was simulated in the presence of 450 mM CaCl$_2$. The system was ran 2000~ns and the last 100~ns was used 
 for analysis. Other details are as in POPC with NaCl.
-\todo{M. Javanainen, please check that this is correct}
+\todo{DONE}
 
 
 \subsubsection{Lipid14}

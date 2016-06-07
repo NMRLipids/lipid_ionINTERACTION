@@ -30,5 +30,5 @@ set xlabel 'Simulation time (ns)' font ",22"
 set ylabel "Numer of ions within 0.325nm\n distance from any lipid oxygen" font ",22"
 set origin 0.2,0
 #set size 0.65, 0.35
-plot "../../Data/POPC/CaCl/CHARMM36/450mMlong/contacts_ca_charmm36.txt"  using ($1/1000):($2) title 'CHARMM36 (POPC with 450mM CaCl_2)' with line linetype 1 lw 2 lc rgb '#0088BF', \
-     "../../Data/POPC/CaCl/SLIPID/450mM/contacts_ca_slipids.txt"  using ($1/1000):($2) title 'Slipids (POPC with 450mM CaCl_2)' with line linetype 1 lw 2 lc rgb '#7AEE9E', \
+plot "../../Data/POPC/CaCl/CHARMM36/450mMlong/contacts_ca_charmm36.txt"  using ($1/1000):($2) title 'CHARMM36 (POPC with 450mM CaCl_2)' with line linetype 1 lw 8 lc rgb '#0088BF', \
+     "../../Data/POPC/CaCl/SLIPID/450mM/contacts_ca_slipids.txt"  using ($1/1000):($2) title 'Slipids (POPC with 450mM CaCl_2)' with line linetype 1 lw 8 lc rgb '#7AEE9E', \
