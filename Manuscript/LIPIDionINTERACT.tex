@@ -643,7 +643,7 @@ by giving atomistic resolution interpretation for the experiments.
 %thus the overestimation of order parameter change may arise, e.g. from overestimated binding, 
 %incorrect headgroup response to penetrating divalent cation or penetration depth. 
 
-The origin of inaccuracies in lipid-ion interactions and binding affinities in different models is far from clear.
+The origin of inaccuracies in lipid--ion interactions and binding affinities in different models is far from clear.
 The potential candidates would be, for example, discrepancies in the ion models~\cite{hess06,chen07,Reif13},
 incomplete treatment of electronic polarizability~\cite{leontyev11} or inaccuracies in the lipid headgroup 
 description~\cite{botan15}. Cordomi et al.~\cite{cordomi09} showed that Na$^+$ binding affinity decreases when ion radius increases
@@ -658,7 +658,7 @@ Ca$^{2+}$ binding was observed with the ion model by Yoo et al~\cite{yoo16}, how
 model must be further analyzed to fully interpret the results.
 
 Also, the lipid models may have a significant influence on the ion binding behaviour.
-% FYI, Use of dashes: http://www.dummies.com/how-to/content/how-to-use-long-and-short-dashes-in-your-writing.html 
+% FYI, Use of dashes and hyphens: http://www.dummies.com/how-to/content/how-to-use-long-and-short-dashes-in-your-writing.html 
 For example, the same ion model and non-bonded parameters are used in the Orange and BergerOPLS~\cite{tieleman06} 
 simulations, but while Na$^+$ ion binding affinity is realistic in the Orange model, it is significantly overestimated 
 in the BergerOPLS (Fig.~\ref{NAdensities}). However, the realistic Na$^+$ binding do not directly relate
@@ -686,10 +686,10 @@ correctly predict the cation binding affinity.
 As suggested by the molecular electrometer concept~\cite{akutsu81,altenbach84,seelig87,scherer89},
 the decrease in order parameters of $\alpha$ and $\beta$ carbons in the PC head group of lipids bilayers
 is related to cation binding  in all tested simulation models, despite of inaccuracies 
-in actual atomistic resolution structures~\cite{botan15}. The concept allows direct comparison
-of Na$^+$ binding affinity between simulations and NMR experiments by using changes in the head group order parameter.
+in actual atomistic resolution structures~\cite{botan15}. Hence, the concept allows direct comparison
+of Na$^+$ binding affinity between simulations and NMR experiments by using changes in the head group order parameters.
 The comparison reveals that most models overestimate the Na$^+$ binding; only Orange, Lipid14, and CHARMM36 
-predict realistic binding affinity. None of the tested models has the required accuracy to interpret
+present binding affinity close to realistic. None of the tested models has the required accuracy to interpret
 the Ca$^{2+}$/lipid stoichiometry or induced structural changes with atomistic resolution.
 
 In general, our results support the traditional (pre-2000) view that Na$^+$ and other monovalent ions (bar Li$^+$)
@@ -718,8 +718,8 @@ extend also to other positively charged objects, e.g. membrane protein segments.
 lipid protein interactions and could explain, for example, contradicting results on electrostatic interactions 
 between charged protein segments and lipid bilayer \cite{arkhipov13,kaszuba15}. In conclusion, 
 more careful studies and model development on lipid bilayer--charged object interactions are
-needed to make molecular dynamics simulations directly usable in physiologically relevant
-electrostatic environment. 
+needed to make molecular dynamics simulations reliable in physiologically relevant
+electrolytic environment. 
 
 
 %The most straightforward explanation for our results is that Na$^+$ ions do not practically penetrate into a PC lipid bilayer
@@ -819,7 +819,7 @@ This can be rationalized with higher and more equilibrated binding affinity in l
 The results suggest that in other simulations the binding affinity 
 is underestimated due to the insufficient equilibration times. This should be taken into account in more careful studies,
 but do not interfere the conclusion in this work that Ca$^{2+}$ binding is most likely overestimated in all the
-other models than in possibly in CHARMM36 with ion model by Yoo et al. \cite{yoo16}.
+other models than CHARMM36 with ion model by Yoo et al. \cite{yoo16}.
 \begin{figure}[]
   \centering
   \includegraphics[width=8cm]{../Fig/bindingINlongRUNS.eps} 
@@ -829,7 +829,7 @@ other models than in possibly in CHARMM36 with ion model by Yoo et al. \cite{yoo
 \end{figure}
 
 \section{Headgroup response on charged amphiphiles}
-The order parameter changes as a function of bound charge cannot be straightforwardly
+The order parameter changes as a function of the bound charge cannot be straightforwardly
 compared between simulations and experiments from systems with ions because the 
 results depend on the definition of bound ions in simulations. In systems with charged
 amphihiles the situation is more straightforward since all the charges can be assumed 
@@ -871,13 +871,13 @@ which is shown as dashed line in Fig.~\ref{DMPC_DMTAP}. The maximum
 overestimations of order parameter decrease with this amount of bound charge per lipid are $\approx$0.04 and $\approx$0.06 for $\beta$ and $\alpha$ order parameter changes, respectively.
 % with largest amount of bound cations in simulations. 
 The numbers are smaller with less amount of bound cations. In principle,
-these value could explain the overestimated order parameter change due to the presence of CaCl$_2$ in Berger model but not in the presence
+these values could explain the overestimated order parameter change due to the presence of CaCl$_2$ in Berger model but not in the presence
 of NaCl (see Fig.~\ref{ordPions}).
 
-In conclusion, with the current data we cannot fully exclude the possibility that the overestimated order parameter response to the
-CaCl$_2$ with Berger model arises from oversensitive headgroup response to bound cations. However, in the presence of NaCl
+In conclusion, we cannot fully exclude the possibility that the overestimated order parameter response to the
+CaCl$_2$ with Berger model arises from oversensitive headgroup response to bound cations with the current data. However, in the presence of NaCl
 the differences between responses in simulations and experiments in Fig. \ref{ordPions} are larger than the maximum estimated 
-influence from oversensitivity of headgroup. 
+influence from a possible oversensitivity of the headgroup. 
 
 \section{Density distributions with different CaCl$_2$ concentrations}
 
@@ -906,7 +906,7 @@ For simulations with Slipids the ion model by Kohagen et al. was used~\cite{koha
 available at~\cite{slipidsFILESpopcSCALED}. The simulation parameters were identical to those employed in the simulation of POPC with 130~mM NaCl (see Methods).
 The order parameter changes and Na$^+$-binding affinity are decreased by the charge scaling but 
 yet overestimated with respect to the experiments as seen from Figs. \ref{OPchangesSCALED} and~\ref{NAdensitySCALED}. 
-Thus the overestimated binding affinity cannot be fixed by only scaling charges.
+Thus the overestimated binding affinity cannot be fixed by only scaling the charges of ions.
 
 \begin{figure*}[]
   \centering
@@ -948,13 +948,13 @@ or NAMD~\cite{NAMD} software packages.
 \subsection{Analysis}
 The order parameters were calculated from simulation trajectories directly applying the equation
 $S_{{\rm CH}}=\langle \frac{3}{2}  \cos^2 \theta-\frac{1}{2} \rangle$,
-where $\theta$ is the angle between a given C--H bond and the bilayer normal and average is taken
+where $\theta$ is the angle between a given C--H bond and the bilayer normal, and the average is taken
 over all lipids and time frames. For united atom models, the positions of hydrogen atoms
 were calculated for each molecule in each frame \textit{a posteriori} by using the {\it protonate} tool in 
 Gromacs 4.0.2 \cite{gromacsMANUAL402}. 
 The statistical error in the order parameter was estimated by calculating the average value separately for each lipid molecule,
 and then the average and standard error of the mean over the ensemble of lipids (as done also in previous work \cite{botan15}).
-All the scripts used in analysis and the resulting data are available in the GitHub repository \cite{githubIONpaper}
+All the scripts used for analysis and the resulting data are available in the GitHub repository \cite{githubIONpaper}
 
 \subsection{Simulation details}
 
@@ -1031,9 +1031,9 @@ After energy minimization and an equilibration run of 0.5 ns, 200ns simulations 
 The systems contained 128 DPPC lipids and about 7600 TIP3P water molecules,
 and an appropriate amount of ions as indicated in  Table~\ref{IONsystems}.  
 We have used CHARMM36 additive force field parameters for lipids~\cite{klauda10}. 
-In the calcium model developed recently by Yoo et al. in \cite{yoo16}, 
+In the calcium model developed recently by Yoo et al.~\cite{yoo16}, 
 each cation is decorated by seven hydrating water molecules (with different charges from the usual TIP3P),
-which are constrainted to remain in its vincinity. The associated parameter files was available
+which are constrainted to remain in its vincinity. The associated parameter files are available
 on http://bionano.physics.illinois.edu/CUFIX. The constraint on the Calcium-Oxygen distances
 was imposed by adding extrabonds through a harmonic potential $V(r) = k(r-r_0)^2$, 
 with $r_0=2.25$~\AA~ and $k=10$~kcal$\cdot$mol$^{-1}$$\cdot$\AA$^{-2}$.
@@ -1047,12 +1047,11 @@ mentionning explicitely the number of ions required.
 Ion placement is random, with the constraint of  minimum 5~\AA~ between ions and lipids,
 as well as between any two ions. A second energy minimization was performed after inserting the ions.
  
-All the minimizations and dynamics were conducted using the NAMD package developed 
-by the Theoretical and Computational Biophysics Group at the University of Illinois at Urbana-Champaign \cite{NAMD}.
-The temperature of the whole system was controled thanks to a Langevin  thermostat with a target temperature of 323~K 
-and a relaxation time constant of 1~ps.  The modified NAMD version of the Nose–Hoover barostat with Langevin dynamics
+All the minimizations and dynamics were conducted using the NAMD package~\cite{NAMD}.
+The temperature of the whole system was controled with Langevin thermostat with a target temperature of 323~K 
+and a relaxation time constant of 1~ps.  The modified NAMD version of Nose–Hoover barostat with Langevin dynamics
 (piston period of 0.1~ps and piston decay time of 0.05~ps) was used semi-isotropically
-to reach the averaged target pressure of 1 bar and an averaged zero surface tension. 
+for an average target pressure of 1 bar and an average zero surface tension. 
 The ratio of the box length in $x-$ and $y-$ directions was kept fixed to avoid spurious box anisotropy.
 The equations of motion were integrated using the multiple time step Verlet r-RESPA algorithm ~\cite{pall13}
 with a time step of 2~fs, and electrostatic forces calculated only every two timesteps. Covalent
@@ -1107,11 +1106,12 @@ Simulation files for pure lipid simulations are found at ~\cite{orangePOPCfiles}
 {\it DPPC} The simulation without ions from~\cite{botan15}, available at \cite{slipidsFILES} was used. 
 For the simulations with ions, the starting DPPC lipid bilayer, which was built with the online CHARMM-GUI~\cite{lee15}
 (http://www.charmm-gui.org/), contained 600 lipids, 30 water molecules/lipid, Na$^+$ and Cl$^-$ ions (150 mM NaCl). 
-The TIP3P water model was used to solvate the system and ion parameters by Roux \cite{beglov94,roux96} were used. 
+We used TIP3P water model and ion parameters by Roux~\cite{beglov94,roux96}. 
+Stockholm lipids (Slipids) force field~\cite{jambeck12,jambeck12b} parameters were used for phospholipids. 
 %All-atom MD simulations of DPPC lipid bilayers were performed 
 %at ten different temperatures (283, 298, 303, 308, 312, 313, 314, 318, 323, and 333 K) using 
-the GROMACS software  package version 4.5.5~\cite{pronk13} and the Stockholm lipids (Slipids) force field parameters 
-for phospholipids were used. After energy 
+GROMACS software package version 4.5.5~\cite{pronk13} was employed for all simulations. 
+After energy 
 minimization and a short equilibration run of 50 ps (time step 1~fs), 100 ns production runs were performed using 
 a time step of 2~fs with leap-frog integrator. All covalent bonds were constrained with the LINCS~\cite{hess97,hess07}
 algorithm. Coordinates were written every 100 ps. PME~\cite{darden93,essman95} with real space cut-off at 1.0 nm was used for Coulomb 
