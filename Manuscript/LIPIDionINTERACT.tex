@@ -473,9 +473,9 @@ A careful analysis with current lipid models is performed in the next section.
   \hline
   Slipid\cite{jambeck12}   &   DPPC & 0 & 128 &3840 & 0 & 0  & 0 & 323 & 150 & 100 &~\cite{slipidsFILES}  \\
   Slipid\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   DPPC & 150 (NaCl)  & 600 & 18000 & 49 & 0  &  49 & 323 & 100 & 40 &-  \\
-  Slipid\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   DPPC & 350 (NaCl)  & 128 & 3726 &  57 & 0  &  57 & 323 & 100 & 100 & -\todo{J. Melcr: will add trajs to Zenodo}  \\
-  Slipid\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   DPPC & 700 (NaCl)  & 128 & 3612 & 114 & 0  & 114 & 323 & 100 & 100 & -  \\
-  Slipid\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   DPPC & 1000 (NaCl) & 128 & 3514 & 163 & 0  & 163 & 323 & 100 & 100 & -  \\
+  Slipid\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   DPPC & 350 (NaCl)  & 128 & 3726 &  57 & 0  &  57 & 323 & 100 & 100 & \cite{slipidsFILESdppc}\todo{J. Melcr: DONE, added trajs to Zenodo}  \\
+  Slipid\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   DPPC & 700 (NaCl)  & 128 & 3612 & 114 & 0  & 114 & 323 & 100 & 100 & \cite{slipidsFILESdppc}  \\
+  Slipid\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   DPPC & 1000 (NaCl) & 128 & 3514 & 163 & 0  & 163 & 323 & 100 & 100 & \cite{slipidsFILESdppc}  \\
   \hline
   Slipid\cite{jambeck12b}   &   POPC & 0 & 128 & 5120 & 0 & 0  & 0 & 303 & 200 & 150 &~\cite{slipidsFILESpopc}  \\
   Slipid\cite{jambeck12b}, AMBER\cite{smith94}  &  POPC & 130 (NaCl) & 200 & 9000 & 21 & 0  & 21 & 310 & 105 & 100 &~\cite{slipidsFILESpopc130mMnaclSD}  \\
@@ -931,7 +931,7 @@ The related files are available at~\cite{charmmFILESpopc450mMcaclSCALED} and~\ci
 respectively, and the results are shown in Figs.~\ref{OPchangesSCALED} and~\ref{CAdensities}.
 The results with scaled charges are slightly improved but yet far from experiments.
 
-Figure~\ref{OPchangesSCALED} also compares CHARMM36 simulation ZENODO TODO with and without NBFIX~\cite{venable13} for NaCl.
+Figure~\ref{OPchangesSCALED} also compares CHARMM36 simulation~\cite{charmmPOPC350mMNaClnoNBFIXfiles} with and without NBFIX~\cite{venable13} for NaCl.
 As expected, without NBFIX the order parameter decrease is more significant.
 \todo{Discussion will be finished as soon as we have the density profiles. Citations to Zenodo repositories will be added, if available. JM: added, please, check. }
 Because the difference promoted by NBFIX~\cite{venable13} is mainly a reduced Na$^+$ density in the headgroup region of the phospholipids,
@@ -1016,7 +1016,7 @@ Pressure was semi-isotropically coupled to the athmospheric pressure with the Be
 Also simulation without NBFIX~\cite{venable13} was run to check its effect on Na$^+$ binding.
 \todo{J. Melcr: DONE}
 The simulation settings were kept consistent with the simulations with NBFIX. The temperature was kept at 310~K with Nose-Hoover~\cite{nose84,hoover85} thermostat. 
-The simulation files are available at ZENODO .... TODO
+The simulation files are available at~\cite{charmmPOPC350mMNaClnoNBFIXfiles}. 
 
 %CaCl_2 simulations by MYKHAILO:
 {\it POPC with CaCl$_2$}
@@ -1113,7 +1113,7 @@ For the simulation with 150~mM NaCl, the starting DPPC lipid bilayer, which was 
 (http://www.charmm-gui.org/), contained 600 lipids hydrated by 30 water molecules per lipid. 
 For the simulation at higher NaCl concentrations (350, 700 and 1000~mM), the configuration from  \cite{slipidsFILES} was taken and 
 an appropriate amount of water molecules was converted to ions to form a neutral NaCl solution. 
-The simulation files are available at~ZENODO TODO....
+The simulation files are available at~\cite{slipidsFILESdppc}. 
 %
 We used TIP3P water model and ion parameters by Roux~\cite{beglov94,roux96}. 
 Stockholm lipids (Slipids) force field~\cite{jambeck12,jambeck12b} parameters were used for phospholipids. 
@@ -1203,7 +1203,7 @@ the last 100ns of each simulation was employed for the analysis.
 {\it Mykhailo Girych} ran and analyzed several simulations. Discussed the project actively with OHSO. \\
 {\it Matti Javanainen} provided data with several lipid and ion models. Discussed the project actively with OHSO. Supervised the work of JT.\\
 {\it Claire Loison provided results for CHARMM36 DPPC+CaCl$_{2}$ with Yoo's model.} \\
-{\it Josef Melcr} \\
+{\it Josef Melcr} performed and analyzed several simulations; discussed the project actively; corrected and contributed to the manuscript. \\
 {\it Markus S. Miettinen} \\
 {\it Luca Monticelli}  \\
 {\it Jukka M{\"a}{\"a}tt{\"a}}  \\
