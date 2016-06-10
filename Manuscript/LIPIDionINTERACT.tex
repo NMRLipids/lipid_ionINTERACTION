@@ -931,9 +931,12 @@ The related files are available at~\cite{charmmFILESpopc450mMcaclSCALED} and~\ci
 respectively, and the results are shown in Figs.~\ref{OPchangesSCALED} and~\ref{CAdensities}.
 The results with scaled charges are slightly improved but yet far from experiments.
 
-Figure~\ref{OPchangesSCALED} also compares CHARMM36 simulation with and without NBFIX~\cite{venable13} for NaCl.
+Figure~\ref{OPchangesSCALED} also compares CHARMM36 simulation ZENODO TODO with and without NBFIX~\cite{venable13} for NaCl.
 As expected, without NBFIX the order parameter decrease is more significant.
-\todo{Discussion will be finished as soon as we have the density profiles. Citations to Zenodo repositories will be added, if available.}
+\todo{Discussion will be finished as soon as we have the density profiles. Citations to Zenodo repositories will be added, if available. JM: added, please, check. }
+Because the difference promoted by NBFIX~\cite{venable13} is mainly a reduced Na$^+$ density in the headgroup region of the phospholipids,
+this behaviour suggests that it is the direct interaction between the lipids and the Na$^+$ cation 
+(and to no or much lesser extent Cl$^-$ anions) that drives the changes of the order parameters. 
 
 
 
@@ -1011,7 +1014,9 @@ for lipids and solution to 303~K with the velocity-rescale method~\cite{bussi07}
 Pressure was semi-isotropically coupled to the athmospheric pressure with the Berendsen method~\cite{berendsen84}.
 
 Also simulation without NBFIX~\cite{venable13} was run to check its effect on Na$^+$ binding.
-\todo{J. Melcr, please add the details here}
+\todo{J. Melcr: DONE}
+The simulation settings were kept consistent with the simulations with NBFIX. The temperature was kept at 310~K with Nose-Hoover~\cite{nose84,hoover85} thermostat. 
+The simulation files are available at ZENODO .... TODO
 
 %CaCl_2 simulations by MYKHAILO:
 {\it POPC with CaCl$_2$}
@@ -1104,13 +1109,17 @@ Simulation files for pure lipid simulations are found at ~\cite{orangePOPCfiles}
 
 \subsubsection{Slipids}
 {\it DPPC} The simulation without ions from~\cite{botan15}, available at \cite{slipidsFILES} was used. 
-For the simulations with ions, the starting DPPC lipid bilayer, which was built with the online CHARMM-GUI~\cite{lee15}
-(http://www.charmm-gui.org/), contained 600 lipids, 30 water molecules/lipid, Na$^+$ and Cl$^-$ ions (150 mM NaCl). 
+For the simulation with 150~mM NaCl, the starting DPPC lipid bilayer, which was built with the online CHARMM-GUI~\cite{lee15}
+(http://www.charmm-gui.org/), contained 600 lipids hydrated by 30 water molecules per lipid. 
+For the simulation at higher NaCl concentrations (350, 700 and 1000~mM), the configuration from  \cite{slipidsFILES} was taken and 
+an appropriate amount of water molecules was converted to ions to form a neutral NaCl solution. 
+The simulation files are available at~ZENODO TODO....
+%
 We used TIP3P water model and ion parameters by Roux~\cite{beglov94,roux96}. 
 Stockholm lipids (Slipids) force field~\cite{jambeck12,jambeck12b} parameters were used for phospholipids. 
 %All-atom MD simulations of DPPC lipid bilayers were performed 
 %at ten different temperatures (283, 298, 303, 308, 312, 313, 314, 318, 323, and 333 K) using 
-GROMACS software package version 4.5.5~\cite{pronk13} was employed for all simulations. 
+GROMACS software package version 4.5.5 or 5.0.7~\cite{pronk13} was employed for all simulations. 
 After energy 
 minimization and a short equilibration run of 50 ps (time step 1~fs), 100 ns production runs were performed using 
 a time step of 2~fs with leap-frog integrator. All covalent bonds were constrained with the LINCS~\cite{hess97,hess07}
@@ -1121,7 +1130,8 @@ bottom leaflets of the lipid bilayer, and for water to one of the temperatures r
 thermostat~\cite{nose84,hoover85} using a time constant of 0.5 ps. Pressure was semi-isotropically coupled to the atmospheric pressure 
 with the Parrinello-Rahman~\cite{parrinello81} barostat using a time constant of 10 ps.
 %The last 40 ns of each simulation was employed for the analysis of DPPC choline and glycerol backbone order parameters.
-\todo{J. Melcr, please add description of the new data}
+\todo{J. Melcr: done, see above}  % JM: see above
+
 
 {\it POPC} The simulation without ions from~\cite{botan15}, available at \cite{slipidsFILESpopc} was used. \\
 {\it POPC with NaCl}
