@@ -209,14 +209,32 @@ an interpretation of lipid--Ca$^{2+}$ interactions with atomistic resolution.
 
 \section{Results and Discussion}
 
-\subsection{Molecular electrometer concept in experiments}\label{conceptinexperiments}
-According to the molecular electrometer concept the binding of charged objects on 
-PC bilayer interface induce systematic changes in choline $\beta$ and $\alpha$
-segment order parameters. Thus, the changes of these order parameters can be used
-to determine binding affinities of the charged objects. The concept is originally
-based on experimentally observed changes in choline order parameters with bound 
-cations~\cite{akutsu81,altenbach84}, see Fig. \ref{ordPions} for data as a function
-of ion concentration in solution. 
+\subsection{Background: Molecular electrometer in experiments}\label{conceptinexperiments}
+The molecular electrometer concept is based on the experimental observation that
+binding of charged objects on a PC bilayer interface induces systematic changes in the choline $\beta$ and $\alpha$
+segment order parameters~\cite{akutsu81,altenbach84,altenbach85,seelig87,macdonald87,scherer89,roux90,beschiasvili91,marassi92,rydall92}.
+Thus, these changes can be used to determine binding affinities of the charged objects.
+Molecular electrometer was originally devised for cations~\cite{akutsu81,altenbach84}, but
+further quantification with various positively and negatively charged molecules~\cite{altenbach84,altenbach85,seelig87,macdonald87,scherer89,roux90,beschiasvili91,marassi92,rydall92}
+showed that the choline order parameters $S_\mathrm{CH}^\alpha$ and $S_\mathrm{CH}^\beta$ in general vary linearly 
+with small amount of bound charge per lipid $X^\pm$ as~\cite{ferreira16}
+\begin{equation}\label{electrometer_eq}
+S_{\rm{CH}}^{i}(X^\pm)=S_{\rm{CH}}^{i}(0) + \frac{4m_i}{3\chi} X^\pm.
+\end{equation}
+%Since the quadrupolar splitting is $\Delta\nu_i^{\rm{Q}}=-\frac{3}{4} \chi S_{\rm{CD}}$
+%and $S_{\rm{CD}} \approx S_{\rm{CH}}$~\cite{ollila16} 
+Here $S_{\rm{CH}}^{i}(0)$ is the order parameter in the absence of bound charges,
+$m_i$ a constant depending on the valency and position of bound charge,
+the quadrupole coupling constant $\chi \approx 167$~kHz, and
+$i$ refers to either $\alpha$ or $\beta$.
+The order parameter change with respect to a bilayer without bound charges then becomes
+\begin{equation}\label{OPchangeEQ}
+\Delta S_{\rm{CH}}^{i}= S_{\rm{CH}}^{i}(X^\pm)-S_{\rm{CH}}^{i}(0) =\frac{4m_i }{3\chi}X^\pm.
+\end{equation}
+For Ca$^{2+}$ binding to POPC bilayer (in the presence of 100~mM NaCl),
+combination of atomic absorption spectra and $^2$H NMR experiments gave
+$m_\alpha=-20.5$  and $m_\beta=-10.0$~\cite{altenbach84}.
+
 \begin{figure*}[]
   \centering
   \includegraphics[width=15cm]{../Fig/OrderParameterIONSchanges.eps}
@@ -234,25 +252,9 @@ of ion concentration in solution.
   }
 \end{figure*}
 
-Further quantification with various positively 
-and negatively charged molecules showed that choline order parameters vary linearly 
-with small amount of bound charge per lipid~\cite{altenbach84,altenbach85,seelig87,macdonald87,scherer89,roux90,beschiasvili91,marassi92,rydall92}.
-%Since the quadrupolar splitting is $\Delta\nu_i^{\rm{Q}}=-\frac{3}{4} \chi S_{\rm{CD}}$
-%and $S_{\rm{CD}} \approx S_{\rm{CH}}$~\cite{ollila16} 
-The relation between bound charge per lipid $X^\pm$ and choline order parameters can be then written as~\cite{ferreira16}
-\begin{equation}\label{electrometer_eq}
-S_{\rm{CH}}^{i}(X^\pm)=S_{\rm{CH}}^{i}(0) + \frac{4}{3}\chi^{-1}m_i X^\pm,
-\end{equation}
-where the quadrupole coupling constant $\chi$ is approximately equal to 167 kHz,
-$S_{\rm{CH}}^{i}(0)$ is order parameter without bound charges, $m_i$
-is constant depending on the valency and position of bound charge, and $i$
-refers to either $\alpha$ or $\beta$. The order parameter change respect to a 
-bilayer without bound charges then becomes
-\begin{equation}\label{OPchangeEQ}
-\Delta S_{\rm{CH}}^{i}= S_{\rm{CH}}^{i}(X^\pm)-S_{\rm{CH}}^{i}(0) =\frac{4}{3}\chi^{-1}m_i X^\pm.
-\end{equation}
-Combination of atomic absorption spectra and $^2$H NMR experiments gave $m_\alpha=-20.5$ 
-and $m_\beta=-10.0$ for Ca$^{2+}$ binding in POPC bilayer in the presence of 100mM NaCl~\cite{altenbach84}.
+
+
+
 
 The quantification of $\beta$ and $\alpha$ segment order parameter changes 
 with different cations
