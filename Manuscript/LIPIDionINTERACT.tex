@@ -513,16 +513,18 @@ this leads us to
 %headgroup sensitivity tested in Supplementary Information cannot explain overestimated order parameter change with NaCl,
 conclude that sodium binding affinity is overestimated in all these models.
 
-The order parameter changes with NaCl in the best three models are small (less than 0.02). Thus, with the achieved accuracy we cannot conclude 
-which of these three models has the most realistic Na$^+$ binding affinity, especially with physiological NaCl concentrations ($\sim$ 150mM) 
-which is relevant for most applications. 
+In the best three models, the order parameter changes with NaCl are small ($<0.02$), so
+with the achieved statistical accuracy we cannot conclude 
+which of the three has the most realistic Na$^+$ binding affinity,
+especially at physiological NaCl concentrations ($\sim$ 150mM) 
+relevant for most applications. 
 %This can be explained by unrealistically strong Na$^+$ binding affinity to the bilayer in these models (see Fig.~\ref{NAdensities}). 
-The overestimated binding on the other models raise questions on the quality of the predictions from these models when NaCl is present.
+The overestimated binding in the other models raise questions on the quality of the predictions from these models when NaCl is present.
 %reported in a number of simulation papers... [complete with examples] 
 \todo{It has been suggested that we should add references here. The problem is that there are a lot of them and
-it is difficult to choose which ones to pick. Any opinions?}
+it is difficult to choose which ones to pick. Any opinions?} {\it Mention that there are many (hundreds?) of them in Web of Science? -markus.}
 Especially interactions between charged molecules and lipid bilayer might be significantly
-affected by the strong Na$^+$ binding which makes bilayer effectively positively charged.
+affected by the strong Na$^+$ binding, as it makes the bilayer effectively positively charged.
 
 %While the predicted changes in order parameters for these three models are very similar,
 %the ion density profiles show differences in Na$^+$ affinity, Orange having lowest affinity and CHARMM36 the highest. 
@@ -547,18 +549,21 @@ affected by the strong Na$^+$ binding which makes bilayer effectively positively
 
 
 
-As a function of CaCl$_2$ concentration, almost all the tested models overestimate the order parameter decrease,
-as seen in Fig.~\ref{ordPions}. The exception is the CHARMM36 with recent ion model by Yoo et al.~\cite{yoo16} which is a selected
-part of CUFIX (Champain-Urbana non-bonded FIX parameters for the CHARMM and AMBER force fields).
-According to the electrometer concept, the overestimated order parameter decrease indicates overestimated Ca$^{2+}$ binding. 
+As a function of CaCl$_2$ concentration, all but one (CHARMM36 with recent ion model by Yoo et al.~\cite{yoo16},
+{\it a selected part of CUFIX (Champain-Urbana non-bonded FIX parameters for the CHARMM and AMBER force fields)}
+\todo{Is this detail (in italics) relevant?})
+model overestimate the order parameter decrease (Fig.~\ref{ordPions}). 
+According to the molecular electrometer, this indicates overestimated Ca$^{2+}$ binding. 
 This is the most likely scenario for the models where changes in both order parameters were overestimated,
-however, in the case of CaCl$_2$ we cannot exclude the explanation that the headgroup response is too sensitive for
-bound cations, see Supplementary Information. In CHARMM36 with ion model by Yoo et al. the order parameter decrease is overestimated for $\beta$ 
-but underestimated for  $\alpha$, in line with figure~\ref{AvsB} where $\Delta S_{\rm{CH}}^{\beta}/\Delta S_{\rm{CH}}^{\alpha}$ 
-ratio is larger in CHARMM36 than in experiments. Since we do not know if $\Delta S_{\rm{CH}}^{\beta}$ or $\Delta S_{\rm{CH}}^{\alpha}$
-is more realistic in CHARMM36, we cannot conclude if Ca$^{2+}$ binding is too strong or weak in simulation with ion model by Yoo et al.~\cite{yoo16}.
+however, in the case of CaCl$_2$ we cannot exclude the possibility that the headgroup response is oversensitive to
+bound cations (see Supplementary Information).
+In CHARMM36 with ion model by Yoo et al.~\cite{yoo16},
+$\Delta S_\mathrm{CH}$ is overestimated for $\beta$  but underestimated for  $\alpha$,
+in line with Fig.~\ref{AvsB} where $\Delta S_{\rm{CH}}^{\beta}/\Delta S_{\rm{CH}}^{\alpha}$ ratio
+in CHARMM36 is larger  than in experiments. Since we do not know if $\Delta S_{\rm{CH}}^{\beta}$ or $\Delta S_{\rm{CH}}^{\alpha}$
+is more realistic in CHARMM36, we cannot conclude if Ca$^{2+}$ binding is too strong or weak in this simulation model.
 This could be resolved by comparing CHARMM36 model to the experimental data with known amount of bound charge 
-(e.g. experiments with amphihilic cations~\cite{scherer89,franzin98}), however, this is beyond the scope of the
+(e.g., experiments with amphiphilic cations~\cite{scherer89,franzin98}), however, this is beyond the scope of the
 current work. 
 
 %However, for CHARMM36 with ions by Yoo et al.
