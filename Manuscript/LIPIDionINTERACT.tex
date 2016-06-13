@@ -69,15 +69,15 @@ Despite the vast amount of experimental and theoretical studies on the binding a
 especially the biologically relevant Na$^+$ and Ca$^{2+}$ ions,  there is no consensus in the literature. 
 In this paper, we show that the ion binding affinity can be directly compared between simulations and experiments by 
 using the choline headgroup order parameters according to the 'molecular electrometer' concept.~\cite{seelig87}.
-
-% Our results -- sounds like we did everything
 Our findings strongly support the pre-2000 view that Na$^+$ and other monovalent ions
 % what's bar Li+? -- I couldn't find it.
+% See http://nmrlipids.blogspot.fi/2016/05/towards-submission-of-nmrlipids-ii.html?showComment=1465633342691#c7303500671316214589
+% But I think we should change this since it does not seem to be widely know style.
 (bar Li$^+$) do not specifically bind to phosphatidylcholine lipid bilayers with mM concentrations, 
 in contrast to Ca$^{2+}$ and other multivalent ions. Especially the Na$^+$ binding affinity is 
 overestimated by several molecular dynamics simulation models, leading to 
-overexagerated structural effects in the headgroups an artificially positively
-charged lipid bilayer. Qualitatively correct headgroup order parameter response is observed with
+an artificially positively charged lipid bilayer and overexagerated structural effects in the headgroups. 
+Qualitatively correct headgroup order parameter response is observed with
 Ca$^{2+}$ binding in all the tested models, however, none of the them has a sufficient 
 quantitative accuracy to interpret the Ca$^{2+}$:lipid stoichiometry or the induced atomistic resolution structural changes.
 
@@ -193,11 +193,12 @@ simulations \cite{ollila16}, therefore the molecular electrometer allows the
 comparison of binding affinity between simulations and experiments. 
 
 % this part doesn't belong to intro, it belongs to conclustions/results -- and it is already there in other words. (commented out by JM)
-%We show that the response of order parameters to penetrating cations 
-%is qualitatively correct in simulations, but the affinity of PC bilayers for Na$^{+}$ ions 
-%is significantly overestimated in several MD simulation models. 
-%Moreover, we show that the accuracy of tested models does not allow for
-%an interpretation of lipid--Ca$^{2+}$ interactions with atomistic resolution.
+% OHSO: I did put this back. I think it serves a reader to shortly summarise the main results in the Introduction.
+We show that the response of order parameters to penetrating cations 
+is qualitatively correct in simulations, but the affinity of PC bilayers for Na$^{+}$ ions 
+is significantly overestimated in several MD simulation models. 
+Moreover, we show that the accuracy of tested models does not allow for
+an interpretation of lipid--Ca$^{2+}$ interactions with atomistic resolution.
 
 
 
@@ -406,15 +407,12 @@ in line with observed correlation between cation binding and order parameter dec
 Fig. \ref{electrometer}.
 
 In conclusion, the clear correlation between bound cations and order parameter decrease 
-is observed in all the tested simulation models. 
-Consequently, the electrometer concept can be 
-used to quantitatively compare the cation binding affinity between experiments and simulations. 
-However, we find that in simulations the responses of $\alpha$ and $\beta$ segments
-to bound cations do not generally quantitatively agree with the experiments. 
-The $\Delta S_{\rm{CH}}^{\beta}/\Delta S_{\rm{CH}}^{\alpha}$ ratio  
+is observed in all the tested simulation models. Consequently, the electrometer concept can 
+be used to compare the cation binding affinity between experiments and simulations. 
+However, we find that the quantitative $\alpha$ and $\beta$ segment order parameter responses to bound cations in simulations 
+do not generally agree with the experiments. The $\Delta S_{\rm{CH}}^{\beta}/\Delta S_{\rm{CH}}^{\alpha}$ ratio  
 agrees with experiments only in Lipid14 model (Fig.~\ref{AvsB}). 
-The observed 
-overestimations of the order parameter changes with cation concentrations may, in principle, arise
+Thus, the observed overestimations of the order parameter changes with cation concentrations may, in principle, arise
 from overbinding of ions or from too sensitive lipid headgroup response on bound cation 
 (see also discussion in Supplementary Material). 
 A careful analysis with current lipid models is performed in the next section.
@@ -523,7 +521,7 @@ changes with NaCl are clearly overestimated in all the other tested models (see 
 show stronger Na$^+$ binding affinity (see Fig.~\ref{NAdensities}). 
 %Since binding affinities clearly correlate with order parameter changes between different models and the 
 %headgroup sensitivity tested in Supplementary Information cannot explain overestimated order parameter change with NaCl,
-Thus we conclude that the sodium binding affinity is overestimated the models other than Orange, CHARMM36 and Lipid14. 
+Thus we conclude that the sodium binding affinity is overestimated in the models other than Orange, CHARMM36 and Lipid14. 
 
 The order parameter changes with NaCl in the best three models are small (less than 0.02). Thus, with the achieved accuracy we cannot conclude 
 which of these three models has the most realistic Na$^+$ binding affinity, especially with physiological NaCl concentrations ($\sim$ 150mM) 
