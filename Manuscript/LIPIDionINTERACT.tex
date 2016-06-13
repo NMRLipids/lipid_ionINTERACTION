@@ -303,14 +303,13 @@ with various CaCl$_2$ concentrations~\cite{akutsu81}.
 %were measured \cite{akutsu81,altenbach84,seelig87,scherer89}
 %order current knowledge on order parameter signs~\cite{hong95a,hong95b,gross97}, 
 
+
+\subsection{Molecular electrometer concept in MD simulations}\label{electrometerinsimulations}
+
 The headgroup order parameter changes as a function of ion concentration in
 solution from H$^2$ NMR experiments are shown in Fig.~\ref{ordPions} for DPPC and POPC bilayers~\cite{akutsu81,altenbach84}.
 %with correct signs~\cite{hong95a,hong95b,gross97}, 
 %as a function NaCl and CaCl$_2$ concentration. 
-In contrast to the response as a function of bound charge in 
-Eq. \ref{electrometer_eq}, the changes in Fig. \ref{ordPions}
-are not linear. This can be explained by electrostatic repulsion between
-already bound calcium ions and ions in solution \cite{altenbach84}.
 Only minor changes in order parameters are seen
 as a function of NaCl in solution, 
 while the effect of CaCl$_2$ is an order of magnitude larger. 
@@ -319,8 +318,13 @@ monovalent Na$^+$ ions have negligible affinity for PC lipid bilayers at concent
 while binding of Ca$^{2+}$ ions at the same concentration is significant~\cite{akutsu81,altenbach84}. 
 %This conclusion is in agreement with several other experimental 
 %studies~\cite{cevc90,tocanne90,binder02,pabst07,filippov09}.
+({\it Note that in contrast to the response as a function of bound charge in 
+Eq.~\eqref{electrometer_eq}, the changes in Fig.~\ref{ordPions}
+are not linear. This can be explained by electrostatic repulsion between
+already bound calcium ions and ions in solution \cite{altenbach84}.}
+\todo{Is this really needed? The x-axis of Fig.~\ref{ordPions} is not $X^\pm$, so
+why would one even expect the curves to follow Eq.~\eqref{electrometer_eq}?})
 
-\subsection{Molecular electrometer concept in MD simulations}\label{electrometerinsimulations}
 
 Figure~\ref{ordPions} also reports order parameter changes calculated from MD simulations
 of DPPC and POPC lipid bilayers as a function of NaCl or CaCl$_2$ concentrations in solution
