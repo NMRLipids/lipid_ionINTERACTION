@@ -410,16 +410,6 @@ Extended comparison with different models is left for further studies.
 %in line with observed correlation between cation binding and order parameter decrease in
 %Fig. \ref{electrometer}.
 
-%In conclusion, the clear correlation between bound cations and order parameter decrease 
-%is observed in all the tested simulation models. Consequently, the electrometer concept can 
-%be used to compare the cation binding affinity between experiments and simulations. 
-%However, we find that the quantitative $\alpha$ and $\beta$ segment order parameter responses to bound cations in simulations 
-%do not generally agree with the experiments. The $\Delta S_{\rm{CH}}^{\beta}/\Delta S_{\rm{CH}}^{\alpha}$ ratio  
-%agrees with experiments only in Lipid14 model (Fig.~\ref{AvsB}). 
-%Thus, the observed overestimations of the order parameter changes with cation concentrations may, in principle, arise
-%from overbinding of ions or from too sensitive lipid headgroup response on bound cation 
-%(see also discussion in Supplementary Material). 
-%A careful analysis with current lipid models is performed in the next section.
 
 Figure~\ref{AvsB} compares the relation between $\Delta S_{\rm{CH}}^{\beta}$ and $\Delta S_{\rm{CH}}^{\alpha}$
 in experiments~\cite{akutsu81} and different simulation models.
@@ -427,7 +417,7 @@ Only Lipid14 gives $\Delta S_{\rm{CH}}^{\beta}/\Delta S_{\rm{CH}}^{\alpha}$ rati
 In all the other models the $\alpha$ order parameter decrease with bound cations is underestimated in
 respect to $\beta$ order parameter decrease.
 
-Figure~\ref{electrometer} shows that order parameter decrease clearly correlates with the
+Figure~\ref{electrometer} shows that the order parameter decrease clearly correlates with the
 amount of bound cations also in simulations. This is also evident from Fig.~\ref{NAdensities},
 which shows the Na$^+$ density profiles of the MD models
 ordered according to the order parameter change 
@@ -436,15 +426,27 @@ The Na$^+$ density peaks are larger for models with larger changes in order para
 in line with the observed correlation between cation binding and order parameter decrease in
 Fig.~\ref{electrometer}.
 
-In conclusion, a clear correlation is observed between bound cations and order parameter decrease 
-in all simulation models. However, the quantitative responses of $S_{\rm{CH}}^{\alpha}$ and $S_{\rm{CH}}^{\beta}$
-to cation binding can not generally agree with experiments because the $\Delta S_{\rm{CH}}^{\beta}/\Delta S_{\rm{CH}}^{\alpha}$ ratio  
-agrees with experiments only in the Lipid14 model (Fig.~\ref{AvsB}). In other words, the observed 
-overestimation of order parameter changes with cation concentrations (Fig.~\ref{ordPions}) may, in principle, arise
-either from overbinding of ions or from too sensitive lipid headgroup response to bound cations 
-(see also discussion in Supplementary Material). Consequently, although the molecular electrometer concept can be 
-used to quantitatively compare the cation binding affinity between experiments and simulations, 
-careful analysis is required with current lipid models. Such analysis is performed in the next section.
+In conclusion, the clear correlation between bound cations and order parameter decrease 
+is observed in all the tested simulation models. Consequently, the electrometer concept can 
+be used to compare the cation binding affinity between experiments and simulations. 
+However, we find that the quantitative $\alpha$ and $\beta$ segment order parameter responses to bound cations in simulations 
+do not generally agree with the experiments. The $\Delta S_{\rm{CH}}^{\beta}/\Delta S_{\rm{CH}}^{\alpha}$ ratio  
+agrees with experiments only in Lipid14 model (Fig.~\ref{AvsB}). 
+Thus, the observed overestimations of the order parameter changes with cation concentrations may, in principle, arise
+from overbinding of ions or from too sensitive lipid headgroup response on bound cation 
+(see also discussion in Supplementary Material). 
+A careful analysis with current lipid models is performed in the next section.
+
+
+%In conclusion, a clear correlation is observed between bound cations and order parameter decrease 
+%in all simulation models. However, the quantitative responses of $S_{\rm{CH}}^{\alpha}$ and $S_{\rm{CH}}^{\beta}$
+%to cation binding can not generally agree with experiments because the $\Delta S_{\rm{CH}}^{\beta}/\Delta S_{\rm{CH}}^{\alpha}$ ratio  
+%agrees with experiments only in the Lipid14 model (Fig.~\ref{AvsB}). In other words, the observed 
+%overestimation of order parameter changes with cation concentrations (Fig.~\ref{ordPions}) may, in principle, arise
+%either from overbinding of ions or from too sensitive lipid headgroup response to bound cations 
+%(see also discussion in Supplementary Material). Consequently, although the molecular electrometer concept can be 
+%used to quantitatively compare the cation binding affinity between experiments and simulations, 
+%careful analysis is required with current lipid models. Such analysis is performed in the next section.
 
 
 
@@ -610,18 +612,6 @@ groups~\cite{hauser76,hauser78,herbette84} of two phospholipid molecules~\cite{a
 Simulation model correctly reproducing the order parameter changes would resolve the discussion
 by giving atomistic resolution interpretation for the experiments.
 
-%Almost all the tested models overestimate the order parameter decrease as a function of CaCl$_2$ concentration,
-%as seen in Fig.~\ref{ordPions}. The only exception is CHARMM36 with the recent ion model by Yoo et al.~\cite{yoo16} which is a selected
-%part of CUFIX (Champain-Urbana non-bonded FIX parameters for the CHARMM and AMBER force fields).
-%According to the electrometer concept, the overestimated order parameter decrease indicates overestimated Ca$^{2+}$ binding. 
-%This is the most likely scenario for the models where changes in both order parameters were overestimated,
-%however, in the case of CaCl$_2$ we cannot exclude that the headgroup response is too sensitive for
-%bound cations (see Supplementary Information). In CHARMM36 with ion model by Yoo et al. the order parameter decrease is overestimated for $\beta$ 
-%but underestimated for  $\alpha$, in line with Fig.~\ref{AvsB} where $\Delta S_{\rm{CH}}^{\beta}/\Delta S_{\rm{CH}}^{\alpha}$ 
-%ratio is larger in CHARMM36 than in experiments. 
-%Since we cannot determine which of the two $\Delta S_{\rm{CH}}^{\beta}$ or $\Delta S_{\rm{CH}}^{\alpha}$
-%is more realistic in CHARMM36, we cannot conclude if Ca$^{2+}$ binding is too strong or weak in simulation with ion model by Yoo et al.~\cite{yoo16}.
-
 As a function of CaCl$_2$ concentration, all but one (CHARMM36 with recent ion model by Yoo et al.~\cite{yoo16},
 {\it a selected part of CUFIX (Champain-Urbana non-bonded FIX parameters for the CHARMM and AMBER force fields)}
 \todo{Is this detail (in italics) relevant?})
@@ -701,26 +691,8 @@ are least sensitive to bound charge in CHARMM36 (Fig.~\ref{electrometer}).
 %incorrect headgroup response to penetrating divalent cation or penetration depth. 
 
 The origin of inaccuracies in lipid--ion interactions and binding affinities in different models is far from clear.
-%The potential candidates would be, for example, discrepancies in the ion models~\cite{hess06,chen07,Reif13},
-%incomplete treatment of electronic polarizability~\cite{leontyev11} or inaccuracies in the lipid headgroup 
-%description~\cite{botan15}. Cordomi et al.~\cite{cordomi09} showed that Na$^+$ binding affinity decreases when ion radius increases
-%in the model, however, also the models with largest radius show significant binding in DPPC bilayer simulated with
-%OPLS-AA force field~\cite{jorgensen96}. In our results the Slipid model gives essentially similar binding affinity with 
-%ion parameters from Refs.~\cite{smith94} and~\cite{beglov94,roux96}. Further, the compensation of missing electronic 
-%polarizability by scaling ion charge~\cite{kohagen16,leontyev11} reduced Na$^+$ binding in Berger, 
-%BergerOPLS and Slipid models but not enough to be in agreement with experiments (see Supplementary Information). 
-%The charge-scaled Ca$^{2+}$ model~\cite{kohagen14} slightly reduced binding in CHARMM36 model but did not have 
-%significant infuence on binding in Slipids model (see Supplementary Information). Significant reduction of
-%Ca$^{2+}$ binding was observed with the ion model by Yoo et al~\cite{yoo16}, however, CHARMM36 lipid
-%model must be further analyzed to fully interpret the results.
-
-%Also, the lipid models may have a significant influence on the ion binding behaviour.
-% FYI, Use of dashes and hyphens: http://www.dummies.com/how-to/content/how-to-use-long-and-short-dashes-in-your-writing.html 
-%For example, the same ion model and non-bonded parameters are used in the Orange and BergerOPLS~\cite{tieleman06} 
-%simulations, but while Na$^+$ ion binding affinity is realistic in the Orange model, it is significantly overestimated 
-%in the BergerOPLS (Fig.~\ref{NAdensities}). However, the realistic Na$^+$ binding do not directly relate
 Potential candidates could be, for example, discrepancies in the ion models~\cite{hess06,chen07,Reif13},
-incomplete treatment of electronic polarizability~\cite{leontyev11}, or inaccuracies in lipid headgroup 
+incomplete treatment of electronic polarizability~\cite{leontyev11}, or inaccuracies in the lipid headgroup 
 description~\cite{botan15}. Cordomi et al.~\cite{cordomi09} showed that the Na$^+$ binding affinity decreases when ion radius increases
 in the model, however, also the models with the largest radius show significant binding in DPPC bilayer simulated with
 OPLS-AA force field~\cite{jorgensen96}. In our results, the Slipid model gives essentially similar binding affinity with 
@@ -1234,7 +1206,6 @@ algorithm. \\
 {\it POPC with CaCl$_2$} A POPC bilayer consisting of 200 lipids, hydrated with 45 water molecules per lipid, 
 was simulated in the presence of 450 mM CaCl$_2$. The system was ran 2000~ns and the last 100~ns was used 
 for analysis. Other details are as in POPC with NaCl.
-\todo{DONE}
 
 
 \subsubsection{Lipid14}
