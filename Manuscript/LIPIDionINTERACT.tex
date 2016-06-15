@@ -1091,7 +1091,7 @@ pressure coupling to 1 bar was obtained with the Parrinello-Rahman barostat~\cit
 using a timestep of 2 fs. Long-range electrostatic interactions were calculated using the PME~\cite{darden93,essman95} method with a fourth order smoothing spline. A real space cut-off of 1.2 nm 
 was employed with grid spacing of 0.12 nm in the reciprocal space. Lennard-Jones interactions were smoothly switched to zero between 1.0 nm and 1.2 nm. Verlet cutoff-scheme~\cite{pall13}  
 was used with the long-range neighbor list updated every 20 steps. Coordinates were written every 10 ps.
-After energy minimization and an equilibration run of 0.5 ns, 200ns simulations were ran and the last 100ns of each simulation was employed for the analysis.
+After energy minimization and an equilibration run of 0.5 ns, 200 ns simulations were ran and the last 100 ns of each simulation was employed for the analysis.
 
  % DPPC + CaCl2 by Sergey Vilov and Claire Loison, 
  % Ca2+ model from  http://dx.doi.org/10.1002/bip.22868 (Jejoong Yoo and Aksimentiev, Oleksii) 
@@ -1164,7 +1164,7 @@ The electrostatics were handled with PME~\cite{darden93,essman95}, with real-spa
 Lennard-Jones potentials were cut off at 1.8 nm. 
 The neighbor lists for the calculation of non-bonded forces were updated every 5 steps.
 
-Temperature was set to 298K with the velocity-rescale thermostat~\cite{bussi07} using a coupling constant of 0.1 ps$^{-1}$, and the pressure was set to 1 bar using the Berendsen weak coupling algorithm~\cite{berendsen84} (compressibility of 4.5\cdot10$^-5$ bar$^-1$, time constant of 1 ps), coupling separately the x-y dimension and the z dimension to obtain a tensionless system. 
+Temperature was set to 298K with the velocity-rescale thermostat~\cite{bussi07} using a coupling constant of 0.1 ps$^{-1}$, and the pressure was set to 1 bar using the Berendsen weak coupling algorithm~\cite{berendsen84} (compressibility of 4.5$\cdot$10$^-5$ bar$^-1$, time constant of 1 ps), coupling separately the x-y dimension and the z dimension to obtain a tensionless system. 
 A time step of 2 fs was used for the integration (with the leap-frog algorithm), coordinates were written every 100 ps, 
 and the total simulation time was 60 ns. 
 
@@ -1215,7 +1215,7 @@ interactions were cut-off at 1~nm, whereas PME \cite{darden93,essman95} was empl
 Dispersion correction was applied to both energy and pressure. All bonds were constrained with the LINCS \cite{hess97,hess07}.
 algorithm. \\
 {\it POPC with CaCl$_2$:} A POPC bilayer consisting of 200 lipids, hydrated with 45 water molecules per lipid, 
-was simulated in the presence of 450 mM CaCl$_2$. The system was ran 2000~ns and the last 100~ns was used 
+was simulated in the presence of 450 mM CaCl$_2$. The system was ran for 2000~ns and the last 100~ns was used 
 for analysis. Other details are as in POPC with NaCl.
 
 
@@ -1235,8 +1235,8 @@ with a fourth order smoothing spline. A real space cut-off at 1.0 nm was employe
 Lennard-Jones potentials were cut-off at 1 nm, with a dispersion correction applied to both energy and pressure. Verlet cutoff-scheme~\cite{pall13} 
 were used with the long-range neighbor list updated every 20 steps. Coordinates were written every 10 ps.
 
-After energy minimization and an equilibration run of 5 ns, 200ns production runs were performed and analysed. In case of the CaCl$_2$ systems 
-only the last 100ns of each simulation was employed for the analysis.
+After energy minimization and an equilibration run of 5 ns, 200 ns production runs were performed and analysed. In case of the CaCl$_2$ systems 
+only the last 100 ns of each simulation was employed for the analysis.
 
 \subsubsection{Ulmschneiders}
 The starting structures with varying amounts of ions were constructed using the CHARMM-GUI Membrane Builder (\url{http://www.charmm-gui.org}) 
@@ -1255,8 +1255,8 @@ with the Parrinello-Rahman barostat~\cite{parrinello81} with a time constant of 
 timestep of 2 fs. Long-range electrostatic interactions were calculated using the PME~\cite{darden93,essman95} method with a fourth order smoothing spline. 
 A real space cut-off at 1.0 nm was employed with grid spacing of 0.12 nm in the reciprocal space. Lennard-Jones potentials were cut-off at 1 nm, 
 with a dispersion correction applied to both energy and pressure. Verlet cutoff-scheme~\cite{pall13} were used with the long-range neighbor list updated 
-every 20 steps. Coordinates were written every 10 ps. After energy minimization and an equilibration run of 5 ns, 200ns simulations were ran and 
-the last 100ns of each simulation was employed for the analysis.
+every 20 steps. Coordinates were written every 10 ps. After energy minimization and an equilibration run of 5 ns, 200 ns simulations were ran and 
+the last 100 ns of each simulation was employed for the analysis.
 
 
 
