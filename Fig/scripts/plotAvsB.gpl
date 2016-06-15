@@ -36,10 +36,10 @@ ls_forKey = 10
 set lmargin at screen 0.37
 #set key at screen 1.3,screen 0.87 maxcols 2 maxrows 8
 set xrange [-0.12:-0.0001] 
-set xlabel '{/Symbol D}S_{CH}^{/Symbol a}' font ",27"
+set xlabel '{/Symbol D}S^{/Symbol a}_{CH}' offset 0,-1 font ",27"
 #set yrange [-0.11:0.05]
-set ylabel "{/Symbol D}S_{CH}^{/Symbol b}" font ",27"
-set origin 0.2,0
+set ylabel "{/Symbol D}S^{/Symbol b}_{CH}" offset -1.5,0  font ",27"
+set origin 0.15,0
 #set size 0.65, 0.35
 plot "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-CaClchange-T332.dat"  using ($3*0.00784):($2*-0.00784) title '^2H NMR' with points  linetype 1 pt 5 lc rgb 'black', \
      "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-CaClchange-T323.dat"  using ($3*0.00784):($2*-0.00784) notitle with points  linetype 1 pt 5 lc rgb 'black', \
