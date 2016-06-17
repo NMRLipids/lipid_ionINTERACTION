@@ -517,9 +517,9 @@ A careful analysis with current lipid models is performed in the next section.
   \hline
   Slipid\cite{jambeck12}   &   DPPC & 0 & 128 &3840 & 0 & 0  & 0 & 323 & 150 & 100 &~\cite{slipidsFILES}  \\
   Slipid\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   DPPC & 150 (NaCl)  & 600 & 18000 & 49 & 0  &  49 & 323 & 100 & 40 &-  \\
-  Slipid\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   DPPC & 350 (NaCl)  & 128 & 3726 &  57 & 0  &  57 & 323 & 100 & 100 & \cite{slipidsFILESdppc}  \\
-  Slipid\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   DPPC & 700 (NaCl)  & 128 & 3612 & 114 & 0  & 114 & 323 & 100 & 100 & \cite{slipidsFILESdppc}  \\
-  Slipid\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   DPPC & 1000 (NaCl) & 128 & 3514 & 163 & 0  & 163 & 323 & 100 & 100 & \cite{slipidsFILESdppc}  \\
+  Slipid\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   DPPC & 850 (NaCl)  & 128 & 3726 &  57 & 0  &  57 & 323 & 100 & 100 & \cite{slipidsFILESdppc}  \\
+%  Slipid\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   DPPC & 700 (NaCl)  & 128 & 3612 & 114 & 0  & 114 & 323 & 100 & 100 & \cite{slipidsFILESdppc}  \\
+%  Slipid\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   DPPC & 1000 (NaCl) & 128 & 3514 & 163 & 0  & 163 & 323 & 100 & 100 & \cite{slipidsFILESdppc}  \\
   \hline
   Slipid\cite{jambeck12b}   &   POPC & 0 & 128 & 5120 & 0 & 0  & 0 & 303 & 200 & 150 &~\cite{slipidsFILESpopc}  \\
   Slipid\cite{jambeck12b}, AMBER\cite{smith94}  &  POPC & 130 (NaCl) & 200 & 9000 & 21 & 0  & 21 & 310 & 105 & 100 &~\cite{slipidsFILESpopc130mMnaclSD}  \\
@@ -996,8 +996,9 @@ Thus the overestimated binding affinity cannot be fixed by only scaling the char
   \centering
   \includegraphics[width=8cm]{../Fig/NAdensitiesSCALED.eps} 
   \caption{\label{NAdensitySCALED}
-    Atom number density profiles along membrane normal coordinate $z$ for lipids, Na$^+$ and Cl$^-$ ions from simulations using
-    ion models with scaled charges. The lipid densities are scaled with 100 (united atom) or 200 (all atom model) to make them visible with the used y-axis scale.
+    Atom number density profiles along membrane normal coordinate $z$ for lipids, Na$^+$ and Cl$^-$ ions. 
+    The effect of NBFIX~\cite{venable13} on CHARMM36 simulation results is shown in top and other figures show the
+    effect of ion models with scaled charges. The lipid densities are scaled with 100 (united atom) or 200 (all atom model) to make them visible with the used y-axis scale.
 }
 \end{figure}
 
@@ -1007,12 +1008,20 @@ The related files are available at~\cite{charmmFILESpopc450mMcaclSCALED} and~\ci
 respectively, and the results are shown in Figs.~\ref{OPchangesSCALED} and~\ref{CAdensities}.
 The results with scaled charges are slightly improved but yet far from experiments.
 
-Figure~\ref{OPchangesSCALED} also compares CHARMM36 simulation~\cite{charmmPOPC350mMNaClnoNBFIXfiles} with and without NBFIX~\cite{venable13} for NaCl.
-As expected, without NBFIX the order parameter decrease is more significant.
-\todo{Discussion will be finished as soon as we have the density profiles. Citations to Zenodo repositories will be added, if available. JM: added, please, check. }
-Because the difference promoted by NBFIX~\cite{venable13} is mainly a reduced Na$^+$ density in the headgroup region of the phospholipids,
-this behaviour suggests that it is the direct interaction between the lipids and the Na$^+$ cation 
-(and to no or much lesser extent Cl$^-$ anions) that drives the changes of the order parameters. 
+Also the effect of NBFIX~\cite{venable13} on Na$^+$ binding in CHARMM36 is quantified.
+The simulation data without NBFIX is available at~\cite{charmmPOPC350mMNaClnoNBFIXfiles}.
+As expected, Figs.~\ref{OPchangesSCALED} and ~\ref{NAdensitySCALED} show 
+more significant order parameter decrease and higher Na$^+$ binding affinity
+without NBFIX. Thus, also the CHARMM36 model without NBFIX overestimates the
+Na$^+$ binding in PC bilayer.
+
+%\todo{Discussion will be finished as soon as we have the density profiles. Citations to Zenodo repositories will be added, if available. JM: added, please, check. }
+%
+%I commented this out since the evidence on relation between order parameter change arising from cation binding
+%is already quite strong in the manuscript.
+%Because the difference promoted by NBFIX~\cite{venable13} is mainly a reduced Na$^+$ density in the headgroup region of the phospholipids,
+%this behaviour suggests that it is the direct interaction between the lipids and the Na$^+$ cation 
+%(and to no or much lesser extent Cl$^-$ anions) that drives the changes of the order parameters. 
 
 
 
@@ -1089,10 +1098,9 @@ The neighbour list was updated every 5th step with cut-off 1.4~nm. Temperature w
 for lipids and solution to 303~K with the velocity-rescale method~\cite{bussi07} with coupling constant 0.2~ps.
 Pressure was semi-isotropically coupled to the athmospheric pressure with the Berendsen method~\cite{berendsen84}.
 
-Also simulation without NBFIX~\cite{venable13} was run to check its effect on Na$^+$ binding.
-\todo{J. Melcr: DONE}
-The simulation settings were kept consistent with the simulations with NBFIX. The temperature was kept at 310~K with Nos{\'e}--Hoover~\cite{nose84,hoover85} thermostat. 
-The simulation files are available at~\cite{charmmPOPC350mMNaClnoNBFIXfiles}. 
+Simulation without NBFIX~\cite{venable13} was ran with the same settings, except that 
+the temperature was kept at 310~K with Nos{\'e}--Hoover~\cite{nose84,hoover85} thermostat 
+(simulation files available at~\cite{charmmPOPC350mMNaClnoNBFIXfiles}). 
 
 %CaCl_2 simulations by MYKHAILO:
 {\it POPC with CaCl$_2$:}
@@ -1110,7 +1118,7 @@ After energy minimization and an equilibration run of 0.5 ns, 200 ns simulations
  % DPPC + CaCl2 by Sergey Vilov and Claire Loison, 
  % Ca2+ model from  http://dx.doi.org/10.1002/bip.22868 (Jejoong Yoo and Aksimentiev, Oleksii) 
 {\it DPPC with CaCl$_2$ (Yoo model):}
-The systems contained 128 DPPC lipids and about 7600 TIP3P water molecules,
+The systems contained 128 DPPC lipids and about 7600 TIP3P~\cite{jorgensen83} water molecules,
 and an appropriate amount of ions as indicated in  Table~\ref{IONsystems}.  
 We have used CHARMM36 additive force field parameters for lipids~\cite{klauda10}. 
 In the calcium model developed recently by Yoo et al.~\cite{yoo16}, 
@@ -1186,15 +1194,16 @@ Simulation files for pure lipid simulations are found at ~\cite{orangePOPCfiles}
 
 
 \subsubsection{Slipids}
-{\it DPPC:} The simulation without ions from~\cite{botan15}, available at \cite{slipidsFILES} was used. 
+{\it DPPC:} The simulation without ions from~\cite{botan15}, available at \cite{slipidsFILES}, was used. 
 For the simulation with 150~mM NaCl, the starting DPPC lipid bilayer, which was built with the online CHARMM-GUI~\cite{lee15}
 (http://www.charmm-gui.org/), contained 600 lipids hydrated by 30 water molecules per lipid. 
-For the simulation at higher NaCl concentrations (350, 700 and 1000~mM), the configuration from  \cite{slipidsFILES} was taken and 
+
+For the simulation with 850~mM NaCl, the configuration from  \cite{slipidsFILES} was taken and 
 an appropriate amount of water molecules was converted to ions to form a neutral NaCl solution. 
 The simulation files are available at~\cite{slipidsFILESdppc}. 
 %
-We used TIP3P water model and ion parameters by Roux~\cite{beglov94,roux96}. 
-Stockholm lipids (Slipids) force field~\cite{jambeck12,jambeck12b} parameters were used for phospholipids. 
+Ion parameters by Roux~\cite{beglov94,roux96}, TIP3P water model~\cite{jorgensen83} and 
+Stockholm lipids (Slipids) parameters~\cite{jambeck12,jambeck12b} for phospholipids were used. 
 %All-atom MD simulations of DPPC lipid bilayers were performed 
 %at ten different temperatures (283, 298, 303, 308, 312, 313, 314, 318, 323, and 333 K) using 
 GROMACS software package version 4.5.5 or 5.0.7~\cite{pronk13} was employed for all simulations. 
@@ -1208,7 +1217,7 @@ bottom leaflets of the lipid bilayer, and for water to 323 K with the Nos\'e-Hoo
 a time constant of 0.5 ps. Pressure was semi-isotropically coupled to the atmospheric pressure 
 with the Parrinello-Rahman~\cite{parrinello81} barostat using a time constant of 10 ps.
 %The last 40 ns of each simulation was employed for the analysis of DPPC choline and glycerol backbone order parameters.
-\todo{J. Melcr: done, see above}  % JM: see above
+%\todo{J. Melcr: done, see above}  % JM: see above
 
 
 {\it POPC:} The simulation without ions from~\cite{botan15}, available at \cite{slipidsFILESpopc} was used. \\

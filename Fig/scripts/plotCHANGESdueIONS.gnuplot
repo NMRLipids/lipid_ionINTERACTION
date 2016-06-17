@@ -101,16 +101,16 @@ plot "../../Data/POPC/NaCl/BERGER/BERGERnaclCONSchange.dat" using 1:6:7  with ye
      "../../Data/POPC/NaCl/LIPID14/LIPID14naclCONSchange.dat" using 1:8:9  with yerrorbars notitle pt 7 lt 1 lc rgb '#FFD300', "" using 1:8 with lines notitle linetype 1 lc rgb '#FFD300',\
      "../../Data/POPC/NaCl/ULM/ULMnaclCONSchange.dat" using 1:6:7  with yerrorbars notitle pt 7 lt 1 lc rgb '#FFA0A3', "" using 1:6 with lines notitle linetype 1 lc rgb '#FFA0A3', \
      "../../Data/POPC/NaCl/ULM/ULMnaclCONSchange.dat" using 1:8:9  with yerrorbars notitle pt 7 lt 1 lc rgb '#FFA0A3', "" using 1:8 with lines notitle linetype 1 lc rgb '#FFA0A3',\
-     "../../Data/DPPC/NaCl/BERGERopls/BERGERoplsnaclCONSchange.dat" using 1:6:7  with yerrorbars notitle pt 7 lt 1 lc rgb 'brown', "" using 1:6 with lines notitle linetype 1 lc rgb 'brown', \
-     "../../Data/DPPC/NaCl/BERGERopls/BERGERoplsnaclCONSchange.dat" using 1:8:9  with yerrorbars notitle pt 7 lt 1 lc rgb 'brown', "" using 1:8 with lines notitle linetype 1 lc rgb 'brown',\
+     "../../Data/DPPC/NaCl/BERGERopls/BERGERoplsnaclCONSchange.dat" using 1:6:7  with yerrorbars notitle pt 5 lt 1 lc rgb 'brown', "" using 1:6 with lines notitle linetype 1 lc rgb 'brown', \
+     "../../Data/DPPC/NaCl/BERGERopls/BERGERoplsnaclCONSchange.dat" using 1:8:9  with yerrorbars notitle pt 5 lt 1 lc rgb 'brown', "" using 1:8 with lines notitle linetype 1 lc rgb 'brown',\
      "../../Data/POPC/NaCl/CHARMM36/CHARMMnaclCONSchange.dat" using 1:6:7  with yerrorbars notitle pt 7 lt 1 lc rgb '#0088BF', "" using 1:6 with lines notitle linetype 1 lc rgb '#0088BF', \
      "../../Data/POPC/NaCl/CHARMM36/CHARMMnaclCONSchange.dat" using 1:8:9  with yerrorbars notitle pt 7 lt 1 lc rgb '#0088BF', "" using 1:8 with lines notitle linetype 1 lc rgb '#0088BF',\
      "../../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSD.dat" using 1:6:7  with yerrorbars notitle pt 7 lt 1 lc rgb '#7AEE9E', "" using 1:6 with lines notitle linetype 1 lc rgb '#7AEE9E', \
      "../../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSD.dat" using 1:8:9  with yerrorbars notitle pt 7 lt 1 lc rgb '#7AEE9E', "" using 1:8 with lines notitle linetype 1 lc rgb '#7AEE9E',\
-     "../../Data/DPPC/NaCl/SLIPIDS/SLIPIDnaclCONSchangeRX.dat" using 1:6:7  with yerrorbars notitle pt 7 lt 1 lc rgb '#7AEE9E', "" using 1:6 with lines notitle linetype 1 lc rgb '#7AEE9E', \
-     "../../Data/DPPC/NaCl/SLIPIDS/SLIPIDnaclCONSchangeRX.dat" using 1:8:9  with yerrorbars notitle pt 7 lt 1 lc rgb '#7AEE9E', "" using 1:8 with lines notitle linetype 1 lc rgb '#7AEE9E',\
-     "../../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchange.dat" using 1:6:7  with yerrorbars notitle pt 7 lt 1 lc rgb '#D70039', "" using 1:6 with lines notitle linetype 1 lc rgb '#D70039', \
-     "../../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchange.dat" using 1:8:9  with yerrorbars notitle pt 7 lt 1 lc rgb '#D70039', "" using 1:8 with lines notitle linetype 1 lc rgb '#D70039', \
+     "../../Data/DPPC/NaCl/SLIPIDS/SLIPIDnaclCONSchangeRX.dat" using 1:6:7  with yerrorbars notitle pt 5 lt 1 lc rgb '#7AEE9E', "" using 1:6 with lines notitle linetype 1 lc rgb '#7AEE9E', \
+     "../../Data/DPPC/NaCl/SLIPIDS/SLIPIDnaclCONSchangeRX.dat" using 1:8:9  with yerrorbars notitle pt 5 lt 1 lc rgb '#7AEE9E', "" using 1:8 with lines notitle linetype 1 lc rgb '#7AEE9E',\
+     "../../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchange.dat" using 1:6:7  with yerrorbars notitle pt 5 lt 1 lc rgb '#D70039', "" using 1:6 with lines notitle linetype 1 lc rgb '#D70039', \
+     "../../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchange.dat" using 1:8:9  with yerrorbars notitle pt 5 lt 1 lc rgb '#D70039', "" using 1:8 with lines notitle linetype 1 lc rgb '#D70039', \
      "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-NaClchange.dat"  using 1:($3*0.00784) notitle with linespoints  lw 5 linetype 1 pt 5 lc rgb 'black'
 
 

@@ -5,10 +5,10 @@ paste -sd " " ../Data/DPPC/NaCl/SLIPIDS/0na/OrderParameters.dat > tmp.dat
 awk '{print "0 "$0}' tmp.dat >> "$outfile" 
 paste -sd " " ../Data/DPPC/NaCl/SLIPIDS/150mM/OrderParameters.dat > tmp.dat 
 awk '{print "150 "$0}' tmp.dat >> "$outfile" 
-paste -sd " " ../Data/DPPC/NaCl/SLIPIDS/350mM/OrderParameters.dat > tmp.dat 
-awk '{print "350 "$0}' tmp.dat >> "$outfile" 
-paste -sd " " ../Data/DPPC/NaCl/SLIPIDS/700mM/OrderParameters.dat > tmp.dat 
-awk '{print "700 "$0}' tmp.dat >> "$outfile" 
-paste -sd " " ../Data/DPPC/NaCl/SLIPIDS/1000mM/OrderParameters.dat > tmp.dat 
-awk '{print "1000 "$0}' tmp.dat >> "$outfile" 
+paste -sd " " ../Data/DPPC/NaCl/SLIPIDS/850mM/OrderParameters.dat > tmp.dat 
+awk '{print "850 "$0}' tmp.dat >> "$outfile" 
+#paste -sd " " ../Data/DPPC/NaCl/SLIPIDS/700mM/OrderParameters.dat > tmp.dat 
+#awk '{print "700 "$0}' tmp.dat >> "$outfile" 
+#paste -sd " " ../Data/DPPC/NaCl/SLIPIDS/1000mM/OrderParameters.dat > tmp.dat 
+#awk '{print "1000 "$0}' tmp.dat >> "$outfile" 
 rm tmp.dat
