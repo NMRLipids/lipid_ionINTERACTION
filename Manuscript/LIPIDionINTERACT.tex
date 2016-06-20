@@ -71,9 +71,6 @@ especially the biologically relevant Na$^+$ and Ca$^{2+}$ ions,  there is no con
 In this paper, we show that the ion binding affinity can be directly compared between simulations and experiments by 
 using the choline headgroup order parameters according to the 'molecular electrometer' concept.~\cite{seelig87}.
 Our findings strongly support the pre-2000 view that Na$^+$ and other monovalent ions
-% what's bar Li+? -- I couldn't find it.
-% See http://nmrlipids.blogspot.fi/2016/05/towards-submission-of-nmrlipids-ii.html?showComment=1465633342691#c7303500671316214589
-% But I think we should change this since it does not seem to be widely know style.
 (except Li$^+$) do not specifically bind to phosphatidylcholine lipid bilayers with mM concentrations, 
 in contrast to Ca$^{2+}$ and other multivalent ions. Especially the Na$^+$ binding affinity is 
 overestimated by several molecular dynamics simulation models, leading to 
@@ -112,9 +109,7 @@ This conclusion has since been further supported by contemporary
 studies showing that bilayer properties remain unaltered upon the addition of millimolar concentrations of a monovalent 
 salt~\cite{binder02,pabst07,filippov09}. 
 However, since 2000, another view, questioning the weakness of interactions between phospholipids and monovalent cations
-and suggesting a much stronger binding especially for Na$^{+}$, has emerged
-%in several experimental and molecular dynamics simulation studies~
-\cite{bockmann03,bockmann04,vacha09a,manyes05,manyes06,fukuma07,leontidis09,ferber11,morata12,klasczyk10,harb13}.
+and suggesting a much stronger binding especially for Na$^{+}$, has emerged~\cite{bockmann03,bockmann04,vacha09a,manyes05,manyes06,fukuma07,leontidis09,ferber11,morata12,klasczyk10,harb13}.
 
 The pre-2000 view is supported by the experimental findings that
 (in contrast to significant effects by the presence of Ca$^{2+}$ or other multivalent ions)
@@ -124,20 +119,16 @@ area per molecule~\cite{pabst07},
 dipole potential~\cite{clarke99},
 lipid lateral diffusion~\cite{filippov09},
 and choline head group order parameters~\cite{akutsu81}.
-% [reference to be added?]
 In addition, water sorption isotherms for a POPC/NaCl system and NaCl in pure water are very similar
---- indicating only weak interaction between ions and lipids~\cite{binder02}. %Further, only minor changes in POPC infrared spectra are observed in the presence of NaCl, while changes are significant in the presence of Ca$^{2+}$ and other multivalent ions,  also confirming that interaction between Na$^+$ and lipids are weak~\cite{binder02}.
+--- indicating only weak interaction between ions and lipids~\cite{binder02}. 
 
 The post-2000 view, which in contrast suggests strong Na$^{+}$ binding, rests on experimental and simulational findings.
 The rotational and translational dynamics of fluorescent probes in lipid bilayers decrease with mM NaCl concentrations~\cite{bockmann03,vacha09a,harb13}, and bilayer hardness and area per lipid measured with Atomistic Force Microscopy (AFM) change~\cite{manyes05,manyes06,fukuma07,ferber11,morata12}.
 In addition, atomistic molecular dynamics (MD) simulations
 commonly predict binding of Na${^+}$ ions 
 to phoshatidylcholine lipid bilayers, although the strength of the binding depends on the specific model used~\cite{bockmann03,bockmann04,sachs04,berkowitz06,cordomi08,cordomi09,valley11,berkowitz12}. 
-%Generally the CHARMM based force fields predict less Na$^+$ binding and changes in bilayer
-%properties than the GROMOS based force fields~\cite{sachs04,valley11}.
 Upon Na$^+$ binding, some simulation studies reported a reduction in lipid lateral diffusion, 
 {\it in agreement with the fluorescent probe measurements~\cite{bockmann03,vacha09a,harb13}}.
-%but in contrast with NMR experiments~\cite{filippov09}. 
 Other simulations showed a reduction in area per lipid in the presence of NaCl, 
 {\it in agreement with AFM experiments~\cite{manyes05,manyes06,fukuma07,ferber11,morata12};
 however, the reduction in area was observed at excessively low Na$^+$ concentrations, 
@@ -149,9 +140,8 @@ Some observables have been interpreted to favor both the pre- as well as the pos
 For example, while the reduced lateral diffusion of fluorescent probes was interpreted to support the post-2000 view,
 reduction of lipid diffusion was not observed in noninvasive NMR experiments,
 suggesting that fluorescence results arise from Na$^{+}$ interactions with probes rather than with lipids~\cite{filippov09}.
-And  %have been interpreted to support both sides:
-as the effect of monovalent ions (except Li$^+$)  on the phase transition temperature is small
-(compared to the effect of multivalent ions), it was initially interpreted %by Cevc
+And as the effect of monovalent ions (except Li$^+$)  on the phase transition temperature is small
+(compared to the effect of multivalent ions), it was initially interpreted 
 as an indication that only multivalent ions and Li$^+$ specifically bind to phosholipid bilayers~\cite{cevc90}; 
 however, more recently such small effect in calorimetric measurements was interpreted to indicate that 
 also Na$^+$ binds~\cite{bockmann03,klasczyk10}.
@@ -166,26 +156,6 @@ between the pre-2000 and post-2000 views
 by directly comparing the headgroup order parameters of hydrocarbon segments
 $\alpha$ and $\beta$ (see Fig. \ref{POPCstructure}) between simulations
 and experiments as a function of cation concentration. 
-%
-% CL: I think this previous sentence could be interprated as a bit too extreme, as we cannot explain with this work how to
-% reinterpret all the experimental  data which seemed to sustain the Na+ binding. 
-% One tries to resolve the contradiction for MD results only.
-% One could be more precise in the different ideas in the article. As far as I see it, the path is 
-% 1) use the electrometer concept to define the NMR data as an absolute experimental reference of ion binding.
-% 2) explain which simulation results can be relyed on or not, and signal the need to reinterpret the data of previous publication.
-% => the electrometer concept is reproduced in MD for Na+, not really for Ca2+
-% => the binding constant are not right for Ca2+
-% => the binding constant are not right for many FF of Na+, for three best, they have different binding constant  and different molecular binding mechanism. Different FF may give acceptable results in term of NMR data, therefore any molecular interpretation should be done with great care.
-% therefore I suggest something a bit less ambitious like :
-%
-%In the present work, we set out to solve several apparent contradictions
-%between the pre-2000 and post-2000 views by critically analysing a broad set of MD simulations
-%in the light of the 'molecular electrometer' concept. 
-%Indeed, it has been shown experimentally that changes in order parameters of the $\alpha$ and $\beta$ carbons 
-%in the phospholipid head group (see Fig. \ref{POPCstructure})  can be used to measure the ion affinity 
-%
-%OHSO: This has been changed back after discussion in GitHub: https://github.com/NMRLipids/lipid_ionINTERACTION/pull/29
-%
 According to the 'molecular electrometer' concept, changes in order parameters of the $\alpha$ and $\beta$ carbons 
 in the phospholipid head group can be used to measure the ion affinity to the 
 phophatidylcholine (PC) lipid bilayer~\cite{akutsu81,altenbach84,seelig87,scherer89}.
@@ -193,25 +163,12 @@ Order parameters can be accurately measured in experiments and straightforwardly
 simulations \cite{ollila16}, therefore the molecular electrometer allows the 
 comparison of binding affinity between simulations and experiments. 
 
-% this part doesn't belong to intro, it belongs to conclustions/results -- and it is already there in other words. (commented out by JM)
-% OHSO: I did put this back. I think it serves a reader to shortly summarise the main results in the Introduction.
-%We show that the response of order parameters to penetrating cations 
-%is qualitatively correct in simulations, but the affinity of PC bilayers for Na$^{+}$ ions 
-%is significantly overestimated in several MD simulation models. 
 In this paper, We will show that the response of order parameters to penetrating cations
 is qualitatively correct in simulations, but the affinity of Na$^{+}$ ions for PC bilayers
 is significantly overestimated in several MD simulation models.
 Moreover, we will assay the accuracy of lipid--Ca$^{2+}$ interactions 
 in different models and show that current models are not accurate enough
 for atomistic resolution interpretation of NMR experiments. 
-
-%Moreover, we show that the accuracy of tested models does not allow for
-%an interpretation of lipid--Ca$^{2+}$ interactions with atomistic resolution.
-
-
-
-
-
 
 \begin{figure}[]
   \centering
@@ -221,9 +178,6 @@ for atomistic resolution interpretation of NMR experiments.
     Chemical structure of 1-palmitoyl-2-oleoylphosphatidylcholine (POPC), and the definition of $\gamma$, $\beta$, $\alpha$, $g_1$, $g_2$ and $g_3$ segments.}
   
 \end{figure}
-
-
-
 
 
 \section{Results and Discussion}
@@ -242,8 +196,6 @@ The empirically observed linear relation can be written as~\cite{ferreira16}
 \begin{equation}\label{electrometer_eq}
 S_{\rm{CH}}^{i}(X^\pm)=S_{\rm{CH}}^{i}(0) + \frac{4m_i}{3\chi} X^\pm,
 \end{equation}
-%Since the quadrupolar splitting is $\Delta\nu_i^{\rm{Q}}=-\frac{3}{4} \chi S_{\rm{CD}}$
-%and $S_{\rm{CD}} \approx S_{\rm{CH}}$~\cite{ollila16} 
 where $S_{\rm{CH}}^{i}(0)$ is the order parameter in the absence of bound charges,
 $m_i$ empirical constant depending on the valency and position of bound charge,
 the quadrupole coupling constant $\chi \approx$ 167 kHz, $X^\pm$ is the amount of bound charge per lipid, and
@@ -267,8 +219,7 @@ $m_\alpha=-20.5$  and $m_\beta=-10.0$~\cite{altenbach84}.
     with concentrations represented here~\cite{altenbach84,ollila16}. 
     It should be noted that none of the models used here reproduces the order parameters
     within experimental error for pure PC bilayer without ions, indicating structural inaccuracies with varying severity in all
-    models \cite{botan15}. %this is important to say, otherwise someone might get wrong impression from this fig.
-    Note that the relatively large decrease in CHARMM36 with 450~mM CaCl$_2$ arise from more equilibrated binding 
+    models \cite{botan15}. Note that the relatively large decrease in CHARMM36 with 450~mM CaCl$_2$ arise from more equilibrated binding 
     affinity due to long simulation times, see Supplementary Information.
   }
 \end{figure*}
@@ -282,7 +233,7 @@ that both $\Delta S_{\rm{CH}}^{\beta}$ and $\Delta S_{\rm{CH}}^{\alpha}$ decreas
 and increase with bound negative charge. Consequently, values of $m_i$ are negative for
 bound positive charges and {\it vice versa}. This can be rationalized by electrostatically 
 induced changes in choline P-N dipole tilt \cite{seelig87,scherer89,seelig90}, which is also
-seen in simulations~\cite{gurtovenko05,cordomi08,cordomi09,zhao12}. %gurtovenko05: dx.doi.org/10.1021/jp053667m
+seen in simulations~\cite{gurtovenko05,cordomi08,cordomi09,zhao12}. 
 This is in line with order parameter decrease related to the P-N vector tilting more parallel to membrane plane seen with decreasing hydration levels~\cite{botan15}. 
 
 
@@ -293,43 +244,18 @@ of different cations (aqueous cations, cationic peptides, cationic anesthetics)~
 More specifically,
 the relation $\Delta S_{\rm{CH}}^{\beta}=0.43 \Delta S_{\rm{CH}}^{\alpha}$ was found for a DPPC bilayer
 with various CaCl$_2$ concentrations~\cite{akutsu81}.
-%With these values the Eq.~\ref{electrometer_eq} gives
-%\begin{equation}\label{alphaCH}
-%\Delta S_{\rm CH}^\alpha=-0.16 X^{\rm Ca^{2+}}
-%\end{equation}
-%and
-%\begin{equation}\label{betaCH}
-%\Delta S_{\rm CH}^\beta=-0.08 X^{\rm Ca^{2+}},
-%\end{equation}
-%where $X^{\rm Ca^{2+}}$ is the amount of bound Ca$^{2+}$ per lipid.
-%Order parameter changes a function of bound charges from Eqs. \ref{alphaCH} and
-%\ref{betaCH} are shown in Fig.~\ref{electrometer}. 
-
-
-%, and positive to the 
-%sign to the order parameter of the 
-%carbon
-%thus both order parameter values are actually decreasing %(becoming more negative) 
-%as the concentration of cations increases~\cite{ollila15}. 
-%Combining extensive quantitifaction of electrometer concept with
-%were measured \cite{akutsu81,altenbach84,seelig87,scherer89}
-%order current knowledge on order parameter signs~\cite{hong95a,hong95b,gross97}, 
 
 
 \subsection{Molecular electrometer concept in MD simulations}\label{electrometerinsimulations}
 
 The headgroup order parameter changes as a function of ion concentration in
 solution from H$^2$ NMR experiments are shown in Fig.~\ref{ordPions} for DPPC and POPC bilayers~\cite{akutsu81,altenbach84}.
-%with correct signs~\cite{hong95a,hong95b,gross97}, 
-%as a function NaCl and CaCl$_2$ concentration. 
 Only minor changes in order parameters are seen
 as a function of NaCl in solution, 
 while the effect of CaCl$_2$ is an order of magnitude larger. 
 Thus, according to the molecular electrometer concept, 
 monovalent Na$^+$ ions have negligible affinity for PC lipid bilayers at concentrations up to 1 M,
 while binding of Ca$^{2+}$ ions at the same concentration is significant~\cite{akutsu81,altenbach84}. 
-%This conclusion is in agreement with several other experimental 
-%studies~\cite{cevc90,tocanne90,binder02,pabst07,filippov09}.
 ({\it Note that in contrast to the response as a function of bound charge in 
 Eq.~\eqref{electrometer_eq}, the changes in Fig.~\ref{ordPions}
 are not linear. This can be explained by electrostatic repulsion between
@@ -346,11 +272,6 @@ Note that none of these MD models
 reproduced within experimental uncertainty the order parameters for a pure PC bilayer without ions
 (Figure 2 in Ref.~\cite{botan15}),
 indicating structural inaccuracies of varying severity in all models \cite{botan15}.
-%\todo{MONTICELLI: hmm, I see a little problem here: the absolute values for the order parameters are not reported here,
-% so how can we notice that they don't match the experiment? 
-% Is it worth having another figure? If not, then I will rephrase this bit above, I don't think it's very clear. \\
-%OLLILA: This is now modified to explicitly point the fig. 2 in NMRlipids I paper.
-%https://github.com/NMRLipids/lipid\_ionINTERACTION/issues/3 }
 However, the experimentally observed headgroup order parameter increase with dehydration
 was qualitatively reproduced by all the models \cite{botan15}, and 
 similarly here the presence of cations leads to the decrease 
@@ -367,7 +288,6 @@ between different models and experimental slopes
 ($m_\alpha=-20.5$ and $m_\beta=-10.0$ for Ca$^{2+}$ binding in DPPC bilayer in
 the presence of 100mM NaCl in Eq. \ref{electrometer_eq}~\cite{altenbach84}) is not straightforward 
 since the simulation slopes depend on the definition used for bound ions. 
-%Thus the more detailed analysis is left for further studies.
 \begin{figure}[]
   \centering
   \includegraphics[width=8.6cm]{../scratch/boundIons/dOP_vs_boundCationCharge_P.pdf}
@@ -388,32 +308,6 @@ in a Berger-based model (Supplementary Information).
 This might, in principle, explain the overestimated order parameter 
 response of Berger model to CaCl$_2$, but not to NaCl (see discussion in Supplementary Information).
 Extended comparison with different models is left for further studies.
-
-
-
-%The order parameter changes as a function of cationic amphiphiles
-%in bilayer is compared between previously published Berger based simulations (DMPC with cationic dimyristoyltrimethylammoniumpropane
-%(DMTAP))~\cite{miettinen09} and experiments~\cite{scherer89,franzin98} in Supplementary Information. The response in simulations is 
-%similar as the average of various cationic amphiphiles measured by Scherer et al.~\cite{scherer89} but larger 
-%than response of POPC bilayer measured with 1,2-dioleoyloxy-3-(trimethylammonio)propane (DOTAP).
-
-
-
-%The relation between $\Delta S_{\rm{CH}}^{\beta}$ and $\Delta S_{\rm{CH}}^{\alpha}$ from different simulation models
-%is compared to experiments in Fig.~\ref{AvsB}. Almost all the tested models give larger $\Delta S_{\rm{CH}}^{\beta}/\Delta S_{\rm{CH}}^{\alpha}$ ratio
-%than in experiments~\cite{akutsu81}; only Lipid14 gives values in agreement with the experimental ratio.
-%Thus, in all the other tested simulation models $\alpha$ order parameter decrease is underestimated with
-%respect to $\beta$ order parameter decrease with bound cations.
-
-%Figure \ref{electrometer} shows that the order parameter decrease clearly correlates with the
-%amount of bound cations also in simulations. This is also evident from Fig.~\ref{NAdensities}
-%showing Na$^+$ density profiles from the different simulation models. 
-%In this figure, the simulation models are ordered according to the order parameter changes 
-%(reported in Fig.~\ref{ordPions}), from the smallest to the largest.
-%The Na$^+$ density peaks are larger for models with larger changes in order parameters,
-%in line with observed correlation between cation binding and order parameter decrease in
-%Fig. \ref{electrometer}.
-
 
 Figure~\ref{AvsB} compares the relation between $\Delta S_{\rm{CH}}^{\beta}$ and $\Delta S_{\rm{CH}}^{\alpha}$
 in experiments~\cite{akutsu81} and different simulation models.
@@ -451,19 +345,6 @@ from overbinding of ions or from too sensitive lipid headgroup response on bound
 (see also discussion in Supplementary Information). 
 A careful analysis with current lipid models is performed in the next section.
 
-
-%In conclusion, a clear correlation is observed between bound cations and order parameter decrease 
-%in all simulation models. However, the quantitative responses of $S_{\rm{CH}}^{\alpha}$ and $S_{\rm{CH}}^{\beta}$
-%to cation binding can not generally agree with experiments because the $\Delta S_{\rm{CH}}^{\beta}/\Delta S_{\rm{CH}}^{\alpha}$ ratio  
-%agrees with experiments only in the Lipid14 model (Fig.~\ref{AvsB}). In other words, the observed 
-%overestimation of order parameter changes with cation concentrations (Fig.~\ref{ordPions}) may, in principle, arise
-%either from overbinding of ions or from too sensitive lipid headgroup response to bound cations 
-%(see also discussion in Supplementary Material). Consequently, although the molecular electrometer concept can be 
-%used to quantitatively compare the cation binding affinity between experiments and simulations, 
-%careful analysis is required with current lipid models. Such analysis is performed in the next section.
-
-
-
 \begin{table*}[htb]
 \centering
 \caption{List of simulations performed in this work. The ion concentrations are calculated as 
@@ -492,8 +373,6 @@ A careful analysis with current lipid models is performed in the next section.
   CHARMM36\cite{klauda10}, CHARMM36\cite{venable13} & POPC & 350 (NaCl)  & 72 & 2085 & 13  & 0 & 13 & 303  & 80 & 60 & \cite{charmmPOPC350mMNaClfiles} \\
   CHARMM36\cite{klauda10}, CHARMM36\cite{venable13} & POPC & 690 (NaCl)  & 72 & 2085 & 26  & 0 & 26 & 303  & 73 & 60 & \cite{charmmPOPC690mMNaClfiles}   \\
   CHARMM36\cite{klauda10}, CHARMM36\cite{venable13}  & POPC & 950 (NaCl)  & 72 & 2168 & 37  & 0 & 37 & 303  & 80 & 60 &\cite{charmmPOPC950mMNaClfiles}  \\
-  %CHARMM36\cite{klauda10}, ionFF~\cite{??}\todoi{Appropriate reference for the ion model?}  & POPC & 1380 (NaCl)  & 72 & 2085 & 52  & 0 & 52 & 303  & 80 & 60 &?\todoi{Samuli put to Zenodo} \\
-  %CHARMM36\cite{klauda10}, ionFF~\cite{??}\todoi{Appropriate reference for the ion model?}   & POPC & 2080  (NaCl)  & 72 & 2085 & 78  & 0 & 78 & 303  & 73 & 60 &?\todoi{Samuli put to Zenodo} \\
   CHARMM36\cite{klauda10}, CHARMM36 & POPC &  350 (CaCl$_2$)  & 128 & 6400 & 0& 35 & 70 & 303  & 200  & 100 & \cite{charmmPOPC350mMCaClfiles}  \\
   CHARMM36\cite{klauda10}, CHARMM36 & POPC &  450 (CaCl$_2$)  & 200 & 9000 & 0& 73 & 146 & 310  & 2000  & 100 & \cite{charmmPOPC450mMCaClfiles}  \\
   CHARMM36\cite{klauda10}, CHARMM36 & POPC &  670 (CaCl$_2$)  & 128 & 6400 & 0& 67 & 134 & 303  & 200  & 120 & \cite{charmmPOPC670mMCaClfiles}  \\  
@@ -518,8 +397,6 @@ A careful analysis with current lipid models is performed in the next section.
   Slipid\cite{jambeck12}   &   DPPC & 0 & 128 &3840 & 0 & 0  & 0 & 323 & 150 & 100 &~\cite{slipidsFILES}  \\
   Slipid\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   DPPC & 150 (NaCl)  & 600 & 18000 & 49 & 0  &  49 & 323 & 100 & 40 &-  \\
   Slipid\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   DPPC & 850 (NaCl)  & 128 & 3726 &  57 & 0  &  57 & 323 & 105 & 100 & \cite{slipidsFILESdppc}  \\
-%  Slipid\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   DPPC & 700 (NaCl)  & 128 & 3612 & 114 & 0  & 114 & 323 & 100 & 100 & \cite{slipidsFILESdppc}  \\
-%  Slipid\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   DPPC & 1000 (NaCl) & 128 & 3514 & 163 & 0  & 163 & 323 & 100 & 100 & \cite{slipidsFILESdppc}  \\
   \hline
   Slipid\cite{jambeck12b}   &   POPC & 0 & 128 & 5120 & 0 & 0  & 0 & 303 & 200 & 150 &~\cite{slipidsFILESpopc}  \\
   Slipid\cite{jambeck12b}, AMBER\cite{smith94}  &  POPC & 130 (NaCl) & 200 & 9000 & 21 & 0  & 21 & 310 & 105 & 100 &~\cite{slipidsFILESpopc130mMnaclSD}  \\
@@ -550,23 +427,11 @@ A careful analysis with current lipid models is performed in the next section.
     reported Fig.~\ref{ordPions}, from the smallest (top panel) to the larges (bottom panel).
     The lipid densities are scaled by 100 (united atom) or 200 (all atom model) to improve readability. 
     Figure discussed in https://github.com/NMRLipids/lipid\_ionINTERACTION/issues/4.}
-    % are you sure you want to keep this comment (last line) in the submitted paper? 
-    % I would prefer to leave it out, as the paper should be self-contained as much as possible.
-    % THAT LINE WILL BE REMOVED BEFORE SUBMISSION BUT KEPT AS LONG AS THE DISCUSSION IS GOING ON.
 \end{figure}
 
 
 
 \subsection{Cation binding in different simulation models}
-
-%The order parameter changes and density distributions in Figs.~\ref{ordPions} and \ref{NAdensities} 
-%with added NaCl show significantly different Na$^+$ binding affinities for different simulation models.
-%The best agreement with experiments (i.e., the lowest order parameter changes) is observed for the Orange,
-%CHARMM36 and Lipid14 models (see Figs.~\ref{ordPions}). These also predict the lowest Na$^+$ densities 
-%in the proximity of the membrane (see Fig.~\ref{NAdensities}). On the other hand, the choline order parameter 
-%changes with NaCl are clearly overestimated in all the other tested models (see Fig.~\ref{ordPions}) which also
-%show stronger Na$^+$ binding affinity (see Fig.~\ref{NAdensities}). 
-%Thus we conclude that the sodium binding affinity is overestimated in the models other than Orange, CHARMM36 and Lipid14. 
 
 The order parameter changes (Fig.~\ref{ordPions}) and density distributions (Fig.~\ref{NAdensities})
 demonstrate significantly different Na$^+$ binding affinities in different simulation models.
@@ -577,8 +442,6 @@ responses to NaCl are clearly overestimated (Fig.~\ref{ordPions}),
 and the strength of the overestimation is clearly linked to the strength of the
 Na$^+$ binding affinity (compare Figs.~\ref{ordPions} and~\ref{NAdensities});
 this leads us to
-%Since binding affinities clearly correlate with order parameter changes between different models and the 
-%headgroup sensitivity tested in Supplementary Information cannot explain overestimated order parameter change with NaCl,
 conclude that sodium binding affinity is overestimated in all these models.
 
 
@@ -587,35 +450,11 @@ with the achieved statistical accuracy we cannot conclude
 which of the three has the most realistic Na$^+$ binding affinity,
 especially at physiological NaCl concentrations ($\sim$ 150mM) 
 relevant for most applications. 
-%This can be explained by unrealistically strong Na$^+$ binding affinity to the bilayer in these models (see Fig.~\ref{NAdensities}). 
 The overestimated binding in the other models raise questions on the quality of the predictions from these models when NaCl is present.
-%reported in a number of simulation papers... [complete with examples] 
 \todo{It has been suggested that we should add references here. The problem is that there are a lot of them and
 it is difficult to choose which ones to pick. Any opinions?} {\it Mention that there are many (hundreds?) of them in Web of Science? -markus.}
 Especially interactions between charged molecules and lipid bilayer might be significantly
 affected by the strong Na$^+$ binding, as it makes the bilayer effectively positively charged.
-
-
-%While the predicted changes in order parameters for these three models are very similar,
-%the ion density profiles show differences in Na$^+$ affinity, Orange having lowest affinity and CHARMM36 the highest. 
-%With the achieved accuracy for the order parameters we are not able to conclude 
-% is this correct? the numbers at low NaCl concentrations are difficult to read.
-% SAMULI: Almost all the points are within the error excepts. One could say that CHARMM is maybe 
-% changing more than others, then there is this weird one point in ORANGE, etc. 
-% I think it is beyond the scope to start distinguish these three models since
-% in that case we should run more to get smaller error bars and do many other things
-% more carefully as well
-
-%\todo{I DID NOT GET THIS: \\
-%On one hand, it is clear that models in better agreement with experimental  data on order parameters
-%show low Na$^+$ binding affinity, as reported in a number of experiments. 
-%On the other hand, differences in ion binding affinities raise questions on the quantitative application 
-%of the molecular electrometer in molecular simulations.\\
-%IF YOU ARE REFERRING TO THE DIFFERENCES BETWEEN THE BEST THREE MODELS, I THINK THE
-%PROBLEM TO DISINGUISH IS TOO LARGE ERROR BARS IN SIMULATIONS, NOT THE ELECTROMETER
-%CONCEPT ITSELF (WHICH MAY BE THE SAME WHAT IS MENT HERE). ANYWAY, I THINK THAT THESE 
-%SENTENCES ARE NOT NEEDED, UNLESS I HAVE MISSED SOMETHING IMPORTANT?
-%Sorry about writing capitals. SAMULI}
 
 Significant Ca$^{2+}$ binding affinity to a phosphatidylcholine bilayer at mM concentrations  
 is agreed in the literature~\cite{akutsu81,altenbach84,cevc90,tocanne90}, however, several
@@ -627,8 +466,6 @@ Simulation model correctly reproducing the order parameter changes would resolve
 by giving atomistic resolution interpretation for the experiments.
 
 As a function of CaCl$_2$ concentration, all but one (CHARMM36 with recent ion model by Yoo et al.~\cite{yoo16}),
-%{\it a selected part of CUFIX (Champain-Urbana non-bonded FIX parameters for the CHARMM and AMBER force fields)}
-%\todo{Is this detail (in italics) relevant?})
 model overestimate the order parameter decrease (Fig.~\ref{ordPions}). 
 According to the molecular electrometer, this indicates overestimated Ca$^{2+}$ binding. 
 This is the most likely scenario for the models where changes in both order parameters were overestimated,
@@ -643,21 +480,6 @@ This could be resolved by comparing CHARMM36 model to the experimental data with
 (e.g., experiments with amphiphilic cations~\cite{scherer89,franzin98}), however, this is beyond the scope of the
 current work. 
 
-%However, for CHARMM36 with ions by Yoo et al.
-%the $\beta$ order parameter decrease could be overestimated also because of too high sensitivity for bound cations, not
-%because of overestimated Ca$^{2+}$ binding. On the other hand, underestimated decrease of $\alpha$ order parameter
-%could arise either from too weak Ca$^{2+}$ binding or from insensitivity of $\alpha$ order parameter to cation binding 
-%(mellow slope in bottom of Fig.~\ref{electrometer}). 
-
-
-%On the other hand, the result could be also explained by the oversensitivity of the
-%choline structure on bound Ca$^{2+}$, i.e. too strong slopes in Fig.~\ref{electrometer}. 
-%We cannot fully exclude this possibility since the quantitative comparison with experimental slope is
-%not possible with current data as discussed in section~\ref{electrometerinsimulations}.
-%In this case the bindiging affinitity could be correct but the overestimated choline structural response 
-%would induce too large order parameter changes. The latter explanation may be relevant especially in
-%the case of Orange model which gives steeper slope in Fig.~\ref{electrometer} than other models.
-
 The ion density distributions with CaCl$_2$ in Fig.~\ref{CAdensitiesCLEAR} show significant
 Ca$^{2+}$ binding in all models, however, some differences occur between different models.
 The Berger model predicts deeper penetration depth (density maxima close to $\pm$1.8~nm) compared
@@ -667,19 +489,6 @@ choline group~\cite{hauser76,hauser78,herbette84,cevc90}. In CHARMM36, almost al
 ions present in simulation bind in bilayer indicating strongest binding affinity among the tested
 models. The difference is not as clear in Fig.~\ref{ordPions} because $\alpha$ carbon order parameters 
 are least sensitive to bound charge in CHARMM36 (Fig.~\ref{electrometer}).
-%Further, the $^1$H~NMR experiments suggest that the N-$\beta$-$\alpha$-O dihedral is only in 
-%gaughe-conformation in the absence of ions, but in the presence of multivalent ions also anti-conformations
-%would occur~\cite{hauser78, hauser81}. However,  in the tested simulation models the glycerol backbone and headgroup atomistic resolution structures
-%and their changes are not reproduced within experimental error~\cite{botan15},
-%thus model development is needed before Ca$^{2+}$ binding affinity, lipid/ion stoichiometry 
-%and concomitant structural changes can be interpreted.
-%\todo{The P-N vector tilting analysis should be considered}
-%I have now calculated the dihedral distributions for this dihedral with different CaCl$_2$ concentrations in different models, see Fig.~\ref{ObaNdihs}.
-%The change suggested by the $^1$H NMR experiments is not seen in the CHARMM36 model. In Orange model this dihedral is mostly in anti
-%conformation also without CaCl$_2$, oppositely as suggested by $^1$H NMR experiments. With CaCl$_2$ anti conformations become slightly more
-%pronounced, however, the conformation seems to be unrealistic from the beginning so the studies of structural response to the CaCl$_2$
-%might not be reasonable with this model. I think we need more simulations with CHARMM36 to see how good the order parameter response
-%to the CaCl$_2$ actually is. Then we can discuss more about its structural response.} \\
 \begin{figure}[]
   \centering
   \includegraphics[width=8cm]{../Fig/CAdensitiesCLEAR.eps}
@@ -693,16 +502,6 @@ are least sensitive to bound charge in CHARMM36 (Fig.~\ref{electrometer}).
     Figure discussed in https://github.com/NMRLipids/lipid\_ionINTERACTION/issues/4.
   }
 \end{figure}
-
-
-%, the estimations for lipid/Ca$^{2+}$ stoichiometry vary between 17 
-%and 0.24~\cite{tatulian87,altenbach84,bockmann04}. The smallest number (0.24) indicating that one 
-%Ca$^{2+}$ ion binds roughly four lipid molecules originates from simulation with Berger model~\cite{bockmann04}.
-%The direct comparison of order parameters between different simulation models and experiments in Fig.~\ref{ordPions}
-%shows that Ca$^{2+}$ binding induced changes are overestimated in all tested models.
-%In contrast to Na$^+$, clear correlation between Ca$^{2+}$ binding affinity and order parameter changes is not found, 
-%thus the overestimation of order parameter change may arise, e.g. from overestimated binding, 
-%incorrect headgroup response to penetrating divalent cation or penetration depth. 
 
 The origin of inaccuracies in lipid--ion interactions and binding affinities in different models is far from clear.
 Potential candidates could be, for example, discrepancies in the ion models~\cite{hess06,chen07,Reif13},
@@ -726,30 +525,13 @@ to realistic Ca$^{2+}$ binding (see Orange, Lipid14 and CHARMM36 in Fig.~\ref{or
 order parameter response to bound charge (see Orange and CHARMM36 in Fig.~\ref{AvsB}).
 It should be also noted that the low binding affinity of Na$^+$ in CHARMM36 model is due to 
 the additional repulsion added between sodium ions and lipid oxygens (NBFIX)~\cite{venable13} (Supplementary Information).
-%This shows that the binding affinity significantly depends on the used lipid parameters. 
 Altogether, our results indicate that probably both, lipid and ion force field parameters, need improvement to 
 correctly predict the cation binding affinity, and the associated structural changes.
-
-
-%The failure of Gromos ions to properly account ion--ion and ion--water binding propensities of Na$^+$ and Cl$^-$ ions has been
-% reported previously~\cite{Reif13}. The \r{A}qvist ions have been parameterized in aqueous solutions with good agreement
-% to experimental energies~\cite{Aaqvist90}. Yet, the binding affinity of ions to lipid bilayers has not been
-% calibrated---instead it is assumed to work based purely on forces obtained using combination rules. Compared to Gromos
-% ions, \r{A}qvist parameters are better, yet Na$^+$ overbinding still occurs.
-
-
-
-
 
 
 \section{Conclusions}
 As suggested by the molecular electrometer concept~\cite{akutsu81,altenbach84,seelig87,scherer89},
 the decrease in order parameters of $\alpha$ and $\beta$ carbons in the PC head group of lipids bilayers
-%is related to cation binding  in all tested simulation models, despite of inaccuracies 
-%in actual atomistic resolution structures~\cite{botan15}. Hence, the concept allows direct comparison
-%of Na$^+$ binding affinity between simulations and NMR experiments by using changes in the head group order parameters.
-%The comparison reveals that most models overestimate the Na$^+$ binding; only Orange, Lipid14, and CHARMM36 
-%present binding affinity close to realistic. None of the tested models has the required accuracy to interpret
 is related to cation binding  in all tested simulation models (Fig.~\ref{electrometer}), despite of known inaccuracies 
 in the actual atomistic resolution structures~\cite{botan15}. Hence molecular electrometer allows direct comparison
 of Na$^+$ binding affinity between simulations and noninvasive NMR experiments.
@@ -769,15 +551,6 @@ reliable for atomistic resolution information than AFM in fluid--like environmen
 data supporting Na binding is quite indirect and can be interpreted in many ways but full discussion about
 this would be quite complicated I think. }}
 
-%The contradictions in the results from previous molecular dynamics simulations~\cite{bockmann03,bockmann04},
-% OHSO: I removed the apparent since I think that it could be understood in two different ways in this context.
-%fluorescent probe dynamics~\cite{bockmann03,vacha09a,harb13}, 
-%calorimetry~\cite{bockmann03,klasczyk10} and AFM~\cite{manyes05,manyes06,fukuma07,ferber11,morata12}, 
-%suggesting stronger Na$^+$ binding, should be reinterpreted taking into account force-field inaccuracies emphasized in this work.
-% direct interactions between Na$^+$ and fluorescent probes~\cite{filippov09}, 
-%alternative interpretations of the significance of small phase transition temperature shifts~\cite{cevc90}, 
-%or insufficient resolution of AFM.
-
 The artificial specific Na$^+$ binding in simulations may lead to doubtful results, since it effectively leads  to
 positively charged phoshatidylcholine (PC) lipid bilayers even at physiological NaCl concentration.
 Such PC a bilayer has distinctly different interactions with charged objects compared to a (more realistic)
@@ -791,77 +564,6 @@ electrolytic environment.
 %I have changed back to ''directly usable'' because simulation can be used also for intepretation
 %besides of prediction. Also I want to keep word directly because simulations might be usable
 %but only with very careful analysis. 
-%
-%needed to make molecular dynamics simulations reliable in physiologically relevant
-%electrolytic environment. 
-
-
-
-
-%The most straightforward explanation for our results is that Na$^+$ ions do not practically penetrate into a PC lipid bilayer
-%at mM concentrations, thus the presense of NaCl does not affect the bilayer properties as observed in various 
-%experiments~\cite{akutsu81,altenbach84,clarke99,binder02,pabst07,filippov09}.
-%Consequently, the Na$^+$ penetration and concominant changes in order parameters, area per molecule and lateral diffusion 
-%seen in almost all simulation models would be artefact due to overestimated attraction between ions and lipid bilayer.
-%Even though this would also explain the absense of positive zeta potential in electrophoresis 
-%experiments~\cite{eisenberg79,tatulian87,manyes05,manyes06,klasczyk10},  
-%the presented data do not rule out the suggested possibility of equal binding of Na$^+$ and Cl$^-$ ions~\cite{knecht13},
-%however, this equal binding should happen in such a way that the bilayer properties are unaffected.
-%The negligible binding of Na$^+$ at mM concentrations suggested here differs from the conclusions made from 
-%measurements of fluorescent probe dynamics~\cite{bockmann03,vacha09a,harb13}, membrane hardness with 
-%AFM~\cite{manyes05,manyes06,fukuma07,ferber11,morata12} and calorimetry~\cite{bockmann03,klasczyk10}.
-%However, the fluorescent measurement results may arise from direct interactions between probe and ions, as already 
-%suggested by Filippov et al.~\cite{filippov09}. 
-%Further, the calorimetric results have been also interpreted to support negligible binding~\cite{cevc90}, 
-%and AFM result is relatively indirect, thus there may be alternative explanations as well.
-
-
-%In conclusion, our results show that the Na$^+$ association to PC bilayer is significantly too strong in the Berger and MacRog models,
-%while Orange and CHARMM36 force fields predict more realistic binding affinity. Since some modest changes are also seen in 
-%Orange and CHARMM36 results, more careful simulation studies would be needed to judge if the Na$^+$ association is slightly 
-%too strong also in these  models. The stonger Na$^+$ ion association in GROMOS based force fields compared to CHARMM based force 
-%has been already reported in the literature~\cite{berkowitz06,cordomi09,valley11,berkowitz12,sachs04,valley11},
-%however the novelty of this work in this respect is that we make a direct comparison
-%to the experiments which can be used as measure for the model quality. 
-
-%In situations where a positive charge penetrates into a bilayer (e.g. cationic surfactant~\cite{scherer89} or multivalent ion~\cite{akutsu81}) 
-%a decrease in choline order parameters is observed in experiments, as also seen in CaCl$_2$ results in Fig.~\ref{ordPions}.
-%Also in all simulations analyzed in this work where cation is penetrating into a bilayer, the choline order parameters
-%decrease as seen in Fig.~\ref{ordPions}. However, in the case of CaCl$_2$ the decrease in too pronounced in 
-%simulations which may arise from too strong partitioning of Ca$^{2+}$ or overestimated influence of charge on lipid conformation.
-
-
-
-%Our discussion gives further support to the idea that choline orientation and ion partitioning can
-%be experimentally measured by using the choline group order parameters as suggested in the series of
-%publications by Seelig and co workers.
-%However, we have updated the details of the relation by including the information about 
-%the sings.
-
-%- \todo{Final conclusions about the structural response to be written once we have all the results} 
-
-
-%In conclusion, the penetrating induced decrease in order parameters can be seen in all models
-%independently of the detailed molecular structure in the model, corresponding to the dehydration case
-%where increase was seen in all models. The most likely explanation is that, despite of the structural model, the choline group
-%orients more parallel to the membrane normal with penetrating cations. In contrast to the dehydration results,
-%we are not aware of experimental data for the glycerol order parameters as a function of penetrating ions. 
-%Furher, our results show that the Na$^+$ partitioning into a PC bilayer with Berger model is a
-%simulation artefact, thus the research lines based these results should be taken with caution.
-
-
-%This work has been done, and will be progressed, as an open collaboration through nmrlipids.blogspot.fi.
-
-
-
-
-
-
-%Similar significant structural changes in the headgroup region are seen upon the addition
-%of sodium and calcium ions in the Berger model. This contradicts with the experiments where
-%sodium does not change the headgroup structure and the changes observed for calcium are different from those seen in simulations.
-%These results indicate that the changes in the headgroup structure due to a permeating charge are not correct
-%in the Berger model and, in particular, that sodium ions penetrating the headgroup region is erroneous.
 
 This work has been, and will be, progressed and discussed through the blog \url{nmrlipids.blogspot.fi}, through which 
 everyone is invited to join the discussion and make contributions. 
@@ -936,16 +638,12 @@ changes between DOTAP and amphihiles with saturated chains is not known. It may 
 from differences in headgroup. In the used simulation data the acyl chains are similar to data from~\cite{scherer89} but the headgroup is 
 similar to the data from~\cite{franzin98}. Also Cl$^-$ binding affinity may affect the comparison.
 Thus we cannot fully conclude how well the headgroup response to bound charge is reproduced in simulation. 
-% is which one should be used as a reference.
-%It is not clear if the overestimation comes from too sensitive headgroup, 
-%differences in the location of charge in bilayer or difference between DMTAP and DOTAP (DOTAP has two double bonds in acyl chains while DMTAP has two saturated chains). 
 
 To estimate the maximum error we take the maximum amount of bound charge from Fig.~\ref{electrometer} ($\approx$ 0.5$\frac{\rm e}{\rm nm^2}$)
 and assume the area per lipid of 0.68~nm$^2$. This gives for maximum amount of bound 
 charge per lipid $X^+_{\rm max}=0.5\frac{\rm e}{\rm nm^2}\cdot 0.68\frac{\rm nm^2}{\rm lipid}=0.34\frac{\rm e}{\rm lipid}$,
 which is shown as dashed line in Fig.~\ref{DMPC_DMTAP}. The maximum
 overestimations of order parameter decrease with this amount of bound charge per lipid are $\approx$0.04 and $\approx$0.06 for $\beta$ and $\alpha$ order parameter changes, respectively.
-% with largest amount of bound cations in simulations. 
 The numbers are smaller with less amount of bound cations. In principle,
 these values could explain the overestimated order parameter change due to the presence of CaCl$_2$ in Berger model but not in the presence
 of NaCl (see Fig.~\ref{ordPions}).
@@ -1015,8 +713,6 @@ more significant order parameter decrease and higher Na$^+$ binding affinity
 without NBFIX. Thus, also the CHARMM36 model without NBFIX overestimates the
 Na$^+$ binding in PC bilayer.
 
-%\todo{Discussion will be finished as soon as we have the density profiles. Citations to Zenodo repositories will be added, if available. JM: added, please, check. }
-%
 %I commented this out since the evidence on relation between order parameter change arising from cation binding
 %is already quite strong in the manuscript.
 %Because the difference promoted by NBFIX~\cite{venable13} is mainly a reduced Na$^+$ density in the headgroup region of the phospholipids,
@@ -1174,12 +870,6 @@ For the lipids, we used an unpublished force field coined Orange force field.
 Briefly, this includes most bonded interactions from Berger lipids~\cite{berger97}, 
 except for dihedrals which were derived via \textit{ab initio} calculations on small model compounds. 
 As in Berger lipids, Lennard-Jones parameters are from OPLS~\cite{jorgensen84,jorgensen86a,jorgensen86b,jorgensen88,briggs91}.
-%;;    (A) Jorgensen et al, JACS (1984), 106, 6638-6646;
-%;;    (B) Jorgensen, JPC (1986), 90, 1276-1284;
-%;;    (C) Jorgensen et al, JPC (1986), 90, 2174-2182;
-%;;    (D) Jorgensen et al, JACS (1988), 110, 1657-1666;
-%;;    (E) Briggs et al, JPC (1991), 95, 3315-3322. 
-% please insert citations in the proper format
 Partial charges were derived on the basis of \textit{ab initio} calculations. 
 In simulations with ions, the \r{A}qvist parameters were used~\cite{aqvist90}. 
 The electrostatics were handled with PME~\cite{darden93,essman95}, with real-space Coulomb cut-off set at 1.8 nm. 
@@ -1204,8 +894,6 @@ The simulation files are available at~\cite{slipidsFILESdppc}.
 %
 Ion parameters by Roux~\cite{beglov94,roux96}, TIP3P water model~\cite{jorgensen83} and 
 Stockholm lipids (Slipids) parameters~\cite{jambeck12,jambeck12b} for phospholipids were used. 
-%All-atom MD simulations of DPPC lipid bilayers were performed 
-%at ten different temperatures (283, 298, 303, 308, 312, 313, 314, 318, 323, and 333 K) using 
 GROMACS software package version 4.5.5 or 5.0.7~\cite{pronk13} was employed for all simulations. 
 After energy 
 minimization and a short equilibration run of 50 ps (time step 1~fs), 100 ns production runs were performed using 
@@ -1216,8 +904,6 @@ lists were updated every 10$^\mathrm{th}$ step with a cut-off of 1.6 nm. Tempera
 bottom leaflets of the lipid bilayer, and for water to 323 K with the Nos\'e-Hoover thermostat~\cite{nose84,hoover85} using 
 a time constant of 0.5 ps. Pressure was semi-isotropically coupled to the atmospheric pressure 
 with the Parrinello-Rahman~\cite{parrinello81} barostat using a time constant of 10 ps.
-%The last 40 ns of each simulation was employed for the analysis of DPPC choline and glycerol backbone order parameters.
-%\todo{J. Melcr: done, see above}  % JM: see above
 
 
 {\it POPC:} The simulation without ions from~\cite{botan15}, available at \cite{slipidsFILESpopc} was used. \\
