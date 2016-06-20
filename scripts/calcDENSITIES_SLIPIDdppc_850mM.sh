@@ -1,10 +1,10 @@
 #script file destination=/work/girychm1/github/NMRlipids/lipid_ionINTERACTION/scripts/
-tmpDIRname=SLIPID_350mMsd_DENStmp
+tmpDIRname=SLIPID_850mMsd_DENStmp
 mkdir $tmpDIRname
 cd $tmpDIRname
-trajname=../trajectory.xtc
-tprname=../topol.tpr
-outFILE=../../Data/DPPC/NaCl/SLIPID/350mMsd/LIPIDdensity.xvg
+trajname=/m/nbe/work/ollilas1/DPPCdata/Slipids/NaCl/850mM/traj_comp_sk10_pbc_350mM.xtc
+tprname=/m/nbe/work/ollilas1/DPPCdata/Slipids/NaCl/850mM/topol.tpr
+outFILE=../../Data/DPPC/NaCl/SLIPIDS/850mM/LIPIDdensity.xvg
 #trjcat -f popcCHOL50molPER0-25ns.trr popcCHOL50molPER25-50ns.trr
 LIPIDname=DPPC
 LIPIDindexNR=$(echo q | gmx make_ndx -f $tprname | grep $LIPIDname | awk '{if(NR==1)print $1}')
