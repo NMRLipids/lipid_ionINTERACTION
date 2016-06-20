@@ -69,7 +69,7 @@ Charles University in Prague, Faculty of Mathematics and Physics, Ke Karlovu 3, 
 Despite the vast amount of experimental and theoretical studies on the binding affinity of cations into phosholipid bilayers, 
 especially the biologically relevant Na$^+$ and Ca$^{2+}$ ions,  there is no consensus in the literature. 
 In this paper, we show that the ion binding affinity can be directly compared between simulations and experiments by 
-using the choline headgroup order parameters according to the 'molecular electrometer' concept.~\cite{seelig87}.
+using the choline headgroup order parameters according to the 'molecular electrometer' concept.%~\cite{seelig87}.
 Our findings strongly support the pre-2000 view that Na$^+$ and other monovalent ions
 (except Li$^+$) do not specifically bind to phosphatidylcholine lipid bilayers with mM concentrations, 
 in contrast to Ca$^{2+}$ and other multivalent ions. Especially the Na$^+$ binding affinity is 
@@ -78,11 +78,8 @@ an artificially positively charged lipid bilayer and overexagerated structural e
 Qualitatively correct headgroup order parameter response is observed with
 Ca$^{2+}$ binding in all the tested models, however, none of the them has a sufficient 
 quantitative accuracy to interpret the Ca$^{2+}$:lipid stoichiometry or the induced atomistic resolution structural changes.
-
-{\it This work has been, and continues to be, progressed and discussed through the blog \url{nmrlipids.blogspot.fi},
-through which everyone is invited to join the discussion and make contributions. The manuscript will be
-eventually submitted to an appropriate scientific journal. Everyone who has contributed to the work through the
-blog will be offered coauthorship. For more details see \url{nmrlipids.blogspot.fi}.}
+This work has been done as a fully open collaboration, using \url{nmrlipids.blogspot.fi} as a main communication platform; 
+all the scientific contributions were made publicly on this blog. 
 \end{abstract}
 
 
@@ -170,6 +167,10 @@ Moreover, we will assay the accuracy of lipid--Ca$^{2+}$ interactions
 in different models and show that current models are not accurate enough
 for atomistic resolution interpretation of NMR experiments. 
 
+This work has been done by using Open Collaboration method (\url{nmrlipids.blogspot.fi})~\cite{botan15}.
+All the related files are available from \url{https://github.com/NMRLipids/lipid_ionINTERACTION} and
+almost all simulation data from \url{https://zenodo.org/collection/user-nmrlipids}.
+
 \begin{figure}[]
   \centering
   \includegraphics[width=8.6cm]{../Fig/POPCstructure.eps}
@@ -256,13 +257,13 @@ while the effect of CaCl$_2$ is an order of magnitude larger.
 Thus, according to the molecular electrometer concept, 
 monovalent Na$^+$ ions have negligible affinity for PC lipid bilayers at concentrations up to 1 M,
 while binding of Ca$^{2+}$ ions at the same concentration is significant~\cite{akutsu81,altenbach84}. 
-({\it Note that in contrast to the response as a function of bound charge in 
-Eq.~\eqref{electrometer_eq}, the changes in Fig.~\ref{ordPions}
-are not linear. This can be explained by electrostatic repulsion between
-already bound calcium ions and ions in solution \cite{altenbach84}.}
-\todo{Is this really needed? The x-axis of Fig.~\ref{ordPions} is not $X^\pm$, so
-why would one even expect the curves to follow Eq.~\eqref{electrometer_eq}?})
-
+%({\it Note that in contrast to the response as a function of bound charge in 
+%Eq.~\eqref{electrometer_eq}, the changes in Fig.~\ref{ordPions}
+%are not linear. This can be explained by electrostatic repulsion between
+%already bound calcium ions and ions in solution \cite{altenbach84}.}
+%\todo{Is this really needed? The x-axis of Fig.~\ref{ordPions} is not $X^\pm$, so
+%why would one even expect the curves to follow Eq.~\eqref{electrometer_eq}?})
+%SAMULI: I have removed this now.
 
 
 Figure~\ref{ordPions} also reports order parameter changes calculated from MD simulations
@@ -451,8 +452,9 @@ which of the three has the most realistic Na$^+$ binding affinity,
 especially at physiological NaCl concentrations ($\sim$ 150mM) 
 relevant for most applications. 
 The overestimated binding in the other models raise questions on the quality of the predictions from these models when NaCl is present.
-\todo{It has been suggested that we should add references here. The problem is that there are a lot of them and
-it is difficult to choose which ones to pick. Any opinions?} {\it Mention that there are many (hundreds?) of them in Web of Science? -markus.}
+%\todo{It has been suggested that we should add references here. The problem is that there are a lot of them and
+%it is difficult to choose which ones to pick. Any opinions?} {\it Mention that there are many (hundreds?) of them in Web of Science? -markus.}
+%OLLILA: I have left this like it is.
 Especially interactions between charged molecules and lipid bilayer might be significantly
 affected by the strong Na$^+$ binding, as it makes the bilayer effectively positively charged.
 
