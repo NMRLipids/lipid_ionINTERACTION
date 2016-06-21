@@ -1,71 +1,132 @@
-% JM edit
-% \documentclass[rmp,aps,floatfix,authordate1-4,preprint]{revtex4}
-% \documentclass[prb,aps,floatfix,authordate1-4,preprint]{revtex4}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%This is the LaTeX ARTICLE template for RSC journals
+%Copyright The Royal Society of Chemistry 2016
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[pre,aps,floatfix,authordate1-4,twocolumn]{revtex4-1}
-%\documentclass[pre,aps,floatfix,authordate1-4]{revtex4-1}
-
-%\documentclass[aps,prl,preprint,superscriptaddress]{revtex4}
-
-
-
-%\documentclass[aps,prl,preprint,groupedaddress]{revtex4}
-
-\usepackage{rotating} 
-\usepackage{times}
-\usepackage{graphicx}
+\documentclass[twoside,twocolumn,9pt]{article}
+\usepackage{extsizes}
+\usepackage[super,sort&compress,comma]{natbib} 
+\usepackage[version=3]{mhchem}
+\usepackage[left=1.5cm, right=1.5cm, top=1.785cm, bottom=2.0cm]{geometry}
+\usepackage{balance}
+\usepackage{times,mathptmx}
+\usepackage{sectsty}
+\usepackage{graphicx} 
+\usepackage{lastpage}
+\usepackage[format=plain,justification=justified,singlelinecheck=false,font={stretch=1.125,small,sf},labelfont=bf,labelsep=space]{caption}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{fnpos}
+\usepackage[english]{babel}
+\usepackage{array}
+\usepackage{droidsans}
+\usepackage{charter}
+\usepackage[T1]{fontenc}
+\usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{setspace}
-\usepackage{amsmath}
-\usepackage{caption}
-\usepackage{subcaption}
-\usepackage{epstopdf}
-%\usepackage{array}
-%\usepackage{arydshln}
-%\usepackage[sort&compress]{natbib}
-%\bibpunct{(}{)}{,}{n}{}{}
-%\renewcommand{\bibnumfmt}[1]{#1.}
+\usepackage[compact]{titlesec}
+%%%Please don't disable any packages in the preamble, as this may cause the template to display incorrectly.%%%
 \usepackage[obeyFinal]{easy-todo}
+\usepackage{url}
+\usepackage{rotating}
 
-\usepackage[normalem]{ulem}
+
+\usepackage{epstopdf}%This line makes .eps figures into .pdf - please comment out if not required.
+
+\definecolor{cream}{RGB}{222,217,201}
 
 \begin{document}
-%\singlespacing
 
-% definite article omitted in subtitle in text, why have it here?
-\title{Molecular electrometer and binding of cations to phospholipid bilayers} 
+\pagestyle{fancy}
+\thispagestyle{plain}
+\fancypagestyle{plain}{
 
-\author{Andrea Catte}
-%\thanks{The authors are listed in alphaphetical order,The author list is not completed.}
-\thanks{University of East Anglia, Norwich, United Kingdom}
-\author{Mykhailo Girych}
-\thanks{Helsinki Biophysics and Biomembrane Group, Department of Biomedical Engineering and Computational Science, Aalto University, Espoo, Finland}
-\author{Matti Javanainen}
-\thanks{Tampere University of Technology, Tampere, Finland}
-%\thanks{University of Helsinki,Finland}
-\author{Claire Loison}
-%\thanks{Lyon}
-\author{Josef Melcr}
-\thanks{Institute of Organic Chemistry and Biochemistry, Czech Academy of Sciences, Flemingovo nám. 2, 16610 Prague 6, Czech Republic,
-Charles University in Prague, Faculty of Mathematics and Physics, Ke Karlovu 3, 121 16 Prague 2, Czech Republic}
-\author{Markus S. Miettinen}
-\thanks{Fachbereich Physik, Freie Universit\"at Berlin, Berlin, Germany}
-\author{Luca Monticelli}
-\thanks{Institut de Biologie et Chimie des Prot{\'e}ines (IBCP), CNRS UMR 5086, Lyon, France}
-%\setcounter{page}{1}
-\author{Jukka M{\"a}{\"a}tt{\"a}}
-\thanks{Aalto University, Espoo, Finland}
-\author{Vasily S. Oganesyan}
-\thanks{University of East Anglia, Norwich, United Kingdom}
-\author{O. H. Samuli Ollila} 
-\thanks{{\bf Author to whom correspondence may be addressed. E-mail: samuli.ollila@aalto.fi.},Department of Neuroscience and Biomedical Engineering, Aalto University, Espoo, Finland}
-\author{Joona Tynkkynen}
-\thanks{Tampere University of Technology, Tampere, Finland}
-\author{Sergey Vilov}
-%\thanks{Lyon}
-%\footnote{Author to whom correspondence may be addressed. E-mail: samuli.ollila@aalto.fi.\\}
+%%%HEADER%%%
+\fancyhead[C]{\includegraphics[width=18.5cm]{head_foot/header_bar}}
+\fancyhead[L]{\hspace{0cm}\vspace{1.5cm}\includegraphics[height=30pt]{head_foot/journal_name}}
+\fancyhead[R]{\hspace{0cm}\vspace{1.7cm}\includegraphics[height=55pt]{head_foot/RSC_LOGO_CMYK}}
+\renewcommand{\headrulewidth}{0pt}
+}
+%%%END OF HEADER%%%
 
+%%%PAGE SETUP - Please do not change any commands within this section%%%
+\makeFNbottom
+\makeatletter
+\renewcommand\LARGE{\@setfontsize\LARGE{15pt}{17}}
+\renewcommand\Large{\@setfontsize\Large{12pt}{14}}
+\renewcommand\large{\@setfontsize\large{10pt}{12}}
+\renewcommand\footnotesize{\@setfontsize\footnotesize{7pt}{10}}
+\makeatother
 
-\begin{abstract}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\renewcommand\footnoterule{\vspace*{1pt}% 
+\color{cream}\hrule width 3.5in height 0.4pt \color{black}\vspace*{5pt}} 
+\setcounter{secnumdepth}{5}
+
+\makeatletter 
+\renewcommand\@biblabel[1]{#1}            
+\renewcommand\@makefntext[1]% 
+{\noindent\makebox[0pt][r]{\@thefnmark\,}#1}
+\makeatother 
+\renewcommand{\figurename}{\small{Fig.}~}
+\sectionfont{\sffamily\Large}
+\subsectionfont{\normalsize}
+\subsubsectionfont{\bf}
+\setstretch{1.125} %In particular, please do not alter this line.
+\setlength{\skip\footins}{0.8cm}
+\setlength{\footnotesep}{0.25cm}
+\setlength{\jot}{10pt}
+\titlespacing*{\section}{0pt}{4pt}{4pt}
+\titlespacing*{\subsection}{0pt}{15pt}{1pt}
+%%%END OF PAGE SETUP%%%
+
+%%%FOOTER%%%
+\fancyfoot{}
+\fancyfoot[LO,RE]{\vspace{-7.1pt}\includegraphics[height=9pt]{head_foot/LF}}
+\fancyfoot[CO]{\vspace{-7.1pt}\hspace{13.2cm}\includegraphics{head_foot/RF}}
+\fancyfoot[CE]{\vspace{-7.2pt}\hspace{-14.2cm}\includegraphics{head_foot/RF}}
+\fancyfoot[RO]{\footnotesize{\sffamily{1--\pageref{LastPage} ~\textbar  \hspace{2pt}\thepage}}}
+\fancyfoot[LE]{\footnotesize{\sffamily{\thepage~\textbar\hspace{3.45cm} 1--\pageref{LastPage}}}}
+\fancyhead{}
+\renewcommand{\headrulewidth}{0pt} 
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\arrayrulewidth}{1pt}
+\setlength{\columnsep}{6.5mm}
+\setlength\bibsep{1pt}
+%%%END OF FOOTER%%%
+
+%%%FIGURE SETUP - please do not change any commands within this section%%%
+\makeatletter 
+\newlength{\figrulesep} 
+\setlength{\figrulesep}{0.5\textfloatsep} 
+
+\newcommand{\topfigrule}{\vspace*{-1pt}% 
+\noindent{\color{cream}\rule[-\figrulesep]{\columnwidth}{1.5pt}} }
+
+\newcommand{\botfigrule}{\vspace*{-2pt}% 
+\noindent{\color{cream}\rule[\figrulesep]{\columnwidth}{1.5pt}} }
+
+\newcommand{\dblfigrule}{\vspace*{-1pt}% 
+\noindent{\color{cream}\rule[-\figrulesep]{\textwidth}{1.5pt}} }
+
+\makeatother
+%%%END OF FIGURE SETUP%%%
+
+%%%TITLE, AUTHORS AND ABSTRACT%%%
+\twocolumn[
+  \begin{@twocolumnfalse}
+\vspace{3cm}
+\sffamily
+\begin{tabular}{m{4.5cm} p{13.5cm} }
+
+\includegraphics{head_foot/DOI} & \noindent\LARGE{\textbf{Molecular electrometer and binding of cations to phospholipid bilayers$^\dag$}} \\%Article title goes here instead of the text "This is the title"
+\vspace{0.3cm} & \vspace{0.3cm} \\
+
+ & \noindent\large{Andrea Catte,\textit{$^{a\ddag}$} Mykhailo Girych,\textit{$^{b}$} Matti Javanainen,\textit{$^{c,d}$} Claire Loison,\textit{$^{e}$} Josef Melcr,\textit{$^{f}$} Markus S. Miettinen,\textit{$^{g}$} Luca Monticelli,\textit{$^{h}$} Jukka M{\"a}{\"a}tt{\"a},\textit{$^{i}$} Vasily S. Oganesyan,\textit{$^{a}$} O. H. Samuli Ollila,\textit{$^{\ast b}$} Joona Tynkkynen,\textit{$^{c}$} and Sergey Vilov,\textit{$^{e}$}
+} \\%Author names go here instead of "Full name", etc.
+
+\includegraphics{head_foot/dates} & \noindent\normalsize{
+%The abstract should be a single paragraph which summarises the content of the article. Any references in the abstract should be written out in full \textit{e.g.}\ [Surname \textit{et al., Journal Title}, 2000, \textbf{35}, 3523].
 Despite the vast amount of experimental and theoretical studies on the binding affinity of cations into phosholipid bilayers, 
 especially the biologically relevant Na$^+$ and Ca$^{2+}$ ions,  there is no consensus in the literature. 
 In this paper, we show that the ion binding affinity can be directly compared between simulations and experiments by 
@@ -79,15 +140,60 @@ Qualitatively correct headgroup order parameter response is observed with
 Ca$^{2+}$ binding in all the tested models, however, none of the them has a sufficient 
 quantitative accuracy to interpret the Ca$^{2+}$:lipid stoichiometry or the induced atomistic resolution structural changes.
 This work has been done as a fully open collaboration, using \url{nmrlipids.blogspot.fi} as a main communication platform; 
-all the scientific contributions were made publicly on this blog. 
-\end{abstract}
+all the scientific contributions were made publicly on this blog. } \\%The abstrast goes here instead of the text "The abstract should be..."
+
+\end{tabular}
+
+ \end{@twocolumnfalse} \vspace{0.6cm}
+
+  ]
+%%%END OF TITLE, AUTHORS AND ABSTRACT%%%
+
+%%%FONT SETUP - please do not change any commands within this section
+\renewcommand*\rmdefault{bch}\normalfont\upshape
+\rmfamily
+\section*{}
+\vspace{-1cm}
 
 
-\maketitle
+%%%FOOTNOTES%%%
+
+\footnotetext{\textit{$^{a}$~University of East Anglia, Norwich, United Kingdom}}
+\footnotetext{\textit{$^{b}$~Department of Biomedical Engineering and Computational Science, Aalto University, Espoo, Finland}}
+\footnotetext{\textit{$^{c}$~Tampere University of Technology, Tampere, Finland}}
+\footnotetext{\textit{$^{d}$~University of Helsinki,Finland}}
+\footnotetext{\textit{$^{e}$~Institut Lumi{\'e}re Mati{\'e}re, UMR5306 Universit{\'e} Lyon 1-CNRS, Universit{\'e} de Lyon, 69622 Villeurbanne, France}}
+\footnotetext{\textit{$^{f}$~Institute of Organic Chemistry and Biochemistry, Czech Academy of Sciences, Flemingovo n{\'a}m. 2, 16610 Prague 6, Czech Republic, Charles University in Prague, Faculty of Mathematics and Physics, Ke Karlovu 3, 121 16 Prague 2, Czech Republic}}
+\footnotetext{\textit{$^{g}$~Fachbereich Physik, Freie Universit\"at Berlin, Berlin, Germany}}
+\footnotetext{\textit{$^{h}$~Institut de Biologie et Chimie des Prot{\'e}ines (IBCP), CNRS UMR 5086, Lyon, France}}
+\footnotetext{\textit{$^{i}$~Aalto University, Espoo, Finland}}
+\footnotetext{\textit{$^{\ast}${\bf Author to whom correspondence may be addressed. E-mail: samuli.ollila@aalto.fi.}}}
 
 
-~\vspace{0.3cm}\\
-{\it \bf} 
+%\footnotetext{\textit{$^{b}$~Address, Address, Town, Country. Fax: XX XXXX XXXX; Tel: XX XXXX XXXX; E-mail: xxxx@aaa.bbb.ccc}} }}
+
+
+
+%Please use \dag to cite the ESI in the main text of the article.
+%If you article does not have ESI please remove the the \dag symbol from the title and the footnotetext below.
+\footnotetext{\dag~Electronic Supplementary Information (ESI) available: %[details of any supplementary information available should be included here]. 
+5 figures, detailed technical discussion and simulation details.
+See DOI: 10.1039/b000000x/}
+%additional addresses can be cited as above using the lower-case letters, c, d, e... If all authors are from the same address, no letter is required
+
+\footnotetext{\ddag~The authors are listed in alphaphetical order. 
+%Additional footnotes to the title and authors can be included \textit{e.g.}\ `Present address:' 
+%or `These authors contributed equally to this work' as above using the symbols: \ddag, \textsection, 
+%and \P. Please place the appropriate symbol next to the author's name and include a \texttt{\textbackslash footnotetext} 
+%entry in the the correct place in the list.
+}
+
+
+%%%END OF FOOTNOTES%%%
+
+%%%MAIN TEXT%%%%
+
+
 
 \section{Introduction}
 
@@ -168,7 +274,7 @@ in different models and show that current models are not accurate enough
 for atomistic resolution interpretation of NMR experiments. 
 
 This work has been done by using Open Collaboration method (\url{nmrlipids.blogspot.fi})~\cite{botan15}.
-All the related files are available from \url{https://github.com/NMRLipids/lipid_ionINTERACTION} and
+All the related files are available from \url{https://github.com/NMRLipids/lipid\_ionINTERACTION} and
 almost all simulation data from \url{https://zenodo.org/collection/user-nmrlipids}.
 
 \begin{figure}[]
@@ -221,7 +327,7 @@ $m_\alpha=-20.5$  and $m_\beta=-10.0$~\cite{altenbach84}.
     It should be noted that none of the models used here reproduces the order parameters
     within experimental error for pure PC bilayer without ions, indicating structural inaccuracies with varying severity in all
     models \cite{botan15}. Note that the relatively large decrease in CHARMM36 with 450~mM CaCl$_2$ arise from more equilibrated binding 
-    affinity due to long simulation times, see Supplementary Information.
+    affinity due to long simulation times, see ESI$^\dag$.
   }
 \end{figure*}
 
@@ -268,7 +374,7 @@ while binding of Ca$^{2+}$ ions at the same concentration is significant~\cite{a
 
 Figure~\ref{ordPions} also reports order parameter changes calculated from MD simulations
 of DPPC and POPC lipid bilayers as a function of NaCl or CaCl$_2$ concentrations in solution
-(for details of the simulated systems see Table~\ref{IONsystems} and Supplementary Information).
+(for details of the simulated systems see Table~\ref{IONsystems} and ESI$^\dag$).
 Note that none of these MD models
 reproduced within experimental uncertainty the order parameters for a pure PC bilayer without ions
 (Figure 2 in Ref.~\cite{botan15}),
@@ -305,9 +411,9 @@ is then explicitly known in both simulations and experiments. Such comparison
 between previously published simulation data \cite{miettinen09} and experiments \cite{scherer89,franzin98}
 could not rule out
 overestimation of order parameter response to bound cations (i.e., slopes $m_\beta$ and $m_\alpha$)
-in a Berger-based model (Supplementary Information).
+in a Berger-based model (ESI$^\dag$).
 This might, in principle, explain the overestimated order parameter 
-response of Berger model to CaCl$_2$, but not to NaCl (see discussion in Supplementary Information).
+response of Berger model to CaCl$_2$, but not to NaCl (see discussion in ESI$^\dag$).
 Extended comparison with different models is left for further studies.
 
 Figure~\ref{AvsB} compares the relation between $\Delta S_{\rm{CH}}^{\beta}$ and $\Delta S_{\rm{CH}}^{\alpha}$
@@ -343,10 +449,10 @@ do not generally agree with the experiments. The $\Delta S_{\rm{CH}}^{\beta}/\De
 agrees with experiments only in Lipid14 model (Fig.~\ref{AvsB}). 
 Thus, the observed overestimations of the order parameter changes with cation concentrations may, in principle, arise
 from overbinding of ions or from too sensitive lipid headgroup response on bound cation 
-(see also discussion in Supplementary Information). 
+(see also discussion in ESI$^\dag$). 
 A careful analysis with current lipid models is performed in the next section.
 
-\begin{table*}[htb]
+\begin{sidewaystable*}[!p]
 \centering
 \caption{List of simulations performed in this work. The ion concentrations are calculated as 
    [ion]=(N$_{\rm ion} \times$[water])/N$_{\rm w}$, where [water]=55.5M. 
@@ -387,6 +493,19 @@ A careful analysis with current lipid models is performed in the next section.
   MacRog\cite{maciejewski14}, OPLS\cite{aqvist90}  & POPC &  210 (NaCl) & 288 & 14500 & 54 & 0 & 54 & 310 & 90&50  &\cite{macrogIONfiles}  \\
   MacRog\cite{maciejewski14}, OPLS\cite{aqvist90}  & POPC &   310 (NaCl) & 288 & 14446 & 81 & 0 & 81 & 310 & 90&50  & \cite{macrogIONfiles} \\
   MacRog\cite{maciejewski14}, OPLS\cite{aqvist90}  & POPC &   420 (NaCl) & 288 & 14392 & 108 & 0 & 108 & 310 & 90& 50  & \cite{macrogIONfiles}  \\
+\end{tabular}
+\end{sidewaystable*} 
+
+\begin{sidewaystable*}[!p]
+\centering
+\caption{List of simulations performed in this work. The ion concentrations are calculated as 
+   [ion]=(N$_{\rm ion} \times$[water])/N$_{\rm w}$, where [water]=55.5M. 
+   These correspond the concentrations reported in the experiments by Akutsu et al.~\cite{akutsu81}.
+   The lipid force fields are named as in our previous work~\cite{botan15}.}\label{IONsystems2}
+\begin{tabular}{c c c c c c c c c c c c}
+  %\hline
+  % some footnotes are not visible in typeset-MS (pdf)
+  Force field (lipid, ion)& lipid & [Ion] mM & \footnote{The number of lipid molecules}N$_{\rm l}$   &  \footnote{The number of water molecules}N$_{\rm w}$   & \footnote{The number of Na$^+$ molecules}N$_{\rm Na}$  & \footnote{The number of Ca$^{2+}$ molecules}N$_{\rm Ca}$   &  \footnote{The number of Cl molecules}N$_{\rm Cl}$ & \footnote{Simulation temperature}T (K)  & \footnote{The total simulation time}t$_{{\rm sim}}$(ns) & \footnote{Time frames used in the analysis}t$_{{\rm anal}}$ (ns) & Files\\
   \hline
   Orange, OPLS\cite{aqvist90}  &   POPC & 0 & 72 & 2880 & 0 & 0  & 0 & 298 & 60 & 50 & \cite{orangePOPCfiles}  \\
   Orange, OPLS\cite{aqvist90} &   POPC & 140 (NaCl) & 72 & 2866 & 7 & 0  & 7 & 298 & 120 & 60 &\cite{orangePOPC140mMNaClfiles}  \\
@@ -413,7 +532,7 @@ A careful analysis with current lipid models is performed in the next section.
   Ulmschneiders~\cite{Ulmschneider09}, OPLS\cite{aqvist90}       &   POPC & 150 (NaCl) & 128 & 5120 & 12 & 0  & 12 & 298.15 & 205 & 200 &~\cite{ulmschneiderPOPC150mMNaClfiles}  \\
   Ulmschneiders~\cite{Ulmschneider09}, OPLS\cite{aqvist90}       &   POPC & 1000 (NaCl) & 128 & 5120 & 77 & 0  & 77 & 298.15 & 205 & 200 &~\cite{ulmschneiderPOPC1000mMNaClfiles}  \\
 \end{tabular}
-\end{table*} 
+\end{sidewaystable*} 
 
 
 
@@ -472,7 +591,7 @@ model overestimate the order parameter decrease (Fig.~\ref{ordPions}).
 According to the molecular electrometer, this indicates overestimated Ca$^{2+}$ binding. 
 This is the most likely scenario for the models where changes in both order parameters were overestimated,
 however, in the case of CaCl$_2$ we cannot exclude the possibility that the headgroup response is oversensitive to
-bound cations (see Supplementary Information).
+bound cations (see ESI$^\dag$).
 In CHARMM36 with ion model by Yoo et al.~\cite{yoo16},
 $\Delta S_\mathrm{CH}$ is overestimated for $\beta$  but underestimated for  $\alpha$,
 in line with Fig.~\ref{AvsB} where $\Delta S_{\rm{CH}}^{\beta}/\Delta S_{\rm{CH}}^{\alpha}$ ratio
@@ -498,7 +617,7 @@ are least sensitive to bound charge in CHARMM36 (Fig.~\ref{electrometer}).
     Atom number density profiles along the membrane normal coordinate $z$ for lipids, Ca$^{2+}$ and Cl$^-$ ions from simulations 
     with different force fields.
     The profiles only with smallest available CaCl$_2$ concentration are shown for clarity.
-    Figure including all the available concentrations is shown in the Supplementary Information.
+    Figure including all the available concentrations is shown in ESI$^\dag$.
     The lipid densities are scaled with 100 (united atom) or 200 (all atom model) to make them visible with the used y-axis scale.
     The Cl$^-$ density is scaled with 2 to equalize charge density of ions.
     Figure discussed in https://github.com/NMRLipids/lipid\_ionINTERACTION/issues/4.
@@ -513,9 +632,9 @@ in the model, however, also the models with the largest radius show significant 
 OPLS-AA force field~\cite{jorgensen96}. In our results, the Slipid model gives essentially similar binding affinity with 
 ion parameters from Refs.~\cite{smith94} and~\cite{beglov94,roux96}. Further, the compensation of missing electronic 
 polarizability by scaling ion charge~\cite{kohagen16,leontyev11} reduced Na$^+$ binding in Berger, 
-BergerOPLS and Slipid models, but not enough to be in agreement with experiments (Supplementary Information). 
+BergerOPLS and Slipid models, but not enough to be in agreement with experiments (ESI$^\dag$). 
 The charge-scaled Ca$^{2+}$ model~\cite{kohagen14} slightly reduced binding in CHARMM36, but did not have 
-significant influence on binding in Slipids (Supplementary Information). Significant reduction of
+significant influence on binding in Slipids (ESI$^\dag$). Significant reduction of
 Ca$^{2+}$ binding was observed with ion model by Yoo et al~\cite{yoo16}, however, the CHARMM36 lipid
 model must be further analyzed to fully interpret the results.
 
@@ -526,7 +645,7 @@ in the BergerOPLS (Fig.~\ref{NAdensities}). However, realistic Na$^+$ binding do
 to realistic Ca$^{2+}$ binding (see Orange, Lipid14 and CHARMM36 in Fig.~\ref{ordPions}) or realistic choline
 order parameter response to bound charge (see Orange and CHARMM36 in Fig.~\ref{AvsB}).
 It should be also noted that the low binding affinity of Na$^+$ in CHARMM36 model is due to 
-the additional repulsion added between sodium ions and lipid oxygens (NBFIX)~\cite{venable13} (Supplementary Information).
+the additional repulsion added between sodium ions and lipid oxygens (NBFIX)~\cite{venable13} (ESI$^\dag$).
 Altogether, our results indicate that probably both, lipid and ion force field parameters, need improvement to 
 correctly predict the cation binding affinity, and the associated structural changes.
 
@@ -958,7 +1077,7 @@ The glycerol backbone order parameters without iones were not the same as report
 The origin of discrepancy was located to the different initial structures which was taken from CHARMM-GUI in this work
 and from Lipidbook in the previous work. Since the order parameters with the initial structure from CHARMM-GUI are
 closer to the experimental values, the results indicate that the structure available from Lipidbook is stuck to a
-state with incorrect glycerol backbone strucuture, for more discussion see \url{https://github.com/NMRLipids/lipid_ionINTERACTION/issues/8}.
+state with incorrect glycerol backbone strucuture, for more discussion see \url{https://github.com/NMRLipids/lipid\_ionINTERACTION/issues/8}.
 
 All-bond lengths were constrained with LINCS~\cite{hess97,hess07}. The temperatures of the lipids and the solvent were separately coupled to the Nose--Hoover~\cite{nose84,hoover85} 
 thermostat with a target temperature of 298.15 K and a relaxation time constant of 0.1 ps. Semi-isotropic pressure coupling to 1 bar was obtained 
@@ -989,8 +1108,8 @@ the last 100 ns of each simulation was employed for the analysis.
 %\onecolumngrid
 \listoftodos
 
-\bibliographystyle{apsrev}
-\bibliography{refs}
+\bibliography{refs} %You need to replace "rsc" on this line with the name of your .bib file
+\bibliographystyle{rsc} %the RSC's .bst file
 
 
 \end{document}
