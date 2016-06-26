@@ -384,7 +384,7 @@ models.
 
 While electrometer concept is well established in experiments (see previous section),
 it is not {\it a priori} clear that it works in simulations. The overestimated order parameter
-decrease could, in principle, arise also from oversentitivity of choline headgroups on cation binding,
+decrease could, in principle, arise also from the oversentitivity of choline headgroups on cation binding,
 instead of overbinding. Here we analyze the relation between cation binding and choline order 
 parameter decrease in simulations in order to evaluate usability of electrometer concept in MD simulations.
 
@@ -396,7 +396,7 @@ Note that quantitative comparison of the proportionality constants (i.e. slopes 
 between different models and experimental slopes
 ($m_\alpha=-20.5$ and $m_\beta=-10.0$ for Ca$^{2+}$ binding in DPPC bilayer in
 the presence of 100mM NaCl in Eq. \ref{electrometer_eq}~\cite{altenbach84}) is not straightforward 
-since the simulation slopes depend on the definition used for bound ions. 
+since the simulation slopes depend on the definition used for bound ions (see ESI$^\dag$ -- \todo{put the definition of bound charges to ESI}). 
 \begin{figure}[t]
   \centering
   \includegraphics[width=8.6cm]{../scratch/boundIons/dOP_vs_boundCationCharge_P.pdf}
@@ -434,7 +434,7 @@ Fig.~\ref{electrometer}.
     Atom number density profiles along the membrane normal for lipids, Na$^+$, and Cl$^-$ ions 
     from simulations with different force fields and different NaCl concentrations. 
     The force fields are ordered according to the order parameter changes 
-    reported Fig.~\ref{ordPions}, from the smallest (top panel) to the larges (bottom panel).
+    reported in Fig.~\ref{ordPions}, from the smallest (top panel) to the largest (bottom panel).
     The lipid densities are scaled by 100 (united atom) or 200 (all atom model) to improve readability. 
 %    Figure discussed in https://github.com/NMRLipids/lipid\_ionINTERACTION/issues/4.
 }
@@ -605,7 +605,7 @@ in line with Fig.~\ref{AvsB} where $\Delta S_{\rm{CH}}^{\beta}/\Delta S_{\rm{CH}
 in CHARMM36 is larger  than in experiments. Since we do not know if $\Delta S_{\rm{CH}}^{\beta}$ or $\Delta S_{\rm{CH}}^{\alpha}$
 is more realistic in CHARMM36, we cannot conclude if Ca$^{2+}$ binding is too strong or weak in this simulation model.
 This could be resolved by comparing CHARMM36 model to the experimental data with known amount of bound charge 
-(e.g., experiments with amphiphilic cations~\cite{scherer89,franzin98}), however, such simulation data is not
+(e.g., experiments with amphiphilic cations~\cite{scherer89,franzin98}), however, such simulation data are not
 currently available.
 
 The ion density distributions with CaCl$_2$ in Fig.~\ref{CAdensitiesCLEAR} show significant
@@ -616,7 +616,7 @@ since $^1$H~NMR and neutron scattering data indicate that Ca$^{2+}$ interacts ma
 choline group~\cite{hauser76,hauser78,herbette84,cevc90}. In CHARMM36, almost all Ca$^{2+}$
 ions present in simulation bind in bilayer indicating strongest binding affinity among the tested
 models. The difference is not as clear in Fig.~\ref{ordPions} because $\alpha$ carbon order parameters 
-are least sensitive to bound charge in CHARMM36 (Fig.~\ref{electrometer}).
+are the least sensitive to bound charge in CHARMM36 (Fig.~\ref{electrometer}).
 \begin{figure}[t]
   \centering
   \includegraphics[width=8cm]{../Fig/CAdensitiesCLEAR.eps}
