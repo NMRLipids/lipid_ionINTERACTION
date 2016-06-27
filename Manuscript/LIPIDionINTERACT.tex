@@ -122,7 +122,7 @@
 \includegraphics{head_foot/DOI} & \noindent\LARGE{\textbf{Molecular electrometer and binding of cations to phospholipid bilayers$^\dag$}} \\%Article title goes here instead of the text "This is the title"
 \vspace{0.3cm} & \vspace{0.3cm} \\
 
- & \noindent\large{Andrea Catte,\textit{$^{a\ddag}$} Mykhailo Girych,\textit{$^{b}$} Matti Javanainen,\textit{$^{c,d}$} Claire Loison,\textit{$^{e}$} Josef Melcr,\textit{$^{f}$} Markus S. Miettinen,\textit{$^{g}$} Luca Monticelli,\textit{$^{h}$} Jukka M{\"a}{\"a}tt{\"a},\textit{$^{i}$} Vasily S. Oganesyan,\textit{$^{a}$} O. H. Samuli Ollila,\textit{$^{\ast b}$} Joona Tynkkynen,\textit{$^{c}$} and Sergey Vilov,\textit{$^{e}$}
+ & \noindent\large{Andrea Catte,\textit{$^{a\ddag}$} Mykhailo Girych,\textit{$^{b}$} Matti Javanainen,\textit{$^{c,d}$} Claire Loison,\textit{$^{e}$} Josef Melcr,\textit{$^{f}$} Markus S. Miettinen,\textit{$^{g,h}$} Luca Monticelli,\textit{$^{i}$} Jukka M{\"a}{\"a}tt{\"a},\textit{$^{j}$} Vasily S. Oganesyan,\textit{$^{a}$} O. H. Samuli Ollila,\textit{$^{\ast b}$} Joona Tynkkynen,\textit{$^{c}$} and Sergey Vilov,\textit{$^{e}$}
 } \\%Author names go here instead of "Full name", etc.
 
 \includegraphics{head_foot/dates} & \noindent\normalsize{
@@ -165,8 +165,9 @@ all the scientific contributions were made publicly on this blog. } \\%The abstr
 \footnotetext{\textit{$^{e}$~Institut Lumi{\'e}re Mati{\'e}re, UMR5306 Universit{\'e} Lyon 1-CNRS, Universit{\'e} de Lyon, 69622 Villeurbanne, France}}
 \footnotetext{\textit{$^{f}$~Institute of Organic Chemistry and Biochemistry, Czech Academy of Sciences, Flemingovo n{\'a}m. 2, 16610 Prague 6, Czech Republic, Charles University in Prague, Faculty of Mathematics and Physics, Ke Karlovu 3, 121 16 Prague 2, Czech Republic}}
 \footnotetext{\textit{$^{g}$~Fachbereich Physik, Freie Universit\"at Berlin, Berlin, Germany}}
-\footnotetext{\textit{$^{h}$~Institut de Biologie et Chimie des Prot{\'e}ines (IBCP), CNRS UMR 5086, Lyon, France}}
-\footnotetext{\textit{$^{i}$~Aalto University, Espoo, Finland}}
+\footnotetext{\textit{$^{h}$~Max Planck Institute of Colloids and Interfaces, Department of Theory and Bio-Systems, Potsdam, Germany}}
+\footnotetext{\textit{$^{i}$~Institut de Biologie et Chimie des Prot{\'e}ines (IBCP), CNRS UMR 5086, Lyon, France}}
+\footnotetext{\textit{$^{j}$~Aalto University, Espoo, Finland}}
 \footnotetext{\textit{$^{\ast}${\bf Author to whom correspondence may be addressed. E-mail: samuli.ollila@aalto.fi.}}}
 
 
@@ -194,87 +195,87 @@ See DOI: 10.1039/b000000x/}
 %%%MAIN TEXT%%%%
 
 
-
 \section{Introduction}
 
 Due to its high physiological importance --- nerve cell signalling being the prime example ---
 interaction of cations with phospholipid membranes
 has been widely studied via theory, simulations, and experiments.
-It is generally agreed that the relative binding affinities of different ions 
+The relative ion binding affinities are generally agreed to
 follow the Hofmeister series~\cite{eisenberg79,cevc90,tocanne90,binder02,celma07,leontidis09,vacha09a,klasczyk10,harb13}, 
 however,
-consensus on the quantitative binding affinities is currently lacking.
-Two extensive reviews covering the field until 1990~\cite{cevc90,tocanne90}
-demonstrate that until that time it was generally considered that
+consensus on the quantitative affinities is currently lacking.
+Until 1990, the consensus (documented in two extensive reviews~\cite{cevc90,tocanne90}) was that
 while  multivalent cations interact significantly with phospholipid bilayers,
 for monovalent cations (with the exception of Li$^+$) the interactions are weak.
-This conclusion has since been further supported by contemporary
-studies showing that bilayer properties remain unaltered upon the addition of millimolar concentrations of a monovalent 
-salt~\cite{binder02,pabst07,filippov09}. 
-However, since 2000, another view, questioning the weakness of interactions between phospholipids and monovalent cations,
-and suggesting a much stronger binding especially for Na$^{+}$, has emerged~\cite{bockmann03,bockmann04,vacha09a,manyes05,manyes06,fukuma07,leontidis09,ferber11,morata12,klasczyk10,harb13}.
+This conclusion has since been strengthened by further
+studies showing that bilayer properties remain unaltered upon the addition of sub-molar concentrations of monovalent 
+salt~\cite{binder02,pabst07,filippov09}.
+Since 2000, however, another view has emerged, suggesting much stronger interactions between phospholipids and monovalent cations, and strong Na$^{+}$ binding in particular~\cite{bockmann03,bockmann04,vacha09a,manyes05,manyes06,fukuma07,leontidis09,ferber11,morata12,klasczyk10,harb13}.
 
-The pre-2000 view is supported by the experimental findings that
-(in contrast to significant effects by the presence of Ca$^{2+}$ or other multivalent ions)
-millimolar concentrations of NaCl have a negligible effect on
+The pre-2000 view has the experimental support that
+(in contrast to the significant effects caused by any multivalent cations)
+sub-molar concentrations of NaCl have a negligible effect on
 phospholipid infrared spectra~\cite{binder02},
 area per molecule~\cite{pabst07},
 dipole potential~\cite{clarke99},
-lipid lateral diffusion~\cite{filippov09},
-and choline head group order parameters~\cite{akutsu81}.
-In addition, water sorption isotherms for a POPC/NaCl system and NaCl in pure water are very similar
---- indicating only weak interaction between ions and lipids~\cite{binder02}. 
+lateral diffusion~\cite{filippov09},
+and choline head group order parameters~\cite{akutsu81};
+in addition, the water sorption isotherm of a NaCl--phospholipid system
+is highly similar to that of a  pure NaCl solution
+--- indicating that the ion--lipid interaction is very weak~\cite{binder02}. 
 
-The post-2000 view, which in contrast suggests strong Na$^{+}$ binding, rests on experimental and simulational findings.
-The rotational and translational dynamics of fluorescent probes in lipid bilayers decrease with mM NaCl concentrations~\cite{bockmann03,vacha09a,harb13}, and bilayer hardness and area per lipid measured with Atomistic Force Microscopy (AFM) change~\cite{manyes05,manyes06,fukuma07,ferber11,morata12}.
-In addition, atomistic molecular dynamics (MD) simulations
-commonly predict binding of Na${^+}$ ions 
-to phoshatidylcholine lipid bilayers, although the strength of the binding depends on the specific model used~\cite{bockmann03,bockmann04,sachs04,berkowitz06,cordomi08,cordomi09,valley11,berkowitz12}. 
-Upon Na$^+$ binding, some simulation studies reported a reduction in lipid lateral diffusion, 
-in agreement with the fluorescent probe measurements~\cite{bockmann03,vacha09a,harb13}.
-Other simulations showed a reduction in area per lipid in the presence of NaCl, 
-in agreement with AFM experiments~\cite{manyes05,manyes06,fukuma07,ferber11,morata12};
-however, the reduction in area was observed at excessively low Na$^+$ concentrations, 
-compared to observations from scattering experiments~\cite{pabst07}.
-Predictions of electrophoretic mobility in the presence of NaCl yielded positive values, higher than in experiments; 
-however, this could be explained by the behaviour of Cl$^-$ ions~\cite{berkowitz06,knecht13}.
+The post-2000 'strong binding' view rests on experimental and above all simulational findings.
+At millimolar NaCl concentrations, the rotational and translational dynamics of membrane-embedded fluorescent probes decrease~\cite{bockmann03,vacha09a,harb13}, and Atomic Force Microscopy (AFM) experiments show changes in bilayer hardness~\cite{manyes05,manyes06,fukuma07,ferber11,morata12};
+in atomistic molecular dynamics (MD) simulations, phospholipid bilayers consistently bind Na${^+}$,
+although the binding strength depends on the model used~\cite{bockmann03,bockmann04,sachs04,berkowitz06,cordomi08,cordomi09,valley11,berkowitz12}.
 
-Some observables have been interpreted to favor both the pre- as well as the post-2000 views.
-For example, while the reduced lateral diffusion of fluorescent probes was interpreted to support the post-2000 view,
-reduction of lipid diffusion was not observed in noninvasive NMR experiments,
-suggesting that fluorescence results arise from Na$^{+}$ interactions with probes rather than with lipids~\cite{filippov09}.
-And as the effect of monovalent ions (except Li$^+$)  on the phase transition temperature is small
+Some observables have been interpreted in favor of both views. For example,
+as the effect of monovalent ions (except Li$^+$)  on the phase transition temperature is tiny
 (compared to the effect of multivalent ions), it was initially interpreted 
 as an indication that only multivalent ions and Li$^+$ specifically bind to phosholipid bilayers~\cite{cevc90}; 
-however, more recently such small effect in calorimetric measurements was interpreted to indicate that 
-also Na$^+$ binds~\cite{bockmann03,klasczyk10}.
-Finally, in electrophoresis measurements on phosphatidylcholine vesicles, 
-positive zeta potentials can be generally reached only with multivalent ions or Li$^+$,
-whereas NaCl increases the (initially negative) zeta potential to only about zero~\cite{eisenberg79,tatulian87,manyes05,manyes06,klasczyk10}. 
-This lack of significant positive electrophoretic mobility in the presence of NaCl suggested weak binding of Na$^+$; 
-however, the same data has also been explained by an effect of the Cl$^-$ ions~\cite{berkowitz06,knecht13}.
+however, such a small effect in calorimetric measurements was later interpreted to indicate that also
+Na$^+$ binds~\cite{bockmann03,klasczyk10}.
 
-In the present work we set out to solve the apparent contradictions
-between the pre-2000 and post-2000 views
-by directly comparing the headgroup order parameters of hydrocarbon segments
-$\alpha$ and $\beta$ (see Fig. \ref{POPCstructure}) between simulations
-and experiments as a function of cation concentration. 
-According to the 'molecular electrometer' concept, changes in order parameters of the $\alpha$ and $\beta$ carbons 
-in the phospholipid head group can be used to measure the ion affinity to the 
-phophatidylcholine (PC) lipid bilayer~\cite{akutsu81,altenbach84,seelig87,scherer89}.
-Order parameters can be accurately measured in experiments and straightforwardly compared to 
-simulations \cite{ollila16}, therefore the molecular electrometer allows the 
-comparison of binding affinity between simulations and experiments. 
-In this paper, we will show that the response of order parameters to penetrating cations
-is qualitatively correct in simulations, but the affinity of Na$^{+}$ ions for PC bilayers
-is significantly overestimated in several MD simulation models.
-Moreover, we will assay the accuracy of lipid--Ca$^{2+}$ interactions 
-in different models and show that current models are not accurate enough
-for atomistic resolution interpretation of NMR experiments. 
+Similarly, the lack of significant positive electrophoretic mobility
+of phosphatidylcholine (PC) vesicles in the presence of NaCl
+(again in contrast to multivalent ions and Li$^+$)
+suggested weak binding of Na$^+$~\cite{eisenberg79,tatulian87,manyes05,manyes06,klasczyk10};
+%NaCl increases the (initially negative) zeta potential to only about zero,
+%whereas positive zeta potentials are generally reached with
+however, these data have also been explained by a countering effect of the Cl$^-$ ions~\cite{berkowitz06,knecht13}.
 
-This work has been done by using Open Collaboration method (\url{nmrlipids.blogspot.fi})~\cite{botan15}.
-All the related files are available from \url{https://github.com/NMRLipids/lipid_ionINTERACTION} and
-almost all simulation data from \url{https://zenodo.org/collection/user-nmrlipids}.
+Area per lipid was found to reduce in simulations upon Na$^+$ binding (e.g. Refs.~\cite{})
+in agreement with AFM experiments~\cite{manyes05,manyes06,fukuma07,ferber11,morata12};
+however, the reduction in area was observed at extremely low (millimolar) Na$^+$ concentrations, 
+whereas molar concentrations were required to reproduce the effect in scattering experiments~\cite{pabst07}.
+
+Lipid lateral diffusion was reported to be reduced in
+some simulation studies (e.g. Refs.~\cite{bockmann03}) upon Na$^+$ binding,
+supporting the interpretation of the reduced lateral diffusion of fluorescent probes~\cite{bockmann03,vacha09a,harb13}
+as favoring the post-2000 view;
+however, reduction of lipid diffusion was not observed in noninvasive NMR experiments,
+suggesting that the fluorescence results arise from Na$^{+}$ interactions with probes rather than with lipids~\cite{filippov09}.
+
+In the present paper we set out to solve the apparent contradictions
+between the pre-2000 and post-2000 views.
+To this end we employ the 'molecular electrometer' concept,
+according to which the changes in the order parameters of the $\alpha$ and $\beta$ carbons 
+in the phospholipid head group (see Fig. \ref{POPCstructure}) can be used to measure the ion affinity to 
+PC lipid bilayer~\cite{akutsu81,altenbach84,seelig87,scherer89}.
+As order parameters can be accurately measured in experiments and directly compared to 
+simulations \cite{ollila16}, employing the molecular electrometer as a function of cation concentration allows the 
+comparison of binding affinity between simulations and experiments.
+In addition to demonstrating the usefulness of this general concept,
+we show that the response of order parameters to penetrating cations
+is qualitatively correct in MD simulations, but that in several  models the affinity of Na$^{+}$ for PC bilayers
+is grossly overestimated.
+Moreover, we show that the accuracy of lipid--Ca$^{2+}$ interactions 
+in current models is not enough for atomistic resolution interpretation of NMR experiments. 
+
+This work has been done as an Open Collaboration at \url{nmrlipids.blogspot.fi};
+all the related files (\url{https://github.com/NMRLipids/lipid_ionINTERACTION})
+and almost all the simulation data (\url{https://zenodo.org/collection/user-nmrlipids})
+are openly available.
 
 \begin{figure}[]
   \centering
