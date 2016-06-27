@@ -225,7 +225,7 @@ is highly similar to that of a  pure NaCl solution
 --- indicating that the ion--lipid interaction is very weak~\cite{binder02}. 
 
 The post-2000 'strong binding' view rests on experimental and above all simulational findings.
-At millimolar NaCl concentrations, the rotational and translational dynamics of membrane-embedded fluorescent probes decrease~\cite{bockmann03,vacha09a,harb13}, and Atomic Force Microscopy (AFM) experiments show changes in bilayer hardness~\cite{manyes05,manyes06,fukuma07,ferber11,morata12};
+At sub-molar NaCl concentrations, the rotational and translational dynamics of membrane-embedded fluorescent probes decrease~\cite{bockmann03,vacha09a,harb13}, and Atomic Force Microscopy (AFM) experiments show changes in bilayer hardness~\cite{manyes05,manyes06,fukuma07,ferber11,morata12};
 in atomistic molecular dynamics (MD) simulations, phospholipid bilayers consistently bind Na${^+}$,
 although the binding strength depends on the model used~\cite{bockmann03,bockmann04,sachs04,berkowitz06,cordomi08,cordomi09,valley11,berkowitz12}.
 
@@ -235,7 +235,6 @@ as the effect of monovalent ions (except Li$^+$)  on the phase transition temper
 as an indication that only multivalent ions and Li$^+$ specifically bind to phosholipid bilayers~\cite{cevc90}; 
 however, such a small effect in calorimetric measurements was later interpreted to indicate that also
 Na$^+$ binds~\cite{bockmann03,klasczyk10}.
-
 Similarly, the lack of significant positive electrophoretic mobility
 of phosphatidylcholine (PC) vesicles in the presence of NaCl
 (again in contrast to multivalent ions and Li$^+$)
@@ -243,20 +242,16 @@ suggested weak binding of Na$^+$~\cite{eisenberg79,tatulian87,manyes05,manyes06,
 %NaCl increases the (initially negative) zeta potential to only about zero,
 %whereas positive zeta potentials are generally reached with
 however, these data have also been explained by a countering effect of the Cl$^-$ ions~\cite{berkowitz06,knecht13}.
+To reduce the area per lipid in scattering experiments, molar concentrations of NaCl are required~\cite{pabst07}, which indicates weak ion--lipid interaction;
+in MD simulations, however, already orders of magnitude lower concentrations result in Na$^+$ binding and clear reduction of area per lipid.
+Finally,  in noninvasive NMR experiments, lipid lateral diffusion is unaltered by NaCl~\cite{filippov09};
+%suggesting that the fluorescence results arise from Na$^{+}$ interactions with probes rather than with lipids.
+%This is pointed out in Conclusions, which I think is the best place for it. -markus.
+however, it is reduced in simulations upon Na$^+$ binding,
+which supports interpreting the reduced lateral diffusion of fluorescent probes~\cite{bockmann03,vacha09a,harb13}
+as favoring the post-2000 view.
 
-Area per lipid was found to reduce in simulations upon Na$^+$ binding (e.g. Refs.~\cite{})
-in agreement with AFM experiments~\cite{manyes05,manyes06,fukuma07,ferber11,morata12};
-however, the reduction in area was observed at extremely low (millimolar) Na$^+$ concentrations, 
-whereas molar concentrations were required to reproduce the effect in scattering experiments~\cite{pabst07}.
-
-Lipid lateral diffusion was reported to be reduced in
-some simulation studies (e.g. Refs.~\cite{bockmann03}) upon Na$^+$ binding,
-supporting the interpretation of the reduced lateral diffusion of fluorescent probes~\cite{bockmann03,vacha09a,harb13}
-as favoring the post-2000 view;
-however, reduction of lipid diffusion was not observed in noninvasive NMR experiments,
-suggesting that the fluorescence results arise from Na$^{+}$ interactions with probes rather than with lipids~\cite{filippov09}.
-
-In the present paper we set out to solve the apparent contradictions
+In this paper we set out to solve the apparent contradictions
 between the pre-2000 and post-2000 views.
 To this end we employ the 'molecular electrometer' concept,
 according to which the changes in the order parameters of the $\alpha$ and $\beta$ carbons 
