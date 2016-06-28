@@ -396,7 +396,9 @@ Note that quantitative comparison of the proportionality constants (i.e. slopes 
 between different models and experimental slopes
 ($m_\alpha=-20.5$ and $m_\beta=-10.0$ for Ca$^{2+}$ binding in DPPC bilayer in
 the presence of 100mM NaCl in Eq. \ref{electrometer_eq}~\cite{altenbach84}) is not straightforward 
-since the simulation slopes depend on the definition used for bound ions (see ESI$^\dag$ -- \todo{put the definition of bound charges to ESI}). 
+since the simulation slopes depend on the definition used for bound ions (see ESI$^\dag$).
+% -- \todo{put the definition of bound charges to ESI}). 
+% This is already in the other todo point.
 \begin{figure}[t]
   \centering
   \includegraphics[width=8.6cm]{../scratch/boundIons/dOP_vs_boundCationCharge_P.pdf}
@@ -921,7 +923,7 @@ The simulation without ions is taken directly from Refs.~\citenum{botan15,charmm
 The starting structures for simulations with NaCl were made by replacing randomly located 
 water molecules of the structure of pure POPC simulation with appropriate amount of ions.
 The force field for lipid were the same as in Refs.~\citenum{botan15,charmm36filesSHORT}.
-The special TIP3P parameters for CHARMM36 and ion parameters with NBFIX by Venable et al.~\cite{venable13} were used.
+The compatible TIP3P parameters for CHARMM36 and ion parameters with NBFIX by Venable et al.~\cite{venable13} were used.
 Simulations were ran with Gromacs 4.5.5 software~\cite{pronk13}.
 Timestep of 2~fs was used with leap-frog integrator. Covalent bonds with hydrogens were constrained with LINCS algorithm~\cite{hess97,hess07}. 
 Coordinates were written every 5~ps. PME with real space cut-off 1.4~nm was used 
@@ -952,7 +954,7 @@ After energy minimization and an equilibration run of 0.5 ns, 200 ns simulations
 {\it DPPC with CaCl$_2$ (Yoo model):}
 The systems contained 128 DPPC lipids and about 7600 TIP3P~\cite{jorgensen83} water molecules,
 and an appropriate amount of ions as indicated in  Table~\ref{IONsystems}.  
-We have used CHARMM36 additive force field parameters for lipids~\cite{klauda10}. 
+We have used CHARMM36 additive force field parameters for lipids~\cite{klauda10} with compatible TIP3P water model. 
 In the calcium model developed recently by Yoo et al.~\cite{yoo16}, 
 each cation is decorated by seven hydrating water molecules (with different charges from the usual TIP3P),
 which are constrainted to remain in its vincinity. The associated parameter files are available
