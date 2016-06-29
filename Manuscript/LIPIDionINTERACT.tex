@@ -401,10 +401,15 @@ since the simulation slopes depend on the definition used for bound ions (see ES
   \centering
   \includegraphics[width=8.6cm]{../scratch/boundIons/dOP_vs_boundCationCharge_P.pdf}
   \caption{\label{electrometer}
-    Order parameters changes $\Delta S_{\rm{CH}}^{\beta}$ and $\Delta S_{\rm{CH}}^{\alpha}$ as a function of bound
-    cations from different simulation models.
+    Change of order parameters (from salt-free solution) of the $\beta$ and $\alpha$ segments,
+    $\Delta S_{\rm{CH}}^{\beta}$ and $\Delta S_{\rm{CH}}^{\alpha}$,
+    shown as a function of bound cation charge.
+    Eight MD simulation models compared.
+    The order parameters as well as the bound charge calculated separately for
+    each leaflet; cations residing between the bilayer center and the density maximum of Phosporus
+    considered bound; error bars show standard error of mean over lipids.
    }
-\todo{Results from long CHARMM and Slipids simulations to be added. Description of the calculation of bound charges to be described, probably in supplementary.}
+\todo{Results from long CHARMM and Slipids simulations to be added.}
 \end{figure}
 
 The comparison of order parameter changes in response to bound charge is more straightforward for
@@ -693,6 +698,8 @@ electrolytic environment.
 %besides of prediction. Also I want to keep word directly because simulations might be usable
 %but only with very careful analysis. 
 
+% Seelig's 1987 paper where the concept molecular electrometer is first mentioned stresses that it is not limited to ion binding, but can be used to study "any process that modifies the electrical properties of the membrane surface". Maybe we should repeat that quote to emphasize that molecular electrometer is a general means to assess the membrane electrical responses. Currently many people use additional molecular probes to measure electric responses, yet the molecular electrometer is a "non-invasive, non-perturbing" alternative.
+
 This work has been done as a fully open collaboration, using
 \url{nmrlipids.blogspot.fi} as the communication platform. All the
 scientific contributions have been communicated publicly through
@@ -719,7 +726,7 @@ J. M. acknowledges computational resources provided by the CESNET LM2015042 and 
 
 \appendix
 \begin{center}
-{\bf SUPPLEMENTARY INFORMATION}
+\part*{SUPPLEMENTARY INFORMATION}
 \end{center}
 \section{Ion binding equilibration times}
 Simulations containg 450~mM CaCl$_2$ with CHARMM36 and Slipids were ran 2~$\mu$s to estimate the times
@@ -741,7 +748,60 @@ other models than CHARMM36 with ion model by Yoo et al. \cite{yoo16}.
 }
 \end{figure}
 
-\section{Headgroup response on charged amphiphiles}
+
+\section{Change of choline order parameters as a function of bound cation charge}
+
+
+To demonstrate that also in current MD simulations the molecular electrometer works as Seelig and coworkers proposed in the 1980's (that is, there is a direct relationship between the changes in the choline $\beta$ and $\alpha$ segment order parameters and the amount of penetrant charge), we calculated the bound cation charge and the corresponding order parameter change separately for each leaflet in several MD simulation systems.
+
+As in reality ions have continuum density distributions, any division to bound and non-bound ions is somewhat artificial,
+and thus the choice of parameters describing ion partitioning is more or less ambiguous.
+We chose to integrate the cation charge distribution from the center of the membrane until a certain predefined limit. Three limits were tested:
+until the g$_3$-carbon (Fig.~\ref{electrometer_g3}), until the phosphorus (Fig.~\ref{electrometer}), and until the $\alpha$-carbon (Fig.~\ref{electrometer_ca}) density maximum. Although phosphorus seems to be the most intuitive choice, comparison of these three plots shows that the conclusions we draw here do not depend on the chosen limit.
+That said, we must stress that the slopes of the curves depend {\bf strongly} on the chosen limit; therefore, one should be very careful when comparing them to one another or to experimental data --- a given limit might or might not match with what is considered 'bound' in an experiment.
+%To put it in other words, we can affect the slopes of the simulation curves by our choice of the integration limit, whereas the experimental slope will not be affected. This has a potential of us introducing an unconscious bias on the one hand, and on the other hand people looking at the plot might conclude one FF to be better matching the experiments than some other, although this might not be the case (both because the OPs at zero bound charge in the simulations are not correct and because of this additional effect on the slope coming from the choice of the integration limit.)
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=8.6cm]{../scratch/boundIons/dOP_vs_boundCationCharge_g3.pdf}
+  \caption{\label{electrometer_g3}
+    Change of order parameters (from salt-free solution) of the $\beta$ and $\alpha$ segments,
+    $\Delta S_{\rm{CH}}^{\beta}$ and $\Delta S_{\rm{CH}}^{\alpha}$,
+    shown as a function of bound cation charge.
+    The order parameters as well as the bound charge calculated separately for
+    each leaflet; {\bf cations residing between the bilayer center and the density maximum of g$_3$ carbon
+    considered bound}; error bars show standard error of mean over lipids.
+   }
+\end{figure}
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=8.6cm]{../scratch/boundIons/dOP_vs_boundCationCharge_Ca.pdf}
+  \caption{\label{electrometer_ca}
+    Change of order parameters (from salt-free solution) of the $\beta$ and $\alpha$ segments,
+    $\Delta S_{\rm{CH}}^{\beta}$ and $\Delta S_{\rm{CH}}^{\alpha}$,
+    shown as a function of bound cation charge.
+    The order parameters as well as the bound charge calculated separately for
+    each leaflet; {\bf cations residing between the bilayer center and the density maximum of $\alpha$ carbon
+    considered bound}; error bars show standard error of mean over lipids.
+    }
+\end{figure}
+
+Figures~\ref{electrometer_g3},~\ref{electrometer}, and \ref{electrometer_ca} show that in all MD models a clear correlation exists between the bound cation charge and the change of the ($\beta$, $\alpha$) order parameters. Also, this correlation does not seem to depend heavily on ion type, as Na$^+$ and Ca$^{2+}$ fall effectively on the same line in each force field.
+In other words, the plots demostrate that the molecular electrometer is robust, that is, qualitatively reproduced also in MD simulations, and even with rather inaccurate force fields. (A similar robust effect was the reorientation of the headgroup upon dehydration in our previous paper~\cite{botan15}.)
+
+We wish to note that with the mono- and divalent ions the bound charge is localized differently in the membrane.
+Interestingly, however, it seems that a single linear slope can capture responses to both.
+This is somewhat surprising, as one might expect correlation effects between the bound ions to show;
+probably these will become evident only at higher concentrations.
+
+%We also note that the differences between force fields for order parameter changes as a function of bound charge do not seem to exactly match the differences between force fields for order parameter changes as a function of ion concentration (Fig.~\ref{ordPions}): The order parameter change as a function of bound charge is similar e.g. for Lipid14 and Berger even though significant difference is observed as a function of ion concentration, and Orange has the smallest dependence on ion concentration but strongest dependence on bound cation charge. Conclusion seems to be that in most cases the order parameter changes as a function of ion concentration arise from differences in ion binding affinity, not from different headgroup responses to ion binding. HOWEVER. The slopes are affected by the choice of the integration limit (see Figs.~\ref{electrometer_g3},~\ref{electrometer}, and \ref{electrometer_ca}), so one should be very careful with conclusions.
+%The exception may be the alpha carbon for CHARMM. It has the weakest dependence on bound charge and it is the only segment which agrees with experiments as a function of Calcium concentration. It may be that CHARMM is more realisitic in this aspect --- or this might coincidental.
+
+
+
+
+\section{Headgroup response to charged amphiphiles}
+
 The order parameter changes as a function of the bound charge cannot be straightforwardly
 compared between simulations and experiments from systems with ions because the 
 results depend on the definition of bound ions in simulations. In systems with charged
@@ -858,7 +918,7 @@ Na$^+$ binding in PC bilayer.
     effect of ion models with scaled charges. The lipid densities are scaled with 100 (united atom) or 200 (all atom model) to make them visible with the used y-axis scale.
 }
 \end{figure}
-\section{methods}
+\section{Methods}
 
 \subsection{Simulated systems}
 All simulations are ran with a standard setup for planar lipid bilayer in zero tension
