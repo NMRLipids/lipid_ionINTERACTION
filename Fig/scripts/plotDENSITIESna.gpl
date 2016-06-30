@@ -106,7 +106,7 @@ set size 1.0, 0.17
 #set yrange [0:15]    
 #set ytic 2
 set key at graph 0.64,graph 0.54 maxcols 1 maxrows 3 font ",10"
-set label at graph 0.45,graph 0.83 "Slipid" font ","
+set label at graph 0.45,graph 0.83 "Slipids" font ","
 #set ylabel "g_{1}  S_{CH}"
 #set yrange [-0.23:0.05]
 plot "../../Data/POPC/NaCl/SLIPID/130mMsd/LIPIDdensity.xvg" using 1:3 title 'POPC, 130mM' with lines linetype 1 lc rgb 'red', \

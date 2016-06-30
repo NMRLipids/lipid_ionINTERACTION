@@ -38,9 +38,9 @@ plot "../../Data/DPPC/NaCl/BERGER/BERGERnaclCONSchange.dat" using 1:2:3 with yer
      "../../Data/DPPC/NaCl/BERGERopls/BERGERoplsnaclCONSchange.dat" using 1:4:5 with yerrorbars notitle  pt 5 lt 1 lc rgb 'brown', "" using 1:4 with lines notitle linetype 1 lc rgb 'brown', \
      "../../Data/DPPC/NaCl/BERGERopls/BERGERoplsnaclCONSchangeSCALED.dat" using 1:2:3 with yerrorbars notitle pt 4 lt 1 lc rgb 'brown', "" using 1:2 with linespoint title 'Berger-OPLS scaled ions' pt 4 linetype 1 dt 2 lc rgb 'brown', \
      "../../Data/DPPC/NaCl/BERGERopls/BERGERoplsnaclCONSchangeSCALED.dat" using 1:4:5 with yerrorbars notitle  pt 4 lt 1 lc rgb 'brown', "" using 1:4 with lines notitle linetype 1 dt 2 lc rgb 'brown', \
-     "../../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSD.dat" using 1:2:3 with yerrorbars notitle pt 7 lt 1 lc rgb '#7AEE9E', "" using 1:2 with linespoint title 'Slipid' pt 7 linetype 1 lc rgb '#7AEE9E', \
+     "../../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSD.dat" using 1:2:3 with yerrorbars notitle pt 7 lt 1 lc rgb '#7AEE9E', "" using 1:2 with linespoint title 'Slipids' pt 7 linetype 1 lc rgb '#7AEE9E', \
      "../../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSD.dat" using 1:4:5 with yerrorbars notitle  pt 7 lt 1 lc rgb '#7AEE9E', "" using 1:4 with lines notitle linetype 1 lc rgb '#7AEE9E',\
-     "../../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSCALED.dat" using 1:2:3 with yerrorbars notitle pt 6 lt 1 lc rgb '#7AEE9E', "" using 1:2 with linespoint title 'Slipid scaled ions' pt 6 linetype 1 dt 2 lc rgb '#7AEE9E', \
+     "../../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSCALED.dat" using 1:2:3 with yerrorbars notitle pt 6 lt 1 lc rgb '#7AEE9E', "" using 1:2 with linespoint title 'Slipids scaled ions' pt 6 linetype 1 dt 2 lc rgb '#7AEE9E', \
      "../../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSCALED.dat" using 1:4:5 with yerrorbars notitle  pt 6 lt 1 lc rgb '#7AEE9E', "" using 1:4 with lines notitle linetype 1 dt 2 lc rgb '#7AEE9E', \
      "../../Data/POPC/NaCl/CHARMM36/CHARMMnaclCONSchange.dat" using 1:2:3 with yerrorbars notitle pt 7 lt 1 lc rgb '#0088BF', "" using 1:2 with linespoint title 'CHARMM36' pt 7 linetype 1 lc rgb '#0088BF', \
      "../../Data/POPC/NaCl/CHARMM36/CHARMMnaclCONSchange.dat" using 1:4:5 with yerrorbars notitle  pt 7 lt 1 lc rgb '#0088BF', "" using 1:4 with lines notitle linetype 1 lc rgb '#0088BF', \

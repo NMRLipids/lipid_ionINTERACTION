@@ -48,7 +48,7 @@ plot "../../Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-CaClchange-T332.dat"  using ($3*0
      "../../Data/POPC/CaCl/CHARMM36/CHARMMcaclCONSchange.dat" using (($6+$8)/2):(($2+$4)/2) with point title 'CHARMM36' pt 7 linetype 1 lc rgb '#0088BF', \
       "../../Data/DPPC/CaCl/CHARMM36/CHARMMcaclCONSchangeYOO.dat" using (($6+$8)/2):(($2+$4)/2) with point title 'CHARMM36 YOO' pt 5 linetype 1 lc rgb '#0088BF', \
      "../../Data/POPC/CaCl/LIPID14/LIPID14caclCONSchange.dat" using (($6+$8)/2):(($2+$4)/2) with point title 'Lipid14' pt 7 linetype 1 lc rgb '#FFD300', \
-     "../../Data/POPC/CaCl/SLIPID/SLIPIDcaclCONSchange.dat" using (($6+$8)/2):(($2+$4)/2) with point title 'Slipid' pt 7 linetype 1 lc rgb '#7AEE9E', \
+     "../../Data/POPC/CaCl/SLIPID/SLIPIDcaclCONSchange.dat" using (($6+$8)/2):(($2+$4)/2) with point title 'Slipids' pt 7 linetype 1 lc rgb '#7AEE9E', \
      "../../scratch/MACROGnaclCONSchange.dat" ev :::0::0 with point title 'MacRog' linetype 1 pt 7 lc rgb '#00A368', \
      "../../scratch/MACROGnaclCONSchange.dat" using (($4+$5)/2):(($2+$3)/2) with point notitle linetype 1 pt 6 lc rgb '#00A368', \
      "../../Data/POPC/NaCl/CHARMM36/CHARMMnaclCONSchange.dat" using (($6+$8)/2):(($2+$4)/2) with point notitle  pt 6 linetype 1 lc rgb '#0088BF', \

@@ -158,7 +158,7 @@ all the scientific contributions were made publicly on this blog. } \\%The abstr
 
 %%%FOOTNOTES%%%
 
-\footnotetext{\textit{$^{a}$~University of East Anglia, Norwich, United Kingdom}}
+\footnotetext{\textit{$^{a}$~School of Chemistry, University of East Anglia, Norwich, NR4 7TJ, United Kingdom}}
 \footnotetext{\textit{$^{b}$~Department of Neuroscience and Biomedical Engineering, Aalto University, Espoo, Finland}}
 \footnotetext{\textit{$^{c}$~Tampere University of Technology, Tampere, Finland}}
 \footnotetext{\textit{$^{d}$~University of Helsinki,Finland}}
@@ -540,13 +540,13 @@ A careful analysis with current lipid models is performed in the next section.
   %\hdashline
   Orange, OPLS &   POPC & 510 (CaCl$_2$)  & 72 & 2802 & 0 & 26  & 52 & 298 & 120 & 60 & \cite{orangePOPC510mMCaClfiles}  \\
   \hline
-  Slipid\cite{jambeck12}   &   DPPC & 0 & 128 &3840 & 0 & 0  & 0 & 323 & 150 & 100 &~\cite{slipidsFILES}  \\
-  Slipid\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   DPPC & 150 (NaCl)  & 600 & 18000 & 49 & 0  &  49 & 323 & 100 & 40 &-  \\
-  Slipid\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   DPPC & 850 (NaCl)  & 128 & 3726 &  57 & 0  &  57 & 323 & 105 & 100 & \cite{slipidsFILESdppc}  \\
+  Slipids\cite{jambeck12}   &   DPPC & 0 & 128 &3840 & 0 & 0  & 0 & 323 & 150 & 100 &~\cite{slipidsFILES}  \\
+  Slipids\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   DPPC & 150 (NaCl)  & 600 & 18000 & 49 & 0  &  49 & 323 & 100 & 40 &-  \\
+  Slipids\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   DPPC & 850 (NaCl)  & 128 & 3726 &  57 & 0  &  57 & 323 & 105 & 100 & \cite{slipidsFILESdppc}  \\
   \hline
-  Slipid\cite{jambeck12b}   &   POPC & 0 & 128 & 5120 & 0 & 0  & 0 & 303 & 200 & 150 &~\cite{slipidsFILESpopc}  \\
-  Slipid\cite{jambeck12b}, AMBER\cite{smith94}  &  POPC & 130 (NaCl) & 200 & 9000 & 21 & 0  & 21 & 310 & 105 & 100 &~\cite{slipidsFILESpopc130mMnaclSD}  \\
-  Slipid\cite{jambeck12b}, AMBER\cite{aqvist90}  &  POPC & 450 (CaCl) & 200 & 9000  & 0 & 73  & 146 & 310 & 2000 & 100 &~\cite{slipidsFILESpopc450mMcacl}  \\
+  Slipids\cite{jambeck12b}   &   POPC & 0 & 128 & 5120 & 0 & 0  & 0 & 303 & 200 & 150 &~\cite{slipidsFILESpopc}  \\
+  Slipids\cite{jambeck12b}, AMBER\cite{smith94}  &  POPC & 130 (NaCl) & 200 & 9000 & 21 & 0  & 21 & 310 & 105 & 100 &~\cite{slipidsFILESpopc130mMnaclSD}  \\
+  Slipids\cite{jambeck12b}, AMBER\cite{aqvist90}  &  POPC & 450 (CaCl) & 200 & 9000  & 0 & 73  & 146 & 310 & 2000 & 100 &~\cite{slipidsFILESpopc450mMcacl}  \\
   \hline
   Lipid14~\cite{dickson14}, AMBER\cite{aqvist90}  &   POPC & 0          & 128 & 5120 & 0 & 0  & 0 & 298 & 205 & 200 &~\cite{lipid14POPC0mMNaClfiles}  \\
   Lipid14~\cite{dickson14}, AMBER\cite{aqvist90}   &   POPC & 150 (NaCl) & 128 & 5120 & 12 & 0 & 12 & 298 & 205 & 200 &~\cite{lipid14POPC150mMNaClfiles}  \\
@@ -645,10 +645,10 @@ Potential candidates could be, for example, discrepancies in the ion models~\cit
 incomplete treatment of electronic polarizability~\cite{leontyev11}, or inaccuracies in the lipid headgroup 
 description~\cite{botan15}. Cordomi et al.~\cite{cordomi09} showed that the Na$^+$ binding affinity decreases when ion radius increases
 in the model, however, also the models with the largest radius show significant binding in DPPC bilayer simulated with
-OPLS-AA force field~\cite{jorgensen96}. In our results, the Slipid model gives essentially similar binding affinity with 
+OPLS-AA force field~\cite{jorgensen96}. In our results, the Slipids model gives essentially similar binding affinity with 
 ion parameters from Refs.~\cite{smith94} and~\cite{beglov94,roux96}. Further, the compensation of missing electronic 
 polarizability by scaling ion charge~\cite{kohagen16,leontyev11} reduced Na$^+$ binding in Berger, 
-BergerOPLS and Slipid models, but not enough to be in agreement with experiments (ESI$^\dag$). 
+BergerOPLS and Slipids models, but not enough to be in agreement with experiments (ESI$^\dag$). 
 The charge-scaled Ca$^{2+}$ model~\cite{kohagen14} slightly reduced binding in CHARMM36, but did not have 
 significant influence on binding in Slipids (ESI$^\dag$). Significant reduction of
 Ca$^{2+}$ binding was observed with ion model by Yoo et al~\cite{yoo16}, however, the CHARMM36 lipid
@@ -718,6 +718,8 @@ All the related content and data is available at \url{https://github.com/NMRLipi
 %coauthorship. For more details see \url{nmrlipids.blogspot.fi}.   
 
 {\bf Acknowledgements: }
+AC and VSO wish to thank the Research Computing Service at UEA for access to the High Performance Computing Cluster. VSO acknowledges the Engineering and Physical Sciences Research Council in the UK for financial support (EP/L001322/1).
+%
 OHSO acknowledges Tiago Ferreira for very useful discussions, the Emil Aaltonen foundation for financial support, Aalto Science-IT project and CSC-IT Center for Science for computational resources. 
 %
 MSM acknowledges financial support from the Volkswagen Foundation (86110).

@@ -38,7 +38,7 @@ set ylabel " "
 set size 1.0, 0.212
 set origin 0,0.3
 #set key at graph 0.6,graph 0.5 maxcols 1 maxrows 5 font ",10"
-set label at graph 0.26,graph 0.85 "SLIPID (POPC, Scaled ions) "
+set label at graph 0.26,graph 0.85 "SLIPIDS (POPC, Scaled ions) "
 set label at graph 0.87,graph 0.83 "1000 mM" font ",10"
 set label at graph 0.9,graph 0.65 "750 mM" font ",10"
 set label at graph 0.88,graph 0.39 "500 mM" font ",10"
@@ -120,7 +120,7 @@ unset label
 #set ytic 2
 #set xtics format "%G"
 #set key at screen 0.8,screen 1.1 maxcols 2 maxrows 6
-#set label at screen 0.37,screen 0.13 "Slipid (DPPC, 150 mM NaCl)"
+#set label at screen 0.37,screen 0.13 "Slipids (DPPC, 150 mM NaCl)"
 #set ylabel "g_{1}  S_{CH}"
 #set xlabel "z (nm)"
 #set yrange [-0.23:0.05]

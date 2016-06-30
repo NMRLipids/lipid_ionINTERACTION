@@ -44,7 +44,7 @@ plot "../../Data/POPC/NaCl/BERGER/BERGERnaclCONSchange.dat" using 1:2:3 with yer
      "../../Data/POPC/NaCl/ULM/ULMnaclCONSchange.dat" using 1:4:5 with yerrorbars notitle  pt 7 lt 1 lc rgb '#FFA0A3', "" using 1:4 with lines notitle linetype 1 lc rgb '#FFA0A3', \
      "../../Data/DPPC/NaCl/BERGERopls/BERGERoplsnaclCONSchange.dat" using 1:2:3 with yerrorbars notitle pt 5 lt 1 lc rgb 'brown', "" using 1:2 with linespoint title 'Berger-OPLS' pt 5 linetype 1 lc rgb 'brown', \
      "../../Data/DPPC/NaCl/BERGERopls/BERGERoplsnaclCONSchange.dat" using 1:4:5 with yerrorbars notitle  pt 5 lt 1 lc rgb 'brown', "" using 1:4 with lines notitle linetype 1 lc rgb 'brown', \
-     "../../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSD.dat" using 1:2:3 with yerrorbars notitle pt 7 lt 1 lc rgb '#7AEE9E', "" using 1:2 with linespoint title 'Slipid' pt 7 linetype 1 lc rgb '#7AEE9E', \
+     "../../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSD.dat" using 1:2:3 with yerrorbars notitle pt 7 lt 1 lc rgb '#7AEE9E', "" using 1:2 with linespoint title 'Slipids' pt 7 linetype 1 lc rgb '#7AEE9E', \
      "../../Data/POPC/NaCl/SLIPID/SLIPIDnaclCONSchangeSD.dat" using 1:4:5 with yerrorbars notitle  pt 7 lt 1 lc rgb '#7AEE9E', "" using 1:4 with lines notitle linetype 1 lc rgb '#7AEE9E', \
      "../../Data/DPPC/NaCl/SLIPIDS/SLIPIDnaclCONSchangeRX.dat" using 1:2:3 with yerrorbars notitle pt 5 lt 1 lc rgb '#7AEE9E', "" using 1:2 with linespoint notitle pt 5 linetype 1 lc rgb '#7AEE9E', \
      "../../Data/DPPC/NaCl/SLIPIDS/SLIPIDnaclCONSchangeRX.dat" using 1:4:5 with yerrorbars notitle  pt 5 lt 1 lc rgb '#7AEE9E', "" using 1:4 with lines notitle linetype 1 lc rgb '#7AEE9E', \

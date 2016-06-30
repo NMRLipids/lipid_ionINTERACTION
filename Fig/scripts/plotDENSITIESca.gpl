@@ -83,7 +83,7 @@ unset label
 
 set size 1.0, 0.205
 set ylabel " "
-set label at graph 0.44, graph 0.84 "SLIPID"
+set label at graph 0.44, graph 0.84 "SLIPIDS"
 set label at graph 0.42,graph 0.47 "(450 mM)" 
 plot  "../../Data/POPC/CaCl/SLIPID/450mMscaled/LIPIDdensity.xvg" using 1:3 title "scaled \nions"  with lines linetype 1 dashtype 2  lw 2 lc rgb 'red',\
       "../../Data/POPC/CaCl/SLIPID/450mMscaled/LIPIDdensity.xvg" using 1:($4/2) notitle with lines linetype 1 dashtype 2 lw 2 lc rgb 'green', \
