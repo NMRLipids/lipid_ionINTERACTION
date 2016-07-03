@@ -132,7 +132,7 @@ especially the biologically relevant Na$^+$ and Ca$^{2+}$ ions,  there is no con
 In this paper, we show that the ion binding affinity can be directly compared between simulations and experiments by 
 using the choline headgroup order parameters according to the 'molecular electrometer' 
 concept [Seelig \textit{et al., Biochemistry}, 1987, \textbf{26}, 7535].
-Our findings strongly support the pre-2000 view that Na$^+$ and other monovalent ions
+Our findings strongly support the view that Na$^+$ and other monovalent ions
 (except Li$^+$) do not specifically bind to phosphatidylcholine lipid bilayers with sub-molar concentrations, 
 in contrast to Ca$^{2+}$ and other multivalent ions. Especially the Na$^+$ binding affinity is 
 overestimated by several molecular dynamics simulation models, leading to 
@@ -287,10 +287,11 @@ are openly available.
 
 \subsection{Background: Molecular electrometer in experiments}\label{conceptinexperiments}
 The molecular electrometer concept is based on the experimental observation that
-binding of any charged objects on a PC bilayer interface induces systematic changes in the choline $\beta$ and $\alpha$
+binding of any charged objects (e.g. ions, peptides, anesthetics, amphihiles) on a PC bilayer interface induces 
+systematic changes in the choline $\beta$ and $\alpha$
 segment order parameters~\cite{akutsu81,altenbach84,altenbach85,seelig87,macdonald87,scherer89,roux90,beschiasvili91,marassi92,rydall92}.
 Thus, these changes can be used to determine binding affinities of the charged objects.
-Molecular electrometer was originally devised for cations~\cite{akutsu81,altenbach84}, but
+The molecular electrometer was originally devised for cations~\cite{akutsu81,altenbach84}, but
 further experimental quantification with various positively and negatively charged 
 molecules showed that the choline order parameters $S_\mathrm{CH}^\alpha$ and $S_\mathrm{CH}^\beta$ 
 in general vary linearly with small amount of bound charge per 
@@ -300,11 +301,11 @@ The empirically observed linear relation can be written as~\cite{ferreira16}
 S_{\rm{CH}}^{i}(X^\pm)=S_{\rm{CH}}^{i}(0) + \frac{4m_i}{3\chi} X^\pm,
 \end{equation}
 where $S_{\rm{CH}}^{i}(0)$ is the order parameter in the absence of bound charges,
-$m_i$ is empirical constant depending on the valency and position of bound charge,
-$X^\pm$ is the amount of bound charge per lipid, 
+$m_i$ is an empirical constant depending on the valency and position of bound charge,
+$X^\pm$ is the amount of the bound charge per lipid, 
 $i$ refers to either $\alpha$ or $\beta$, and
 the value of quadrupole coupling constant is $\chi \approx$ 167 kHz. 
-The order parameter change with respect to a bilayer without bound charges then becomes
+The change in order parameters with respect to a bilayer without bound charges then becomes
 \begin{equation}\label{OPchangeEQ}
 \Delta S_{\rm{CH}}^{i}= S_{\rm{CH}}^{i}(X^\pm)-S_{\rm{CH}}^{i}(0) =\frac{4m_i }{3\chi}X^\pm.
 \end{equation}
@@ -388,11 +389,11 @@ While electrometer concept is well established in experiments (see previous sect
 it is not {\it a priori} clear that it works in simulations. The overestimated order parameter
 decrease could, in principle, arise also from the oversensitivity of choline headgroups on cation binding,
 instead of overbinding. Here we analyse the relation between cation binding and choline order 
-parameter decrease in simulations in order to evaluate usability of electrometer concept in MD simulations.
+parameter decrease in simulations in order to evaluate the usability of the electrometer concept in MD simulations.
 
 According to the molecular electrometer concept, order parameter changes are linearly proportional to
 the amount of bound cations in bilayer (Eq.~\eqref{OPchangeEQ}).
-Figure~\ref{electrometer} shows the order parameter changes as a function of bound charge in MD simulations
+Figure~\ref{electrometer} shows the changes in order parameter as a function of bound charge in MD simulations
 (see ESI$^\dag$ for the definition of bound ions);
 in keeping with the molecular electrometer, roughly linear correlation between bound charge and order parameter change is found in all models.
 Note that quantitative comparison of the proportionality constants (i.e. slopes in Fig. \ref{electrometer})
@@ -429,7 +430,7 @@ response of Berger model to CaCl$_2$, but not to NaCl (see discussion in ESI$^\d
 Since simulation data with charged amphiphiles from other models is not available,
 the extended comparison with different models is left for further studies.
 
-Figure~\ref{electrometer} shows that the order parameter decrease clearly correlates with the
+Figure~\ref{electrometer} shows that the decrease on order parameter clearly correlates with the
 amount of bound cations also in simulations. This is also evident from Fig.~\ref{NAdensities},
 which shows the Na$^+$ density profiles of the MD models
 ordered according to the order parameter change 
@@ -671,7 +672,7 @@ correctly predict the cation binding affinity, and the associated structural cha
 As suggested by the molecular electrometer concept~\cite{akutsu81,altenbach84,seelig87,scherer89},
 the decrease in order parameters of $\alpha$ and $\beta$ carbons in the PC head group of lipids bilayers
 is related to cation binding  in all tested simulation models (Fig.~\ref{electrometer}), despite of known inaccuracies 
-in the actual atomistic resolution structures~\cite{botan15}. Hence molecular electrometer allows direct comparison
+in the actual atomistic resolution structures~\cite{botan15}. Hence the molecular electrometer concept allows a direct comparison
 of Na$^+$ binding affinity between simulations and noninvasive NMR experiments.
 The comparison reveals that most models overestimate Na$^+$ binding; only Orange, Lipid14, and CHARMM36 
 predict realistic binding affinity. None of the tested models has the required accuracy to interpret
@@ -727,8 +728,9 @@ MSM acknowledges financial support from the Volkswagen Foundation (86110).
 %
 M.G. acknowledges financial support from Finnish Center of International Mobility (Fellowship TM-9363).
 %
-J. M. acknowledges computational resources provided by the CESNET LM2015042 and the CERIT Scientific Cloud LM2015085 projects under the program ''Projects of Large Research, Development, and Innovations Infrastructure''
-
+J. Melcr acknowledges computational resources provided by the CESNET LM2015042 and the CERIT Scientific Cloud LM2015085 projects under the program ''Projects of Large Research, Development, and Innovations Infrastructure''
+%
+LM acknowledges funding from the Institut National de la Sante et de la Recherche Medicale (INSERM).
 
 \bibliography{refs} %You need to replace "rsc" on this line with the name of your .bib file
 \bibliographystyle{rsc} %the RSC's .bst file
