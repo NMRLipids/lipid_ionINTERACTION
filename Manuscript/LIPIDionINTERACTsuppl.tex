@@ -147,7 +147,7 @@
 \footnotetext{\textit{$^{b}$~Department of Neuroscience and Biomedical Engineering, Aalto University, Espoo, Finland}}
 \footnotetext{\textit{$^{c}$~Tampere University of Technology, Tampere, Finland}}
 \footnotetext{\textit{$^{d}$~University of Helsinki, Helsinki, Finland}}
-\footnotetext{\textit{$^{e}$~Institut Lumi{\'e}re Mati{\'e}re, UMR5306 Universit{\'e} Lyon 1-CNRS, Universit{\'e} de Lyon, 69622 Villeurbanne, France}}
+\footnotetext{\textit{$^{e}$~Univ Lyon, Universit{\'e} Claude Bernard Lyon 1, CNRS, Institut Lumi{\'e}re Mati{\'e}re, F-69622, LYON, France}}
 \footnotetext{\textit{$^{f}$~Institute of Organic Chemistry and Biochemistry, Czech Academy of Sciences, Flemingovo n{\'a}m. 2, 16610 Prague 6, Czech Republic, Charles University in Prague, Faculty of Mathematics and Physics, Ke Karlovu 3, 121 16 Prague 2, Czech Republic}}
 \footnotetext{\textit{$^{g}$~Fachbereich Physik, Freie Universit\"at Berlin, Berlin, Germany}}
 \footnotetext{\textit{$^{h}$~Max Planck Institute of Colloids and Interfaces, Department of Theory and Bio-Systems, Potsdam, Germany}}
@@ -476,18 +476,18 @@ was imposed by adding extra bonds through a harmonic potential $V(r) = k(r-r_0)^
 with $r_0=2.25$~\AA~ and $k=10$~kcal$\cdot$mol$^{-1}$$\cdot$\AA$^{-2}$.
  
 The starting  configuration of hydrated lipidic bilayers were constructed using {\it packmol} \cite{packmol} 
-with a large area per lipid (74~\AA$^{2}$). 
+with a large area per lipid (64~\AA$^{2}$). 
 After a first energy minimisation (5000 steps),
 varying amounts of Ca$^{2+}$ and Cl$^-$ ions were added  by replacing water molecules,
 using the {\it autoionize} plugin of vmd package \cite{hump96},
-mentioning explicitly the number of ions required.
-Ion placement is random, with the constraint of  minimum 5~\AA~ between ions and lipids,
+mentioning explicitly the ion concentration.
+Ion placement is random, with the constraint of  minimum 2~\AA~ between ions and lipids,
 as well as between any two ions. A second energy minimisation was performed after inserting the ions.
  
 All the minimisation and dynamics were conducted using the NAMD package~\cite{NAMD}.
 The temperature of the whole system was controlled with Langevin thermostat with a target temperature of 323~K 
 and a relaxation time constant of 1~ps.  The modified NAMD version of Nose--Hoover barostat with Langevin dynamics
-(piston period of 0.1~ps and piston decay time of 0.05~ps) was used semi-isotropically
+(piston period of 0.2~ps and piston decay time of 0.05~ps) was used semi-isotropically
 for an average target pressure of 1 bar and an average zero surface tension. 
 %The ratio of the box length in $x-$ and $y-$ directions was kept fixed to avoid spurious box anisotropy.
 %Samuli: This implies from semi-isotropic coupling, right?
@@ -624,13 +624,13 @@ the last 100 ns of each simulation was employed for the analysis.
 \section{Author Contributions}
 \noindent 
 {\it Andrea Catte} performed and analysed Slipids DPPC simulation with NaCl. \\
-{\it Mykhailo Girych} ran and analysed several simulations. \\
+{\it Mykhailo Girych} ran and analysed several simulations (LIPID14, Ulmschneider and CHARMM36+CaCl2). \\
 {\it Matti Javanainen} provided data for several lipid and ion models, participated in discussions throughout the project, and supervised the work of JT. \\
 {\it Claire Loison} provided results for CHARMM36 DPPC with CaCl$_{2}$ using Yoo's model, and commented on the manuscript. \\
 {\it Josef Melcr} performed and analysed Slipids DPPC simulation with NaCl and CHARMM36 POPC simulation without NBFIX, commented on the manuscript, and prepared the Table of Content figure. \\
 {\it Markus S. Miettinen} co-designed the project with OHSO.  Provided the Berger DMTAP/DMPC trajectories. Performed the analysis of $\Delta S_\mathrm{CH}$ as a function of bound charge.\\
 {\it Luca Monticelli} provided parameters for the Orange model and participated in discussions throughout the project. \\
-{\it Jukka M{\"a}{\"a}tt{\"a}} ran and analysed several simulations. Discussed the project actively in the blog. \\
+{\it Jukka M{\"a}{\"a}tt{\"a}} ran and analysed several simulations and participated in discussions throughout the project. \\
 {\it Vasily S. Oganesyan} performed and analysed Slipids DPPC simulation with NaCl.\\
 {\it O. H. Samuli Ollila} co-designed the project with MSM and managed the work. Ran and analysed several simulations. Wrote the manuscript. \\
 {\it Joona Tynkkynen } provided results for the MacRog model. \\
