@@ -130,8 +130,9 @@
 Despite the vast amount of experimental and theoretical studies on the binding affinity of cations into phospholipid bilayers, 
 especially the biologically relevant Na$^+$ and Ca$^{2+}$ ions,  there is no consensus in the literature. 
 In this paper, we show that the ion binding affinity can be directly compared between simulations and experiments by 
-using the choline headgroup order parameters according to the 'molecular electrometer' concept [Seelig \textit{et al., Biochemistry}, 1987, \textbf{26}, 7535].%~\cite{seelig87}.
-Our findings strongly support the pre-2000 view that Na$^+$ and other monovalent ions
+using the choline headgroup order parameters according to the 'molecular electrometer' 
+concept [Seelig \textit{et al., Biochemistry}, 1987, \textbf{26}, 7535].
+Our findings strongly support the view that Na$^+$ and other monovalent ions
 (except Li$^+$) do not specifically bind to phosphatidylcholine lipid bilayers with sub-molar concentrations, 
 in contrast to Ca$^{2+}$ and other multivalent ions. Especially the Na$^+$ binding affinity is 
 overestimated by several molecular dynamics simulation models, leading to 
@@ -161,8 +162,8 @@ all the scientific contributions were made publicly on this blog. } \\%The abstr
 \footnotetext{\textit{$^{a}$~School of Chemistry, University of East Anglia, Norwich, NR4 7TJ, United Kingdom}}
 \footnotetext{\textit{$^{b}$~Department of Neuroscience and Biomedical Engineering, Aalto University, Espoo, Finland}}
 \footnotetext{\textit{$^{c}$~Tampere University of Technology, Tampere, Finland}}
-\footnotetext{\textit{$^{d}$~University of Helsinki,Finland}}
-\footnotetext{\textit{$^{e}$~Institut Lumi{\'e}re Mati{\'e}re, UMR5306 Universit{\'e} Lyon 1-CNRS, Universit{\'e} de Lyon, 69622 Villeurbanne, France}}
+\footnotetext{\textit{$^{d}$~University of Helsinki, Helsinki, Finland}}
+\footnotetext{\textit{$^{e}$~Univ Lyon, Universit{\'e} Claude Bernard Lyon 1, CNRS, Institut Lumi{\'e}re Mati{\'e}re, F-69622, LYON, France}}
 \footnotetext{\textit{$^{f}$~Institute of Organic Chemistry and Biochemistry, Czech Academy of Sciences, Flemingovo n{\'a}m. 2, 16610 Prague 6, Czech Republic, Charles University in Prague, Faculty of Mathematics and Physics, Ke Karlovu 3, 121 16 Prague 2, Czech Republic}}
 \footnotetext{\textit{$^{g}$~Fachbereich Physik, Freie Universit\"at Berlin, Berlin, Germany}}
 \footnotetext{\textit{$^{h}$~Max Planck Institute of Colloids and Interfaces, Department of Theory and Bio-Systems, Potsdam, Germany}}
@@ -225,7 +226,7 @@ is highly similar to that of a  pure NaCl solution
 --- indicating that the ion--lipid interaction is very weak~\cite{binder02}. 
 
 The post-2000 'strong binding' view rests on experimental and above all simulation findings.
-At sub-molar NaCl concentrations, the rotational and translational dynamics of membrane-embedded fluorescent probes decrease~\cite{bockmann03,vacha09a,harb13}, and Atomic Force Microscopy (AFM) experiments show changes in bilayer hardness~\cite{manyes05,manyes06,fukuma07,ferber11,morata12};
+At sub-molar NaCl concentrations, the rotational and translational dynamics of membrane-embedded fluorescent probes decrease~\cite{bockmann03,vacha09a,harb13}, and atomic force microscopy (AFM) experiments show changes in bilayer hardness~\cite{manyes05,manyes06,fukuma07,ferber11,morata12};
 in atomistic molecular dynamics (MD) simulations, phospholipid bilayers consistently bind Na${^+}$,
 although the binding strength depends on the model used~\cite{bockmann03,bockmann04,sachs04,berkowitz06,cordomi08,cordomi09,valley11,berkowitz12}.
 
@@ -268,7 +269,7 @@ Moreover, we show that the accuracy of lipid--Ca$^{2+}$ interactions
 in current models is not enough for atomistic resolution interpretation of NMR experiments. 
 
 This work has been done as an Open Collaboration at \url{nmrlipids.blogspot.fi};
-all the related files (\url{https://github.com/NMRLipids/lipid_ionINTERACTION})
+all the related files \cite{githubIONpaper} %(\url{https://github.com/NMRLipids/lipid_ionINTERACTION})
 and almost all the simulation data (\url{https://zenodo.org/collection/user-nmrlipids})
 are openly available.
 
@@ -286,10 +287,11 @@ are openly available.
 
 \subsection{Background: Molecular electrometer in experiments}\label{conceptinexperiments}
 The molecular electrometer concept is based on the experimental observation that
-binding of any charged objects on a PC bilayer interface induces systematic changes in the choline $\beta$ and $\alpha$
+binding of any charged objects (e.g. ions, peptides, anesthetics, amphihiles) on a PC bilayer interface induces 
+systematic changes in the choline $\beta$ and $\alpha$
 segment order parameters~\cite{akutsu81,altenbach84,altenbach85,seelig87,macdonald87,scherer89,roux90,beschiasvili91,marassi92,rydall92}.
 Thus, these changes can be used to determine binding affinities of the charged objects.
-Molecular electrometer was originally devised for cations~\cite{akutsu81,altenbach84}, but
+The molecular electrometer was originally devised for cations~\cite{akutsu81,altenbach84}, but
 further experimental quantification with various positively and negatively charged 
 molecules showed that the choline order parameters $S_\mathrm{CH}^\alpha$ and $S_\mathrm{CH}^\beta$ 
 in general vary linearly with small amount of bound charge per 
@@ -299,11 +301,11 @@ The empirically observed linear relation can be written as~\cite{ferreira16}
 S_{\rm{CH}}^{i}(X^\pm)=S_{\rm{CH}}^{i}(0) + \frac{4m_i}{3\chi} X^\pm,
 \end{equation}
 where $S_{\rm{CH}}^{i}(0)$ is the order parameter in the absence of bound charges,
-$m_i$ is empirical constant depending on the valency and position of bound charge,
-$X^\pm$ is the amount of bound charge per lipid, 
+$m_i$ is an empirical constant depending on the valency and position of bound charge,
+$X^\pm$ is the amount of the bound charge per lipid, 
 $i$ refers to either $\alpha$ or $\beta$, and
 the value of quadrupole coupling constant is $\chi \approx$ 167 kHz. 
-The order parameter change with respect to a bilayer without bound charges then becomes
+The change in order parameters with respect to a bilayer without bound charges then becomes
 \begin{equation}\label{OPchangeEQ}
 \Delta S_{\rm{CH}}^{i}= S_{\rm{CH}}^{i}(X^\pm)-S_{\rm{CH}}^{i}(0) =\frac{4m_i }{3\chi}X^\pm.
 \end{equation}
@@ -335,14 +337,14 @@ positive~\cite{hong95a,hong95b,gross97}, we can conclude
 that both $\Delta S_{\rm{CH}}^{\beta}$ and $\Delta S_{\rm{CH}}^{\alpha}$ decrease with bound positive charge 
 and increase with bound negative charge. Consequently, values of $m_i$ are negative for
 bound positive charges and {\it vice versa}. This can be rationalised by electrostatically 
-induced changes in choline P-N dipole tilt \cite{seelig87,scherer89,seelig90}, which is also
+induced changes in choline P--N dipole tilt \cite{seelig87,scherer89,seelig90}, which is also
 seen in simulations~\cite{gurtovenko05,cordomi08,cordomi09,zhao12}. 
-This is in line with order parameter decrease related to the P-N vector tilting more parallel to membrane plane seen with decreasing hydration levels~\cite{botan15}. 
+This is in line with order parameter decrease related to the P--N vector tilting more parallel to membrane plane seen with decreasing hydration levels~\cite{botan15}. 
 
 
 The quantification of $\Delta S_\mathrm{CH}^\beta$ and $\Delta S_\mathrm{CH}^\alpha$
 with different cations
-have revealed that $\Delta S_{\rm{CH}}^{\beta}/\Delta S_{\rm{CH}}^{\alpha} \approx$0.5 for a wide range
+have revealed that $\Delta S_{\rm{CH}}^{\beta}/\Delta S_{\rm{CH}}^{\alpha} \approx$ 0.5 for a wide range
 of different cations (aqueous cations, cationic peptides, cationic anesthetics)~\cite{beschiasvili91,rydall92}.
 More specifically,
 the relation $\Delta S_{\rm{CH}}^{\beta}=0.43 \Delta S_{\rm{CH}}^{\alpha}$ was found for a DPPC bilayer
@@ -369,7 +371,7 @@ while binding of Ca$^{2+}$ ions at the same concentration is significant~\cite{a
 
 
 Figure~\ref{ordPions} also reports order parameter changes calculated from MD simulations
-of DPPC and POPC lipid bilayers as a function of NaCl or CaCl$_2$ concentrations in solution
+of DPPC and POPC lipid bilayers as a function of NaCl or CaCl$_2$ initial concentrations in solution
 (for details of the simulated systems see Tables~\ref{IONsystems},~\ref{IONsystems2} and ESI$^\dag$).
 Note that none of these MD models
 reproduced within experimental uncertainty the order parameters for a pure PC bilayer without ions
@@ -387,11 +389,11 @@ While electrometer concept is well established in experiments (see previous sect
 it is not {\it a priori} clear that it works in simulations. The overestimated order parameter
 decrease could, in principle, arise also from the oversensitivity of choline headgroups on cation binding,
 instead of overbinding. Here we analyse the relation between cation binding and choline order 
-parameter decrease in simulations in order to evaluate usability of electrometer concept in MD simulations.
+parameter decrease in simulations in order to evaluate the usability of the electrometer concept in MD simulations.
 
 According to the molecular electrometer concept, order parameter changes are linearly proportional to
 the amount of bound cations in bilayer (Eq.~\eqref{OPchangeEQ}).
-Figure~\ref{electrometer} shows the order parameter changes as a function of bound charge in MD simulations
+Figure~\ref{electrometer} shows the changes in order parameter as a function of bound charge in MD simulations
 (see ESI$^\dag$ for the definition of bound ions);
 in keeping with the molecular electrometer, roughly linear correlation between bound charge and order parameter change is found in all models.
 Note that quantitative comparison of the proportionality constants (i.e. slopes in Fig. \ref{electrometer})
@@ -428,7 +430,7 @@ response of Berger model to CaCl$_2$, but not to NaCl (see discussion in ESI$^\d
 Since simulation data with charged amphiphiles from other models is not available,
 the extended comparison with different models is left for further studies.
 
-Figure~\ref{electrometer} shows that the order parameter decrease clearly correlates with the
+Figure~\ref{electrometer} shows that the decrease on order parameter clearly correlates with the
 amount of bound cations also in simulations. This is also evident from Fig.~\ref{NAdensities},
 which shows the Na$^+$ density profiles of the MD models
 ordered according to the order parameter change 
@@ -487,38 +489,38 @@ A careful analysis with current lipid models is performed in the next section.
 \begin{tabular}{c c c c c c c c c c c c}
   %\hline
   % some footnotes are not visible in typeset-MS (pdf)
-  Force field (lipid, ion)& lipid & [Ion] mM & \footnote{The number of lipid molecules}N$_{\rm l}$   &  \footnote{The number of water molecules}N$_{\rm w}$   & \footnote{The number of Na$^+$ molecules}N$_{\rm Na}$  & \footnote{The number of Ca$^{2+}$ molecules}N$_{\rm Ca}$   &  \footnote{The number of Cl molecules}N$_{\rm Cl}$ & \footnote{Simulation temperature}T (K)  & \footnote{The total simulation time}t$_{{\rm sim}}$(ns) & \footnote{Time frames used in the analysis}t$_{{\rm anal}}$ (ns) & Files\\
+  Force field (lipid, ion)& lipid & [Ion] mM & \footnote{The number of lipid molecules}N$_{\rm l}$   &  \footnote{The number of water molecules}N$_{\rm w}$   & \footnote{The number of Na$^+$ molecules}N$_{\rm Na}$  & \footnote{The number of Ca$^{2+}$ molecules}N$_{\rm Ca}$   &  \footnote{The number of Cl molecules}N$_{\rm Cl}$ & \footnote{Simulation temperature}T (K)  & \footnote{The total simulation time}t$_{{\rm sim}}$(ns) & \footnote{Time frames used in the analysis}t$_{{\rm anal}}$ (ns) & \footnote{Reference for simulation files}Files\\
   \hline
-  Berger-POPC-07\cite{ollila07a}   &   POPC & 0          & 128 & 7290 & 0  & 0  & 0 & 298  & 270 & 240 & \cite{bergerFILESpopc}  \\
-  Berger-POPC-07\cite{ollila07a}, ffgmx\cite{straatsma88}  &   POPC & 340 (NaCl) & 128 & 7202 & 44  & 0  & 44 &298  & 110 & 50 & \cite{bergerPOPC340mMNaClfiles} \\
+  Berger-POPC-07\cite{ollila07a}   &   POPC & 0          & 128 & 7290 & 0  & 0  & 0 & 298  & 270 & 240 & \citenum{bergerFILESpopc}  \\
+  Berger-POPC-07\cite{ollila07a}, ffgmx\cite{straatsma88}  &   POPC & 340 (NaCl) & 128 & 7202 & 44  & 0  & 44 &298  & 110 & 50 & \citenum{bergerPOPC340mMNaClfiles} \\
   %\hdashline
-  Berger-POPC-07\cite{ollila07a}, ffgmx\cite{straatsma88}  &   POPC & 340 (CaCl$_2$) & 128 & 7157 & 0 & 44  & 88 &298 & 108 & 58 &\cite{bergerPOPC340mMCaClfiles}  \\
+  Berger-POPC-07\cite{ollila07a}, ffgmx\cite{straatsma88}  &   POPC & 340 (CaCl$_2$) & 128 & 7157 & 0 & 44  & 88 &298 & 108 & 58 &\citenum{bergerPOPC340mMCaClfiles}  \\
   \hline
-  Berger-DPPC-97\cite{marrink98}   &   DPPC & 0 & 72 & 2880 & 0  & 0  & 0 &323  & 60 & 50 &\cite{bergerDPPCfiles} \\
-  Berger-DPPC-97\cite{marrink98}, ffgmx\cite{straatsma88}   &   DPPC & 150 (NaCl) & 72 & 2880 & 8  & 0  & 8 &323  & 120 & 60 &\cite{bergerDPPC150mMfiles} \\
-  Berger-DPPC-97\cite{marrink98}, ffgmx\cite{straatsma88}   &   DPPC & 1000 (NaCl) & 72 & 2778 & 51  & 0  & 51 &323  & 120 & 60 &\cite{bergerDPPC1000mMfiles} \\
+  Berger-DPPC-97\cite{marrink98}   &   DPPC & 0 & 72 & 2880 & 0  & 0  & 0 &323  & 60 & 50 &\citenum{bergerDPPCfiles} \\
+  Berger-DPPC-97\cite{marrink98}, ffgmx\cite{straatsma88}   &   DPPC & 150 (NaCl) & 72 & 2880 & 8  & 0  & 8 &323  & 120 & 60 &\citenum{bergerDPPC150mMfiles} \\
+  Berger-DPPC-97\cite{marrink98}, ffgmx\cite{straatsma88}   &   DPPC & 1000 (NaCl) & 72 & 2778 & 51  & 0  & 51 &323  & 120 & 60 &\citenum{bergerDPPC1000mMfiles} \\
   \hline
-  BergerOPLS-DPPC-06\cite{tieleman06} &   DPPC & 0 & 72 & 2880 & 0  & 0  & 0 &323  & 120 & 60 &\cite{bergerOPLSDPPCfiles} \\
-  BergerOPLS-DPPC-06\cite{tieleman06}, OPLS\cite{aqvist90} &   DPPC & 150 (NaCl) & 72 & 2880 & 8  & 0  & 8 &323  & 120 & 60 &\cite{bergerOPLSDPPCfiles150mMnacl} \\
-  BergerOPLS-DPPC-06\cite{tieleman06}, OPLS\cite{aqvist90} &   DPPC & 1000 (NaCl) & 72 & 2778 & 51  & 0  & 51 &323  & 120 & 60 &\cite{bergerOPLSDPPCfiles1000mMnacl} \\
+  BergerOPLS-DPPC-06\cite{tieleman06} &   DPPC & 0 & 72 & 2880 & 0  & 0  & 0 &323  & 120 & 60 &\citenum{bergerOPLSDPPCfiles} \\
+  BergerOPLS-DPPC-06\cite{tieleman06}, OPLS\cite{aqvist90} &   DPPC & 150 (NaCl) & 72 & 2880 & 8  & 0  & 8 &323  & 120 & 60 &\citenum{bergerOPLSDPPCfiles150mMnacl} \\
+  BergerOPLS-DPPC-06\cite{tieleman06}, OPLS\cite{aqvist90} &   DPPC & 1000 (NaCl) & 72 & 2778 & 51  & 0  & 51 &323  & 120 & 60 &\citenum{bergerOPLSDPPCfiles1000mMnacl} \\
   \hline
-  CHARMM36\cite{klauda10}   & POPC & 0           & 72 & 2242 & 0  & 0 & 0 & 303  & 30 & 20 & \cite{charmm36filesSHORT} \\
-  CHARMM36\cite{klauda10}, CHARMM36\cite{venable13} & POPC & 350 (NaCl)  & 72 & 2085 & 13  & 0 & 13 & 303  & 80 & 60 & \cite{charmmPOPC350mMNaClfiles} \\
-  CHARMM36\cite{klauda10}, CHARMM36\cite{venable13} & POPC & 690 (NaCl)  & 72 & 2085 & 26  & 0 & 26 & 303  & 73 & 60 & \cite{charmmPOPC690mMNaClfiles}   \\
-  CHARMM36\cite{klauda10}, CHARMM36\cite{venable13}  & POPC & 950 (NaCl)  & 72 & 2168 & 37  & 0 & 37 & 303  & 80 & 60 &\cite{charmmPOPC950mMNaClfiles}  \\
-  CHARMM36\cite{klauda10}, CHARMM36 & POPC &  350 (CaCl$_2$)  & 128 & 6400 & 0& 35 & 70 & 303  & 200  & 100 & \cite{charmmPOPC350mMCaClfiles}  \\
-  CHARMM36\cite{klauda10}, CHARMM36 & POPC &  450 (CaCl$_2$)  & 200 & 9000 & 0& 73 & 146 & 310  & 2000  & 100 & \cite{charmmPOPC450mMCaClfiles}  \\
-  CHARMM36\cite{klauda10}, CHARMM36 & POPC &  670 (CaCl$_2$)  & 128 & 6400 & 0& 67 & 134 & 303  & 200  & 120 & \cite{charmmPOPC670mMCaClfiles}  \\  
-  CHARMM36\cite{klauda10}, CHARMM36 & POPC &  1000 (CaCl$_2$) & 128 & 6400 & 0& 100 & 200 & 303 & 200  & 100 & \cite{charmmPOPC1000mMCaClfiles}  \\
+  CHARMM36\cite{klauda10}   & POPC & 0           & 72 & 2242 & 0  & 0 & 0 & 303  & 30 & 20 & \citenum{charmm36filesSHORT} \\
+  CHARMM36\cite{klauda10}, CHARMM36\cite{venable13} & POPC & 350 (NaCl)  & 72 & 2085 & 13  & 0 & 13 & 303  & 80 & 60 & \citenum{charmmPOPC350mMNaClfiles} \\
+  CHARMM36\cite{klauda10}, CHARMM36\cite{venable13} & POPC & 690 (NaCl)  & 72 & 2085 & 26  & 0 & 26 & 303  & 73 & 60 & \citenum{charmmPOPC690mMNaClfiles}   \\
+  CHARMM36\cite{klauda10}, CHARMM36\cite{venable13}  & POPC & 950 (NaCl)  & 72 & 2168 & 37  & 0 & 37 & 303  & 80 & 60 &\citenum{charmmPOPC950mMNaClfiles}  \\
+  CHARMM36\cite{klauda10}, CHARMM36 & POPC &  350 (CaCl$_2$)  & 128 & 6400 & 0& 35 & 70 & 303  & 200  & 100 & \citenum{charmmPOPC350mMCaClfiles}  \\
+  CHARMM36\cite{klauda10}, CHARMM36 & POPC &  450 (CaCl$_2$)  & 200 & 9000 & 0& 73 & 146 & 310  & 2000  & 100 & \citenum{charmmPOPC450mMCaClfiles}  \\
+  CHARMM36\cite{klauda10}, CHARMM36 & POPC &  670 (CaCl$_2$)  & 128 & 6400 & 0& 67 & 134 & 303  & 200  & 120 & \citenum{charmmPOPC670mMCaClfiles}  \\  
+  CHARMM36\cite{klauda10}, CHARMM36 & POPC &  1000 (CaCl$_2$) & 128 & 6400 & 0& 100 & 200 & 303 & 200  & 100 & \citenum{charmmPOPC1000mMCaClfiles}  \\
   \hline
-  CHARMM36\cite{klauda10}, Yoo\cite{yoo16}  & DPPC & 430 (CaCl$_2$)  & 128 & 7760 & 60  & 0 & 120 & 323  & 200 & 170 & -  \\
-  CHARMM36\cite{klauda10}, Yoo\cite{yoo16}  & DPPC & 886 (CaCl$_2$)  & 128 & 7520 & 120  & 0 & 240 & 323  & 200 & 170 & -  \\
+  CHARMM36\cite{klauda10}, Yoo\cite{yoo16}  & DPPC & 430 (CaCl$_2$)  & 128 & 7760 & 0 & 60  & 120 & 323  & 200 & 170 & -  \\
+  CHARMM36\cite{klauda10}, Yoo\cite{yoo16}  & DPPC & 886 (CaCl$_2$)  & 128 & 7520 & 0 & 120 & 240 & 323  & 200 & 170 & -  \\
   \hline
-  MacRog\cite{maciejewski14}  & POPC & 0 & 288 & 14400 & 0 & 0 & 0 & 310 & 90&40  &~\cite{macrogdehydFILES}  \\
-  MacRog\cite{maciejewski14}, OPLS\cite{aqvist90}  & POPC & 100 (NaCl) & 288 & 14554 & 27 & 0 & 27 & 310 & 90&50  & \cite{macrogIONfiles} \\
-  MacRog\cite{maciejewski14}, OPLS\cite{aqvist90}  & POPC &  210 (NaCl) & 288 & 14500 & 54 & 0 & 54 & 310 & 90&50  &\cite{macrogIONfiles}  \\
-  MacRog\cite{maciejewski14}, OPLS\cite{aqvist90}  & POPC &   310 (NaCl) & 288 & 14446 & 81 & 0 & 81 & 310 & 90&50  & \cite{macrogIONfiles} \\
-  MacRog\cite{maciejewski14}, OPLS\cite{aqvist90}  & POPC &   420 (NaCl) & 288 & 14392 & 108 & 0 & 108 & 310 & 90& 50  & \cite{macrogIONfiles}  \\
+  MacRog\cite{maciejewski14}  & POPC & 0 & 288 & 14400 & 0 & 0 & 0 & 310 & 90&40  &~\citenum{macrogdehydFILES}  \\
+  MacRog\cite{maciejewski14}, OPLS\cite{aqvist90}  & POPC & 100 (NaCl) & 288 & 14554 & 27 & 0 & 27 & 310 & 90&50  & \citenum{macrogIONfiles} \\
+  MacRog\cite{maciejewski14}, OPLS\cite{aqvist90}  & POPC &  210 (NaCl) & 288 & 14500 & 54 & 0 & 54 & 310 & 90&50  &\citenum{macrogIONfiles}  \\
+  MacRog\cite{maciejewski14}, OPLS\cite{aqvist90}  & POPC &   310 (NaCl) & 288 & 14446 & 81 & 0 & 81 & 310 & 90&50  & \citenum{macrogIONfiles} \\
+  MacRog\cite{maciejewski14}, OPLS\cite{aqvist90}  & POPC &   420 (NaCl) & 288 & 14392 & 108 & 0 & 108 & 310 & 90& 50  & \citenum{macrogIONfiles}  \\
 \end{tabular}
 \end{sidewaystable*} 
 
@@ -531,32 +533,32 @@ A careful analysis with current lipid models is performed in the next section.
 \begin{tabular}{c c c c c c c c c c c c}
   %\hline
   % some footnotes are not visible in typeset-MS (pdf)
-  Force field (lipid, ion)& lipid & [Ion] mM & \footnote{The number of lipid molecules}N$_{\rm l}$   &  \footnote{The number of water molecules}N$_{\rm w}$   & \footnote{The number of Na$^+$ molecules}N$_{\rm Na}$  & \footnote{The number of Ca$^{2+}$ molecules}N$_{\rm Ca}$   &  \footnote{The number of Cl molecules}N$_{\rm Cl}$ & \footnote{Simulation temperature}T (K)  & \footnote{The total simulation time}t$_{{\rm sim}}$(ns) & \footnote{Time frames used in the analysis}t$_{{\rm anal}}$ (ns) & Files\\
+  Force field (lipid, ion)& lipid & [Ion] mM & \footnote{The number of lipid molecules}N$_{\rm l}$   &  \footnote{The number of water molecules}N$_{\rm w}$   & \footnote{The number of Na$^+$ molecules}N$_{\rm Na}$  & \footnote{The number of Ca$^{2+}$ molecules}N$_{\rm Ca}$   &  \footnote{The number of Cl molecules}N$_{\rm Cl}$ & \footnote{Simulation temperature}T (K)  & \footnote{The total simulation time}t$_{{\rm sim}}$(ns) & \footnote{Time frames used in the analysis}t$_{{\rm anal}}$ (ns) & \footnote{Reference for simulation files}Files\\
   \hline
-  Orange, OPLS\cite{aqvist90}  &   POPC & 0 & 72 & 2880 & 0 & 0  & 0 & 298 & 60 & 50 & \cite{orangePOPCfiles}  \\
-  Orange, OPLS\cite{aqvist90} &   POPC & 140 (NaCl) & 72 & 2866 & 7 & 0  & 7 & 298 & 120 & 60 &\cite{orangePOPC140mMNaClfiles}  \\
-  Orange, OPLS\cite{aqvist90}  &   POPC & 510 (NaCl) & 72 & 2802 & 26 & 0  & 26 & 298 & 120 & 100 &\cite{orangePOPC510mMNaClfiles}   \\
-  Orange, OPLS\cite{aqvist90}  &   POPC & 1000 (NaCl) & 72 & 2780 & 50 & 0  & 50 & 298 & 120 & 80 & \cite{orangePOPC1000mMNaClfiles} \\
+  Orange, OPLS\cite{aqvist90}  &   POPC & 0 & 72 & 2880 & 0 & 0  & 0 & 298 & 60 & 50 & \citenum{orangePOPCfiles}  \\
+  Orange, OPLS\cite{aqvist90} &   POPC & 140 (NaCl) & 72 & 2866 & 7 & 0  & 7 & 298 & 120 & 60 &\citenum{orangePOPC140mMNaClfiles}  \\
+  Orange, OPLS\cite{aqvist90}  &   POPC & 510 (NaCl) & 72 & 2802 & 26 & 0  & 26 & 298 & 120 & 100 &\citenum{orangePOPC510mMNaClfiles}   \\
+  Orange, OPLS\cite{aqvist90}  &   POPC & 1000 (NaCl) & 72 & 2780 & 50 & 0  & 50 & 298 & 120 & 80 & \citenum{orangePOPC1000mMNaClfiles} \\
   %\hdashline
-  Orange, OPLS &   POPC & 510 (CaCl$_2$)  & 72 & 2802 & 0 & 26  & 52 & 298 & 120 & 60 & \cite{orangePOPC510mMCaClfiles}  \\
+  Orange, OPLS &   POPC & 510 (CaCl$_2$)  & 72 & 2802 & 0 & 26  & 52 & 298 & 120 & 60 & \citenum{orangePOPC510mMCaClfiles}  \\
   \hline
-  Slipids\cite{jambeck12}   &   DPPC & 0 & 128 &3840 & 0 & 0  & 0 & 323 & 150 & 100 &~\cite{slipidsFILES}  \\
+  Slipids\cite{jambeck12}   &   DPPC & 0 & 128 &3840 & 0 & 0  & 0 & 323 & 150 & 100 &~\citenum{slipidsFILES}  \\
   Slipids\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   DPPC & 150 (NaCl)  & 600 & 18000 & 49 & 0  &  49 & 323 & 100 & 40 &-  \\
-  Slipids\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   DPPC & 850 (NaCl)  & 128 & 3726 &  57 & 0  &  57 & 323 & 105 & 100 & \cite{slipidsFILESdppc}  \\
+  Slipids\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   DPPC & 850 (NaCl)  & 128 & 3726 &  57 & 0  &  57 & 323 & 105 & 100 & \citenum{slipidsFILESdppc}  \\
   \hline
-  Slipids\cite{jambeck12b}   &   POPC & 0 & 128 & 5120 & 0 & 0  & 0 & 303 & 200 & 150 &~\cite{slipidsFILESpopc}  \\
-  Slipids\cite{jambeck12b}, AMBER\cite{smith94}  &  POPC & 130 (NaCl) & 200 & 9000 & 21 & 0  & 21 & 310 & 105 & 100 &~\cite{slipidsFILESpopc130mMnaclSD}  \\
-  Slipids\cite{jambeck12b}, AMBER\cite{aqvist90}  &  POPC & 450 (CaCl) & 200 & 9000  & 0 & 73  & 146 & 310 & 2000 & 100 &~\cite{slipidsFILESpopc450mMcacl}  \\
+  Slipids\cite{jambeck12b}   &   POPC & 0 & 128 & 5120 & 0 & 0  & 0 & 303 & 200 & 150 &~\citenum{slipidsFILESpopc}  \\
+  Slipids\cite{jambeck12b}, AMBER\cite{smith94}  &  POPC & 130 (NaCl) & 200 & 9000 & 21 & 0  & 21 & 310 & 105 & 100 &~\citenum{slipidsFILESpopc130mMnaclSD}  \\
+  Slipids\cite{jambeck12b}, AMBER\cite{aqvist90}  &  POPC & 450 (CaCl) & 200 & 9000  & 0 & 73  & 146 & 310 & 2000 & 100 &~\citenum{slipidsFILESpopc450mMcacl}  \\
   \hline
-  Lipid14~\cite{dickson14}, AMBER\cite{aqvist90}  &   POPC & 0          & 128 & 5120 & 0 & 0  & 0 & 298 & 205 & 200 &~\cite{lipid14POPC0mMNaClfiles}  \\
-  Lipid14~\cite{dickson14}, AMBER\cite{aqvist90}   &   POPC & 150 (NaCl) & 128 & 5120 & 12 & 0 & 12 & 298 & 205 & 200 &~\cite{lipid14POPC150mMNaClfiles}  \\
-  Lipid14~\cite{dickson14}, AMBER\cite{aqvist90}   &   POPC & 1000 (NaCl) & 128 & 5120 & 77 & 0 & 77 & 298 & 205 & 200 &~\cite{lipid14POPC1000mMNaClfiles}  \\
-  Lipid14~\cite{dickson14}, AMBER\cite{aqvist90}   &   POPC & 350 (CaCl$_2$) & 128 & 6400 & 0 & 35 & 70 & 298 & 200 & 100 &~\cite{lipid14POPC350mMCaClfiles}  \\
-  Lipid14~\cite{dickson14}, AMBER\cite{aqvist90}   &   POPC & 1000 (CaCl$_2$) & 128 & 6400 & 0 & 100 & 200 & 298 & 200 & 100 &~\cite{lipid14POPC1000mMCaClfiles}  \\
+  Lipid14~\cite{dickson14}, AMBER\cite{aqvist90}  &   POPC & 0          & 128 & 5120 & 0 & 0  & 0 & 298 & 205 & 200 &~\citenum{lipid14POPC0mMNaClfiles}  \\
+  Lipid14~\cite{dickson14}, AMBER\cite{aqvist90}   &   POPC & 150 (NaCl) & 128 & 5120 & 12 & 0 & 12 & 298 & 205 & 200 &~\citenum{lipid14POPC150mMNaClfiles}  \\
+  Lipid14~\cite{dickson14}, AMBER\cite{aqvist90}   &   POPC & 1000 (NaCl) & 128 & 5120 & 77 & 0 & 77 & 298 & 205 & 200 &~\citenum{lipid14POPC1000mMNaClfiles}  \\
+  Lipid14~\cite{dickson14}, AMBER\cite{aqvist90}   &   POPC & 350 (CaCl$_2$) & 128 & 6400 & 0 & 35 & 70 & 298 & 200 & 100 &~\citenum{lipid14POPC350mMCaClfiles}  \\
+  Lipid14~\cite{dickson14}, AMBER\cite{aqvist90}   &   POPC & 1000 (CaCl$_2$) & 128 & 6400 & 0 & 100 & 200 & 298 & 200 & 100 &~\citenum{lipid14POPC1000mMCaClfiles}  \\
   \hline
-  Ulmschneiders~\cite{Ulmschneider09}, OPLS\cite{aqvist90}       &   POPC & 0          & 128 & 5120 & 0 & 0  & 0 & 298.15 & 205 & 200 &~\cite{ulmschneiderPOPC0mMNaClfiles}  \\
-  Ulmschneiders~\cite{Ulmschneider09}, OPLS\cite{aqvist90}       &   POPC & 150 (NaCl) & 128 & 5120 & 12 & 0  & 12 & 298.15 & 205 & 200 &~\cite{ulmschneiderPOPC150mMNaClfiles}  \\
-  Ulmschneiders~\cite{Ulmschneider09}, OPLS\cite{aqvist90}       &   POPC & 1000 (NaCl) & 128 & 5120 & 77 & 0  & 77 & 298.15 & 205 & 200 &~\cite{ulmschneiderPOPC1000mMNaClfiles}  \\
+  Ulmschneiders~\cite{Ulmschneider09}, OPLS\cite{aqvist90}       &   POPC & 0          & 128 & 5120 & 0 & 0  & 0 & 298.15 & 205 & 200 &~\citenum{ulmschneiderPOPC0mMNaClfiles}  \\
+  Ulmschneiders~\cite{Ulmschneider09}, OPLS\cite{aqvist90}       &   POPC & 150 (NaCl) & 128 & 5120 & 12 & 0  & 12 & 298.15 & 205 & 200 &~\citenum{ulmschneiderPOPC150mMNaClfiles}  \\
+  Ulmschneiders~\cite{Ulmschneider09}, OPLS\cite{aqvist90}       &   POPC & 1000 (NaCl) & 128 & 5120 & 77 & 0  & 77 & 298.15 & 205 & 200 &~\citenum{ulmschneiderPOPC1000mMNaClfiles}  \\
 \end{tabular}
 \end{sidewaystable*} 
 
@@ -593,7 +595,7 @@ The overestimated binding in the other models raise questions on the quality of 
 Especially interactions between charged molecules and lipid bilayer might be significantly
 affected by the strong Na$^+$ binding, as it makes the bilayer effectively positively charged.
 
-Significant Ca$^{2+}$ binding affinity to a phosphatidylcholine bilayer at mM concentrations  
+Significant Ca$^{2+}$ binding affinity to a phosphatidylcholine bilayer at sub-molar concentrations  
 is agreed in the literature~\cite{akutsu81,altenbach84,cevc90,tocanne90}, however, several
 details are yet under discussion. Simulations suggest that Ca$^{2+}$ bind to lipid carbonyl
 oxygens with coordination number of 4.2~\cite{bockmann04}, while interpretation of NMR and 
@@ -646,7 +648,7 @@ incomplete treatment of electronic polarizability~\cite{leontyev11}, or inaccura
 description~\cite{botan15}. Cordomi et al.~\cite{cordomi09} showed that the Na$^+$ binding affinity decreases when ion radius increases
 in the model, however, also the models with the largest radius show significant binding in DPPC bilayer simulated with
 OPLS-AA force field~\cite{jorgensen96}. In our results, the Slipids model gives essentially similar binding affinity with 
-ion parameters from Refs.~\cite{smith94} and~\cite{beglov94,roux96}. Further, the compensation of missing electronic 
+ion parameters from Refs.~\citenum{smith94} and~\citenum{beglov94,roux96}. Further, the compensation of missing electronic 
 polarizability by scaling ion charge~\cite{kohagen16,leontyev11} reduced Na$^+$ binding in Berger, 
 BergerOPLS and Slipids models, but not enough to be in agreement with experiments (ESI$^\dag$). 
 The charge-scaled Ca$^{2+}$ model~\cite{kohagen14} slightly reduced binding in CHARMM36, but did not have 
@@ -670,23 +672,23 @@ correctly predict the cation binding affinity, and the associated structural cha
 As suggested by the molecular electrometer concept~\cite{akutsu81,altenbach84,seelig87,scherer89},
 the decrease in order parameters of $\alpha$ and $\beta$ carbons in the PC head group of lipids bilayers
 is related to cation binding  in all tested simulation models (Fig.~\ref{electrometer}), despite of known inaccuracies 
-in the actual atomistic resolution structures~\cite{botan15}. Hence molecular electrometer allows direct comparison
+in the actual atomistic resolution structures~\cite{botan15}. Hence the molecular electrometer concept allows a direct comparison
 of Na$^+$ binding affinity between simulations and noninvasive NMR experiments.
 The comparison reveals that most models overestimate Na$^+$ binding; only Orange, Lipid14, and CHARMM36 
 predict realistic binding affinity. None of the tested models has the required accuracy to interpret
 the Ca$^{2+}$:lipid stoichiometry or induced structural changes with atomistic resolution.
 
-In general, our results support the pre-2000 view that at mM concentrations, in contrast to Ca$^{2+}$ and other multivalent ions~\cite{eisenberg79,akutsu81,altenbach84,tatulian87,cevc90,tocanne90,clarke99,binder02,pabst07,filippov09},
+In general, our results support the pre-2000 view that at sub-molar concentrations, in contrast to Ca$^{2+}$ and other multivalent ions~\cite{eisenberg79,akutsu81,altenbach84,tatulian87,cevc90,tocanne90,clarke99,binder02,pabst07,filippov09},
 Na$^+$ and other monovalent ions (except Li$^+$) do not specifically bind to phospholipid bilayers.
 Concerning the interpretation of existing experimental data, our work supports Cevc's view~\cite{cevc90}
 that the observed small shift in phase transition temperature is not indicative of Na$^+$ binding.
 Further, our findings are in line with the noninvasive NMR spectroscopy work of Filippov et al.~\cite{filippov09} 
-that proved the results of Refs.~\cite{bockmann03,vacha09a,harb13} to be explainable by direct interactions between Na$^+$ ions and fluorescent probes.
+that proved the results of Refs.~\citenum{bockmann03,vacha09a,harb13} to be explainable by direct interactions between Na$^+$ ions and fluorescent probes.
 Finally, as spectroscopic methods are in general more sensitive to atomistic details in fluid-like environment than AFM, our work indirectly suggests that the ion 
-binding reported from AFM experiments on fluid--like lipid bilayer systems~\cite{manyes05,manyes06,fukuma07,ferber11,morata12} might be confounded with other physical features of the system.
+binding reported from AFM experiments on fluid-like lipid bilayer systems~\cite{manyes05,manyes06,fukuma07,ferber11,morata12} might be confounded with other physical features of the system.
 %\todo{This feels like a detached comment\ldots Could we back this claim up, or rephrase? I mean, now it sounds a bit like we came to conclude based on our simulations that the AFM resolution is not enough. \\
 %OLLILA: Rephrasing is welcomed. In the the end, my justification for this comment is that spectrocopy is in general more reliable for atomistic resolution information than AFM in fluid--like environment. Also, I think that the AFM data supporting Na binding is quite indirect and can be interpreted in many ways but full discussion about this would be quite complicated I think. }}
-Concerning contradictions in MD simulation results, we reinterpret strong Na$^+$ binding as an artefact of several simulation models, e.g., the Berger model used in Refs.~\cite{bockmann03,bockmann04}.
+Concerning contradictions in MD simulation results, we reinterpret strong Na$^+$ binding as an artefact of several simulation models, e.g., the Berger model used in Refs.~\citenum{bockmann03,bockmann04}.
 
 The artificial specific Na$^+$ binding in simulations may lead to doubtful results, since it effectively leads  to
 positively charged phosphatidylcholine (PC) lipid bilayers even at physiological NaCl concentration.
@@ -707,8 +709,8 @@ electrolytic environment.
 This work has been done as a fully open collaboration, using
 \url{nmrlipids.blogspot.fi} as the communication platform. All the
 scientific contributions have been communicated publicly through
-this blog or GitHub repository \url{https://github.com/NMRLipids/lipid_ionINTERACTION}.
-All the related content and data is available at \url{https://github.com/NMRLipids/lipid_ionINTERACTION}.
+this blog or GitHub repository \cite{githubIONpaper}.% \url{https://github.com/NMRLipids/lipid_ionINTERACTION}.
+All the related content and data is available at Ref. \citenum{githubIONpaper}. %\url{https://github.com/NMRLipids/lipid_ionINTERACTION}.
 %Befor publication I will create Zenodo link from GitHub repo which will be cited here.
 
 %This work has been, and will be, progressed and discussed through the blog \url{nmrlipids.blogspot.fi}, through which 
@@ -726,8 +728,9 @@ MSM acknowledges financial support from the Volkswagen Foundation (86110).
 %
 M.G. acknowledges financial support from Finnish Center of International Mobility (Fellowship TM-9363).
 %
-J. M. acknowledges computational resources provided by the CESNET LM2015042 and the CERIT Scientific Cloud LM2015085 projects under the program ''Projects of Large Research, Development, and Innovations Infrastructure''
-
+J. Melcr acknowledges computational resources provided by the CESNET LM2015042 and the CERIT Scientific Cloud LM2015085 projects under the program ''Projects of Large Research, Development, and Innovations Infrastructure''
+%
+LM acknowledges funding from the Institut National de la Sante et de la Recherche Medicale (INSERM).
 
 \bibliography{refs} %You need to replace "rsc" on this line with the name of your .bib file
 \bibliographystyle{rsc} %the RSC's .bst file
