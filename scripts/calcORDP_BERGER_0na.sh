@@ -1,12 +1,12 @@
-tmpDIRname=ULM_0na_OPtmp
+tmpDIRname=BERGER_44ca_OPtmp
 mkdir $tmpDIRname
 cd $tmpDIRname
-cp ../calcORDP_ULM_015M.sh ./
+cp ../calcORDPberger.sh ./
 cp ../gro_OP.awk ./
-trajname=
-tprname402=
-hdbfile=../scratch/ffgmx2_ULM_POPC.hdb
-cp $hdbfile ./
+trajname=/media/be85b54b-6796-4273-9ee1-0914d3a40746/nonionics/POPCnewDATA/popc1-8.xtc
+tprname402=/media/be85b54b-6796-4273-9ee1-0914d3a40746/nonionics/POPCnewDATA/popc407.tpr
+hdbfile=../scratch/ffgmx2berger.hdb
+cp $hdbfile ./ffgmx2.hdb
 starttime=0
 endtime=240000
 numberOFlipids=128
@@ -23,7 +23,7 @@ for((  j = 1 ;  j <= $numberOFlipids;  j=j+1  ))
 do
     rm runPROT.gro
     echo "$j" | /home/ollilas1/gromacs/gromacs402/bin/protonate -f trjtmpINBOX.xtc -s $tprname402 -o runPROT.gro -n index.ndx
-    sh calcORDP_ULM_015M.sh > OrderParameters_"$j".dat
+    sh calcORDPberger.sh > OrderParameters_"$j".dat
 done
 #Calculate average and the error of the mean of order parameters over lipids.
 echo '0
