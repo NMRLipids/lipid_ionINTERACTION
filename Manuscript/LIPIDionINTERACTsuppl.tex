@@ -495,9 +495,11 @@ The equations of motion were integrated using the multiple time step Verlet r-RE
 with a time step of 2~fs, and electrostatic forces calculated only every two time steps. Covalent
 bonds between heavy and hydrogen atoms were constrained using SHAKE/RATTLE algorithm.
 Long-range electrostatic interactions were calculated using the PME~\cite{darden93,essman95} method 
-with a 4-th order smoothing spline and a grid spacing of about 0.1~nm.
+with a 6-th order smoothing spline and a grid spacing of about 0.1~nm.
 A cut-off of 1.2~nm was employed for the Lennard-Jones
-interactions, with a force-based switching function for distances beyond 1~nm. Neighbour
+interactions, with a force-based switching function for distances beyond 1~nm,
+activating the vdwForceSwitching option to ensure NAMD
+compatibility with CHARMM force smoothing. Neighbour
 lists with a radius of 1.4~nm were updated every 10 timesteps.
 Coordinates were written every 20~ps. After energy minimisation, a run of  200~ns simulations was performed,
 and the last $\sim$ 170~ns 
