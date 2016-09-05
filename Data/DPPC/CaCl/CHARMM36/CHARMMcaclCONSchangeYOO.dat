@@ -1,5 +1,14 @@
 # Directly from http://nmrlipids.blogspot.com/2015/12/towards-submission-of-nmrlipids-ii.html?showComment=1463482818700#c8756317300169938071
 #     b1           SD        b2          SD         a1          SD       a2        SD       g11        SD       g12        SD       g2        SD       g31        SD       g32        SD
-0     0            0          0           0         0          0         0         0
-429  -0.026        0.004   -0.032       0.004     -0.018      0.004    -0.021     0.004
-886  -0.036        0.005   -0.037       0.005     -0.030      0.005    -0.026     0.005
+# 0     0            0          0           0         0          0         0         0
+# 429  -0.026        0.004   -0.032       0.004     -0.018      0.004    -0.021     0.004
+# 886  -0.036        0.005   -0.037       0.005     -0.030      0.005    -0.026     0.005
+
+
+# MODIFIED by C. LOISON 05/09/2016 
+# the data  previously were done with vdwForceSwitching OFF
+# the new data are below , with  vdwForceSwitching ON as should be when using NAMD with CHARMM36-FF
+#     b1           SD        b2          SD         a1          SD       a2        SD       g11        SD       g12        SD       g2        SD       g31        SD       g32        SD
+0     0            0          0          0         0            0         0         0
+429  -0.0261372    0.004     -0.0272155  0.004    -0.0269126    0.004    -0.0202017  0.004
+886  -0.0397442    0.005     -0.034679   0.005    -0.035967     0.005    -0.0296769  0.005
