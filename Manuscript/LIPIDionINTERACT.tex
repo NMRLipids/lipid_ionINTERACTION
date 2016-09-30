@@ -430,26 +430,27 @@ response of Berger model to CaCl$_2$, but not to NaCl (see discussion in ESI$^\d
 Since simulation data with charged amphiphiles from other models is not available,
 the extended comparison with different models is left for further studies.
 
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=7.625cm]{../Fig/NaDensities_withSnap.pdf}
+  \caption{\label{NAdensities}
+    Na$^+$ (solid line) and Cl$^-$ (dashed) distributions along the lipid bi\-layer normal from MD simulations
+    at several NaCl concentrations.
+    The eight MD models are ordered according to their strength of order parameter change in response to NaCl
+    (Fig.~\ref{ordPions})
+    from the weakest (top panel) to the strongest (bottom).
+    The light green vertical lines indicate the locations of the Phosphorus maxima,
+    used to define bound cations in Fig.~\ref{electrometer}.
+}
+\end{figure}
+%
 Figure~\ref{electrometer} shows that the decrease on order parameter clearly correlates with the
 amount of bound cations also in simulations. This is also evident from Fig.~\ref{NAdensities},
-which shows the Na$^+$ density profiles of the MD models
-ordered according to the order parameter change 
+which shows the Na$^+$ density profiles of the MD models ordered according to the order parameter change 
 (reported in Fig.~\ref{ordPions}) from the smallest (top) to the largest (bottom).
 The Na$^+$ density peaks are larger for models with larger changes in order parameters,
 in line with the observed correlation between cation binding and order parameter decrease in
 Fig.~\ref{electrometer}.
-\begin{figure}[t]
-  \centering
-  \includegraphics[width=8cm]{../Fig/NAdensities.eps}
-  \caption{\label{NAdensities}
-    Atom number density profiles along the membrane normal for lipids, Na$^+$, and Cl$^-$ ions 
-    from simulations with different force fields and different NaCl concentrations. 
-    The force fields are ordered according to the order parameter changes 
-    reported in Fig.~\ref{ordPions}, from the smallest (top panel) to the largest (bottom panel).
-    The lipid densities are scaled by 100 (united atom) or 200 (all atom model) to improve readability. 
-%    Figure discussed in https://github.com/NMRLipids/lipid\_ionINTERACTION/issues/4.
-}
-\end{figure}
 
 Figure~\ref{AvsB} compares the relation between $\Delta S_{\rm{CH}}^{\beta}$ and $\Delta S_{\rm{CH}}^{\alpha}$
 in experiments~\cite{akutsu81} and different simulation models.
