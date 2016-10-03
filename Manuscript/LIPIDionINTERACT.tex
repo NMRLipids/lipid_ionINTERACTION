@@ -405,15 +405,15 @@ since the simulation slopes depend on the definition used for bound ions (see ES
 % This is already in the other todo point.
 \begin{figure}[t]
   \centering
-  \includegraphics[width=8.6cm]{../scratch/boundIons/dOP_vs_boundCationCharge_P.pdf}
+  \includegraphics[width=8.8cm]{../Fig/dOP_vs_boundCationCharge_P.pdf}
   \caption{\label{electrometer}
     Change of order parameters (from salt-free solution) of the $\beta$ and $\alpha$ segments,
     $\Delta S_{\rm{CH}}^{\beta}$ and $\Delta S_{\rm{CH}}^{\alpha}$,
-    shown as a function of bound cation charge.
-    Eight MD simulation models compared.
+    as a function of bound cation charge.
+    Eight MD simulation models compared; the two lines per model denote to the two hydrogens per carbon.
     The order parameters as well as the bound charge calculated separately for
     each leaflet; cations residing between the bilayer centre and the density maximum of Phosphorus
-    considered bound; error bars show standard error of mean over lipids.
+    considered bound; error bars (shaded) show standard error of mean over lipids.
    }
 %\todo{Results from long CHARMM and Slipids simulations to be added.}
 \end{figure}
@@ -432,7 +432,7 @@ the extended comparison with different models is left for further studies.
 
 \begin{figure}[!h]
   \centering
-  \includegraphics[width=7.625cm]{../Fig/NaDensities_withSnap.pdf}
+  \includegraphics[width=7.595cm]{../Fig/NaDensities_withSnap.pdf}
   \caption{\label{NAdensities}
     Na$^+$ (solid line) and Cl$^-$ (dashed) distributions along the lipid bi\-layer normal from MD simulations
     at several NaCl concentrations.
@@ -630,17 +630,15 @@ choline group~\cite{hauser76,hauser78,herbette84,cevc90}. In CHARMM36, almost al
 ions present in simulation bind in bilayer indicating strongest binding affinity among the tested
 models. The difference is not as clear in Fig.~\ref{ordPions} because $\alpha$ carbon order parameters 
 are the least sensitive to bound charge in CHARMM36 (Fig.~\ref{electrometer}).
-\begin{figure}[t]
+\begin{figure}[!h]
   \centering
-  \includegraphics[width=8cm]{../Fig/CAdensitiesCLEAR.eps}
+  \includegraphics[width=7.6cm]{../Fig/CaDensities_withSnap.pdf}
   \caption{\label{CAdensitiesCLEAR}
-    Atom number density profiles along the membrane normal coordinate $z$ for lipids, Ca$^{2+}$ and Cl$^-$ ions from simulations 
-    with different force fields.
-    The profiles only with smallest available CaCl$_2$ concentration are shown for clarity.
-    Figure including all the available concentrations is shown in ESI$^\dag$.
-    The lipid densities are scaled with 100 (united atom) or 200 (all atom model) to make them visible with the used y-axis scale.
-    The Cl$^-$ density is scaled with 2 to equalise charge density of ions.
-%    Figure discussed in https://github.com/NMRLipids/lipid\_ionINTERACTION/issues/4.
+    Ca$^{2+}$ (solid line) and Cl$^-$ (dashed) distributions along the lipid bi\-layer normal from MD simulations.
+    For clarity, only one CaCl$_2$ concentration per MD model is shown;
+    see ESI$^\dag$ for a plot including all the available concentrations.
+    The light green vertical lines indicate the locations of the Phosphorus maxima,
+    used to define bound cations in Fig.~\ref{electrometer}.
   }
 \end{figure}
 
@@ -722,15 +720,15 @@ All the related content and data is available at Ref. \citenum{githubIONpaper}. 
 %coauthorship. For more details see \url{nmrlipids.blogspot.fi}.   
 
 {\bf Acknowledgements: }
-AC and VSO wish to thank the Research Computing Service at UEA for access to the High Performance Computing Cluster. VSO acknowledges the Engineering and Physical Sciences Research Council in the UK for financial support (EP/L001322/1).
+AC and VSO wish to thank the Research Computing Service at UEA for access to the High Performance Computing Cluster; VSO acknowledges the Engineering and Physical Sciences Research Council in the UK for financial support (EP/L001322/1).
 %
 OHSO acknowledges Tiago Ferreira for very useful discussions, the Emil Aaltonen foundation for financial support, Aalto Science-IT project and CSC-IT Center for Science for computational resources. 
 %
 MSM acknowledges financial support from the Volkswagen Foundation (86110).
 %
-M.G. acknowledges financial support from Finnish Center of International Mobility (Fellowship TM-9363).
+MG acknowledges financial support from Finnish Center of International Mobility (Fellowship TM-9363).
 %
-J. Melcr acknowledges computational resources provided by the CESNET LM2015042 and the CERIT Scientific Cloud LM2015085 projects under the program ''Projects of Large Research, Development, and Innovations Infrastructure''
+J. Melcr acknowledges computational resources provided by the CESNET LM2015042 and the CERIT Scientific Cloud LM2015085 projects under the program ''Projects of Large Research, Development, and Innovations Infrastructure''.
 %
 LM acknowledges funding from the Institut National de la Sante et de la Recherche Medicale (INSERM).
 
