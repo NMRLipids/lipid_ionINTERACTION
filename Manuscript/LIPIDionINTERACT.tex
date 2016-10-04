@@ -286,32 +286,28 @@ are openly available.
 \section{Results and Discussion}
 
 \subsection{Background: Molecular electrometer in experiments}\label{conceptinexperiments}
-The molecular electrometer concept is based on the experimental observation that
-binding of any charged objects (e.g. ions, peptides, anesthetics, amphihiles) on a PC bilayer interface induces 
-systematic changes in the choline $\beta$ and $\alpha$
-segment order parameters~\cite{brown77,akutsu81,altenbach84,altenbach85,seelig87,macdonald87,scherer89,roux90,beschiasvili91,marassi92,rydall92}.
-Thus, these changes can be used to determine binding affinities of the charged objects.
-The molecular electrometer was originally devised for cations~\cite{brown77,akutsu81,altenbach84}, but
+The basis for the molecular electrometer is the experimental observation that
+binding of any charged objects (ions, peptides, anesthetics, amphihiles) on a PC bilayer interface induced
+systematic changes in the choline $\alpha$ and $\beta$
+segment C--H order parameters~\cite{brown77,akutsu81,altenbach84,altenbach85,seelig87,macdonald87,scherer89,roux90,beschiasvili91,marassi92,rydall92}.
+Being systematic, these changes could be employed for determining the binding affinities of the charged objects in question.
+Originally the molecular electrometer was devised for cations~\cite{brown77,akutsu81,altenbach84}, but
 further experimental quantification with various positively and negatively charged 
 molecules showed that the choline order parameters $S_\mathrm{CH}^\alpha$ and $S_\mathrm{CH}^\beta$ 
 in general vary linearly with small amount of bound charge per 
 lipid~\cite{altenbach84,altenbach85,seelig87,macdonald87,scherer89,roux90,beschiasvili91,marassi92,rydall92}. 
-The empirically observed linear relation can be written as~\cite{ferreira16}
-\begin{equation}\label{electrometer_eq}
-S_{\rm{CH}}^{i}(X^\pm)=S_{\rm{CH}}^{i}(0) + \frac{4m_i}{3\chi} X^\pm,
-\end{equation}
-where $S_{\rm{CH}}^{i}(0)$ is the order parameter in the absence of bound charges,
-$m_i$ is an empirical constant depending on the valency and position of bound charge,
-$X^\pm$ is the amount of the bound charge per lipid, 
-$i$ refers to either $\alpha$ or $\beta$, and
-the value of quadrupole coupling constant is $\chi \approx$ 167 kHz. 
-The change in order parameters with respect to a bilayer without bound charges then becomes
+Let now $S_{\rm{CH}}^{i}(0)$, where $i$ refers to either $\alpha$ or $\beta$, denote the order parameter in the absence of bound charge;
+the empirically observed linear relation %for the change in order parameters %with respect to a bilayer without bound charges
+can then be written as~\cite{ferreira16}
 \begin{equation}\label{OPchangeEQ}
 \Delta S_{\rm{CH}}^{i}= S_{\rm{CH}}^{i}(X^\pm)-S_{\rm{CH}}^{i}(0) =\frac{4m_i }{3\chi}X^\pm.
 \end{equation}
-For Ca$^{2+}$ binding to POPC bilayer (in the presence of 100~mM NaCl),
-combination of atomic absorption spectra and $^2$H NMR experiments gave
-$m_\alpha=-20.5$  and $m_\beta=-10.0$~\cite{altenbach84}.
+%\begin{equation}\label{electrometer_eq}
+%S_{\rm{CH}}^{i}(X^\pm)=S_{\rm{CH}}^{i}(0) + \frac{4m_i}{3\chi} X^\pm,
+%\end{equation}
+Here $X^\pm$ is the amount of bound charge per lipid, 
+$m_i$ an empirical constant depending on the valency and position of bound charge,
+and the value of the quadrupole coupling constant $\chi \approx$\,167\,kHz. 
 
 \begin{figure*}[t]
   \centering
@@ -329,26 +325,28 @@ $m_\alpha=-20.5$  and $m_\beta=-10.0$~\cite{altenbach84}.
   }
 \end{figure*}
 
-The absolute values of order parameters 
-increase for $\beta$ and decrease for $\alpha$ segment with bound positive charge
-and {\it vice versa} for negative charge~\cite{brown77,akutsu81,altenbach84,altenbach85,seelig87,scherer89,rydall92}. 
-However, as the $\beta$ carbon order parameter is negative while $\alpha$ carbon order parameter is 
-positive~\cite{hong95a,hong95b,gross97}, we can conclude 
-that both $\Delta S_{\rm{CH}}^{\beta}$ and $\Delta S_{\rm{CH}}^{\alpha}$ decrease with bound positive charge 
-and increase with bound negative charge. Consequently, values of $m_i$ are negative for
-bound positive charges and {\it vice versa}. This can be rationalised by electrostatically 
-induced changes in choline P--N dipole tilt \cite{seelig87,scherer89,seelig90}, which is also
-seen in simulations~\cite{gurtovenko05,cordomi08,cordomi09,zhao12}. 
-This is in line with order parameter decrease related to the P--N vector tilting more parallel to membrane plane seen with decreasing hydration levels~\cite{botan15}. 
+With bound positive charge, the absolute value of the $\beta$ segment order parameter increases
+and the $\alpha$ segment order parameter decreases 
+(and {\it vice versa} for negative charge)~\cite{brown77,akutsu81,altenbach84,altenbach85,seelig87,scherer89,rydall92}. 
+However, as $S_{\rm{CH}}^{\beta}(0)<0$ while $S_{\rm{CH}}^{\alpha}(0)>0$~\cite{hong95a,hong95b,gross97}, %we can conclude that
+both $\Delta S_{\rm{CH}}^{\beta}$ and $\Delta S_{\rm{CH}}^{\alpha}$ in fact decrease with bound positive charge 
+(and increase with bound negative charge). Consequently, values of $m_i$ are negative for
+bound positive charges; % and {\it vice versa}.
+for Ca$^{2+}$ binding to POPC bilayer (in the presence of 100~mM NaCl),
+combination of atomic absorption spectra and $^2$H NMR experiments gave
+$m_\alpha=-20.5$  and $m_\beta=-10.0$~\cite{altenbach84}.
+This decrease can be rationalised by electrostatically 
+induced tilting of the choline P--N dipole~\cite{seelig87,scherer89,seelig90} --- also
+seen in simulations~\cite{gurtovenko05,cordomi08,cordomi09,zhao12} ---
+and is in line with the order parameter increase related to the P--N vector tilting more parallel to the membrane plane seen with decreasing hydration levels~\cite{botan15}. 
 
 
-The quantification of $\Delta S_\mathrm{CH}^\beta$ and $\Delta S_\mathrm{CH}^\alpha$
-with different cations
-have revealed that $\Delta S_{\rm{CH}}^{\beta}/\Delta S_{\rm{CH}}^{\alpha} \approx$ 0.5 for a wide range
-of different cations (aqueous cations, cationic peptides, cationic anesthetics)~\cite{beschiasvili91,rydall92}.
+Quantification of $\Delta S_\mathrm{CH}^\alpha$ and $\Delta S_\mathrm{CH}^\beta$
+for a wide range of different cations (aqueous cations, cationic peptides, cationic anesthetics)
+has revealed that $\Delta S_{\rm{CH}}^{\beta}/\Delta S_{\rm{CH}}^{\alpha} \approx$\,0.5~\cite{beschiasvili91,rydall92}.
 More specifically,
-the relation $\Delta S_{\rm{CH}}^{\beta}=0.43 \Delta S_{\rm{CH}}^{\alpha}$ was found for a DPPC bilayer
-with various CaCl$_2$ concentrations~\cite{akutsu81}.
+the relation $\Delta S_{\rm{CH}}^{\beta}=0.43 \Delta S_{\rm{CH}}^{\alpha}$ was found to hold for DPPC bilayers
+at various CaCl$_2$ concentrations~\cite{akutsu81}.
 
 
 \subsection{Molecular electrometer concept in MD simulations}\label{electrometerinsimulations}
@@ -399,7 +397,7 @@ in keeping with the molecular electrometer, roughly linear correlation between b
 Note that quantitative comparison of the proportionality constants (i.e. slopes in Fig. \ref{electrometer})
 between different models and experimental slopes
 ($m_\alpha=-20.5$ and $m_\beta=-10.0$ for Ca$^{2+}$ binding in DPPC bilayer in
-the presence of 100mM NaCl in Eq. \ref{electrometer_eq}~\cite{altenbach84}) is not straightforward 
+the presence of 100mM NaCl in Eq. \ref{OPchangeEQ}~\cite{altenbach84}) is not straightforward 
 since the simulation slopes depend on the definition used for bound ions (see ESI$^\dag$).
 % -- \todo{put the definition of bound charges to ESI}). 
 % This is already in the other todo point.
