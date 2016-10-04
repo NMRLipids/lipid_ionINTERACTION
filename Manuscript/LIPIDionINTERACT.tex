@@ -225,10 +225,10 @@ in addition, the water sorption isotherm of a NaCl--phospholipid system
 is highly similar to that of a  pure NaCl solution
 --- indicating that the ion--lipid interaction is very weak~\cite{binder02}. 
 
-The post-2000 'strong binding' view rests on experimental and above all simulation findings.
-At sub-molar NaCl concentrations, the rotational and translational dynamics of membrane-embedded fluorescent probes decrease~\cite{bockmann03,vacha09a,harb13}, and atomic force microscopy (AFM) experiments show changes in bilayer hardness~\cite{manyes05,manyes06,fukuma07,ferber11,morata12};
-in atomistic molecular dynamics (MD) simulations, phospholipid bilayers consistently bind Na${^+}$,
-although the binding strength depends on the model used~\cite{bockmann03,bockmann04,sachs04,berkowitz06,cordomi08,cordomi09,valley11,berkowitz12}.
+The post-2000 'strong binding' view rests on experimental and above all simulational findings.
+At sub-molar NaCl concentrations, the rotational and translational dynamics of membrane-embedded fluorescent probes decreased~\cite{bockmann03,vacha09a,harb13}, and atomic force microscopy (AFM) experiments showed changes in bilayer hardness~\cite{manyes05,manyes06,fukuma07,ferber11,morata12};
+in atomistic molecular dynamics (MD) simulations, phospholipid bilayers consistently bound Na${^+}$,
+although the binding strength depended on the model used~\cite{bockmann03,bockmann04,sachs04,berkowitz06,cordomi08,cordomi09,valley11,berkowitz12}.
 
 Some observables have been interpreted in favour of both views. For example,
 as the effect of monovalent ions (except Li$^+$)  on the phase transition temperature is tiny
@@ -242,33 +242,33 @@ of phosphatidylcholine (PC) vesicles in the presence of NaCl
 suggested weak binding of Na$^+$~\cite{eisenberg79,tatulian87,manyes05,manyes06,klasczyk10};
 %NaCl increases the (initially negative) zeta potential to only about zero,
 %whereas positive zeta potentials are generally reached with
-however, these data have also been explained by a countering effect of the Cl$^-$ ions~\cite{berkowitz06,knecht13}.
-To reduce the area per lipid in scattering experiments, molar concentrations of NaCl are required~\cite{pabst07}, which indicates weak ion--lipid interaction;
-in MD simulations, however, already orders of magnitude lower concentrations result in Na$^+$ binding and clear reduction of area per lipid~\cite{bockmann03,cordomi08}.
-Finally,  in noninvasive NMR experiments, lipid lateral diffusion is unaltered by NaCl~\cite{filippov09};
+however, these data were also explained by a countering effect of the Cl$^-$ ions~\cite{berkowitz06,knecht13}.
+Furthermore, to reduce the area per lipid in scattering experiments, molar concentrations of NaCl were required~\cite{pabst07}, indicating weak ion--lipid interaction;
+in MD simulations, however, already orders of magnitude lower concentrations resulted in Na$^+$ binding and a clear reduction of area per lipid~\cite{bockmann03,cordomi08}.
+Finally, lipid lateral diffusion was unaltered by NaCl in noninvasive NMR experiments~\cite{filippov09};
 %suggesting that the fluorescence results arise from Na$^{+}$ interactions with probes rather than with lipids.
 %This is pointed out in Conclusions, which I think is the best place for it. -markus.
-however, it is reduced in simulations upon Na$^+$ binding,
-which supports interpreting the reduced lateral diffusion of fluorescent probes~\cite{bockmann03,vacha09a,harb13}
-as favouring the post-2000 view.
+however, as it was reduced upon Na$^+$ binding in simulations,
+the reduced lateral diffusion of fluorescent probes~\cite{bockmann03,vacha09a,harb13}
+has been interpreted to support the post-2000 'strong binding' view.
 
-In this paper we set out to solve the apparent contradictions
+In this paper, we set out to solve the apparent contradictions
 between the pre-2000 and post-2000 views.
-To this end we employ the 'molecular electrometer' concept,
-according to which the changes in the order parameters of the $\alpha$ and $\beta$ carbons 
-in the phospholipid head group (see Fig. \ref{POPCstructure}) can be used to measure the ion affinity to 
+To this end, we employ the 'molecular electrometer' concept,
+according to which the changes in the C--H order parameters of the $\alpha$ and $\beta$ carbons 
+in the phospholipid head group (see Fig.~\ref{POPCstructure}) can be used to measure the ion affinity for a
 PC lipid bilayer~\cite{brown77,akutsu81,altenbach84,seelig87,scherer89}.
-As order parameters can be accurately measured in experiments and directly compared to 
-simulations \cite{ollila16}, employing the molecular electrometer as a function of cation concentration allows the 
+As the order parameters can be accurately measured in experiments and directly compared to 
+simulations~\cite{ollila16}, applying the molecular electrometer as a function of cation concentration allows the 
 comparison of binding affinity between simulations and experiments.
 In addition to demonstrating the usefulness of this general concept,
-we show that the response of order parameters to penetrating cations
+we show that the response of the $\alpha$ and $\beta$ order parameters to penetrating cations
 is qualitatively correct in MD simulations, but that in several  models the affinity of Na$^{+}$ for PC bilayers
 is grossly overestimated.
 Moreover, we show that the accuracy of lipid--Ca$^{2+}$ interactions 
 in current models is not enough for atomistic resolution interpretation of NMR experiments. 
 
-This work has been done as an Open Collaboration at \url{nmrlipids.blogspot.fi};
+This work was done as an Open Collaboration at \url{nmrlipids.blogspot.fi};
 all the related files \cite{githubIONpaper} %(\url{https://github.com/NMRLipids/lipid_ionINTERACTION})
 and almost all the simulation data (\url{https://zenodo.org/collection/user-nmrlipids})
 are openly available.
