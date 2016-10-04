@@ -488,71 +488,70 @@ A careful analysis with current lipid models is performed in the next section.
    these correspond the concentrations reported in the experiments by Akutsu et al.~\cite{akutsu81}.
    The lipid force fields named as in our previous work~\cite{botan15}.}\label{IONsystems}
 \begin{minipage}[t]{\textwidth}
-\begin{tabular}{c c c c c c c c c c c}
+\begin{tabular}{l l l r r r r r r r c}
   %\hline
   % some footnotes are not visible in typeset-MS (pdf)
-  Force field (lipid, ion)& lipid & salt & [salt] (mM) & \footnote{The number of lipid molecules}N$_{\rm l}$   &  \footnote{The number of water molecules}N$_{\rm w}$   & \footnote{The number of cations}N$_{\rm c}$  & \footnote{Simulation temperature}T (K)  & \footnote{The total simulation time}t$_{{\rm sim}}$(ns) & \footnote{Time frames used in the analysis}t$_{{\rm anal}}$ (ns) & \footnote{Reference for simulation files}Files\\
+  force field for lipids / ions & lipid & salt & [salt]\,(mM) & \footnote{Number of lipid molecules}N$_{\rm l}$   &  \footnote{Number of water molecules}N$_{\rm w}$   & \footnote{Number of cations}N$_{\rm c}$  & \footnote{Simulation temperature}T (K)  & \footnote{Total simulation time}t$_{{\rm sim}}$(ns) & \footnote{Time used for analysis}t$_{{\rm anal}}$ (ns) & \footnote{Reference for simulation files}files\\
   \hline
-  Berger-POPC-07\cite{ollila07a}   &   POPC & no & 0        & 128 			   		& 7290 & 0  & 298  & 270 & 50 & \citenum{bergerFILESpopc}  \\
-  Berger-POPC-07\cite{ollila07a}, ffgmx\cite{straatsma88}  &   " & NaCl & 340 & " 		& 7202 & 44 & "  & 110 & " & \citenum{bergerPOPC340mMNaClfiles} \\
+  Berger-POPC-07\cite{ollila07a} / --  &   POPC & no & 0        & 128 			   		& 7290 & 0  & 298  & 270 & 50 & \citenum{bergerFILESpopc}  \\
+  Berger-POPC-07\cite{ollila07a} / ffgmx\cite{straatsma88}  &   " & NaCl & 340 & " 		& 7202 & 44 & "  & 110 & " & \citenum{bergerPOPC340mMNaClfiles} \\
+  Berger-POPC-07\cite{ollila07a} / ffgmx\cite{straatsma88}  &   " & CaCl$_2$ & 340  & " 	& 7157 & " & " & 108 & 58 &\citenum{bergerPOPC340mMCaClfiles}  \\
+  %\hline
+  Berger-DPPC-97\cite{marrink98} / --  &   DPPC & no & 0 & 72 						& 2880 & 0  &323  & 60 & 50 &\citenum{bergerDPPCfiles} \\
+  Berger-DPPC-97\cite{marrink98} / ffgmx\cite{straatsma88}   &   " &  NaCl & 150 & " 		& "       & 8  & "  & 120 & 60 &\citenum{bergerDPPC150mMfiles} \\
+  Berger-DPPC-97\cite{marrink98} / ffgmx\cite{straatsma88}   &   " & " & 1000  & " 		& 2778 & 51 & "  & " & " &\citenum{bergerDPPC1000mMfiles} \\
+  \hline
+  BergerOPLS-DPPC-06\cite{tieleman06} / -- &   DPPC & no & 0 & 72 					& 2880 & 0 & 323  & 120 & 60 &\citenum{bergerOPLSDPPCfiles} \\
+  BergerOPLS-DPPC-06\cite{tieleman06} / OPLS\cite{aqvist90} &   " & NaCl & 150  & "	& " & 8  & "  & " & " &\citenum{bergerOPLSDPPCfiles150mMnacl} \\
+  BergerOPLS-DPPC-06\cite{tieleman06} / OPLS\cite{aqvist90} &   " & " & 1000 & " 		& 2778 & 51 & "  & " & " &\citenum{bergerOPLSDPPCfiles1000mMnacl} \\
+  \hline
+  CHARMM36\cite{klauda10} / -- & POPC & no & 0 & 128 							& 5210 & 0 & 303 & 200 & 150 & \citenum{charmm36files} \\ % Hubert's 0CHL simu (doi: 10.5281/zenodo.14066)
+  CHARMM36\cite{klauda10} / --  & " & " & 0           & 72 							& 2242 & "  & "  & 30 & 20 & \citenum{charmm36filesSHORT} \\
+  CHARMM36\cite{klauda10} / CHARMM36\cite{venable13} & " & NaCl & 350   & " 		& 2085 & 13  & "  & 80 & 60 & \citenum{charmmPOPC350mMNaClfiles} \\
+  CHARMM36\cite{klauda10} / CHARMM36\cite{venable13} & " & " & 690 & " 			& " & 26 & "  & 73 & " & \citenum{charmmPOPC690mMNaClfiles}   \\
+  CHARMM36\cite{klauda10} / CHARMM36\cite{venable13}  & " & " & 950 & " 			& 2168 & 37 & "  & 80 & " &\citenum{charmmPOPC950mMNaClfiles}  \\
+  CHARMM36\cite{klauda10} / CHARMM36 & " & CaCl$_2$ & 350  & 128 				& 6400 & 35 & "  & 200  & 100 & \citenum{charmmPOPC350mMCaClfiles}  \\
+  CHARMM36\cite{klauda10} / CHARMM36 & " & " & 450  & 200 					& 9000 & 73 & 310  & 2000  & " & \citenum{charmmPOPC450mMCaClfiles}  \\
+  CHARMM36\cite{klauda10} / CHARMM36 & " & " & 670  & 128 					& 6400 & 67 & 303  & 200  & 120 & \citenum{charmmPOPC670mMCaClfiles}  \\  
+  CHARMM36\cite{klauda10} / CHARMM36 & " & " & 1000 & " 						& " & 100 & " & "  & 100 & \citenum{charmmPOPC1000mMCaClfiles}  \\
+  %\hline
+  CHARMM36\cite{klauda10} / -- & DPPC & no & 0  & 128 							& 8000 & 0 & 323  & 170 & 150 & --  \\
+  CHARMM36\cite{klauda10} / Yoo\cite{yoo16}  & " & CaCl$_2$ & 430   & " 			& 7760 & 60 & "  & 200 & 170 & --  \\
+  CHARMM36\cite{klauda10} / Yoo\cite{yoo16}  & " & " & 890  & " 					& 7520 & 120 & "  & " & " & --  \\
+  \hline
+  MacRog\cite{maciejewski14} / -- & POPC & no & 0 & 128 							& 6400 & 0 & 310 & 400& 200 & \citenum{macrogCHOLfiles}  \\ % Matti's 0CHL simu (doi: 10.5281/zenodo.13877)
+  MacRog\cite{maciejewski14} / -- & " & " & 0 & 288 								& 14400 & " & " & 90 & 40  & \citenum{macrogdehydFILES}  \\  
+  MacRog\cite{maciejewski14} / OPLS\cite{aqvist90}  & " & NaCl & 100  & " 			& 14554 & 27 & " & " &50  & \citenum{macrogIONfiles} \\
+  MacRog\cite{maciejewski14} / OPLS\cite{aqvist90}  & " & " & 210  & " 				& 14500 & 54 & " & " & "  & "  \\
+  MacRog\cite{maciejewski14} / OPLS\cite{aqvist90}  & " & " &  310 & " 				& 14446 & 81 & " & " & "  & " \\
+  MacRog\cite{maciejewski14} / OPLS\cite{aqvist90}  & " & " &  420 & " 				& 14392 & 108 & " & " & "  & "  \\
+  \hline
+  Orange / --            			& POPC & no & 0 & 72 	& 2880 & 0 & 298 & 60 & 50 & \citenum{orangePOPCfiles}  \\
+  Orange / OPLS\cite{aqvist90}	&   " & NaCl & 140  & " 	& 2866 & 7 & " & 120 & 60 &\citenum{orangePOPC140mMNaClfiles}  \\
+  Orange / OPLS\cite{aqvist90} 	&   " & " & 510 & " 		& 2802 & 26 & " & " & 100 &\citenum{orangePOPC510mMNaClfiles}   \\
+  Orange / OPLS\cite{aqvist90} 	&   " & " & 1000 & " 		& 2780 & 50 & " & " & 80 & \citenum{orangePOPC1000mMNaClfiles} \\
   %\hdashline
-  Berger-POPC-07\cite{ollila07a}, ffgmx\cite{straatsma88}  &   " & CaCl$_2$ & 340  & " 	& 7157 & 44 & " & 108 & 58 &\citenum{bergerPOPC340mMCaClfiles}  \\
+  Orange / OPLS &   " & CaCl$_2$ & 510  & " 			& 2802 & 26 & " & " & 60 & \citenum{orangePOPC510mMCaClfiles}  \\
+  \hline
+  Slipids\cite{jambeck12b} / --  &   POPC & no & 0 & 128 					& 5120 & 0 & 310 & 200 & 150 &~\citenum{slipidsFILESpopc}  \\
+  Slipids\cite{jambeck12b} / AMBER\cite{smith94}  &  " & NaCl & 130 & 200 	& 9000 & 21 & " & 105 & 100 &~\citenum{slipidsFILESpopc130mMnaclSD}  \\
+  Slipids\cite{jambeck12b} / AMBER\cite{aqvist90}  &  "& CaCl$_2$ & 450  & " 	& "  & 73 & " & 2000 & " &~\citenum{slipidsFILESpopc450mMcacl}  \\
   %\hline
-  Berger-DPPC-97\cite{marrink98}   &   DPPC & no & 0 & 72 						& 2880 & 0  &323  & 60 & 50 &\citenum{bergerDPPCfiles} \\
-  Berger-DPPC-97\cite{marrink98}, ffgmx\cite{straatsma88}   &   " &  NaCl & 150 & " 		& "       & 8  & "  & 120 & 60 &\citenum{bergerDPPC150mMfiles} \\
-  Berger-DPPC-97\cite{marrink98}, ffgmx\cite{straatsma88}   &   " & " & 1000  & " 		& 2778 & 51 & "  & " & " &\citenum{bergerDPPC1000mMfiles} \\
+  Slipids\cite{jambeck12} / -- &   DPPC & no & 0 & 128 		& 3840 & 0 & 323 & 150 & 100 &~\citenum{slipidsFILES}  \\
+  Slipids\cite{jambeck12} / AMBER\cite{beglov94,roux96} &   " & NaCl & 150  & 600 	& 18000 & 49 & " & 100 & 40 &--  \\
+  Slipids\cite{jambeck12} / AMBER\cite{beglov94,roux96} &   " & " & 850 & 128 		& 3726 &  57 & " & 205 & 200 & \citenum{slipidsFILESdppc}  \\
+  Slipids\cite{jambeck12} / AMBER\cite{beglov94,roux96} &   " & " & 1750 & " 		& 3612 &  114 & " & 105 & 100 & "  \\
+  Slipids\cite{jambeck12} / AMBER\cite{beglov94,roux96} &   " & " & 2570 & " 		& 3514 &  163 & " & " & " & "  \\
   \hline
-  BergerOPLS-DPPC-06\cite{tieleman06} &   DPPC & no & 0 & 72 					& 2880 & 0 & 323  & 120 & 60 &\citenum{bergerOPLSDPPCfiles} \\
-  BergerOPLS-DPPC-06\cite{tieleman06}, OPLS\cite{aqvist90} &   " & NaCl & 150  & "	& " & 8  & "  & " & " &\citenum{bergerOPLSDPPCfiles150mMnacl} \\
-  BergerOPLS-DPPC-06\cite{tieleman06}, OPLS\cite{aqvist90} &   " & " & 1000 & " 		& 2778 & 51 & "  & " & " &\citenum{bergerOPLSDPPCfiles1000mMnacl} \\
+  Lipid14~\cite{dickson14} / --                        &   POPC & no 		& 0		& 128	& 5120 	& 0 & 298 & 205 & 200 &~\citenum{lipid14POPC0mMNaClfiles}  \\
+  Lipid14~\cite{dickson14} / AMBER\cite{aqvist90}   &   " & NaCl & 150	& " 		& " 		& 12 & " & " & " &~\citenum{lipid14POPC150mMNaClfiles}  \\
+  Lipid14~\cite{dickson14} / AMBER\cite{aqvist90}   &   " & " 	& 1000 	& " 		& " 		& 77 & " & " & " &~\citenum{lipid14POPC1000mMNaClfiles}  \\
+  Lipid14~\cite{dickson14} / AMBER\cite{aqvist90}   &   " & CaCl$_2$ & 350 & " 		& 6400 	& 35 & " & 200 & 100 &~\citenum{lipid14POPC350mMCaClfiles}  \\
+  Lipid14~\cite{dickson14} / AMBER\cite{aqvist90}   &   " & " 	& 1000 	& " 		& " 		& 100 & " & " & " &~\citenum{lipid14POPC1000mMCaClfiles}  \\
   \hline
-  CHARMM36\cite{klauda10} & POPC & no & 0 & 128 							& 5210 & 0 & 303 & 200 & 150 & \citenum{charmm36files} \\ % Hubert's 0CHL simu (doi: 10.5281/zenodo.14066)
-  CHARMM36\cite{klauda10}   & " & " & 0           & 72 							& 2242 & 0  & "  & 30 & 20 & \citenum{charmm36filesSHORT} \\
-  CHARMM36\cite{klauda10}, CHARMM36\cite{venable13} & " & NaCl & 350   & " 		& 2085 & 13  & "  & 80 & 60 & \citenum{charmmPOPC350mMNaClfiles} \\
-  CHARMM36\cite{klauda10}, CHARMM36\cite{venable13} & " & " & 690 & " 			& " & 26 & "  & 73 & " & \citenum{charmmPOPC690mMNaClfiles}   \\
-  CHARMM36\cite{klauda10}, CHARMM36\cite{venable13}  & " & " & 950 & " 			& 2168 & 37 & "  & 80 & " &\citenum{charmmPOPC950mMNaClfiles}  \\
-  CHARMM36\cite{klauda10}, CHARMM36 & " & CaCl$_2$ & 350  & 128 				& 6400 & 35 & "  & 200  & 100 & \citenum{charmmPOPC350mMCaClfiles}  \\
-  CHARMM36\cite{klauda10}, CHARMM36 & " & " & 450  & 200 					& 9000 & 73 & 310  & 2000  & " & \citenum{charmmPOPC450mMCaClfiles}  \\
-  CHARMM36\cite{klauda10}, CHARMM36 & " & " & 670  & 128 					& 6400 & 67 & 303  & 200  & 120 & \citenum{charmmPOPC670mMCaClfiles}  \\  
-  CHARMM36\cite{klauda10}, CHARMM36 & " & " & 1000 & " 						& " & 100 & " & "  & 100 & \citenum{charmmPOPC1000mMCaClfiles}  \\
-  %\hline
-  CHARMM36\cite{klauda10}  & DPPC & no & 0  & 128 							& 8000 & 0 & 323  & 170 & 150 & --  \\
-  CHARMM36\cite{klauda10}, Yoo\cite{yoo16}  & " & CaCl$_2$ & 430   & " 			& 7760 & 60 & "  & 200 & 170 & --  \\
-  CHARMM36\cite{klauda10}, Yoo\cite{yoo16}  & " & " & 890  & " 					& 7520 & 120 & "  & " & " & --  \\
-  \hline
-  MacRog\cite{maciejewski14}  & POPC & no & 0 & 128 							& 6400 & 0 & 310 & 400& 200 & \citenum{macrogCHOLfiles}  \\ % Matti's 0CHL simu (doi: 10.5281/zenodo.13877)
-  MacRog\cite{maciejewski14}  & " & " & 0 & 288 								& 14400 & 0 & " & 90 & 40  & \citenum{macrogdehydFILES}  \\  
-  MacRog\cite{maciejewski14}, OPLS\cite{aqvist90}  & " & NaCl & 100  & " 			& 14554 & 27 & " & " &50  & \citenum{macrogIONfiles} \\
-  MacRog\cite{maciejewski14}, OPLS\cite{aqvist90}  & " & " & 210  & " 				& 14500 & 54 & " & " & "  & "  \\
-  MacRog\cite{maciejewski14}, OPLS\cite{aqvist90}  & " & " &  310 & " 				& 14446 & 81 & " & " & "  & " \\
-  MacRog\cite{maciejewski14}, OPLS\cite{aqvist90}  & " & " &  420 & " 				& 14392 & 108 & " & " & "  & "  \\
-  \hline
-  Orange              			& POPC & no & 0 & 72 	& 2880 & 0 & 298 & 60 & 50 & \citenum{orangePOPCfiles}  \\
-  Orange, OPLS\cite{aqvist90}	&   " & NaCl & 140  & " 	& 2866 & 7 & " & 120 & 60 &\citenum{orangePOPC140mMNaClfiles}  \\
-  Orange, OPLS\cite{aqvist90} 	&   " & " & 510 & " 		& 2802 & 26 & " & " & 100 &\citenum{orangePOPC510mMNaClfiles}   \\
-  Orange, OPLS\cite{aqvist90} 	&   " & " & 1000 & " 		& 2780 & 50 & " & " & 80 & \citenum{orangePOPC1000mMNaClfiles} \\
-  %\hdashline
-  Orange, OPLS &   " & CaCl$_2$ & 510  & " 			& 2802 & 26 & " & " & 60 & \citenum{orangePOPC510mMCaClfiles}  \\
-  \hline
-  Slipids\cite{jambeck12b}   &   POPC & no & 0 & 128 					& 5120 & 0 & 310 & 200 & 150 &~\citenum{slipidsFILESpopc}  \\
-  Slipids\cite{jambeck12b}, AMBER\cite{smith94}  &  " & NaCl & 130 & 200 	& 9000 & 21 & " & 105 & 100 &~\citenum{slipidsFILESpopc130mMnaclSD}  \\
-  Slipids\cite{jambeck12b}, AMBER\cite{aqvist90}  &  "& CaCl$_2$ & 450  & " 	& "  & 73 & " & 2000 & " &~\citenum{slipidsFILESpopc450mMcacl}  \\
-  %\hline
-  Slipids\cite{jambeck12}   &   DPPC & no & 0 & 128 		& 3840 & 0 & 323 & 150 & 100 &~\citenum{slipidsFILES}  \\
-  Slipids\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   " & NaCl & 150  & 600 	& 18000 & 49 & " & 100 & 40 &--  \\
-  Slipids\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   " & " & 850 & 128 		& 3726 &  57 & " & 205 & 200 & \citenum{slipidsFILESdppc}  \\
-  Slipids\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   " & " & 1750 & " 		& 3612 &  114 & " & 105 & 100 & "  \\
-  Slipids\cite{jambeck12}, AMBER\cite{beglov94,roux96} &   " & " & 2570 & " 		& 3514 &  163 & " & " & " & "  \\
-  \hline
-  Lipid14~\cite{dickson14}                         &   POPC & no 		& 0		& 128	& 5120 	& 0 & 298 & 205 & 200 &~\citenum{lipid14POPC0mMNaClfiles}  \\
-  Lipid14~\cite{dickson14}, AMBER\cite{aqvist90}   &   " & NaCl & 150	& " 		& " 		& 12 & " & " & " &~\citenum{lipid14POPC150mMNaClfiles}  \\
-  Lipid14~\cite{dickson14}, AMBER\cite{aqvist90}   &   " & " 	& 1000 	& " 		& " 		& 77 & " & " & " &~\citenum{lipid14POPC1000mMNaClfiles}  \\
-  Lipid14~\cite{dickson14}, AMBER\cite{aqvist90}   &   " & CaCl$_2$ & 350 & " 		& 6400 	& 35 & " & 200 & 100 &~\citenum{lipid14POPC350mMCaClfiles}  \\
-  Lipid14~\cite{dickson14}, AMBER\cite{aqvist90}   &   " & " 	& 1000 	& " 		& " 		& 100 & " & " & " &~\citenum{lipid14POPC1000mMCaClfiles}  \\
-  \hline
-  Ulmschneiders~\cite{Ulmschneider09}                            		& POPC 	& no 		& 0		& 128 & 5120 	& 0 & 298 & 2$\times$205 & 2$\times$200 &~\citenum{ulmschneiderPOPC0mMNaClfiles}  \\
-  Ulmschneiders~\cite{Ulmschneider09}, OPLS\cite{aqvist90}	&   " 		& NaCl 	& 150 	& " 	  & " 		& 12 & " & 205 & 200 &~\citenum{ulmschneiderPOPC150mMNaClfiles}  \\
-  Ulmschneiders~\cite{Ulmschneider09}, OPLS\cite{aqvist90}	&   " 		& " 		& 1000  	& " 	  & " 		& 77 & " & " & " &~\citenum{ulmschneiderPOPC1000mMNaClfiles}  \\
+  Ulmschneiders~\cite{Ulmschneider09} / --                           		& POPC 	& no 		& 0		& 128 & 5120 	& 0 & 298 & 2$\times$205 & 2$\times$200 &~\citenum{ulmschneiderPOPC0mMNaClfiles}  \\
+  Ulmschneiders~\cite{Ulmschneider09} / OPLS\cite{aqvist90}	&   " 		& NaCl 	& 150 	& " 	  & " 		& 12 & " & 205 & 200 &~\citenum{ulmschneiderPOPC150mMNaClfiles}  \\
+  Ulmschneiders~\cite{Ulmschneider09} / OPLS\cite{aqvist90}	&   " 		& " 		& 1000  	& " 	  & " 		& 77 & " & " & " &~\citenum{ulmschneiderPOPC1000mMNaClfiles}  \\
 \end{tabular}
 \end{minipage}
 %\end{sidewaystable*} 
