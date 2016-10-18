@@ -307,12 +307,10 @@ influence from a possible oversensitivity of the headgroup.
 The density distributions with all simulated CaCl$_2$ concentrations are shown in Fig.~\ref{CAdensities}.
 \begin{figure}[t]
   \centering
-  \includegraphics[width=8cm]{../Fig/CAdensities.eps}
+  \includegraphics[width=8.6cm]{../Fig/CaDensities_allForSI.pdf}
   \caption{\label{CAdensities}
-    Number density profiles for lipids, Ca$^{2+}$ and Cl$^-$ ions from simulations with different force fields 
-    and different CaCl$_2$ concentrations. 
-    The lipid densities are scaled with 100 (united atom) or 200 (all atom model) to make them visible with the used y-axis scale.
-    The Cl$^-$ density is scaled with 2 to equalise charge density of ions.
+    Number density profiles of Ca$^{2+}$ (solid lines) and Cl$^-$ (dashed) ions in simulations with different force fields 
+    and CaCl$_2$ concentrations. 
 %    Figure discussed in https://github.com/NMRLipids/lipid\_ionINTERACTION/issues/4.
   }
 \end{figure}
@@ -334,20 +332,34 @@ and Slipids with scaled Na$^+$ and Cl$^-$ ions. For Berger-DPPC-97 and BergerOPL
 the ion charge in systems listed in Table~1 in the main text was simply scaled with 0.7 and
 the related files are available 
 at ~\cite{DPPCBergerNaCl150mMscaled,DPPCBergerNaCl1000mMscaled,DPPCBergerOPLS06NaCl150mMscaled,DPPCBergerOPLS06NaCl1000mMscaled}). 
-For simulations with Slipids the ion model by Kohagen et al. was used~\cite{kohagen16} and the related files are 
+For simulations with Slipids the electronic continuum correction (ECC) ion model by Kohagen et al. was used~\cite{kohagen16} and the related files are 
 available at~\cite{slipidsFILESpopcSCALED}. The simulation parameters were identical to those employed in the simulation of POPC with 130~mM NaCl (see Methods).
-The order parameter changes and Na$^+$-binding affinity are decreased by the charge scaling but 
-yet overestimated with respect to the experiments as seen from Figs. \ref{OPchangesSCALED} and~\ref{NAdensitySCALED}. 
-Thus the overestimated binding affinity cannot be fixed by only scaling the charges of ions.
+The order parameter changes (Fig.~\ref{OPchangesSCALED}) and Na$^+$-binding affinity (Fig.~\ref{NAdensitySCALED}) are decreased by the charge scaling but 
+yet overestimated with respect to the experiments. Thus the overestimated binding affinity cannot be fixed by only scaling the charges of ions.
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=8.6cm]{../Fig/NaDensities_scaledions.pdf} 
+  \caption{\label{NAdensitySCALED}
+    Number density profiles along membrane normal for Na$^+$ and Cl$^-$ ions. 
+    The top panel shows the effect of NBFIX~\cite{venable13} on CHARMM36 simulations;
+    other panels show the effect of ion models with scaled charges.
+}
+\end{figure}
 
-
-
-
-The ion model for CaCl$_2$ with scaled charges~\cite{kohagen14} was tested with CHARMM36 and Slipids models.
+The ion model for CaCl$_2$ with electronic continuum correction (ECC) scaled charges~\cite{kohagen14} was tested with CHARMM36 and Slipids models.
 The related files are available at Refs.~\citenum{charmmFILESpopc450mMcaclSCALED} and~\citenum{slipidsFILESpopc450mMcaclSCALED},
-respectively, and the results are shown in Figs.~\ref{CAdensities} and~\ref{OPchangesSCALED}.
+respectively, and the results are shown in Figs.~\ref{OPchangesSCALED} and~\ref{CAdensitySCALED}.
 The results with scaled charges are slightly improved but yet far from experiments.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=8.6cm]{../Fig/CaDensities_scaledions.pdf} 
+  \caption{\label{CAdensitySCALED}
+    Number density profiles along membrane normal for Ca$^{2+}$ and Cl$^-$ ions. 
+    The effect of ion models with (ECC~\cite{kohagen16}) scaled charges.
+}
+\end{figure}
 
 Also the effect of NBFIX~\cite{venable13} on Na$^+$ binding in CHARMM36 is quantified.
 The simulation data without NBFIX is available at~\cite{charmmPOPC350mMNaClnoNBFIXfiles}.
@@ -363,16 +375,6 @@ Na$^+$ binding in PC bilayer.
 %(and to no or much lesser extent Cl$^-$ anions) that drives the changes of the order parameters. 
 
 
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=8cm]{../Fig/NAdensitiesSCALED.eps} 
-  \caption{\label{NAdensitySCALED}
-    Atom number density profiles along membrane normal coordinate $z$ for lipids, Na$^+$ and Cl$^-$ ions. 
-    The effect of NBFIX~\cite{venable13} on CHARMM36 simulation results is shown in top and other figures show the
-    effect of ion models with scaled charges. The lipid densities are scaled with 100 (united atom) or 200 (all atom model) to make them visible with the used y-axis scale.
-}
-\end{figure}
 \section{Methods}
 
 \subsection{Simulated systems}
