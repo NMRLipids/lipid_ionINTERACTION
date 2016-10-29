@@ -1,0 +1,26 @@
+none  0.000 -1.78564 -0.0851876 
+none  0.000  1.78566 -0.0820231
+
+CaCl2 0.350 -1.76599 -0.0364841
+CaCl2 0.350  1.76601 -0.0560283
+
+CaCl2 0.670 -1.77346 -0.0630857
+CaCl2 0.670  1.77343 -0.0562723
+
+CaCl2 1.000 -1.76457 -0.0711766
+CaCl2 1.000  1.76451 -0.0517842
+
+NaCl  0.950:
+
+Upper leaflet surface charge density at 1.77221 nm is -0.0345724 q/nm2.
+Lower leaflet surface charge density at 1.77227 nm is -0.0332538 q/nm2.
+
+NaCl  0.690:
+
+Upper leaflet surface charge density at 1.78117 nm is -0.0441199 q/nm2.
+Lower leaflet surface charge density at 1.78109 nm is -0.0397024 q/nm2.
+
+NaCl  0.350:
+
+Upper leaflet surface charge density at 1.78076 nm is -0.0390255 q/nm2.
+Lower leaflet surface charge density at 1.7808 nm is -0.0585551 q/nm2.

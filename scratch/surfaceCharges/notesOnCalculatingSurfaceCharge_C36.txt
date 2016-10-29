@@ -1,0 +1,451 @@
+localhost:surfaceCharges bb$ ./doOneSystem.sh ../../MAPPING/mappingPOPCcharmm.txt ../../../../fromZenodo/POPC/NaCl/C36/950mM/popcRUN2.tpr ../../../../fromZenodo/POPC/NaCl/C36/950mM/popcRUN2-4.xtc 150 surfChargeDensProfile_C36_POPC_950mM-NaCl.dat
+-- STEP 1/4 --
+
+Will now CENTER trajectory ../../../../fromZenodo/POPC/NaCl/C36/950mM/popcRUN2-4.xtc to centered.xtc.
+
+Making molecules whole...
+Selected 0: 'System'
+gcq#22: "I Had So Many Problem, and Then I Got Me a Walkman" (F. Black)
+
+The name of the CH3 carbon in sn-1 chain: C316
+The atom number of the last lipid's CH3:  9645
+Centering molecules around atom 9645...
+Selected 14: 'centralAtom'
+Selected 0: 'System'
+gcq#119: "You Don't Wanna Know" (Pulp Fiction)
+
+The name of the g3 carbon: C1
+Centering around the center of mass of C1 atoms...
+Selected 13: 'C1'
+Selected 0: 'System'
+gcq#34: "There's No Room For the Weak" (Joy Division)
+
+-- STEP 2/4 --
+
+The name of the g3 carbon: C1
+Calculating charge distribution using all components...
+Selected 13: 'C1'
+Selected 0: 'System'
+gcq#148: "I Ripped the Cord Right Out Of the Phone" (Capt. Beefheart)
+
+-- STEP 3/4 --
+
+Will calculate the POSITIONS of g3 peaks for each leaflet.
+Note. I assume that your bilayer CoM is at the box center.
+
+The name of the g3 carbon: C1
+Calculating density distribution of C1s...
+Selected 13: 'C1'
+Selected 13: 'C1'
+gcq#514: "Wedged as we are between two eternities of idleness, there is no excuse for being idle now" (Anthony Burgess)
+
+Peak positions:
+Negative peak at: -1.77227 (std. dev. 0.207459) nm from bilayer center.
+Positive peak at:  1.77221 (std. dev. 0.207826) nm from bilayer center.
+
+-- STEP 4/4 --
+Upper leaflet surface charge density at 1.77221 nm is 0.0459576 q/nm2.
+Lower leaflet surface charge density at 1.77227 nm is 0.044055 q/nm2.
+
+localhost:surfaceCharges bb$
+
+
+
+
+
+
+
+
+
+
+
+
+localhost:surfaceCharges bb$ ./doOneSystem.sh ../../MAPPING/mappingPOPCcharmm.txt ../../../../fromZenodo/POPC/NaCl/C36/690mM/popcRUN2.tpr ../../../../fromZenodo/POPC/NaCl/C36/690mM/popcRUN13-73ns.xtc 150 surfChargeDensProfile_C36_POPC_690mM-NaCl.dat
+-- STEP 1/4 --
+
+Will now CENTER trajectory ../../../../fromZenodo/POPC/NaCl/C36/690mM/popcRUN13-73ns.xtc to centered.xtc.
+
+Making molecules whole...
+Selected 0: 'System'
+gcq#196: "Garbage Collecting..." (GNU Emacs)
+
+The name of the CH3 carbon in sn-1 chain: C316
+The atom number of the last lipid's CH3:  9645
+Centering molecules around atom 9645...
+Selected 14: 'centralAtom'
+Selected 0: 'System'
+gcq#46: "I Am Testing Your Grey Matter" (Red Hot Chili Peppers)
+
+The name of the g3 carbon: C1
+Centering around the center of mass of C1 atoms...
+Selected 13: 'C1'
+Selected 0: 'System'
+gcq#394: "Restraint! What possible restraint?" (Joseph Conrad)
+
+-- STEP 2/4 --
+
+The name of the g3 carbon: C1
+Calculating charge distribution using all components...
+Selected 13: 'C1'
+Selected 0: 'System'
+gcq#295: "A Pretty Village Burning Makes a Pretty Fire" (David Sandstrom)
+
+-- STEP 3/4 --
+
+Will calculate the POSITIONS of g3 peaks for each leaflet.
+Note. I assume that your bilayer CoM is at the box center.
+
+The name of the g3 carbon: C1
+Calculating density distribution of C1s...
+Selected 13: 'C1'
+Selected 13: 'C1'
+gcq#110: "I Don't Like Dirt" (The Breeders)
+
+Peak positions:
+Negative peak at: -1.78109 (std. dev. 0.209089) nm from bilayer center.
+Positive peak at:  1.78117 (std. dev. 0.229224) nm from bilayer center.
+
+-- STEP 4/4 --
+Upper leaflet surface charge density at 1.78117 nm is 0.0471342 q/nm2.
+Lower leaflet surface charge density at 1.78109 nm is 0.040591 q/nm2.
+
+localhost:surfaceCharges bb$
+
+
+
+
+
+
+
+
+
+
+localhost:surfaceCharges bb$ ./doOneSystem.sh ../../MAPPING/mappingPOPCcharmm.txt ../../../../fromZenodo/POPC/NaCl/C36/350mM/popcRUN2.tpr ../../../../fromZenodo/POPC/NaCl/C36/350mM/popcRUN2-4.trr 150 surfChargeDensProfile_C36_POPC_350mM-NaCl.dat
+-- STEP 1/4 --
+
+Will now CENTER trajectory ../../../../fromZenodo/POPC/NaCl/C36/350mM/popcRUN2-4.trr to centered.xtc.
+
+Making molecules whole...
+Selected 0: 'System'
+gcq#92: "Exactly" (Pulp Fiction)
+
+The name of the CH3 carbon in sn-1 chain: C316
+The atom number of the last lipid's CH3:  9645
+Centering molecules around atom 9645...
+Selected 14: 'centralAtom'
+Selected 0: 'System'
+gcq#512: "The three principal virtues of a programmer are Laziness, Impatience, and Hubris" (Larry Wall)
+
+The name of the g3 carbon: C1
+Centering around the center of mass of C1 atoms...
+Selected 13: 'C1'
+Selected 0: 'System'
+gcq#512: "The three principal virtues of a programmer are Laziness, Impatience, and Hubris" (Larry Wall)
+
+-- STEP 2/4 --
+
+The name of the g3 carbon: C1
+Calculating charge distribution using all components...
+Selected 13: 'C1'
+Selected 0: 'System'
+gcq#48: "You Could Make More Money As a Butcher" (F. Zappa)
+
+-- STEP 3/4 --
+
+Will calculate the POSITIONS of g3 peaks for each leaflet.
+Note. I assume that your bilayer CoM is at the box center.
+
+The name of the g3 carbon: C1
+Calculating density distribution of C1s...
+Selected 13: 'C1'
+Selected 13: 'C1'
+gcq#203: "I've Got Two Turntables and a Microphone" (B. Hansen)
+
+Peak positions:
+Negative peak at: -1.7808 (std. dev. 0.216128) nm from bilayer center.
+Positive peak at:  1.78076 (std. dev. 0.202469) nm from bilayer center.
+
+-- STEP 4/4 --
+Upper leaflet surface charge density at 1.78076 nm is 0.0428246 q/nm2.
+Lower leaflet surface charge density at 1.7808 nm is 0.0376075 q/nm2.
+
+localhost:surfaceCharges bb$
+
+
+
+
+
+
+
+localhost:surfaceCharges bb$ ./doOneSystem.sh ../../MAPPING/mappingPOPCcharmm.txt ../../../../fromZenodo/POPC/noIons/C36/Samuli/popcRUN2.tpr ../../../../fromZenodo/POPC/noIons/C36/Samuli/popcRUN2-3.trr 150 surfChargeDensProfile_C36_POPC_noIons_Samuli.dat
+-- STEP 1/4 --
+
+Will now CENTER trajectory ../../../../fromZenodo/POPC/noIons/C36/Samuli/popcRUN2-3.trr to centered.xtc.
+
+Making molecules whole...
+Selected 0: 'System'
+gcq#344: "Everything's formed from particles" (Van der Graaf Generator)
+
+The name of the CH3 carbon in sn-1 chain: C316
+The atom number of the last lipid's CH3:  9645
+Centering molecules around atom 9645...
+Selected 7: 'centralAtom'
+Selected 0: 'System'
+gcq#134: "It Was My Pleasure" (Pulp Fiction)
+
+The name of the g3 carbon: C1
+Centering around the center of mass of C1 atoms...
+Selected 6: 'C1'
+Selected 0: 'System'
+gcq#169: "We Look Pretty Sharp In These Clothes" (F. Zappa)
+
+-- STEP 2/4 --
+
+The name of the g3 carbon: C1
+Calculating charge distribution using all components...
+Selected 6: 'C1'
+Selected 0: 'System'
+gcq#107: "Ease Myself Into the Body Bag" (P.J. Harvey)
+
+-- STEP 3/4 --
+
+Will calculate the POSITIONS of g3 peaks for each leaflet.
+Note. I assume that your bilayer CoM is at the box center.
+
+The name of the g3 carbon: C1
+Calculating density distribution of C1s...
+Selected 6: 'C1'
+Selected 6: 'C1'
+gcq#362: "It Doesn't Seem Right, No Computers in Sight" (Faun Fables)
+
+Peak positions:
+Negative peak at: -1.78825 (std. dev. 0.203966) nm from bilayer center.
+Positive peak at:  1.78829 (std. dev. 0.208444) nm from bilayer center.
+
+-- STEP 4/4 --
+Upper leaflet surface charge density at 1.78829 nm is 0.0387005 q/nm2.
+Lower leaflet surface charge density at 1.78825 nm is 0.0431663 q/nm2.
+
+localhost:surfaceCharges bb$
+
+
+
+
+
+
+localhost:surfaceCharges bb$ ./doOneSystem.sh ../../MAPPING/mappingPOPCcharmm.txt ../../../../fromZenodo/POPC/noIons/C36/Hubert/POPC_0CHL.tpr ../../../../fromZenodo/POPC/noIons/C36/Hubert/POPC_0CHL.xtc 150 surfChargeDensProfile_C36_POPC_noIons_Hubert.dat
+-- STEP 1/4 --
+
+Will now CENTER trajectory ../../../../fromZenodo/POPC/noIons/C36/Hubert/POPC_0CHL.xtc to centered.xtc.
+
+Making molecules whole...
+Selected 0: 'System'
+gcq#540: "Science is the great antidote to the poison of enthusiasm and superstition." (Adam Smith, Wealth of Nations, 1776)
+
+The name of the CH3 carbon in sn-1 chain: C316
+The atom number of the last lipid's CH3:  17149
+Centering molecules around atom 17149...
+Selected 7: 'centralAtom'
+Selected 0: 'System'
+gcq#456: "People disagree with me. I just ignore them." (Linus Torvalds on the use of C++ in the kernel)
+
+The name of the g3 carbon: C1
+Centering around the center of mass of C1 atoms...
+Selected 6: 'C1'
+Selected 0: 'System'
+gcq#495: "This isn't right. This isn't even wrong." (Wolfgang Pauli)
+
+-- STEP 2/4 --
+
+The name of the g3 carbon: C1
+Calculating charge distribution using all components...
+Selected 6: 'C1'
+Selected 0: 'System'
+gcq#494: "If it's a good idea, go ahead and do it. It's much easier to apologize than it is to get permission." (Grace Hopper, developer of COBOL)
+
+-- STEP 3/4 --
+
+Will calculate the POSITIONS of g3 peaks for each leaflet.
+Note. I assume that your bilayer CoM is at the box center.
+
+The name of the g3 carbon: C1
+Calculating density distribution of C1s...
+Selected 6: 'C1'
+Selected 6: 'C1'
+gcq#300: "Shoot them in the back now" (The Ramones)
+
+Peak positions:
+Negative peak at: -1.78564 (std. dev. 0.243351) nm from bilayer center.
+Positive peak at:  1.78566 (std. dev. 0.244619) nm from bilayer center.
+
+-- STEP 4/4 --
+Upper leaflet surface charge density at 1.78566 nm is 0.0415518 q/nm2.
+Lower leaflet surface charge density at 1.78564 nm is 0.0407612 q/nm2.
+
+localhost:surfaceCharges bb$
+
+
+
+
+localhost:surfaceCharges bb$ ./doOneSystem.sh ../../MAPPING/mappingPOPCcharmm.txt ../../../../fromZenodo/POPC/CaCl2/C36/350mM/035M_CaCl2_POPC_CRM36.tpr ../../../../fromZenodo/POPC/CaCl2/C36/350mM/035M_CaCl2_POPC_CRM36_100_200ns.xtc 150 surfChargeDensProfile_C36_POPC_350mM-CaCl2.dat
+-- STEP 1/4 --
+
+Will now CENTER trajectory ../../../../fromZenodo/POPC/CaCl2/C36/350mM/035M_CaCl2_POPC_CRM36_100_200ns.xtc to centered.xtc.
+
+Making molecules whole...
+Selected 0: 'System'
+gcq#549: "Measuring programming progress by lines of code is like measuring aircraft building progress by weight." (Bill Gates)
+
+The name of the CH3 carbon in sn-1 chain: C316
+The atom number of the last lipid's CH3:  17149
+Centering molecules around atom 17149...
+Selected 12: 'centralAtom'
+Selected 0: 'System'
+gcq#217: "Here's Another Useful Quote" (S. Boot)
+
+The name of the g3 carbon: C1
+Centering around the center of mass of C1 atoms...
+Selected 11: 'C1'
+Selected 0: 'System'
+gcq#450: "Above all, don't fear difficult moments. The best comes from them." (Rita Levi-Montalcini)
+
+-- STEP 2/4 --
+
+The name of the g3 carbon: C1
+Calculating charge distribution using all components...
+Selected 11: 'C1'
+Selected 0: 'System'
+gcq#512: "The three principal virtues of a programmer are Laziness, Impatience, and Hubris" (Larry Wall)
+
+-- STEP 3/4 --
+
+Will calculate the POSITIONS of g3 peaks for each leaflet.
+Note. I assume that your bilayer CoM is at the box center.
+
+The name of the g3 carbon: C1
+Calculating density distribution of C1s...
+Selected 11: 'C1'
+Selected 11: 'C1'
+gcq#110: "I Don't Like Dirt" (The Breeders)
+
+Peak positions:
+Negative peak at: -1.76599 (std. dev. 0.206517) nm from bilayer center.
+Positive peak at:  1.76601 (std. dev. 0.208419) nm from bilayer center.
+
+-- STEP 4/4 --
+Upper leaflet surface charge density at 1.76601 nm is 0.0338981 q/nm2.
+Lower leaflet surface charge density at 1.76599 nm is 0.0406817 q/nm2.
+
+localhost:surfaceCharges bb$
+
+
+
+
+
+localhost:surfaceCharges bb$ ./doOneSystem.sh ../../MAPPING/mappingPOPCcharmm.txt ../../../../fromZenodo/POPC/CaCl2/C36/670mM/popcRUN3.tpr ../../../../fromZenodo/POPC/CaCl2/C36/670mM/traj80-200ns.xtc 150 surfChargeDensProfile_C36_POPC_670mM-CaCl2.dat
+-- STEP 1/4 --
+
+Will now CENTER trajectory ../../../../fromZenodo/POPC/CaCl2/C36/670mM/traj80-200ns.xtc to centered.xtc.
+
+Making molecules whole...
+Selected 0: 'System'
+gcq#555: "Any one who considers arithmetical methods of producing random digits is, of course, in a state of sin." (John von Neumann)
+
+The name of the CH3 carbon in sn-1 chain: C316
+The atom number of the last lipid's CH3:  9645
+Centering molecules around atom 9645...
+Selected 14: 'centralAtom'
+Selected 0: 'System'
+gcq#5: "We Can Dance Like Iggy Pop" (Red Hot Chili Peppers)
+
+The name of the g3 carbon: C1
+Centering around the center of mass of C1 atoms...
+Selected 13: 'C1'
+Selected 0: 'System'
+gcq#212: "Engage" (J.L. Picard)
+
+-- STEP 2/4 --
+
+The name of the g3 carbon: C1
+Calculating charge distribution using all components...
+Selected 13: 'C1'
+Selected 0: 'System'
+gcq#88: "Let Me Do This" (Urban Dance Squad)
+
+-- STEP 3/4 --
+
+Will calculate the POSITIONS of g3 peaks for each leaflet.
+Note. I assume that your bilayer CoM is at the box center.
+
+The name of the g3 carbon: C1
+Calculating density distribution of C1s...
+Selected 13: 'C1'
+Selected 13: 'C1'
+gcq#270: "Working in the Burger Kings, Spitting on your Onion Rings" (Slim Shady)
+
+Peak positions:
+Negative peak at: -1.77346 (std. dev. 0.186144) nm from bilayer center.
+Positive peak at:  1.77343 (std. dev. 0.184407) nm from bilayer center.
+
+-- STEP 4/4 --
+Upper leaflet surface charge density at 1.77343 nm is 0.0184902 q/nm2.
+Lower leaflet surface charge density at 1.77346 nm is 0.0146041 q/nm2.
+
+localhost:surfaceCharges bb$
+
+
+
+
+
+localhost:surfaceCharges bb$ ./doOneSystem.sh ../../MAPPING/mappingPOPCcharmm.txt ../../../../fromZenodo/POPC/CaCl2/C36/1000mM/1M_CaCl2_POPC_CRM36.tpr ../../../../fromZenodo/POPC/CaCl2/C36/1000mM/1M_CaCl2_POPC_CRM36_100_200ns.xtc 150 surfChargeDensProfile_C36_POPC_1000mM-CaCl2.dat
+-- STEP 1/4 --
+
+Will now CENTER trajectory ../../../../fromZenodo/POPC/CaCl2/C36/1000mM/1M_CaCl2_POPC_CRM36_100_200ns.xtc to centered.xtc.
+
+Making molecules whole...
+Selected 0: 'System'
+gcq#557: "As an adolescent I aspired to lasting fame, I craved factual certainty, and I thirsted for a meaningful vision of human life -- so I became a scientist. This is like becoming an archbishop so you can meet girls." (Matt Cartmill)
+
+The name of the CH3 carbon in sn-1 chain: C316
+The atom number of the last lipid's CH3:  17149
+Centering molecules around atom 17149...
+Selected 12: 'centralAtom'
+Selected 0: 'System'
+gcq#402: "Ubiquitin's just a rock" (Berk Hess)
+
+The name of the g3 carbon: C1
+Centering around the center of mass of C1 atoms...
+Selected 11: 'C1'
+Selected 0: 'System'
+gcq#310: "I'd be Safe and Warm if I was in L.A." (The Mamas and the Papas)
+
+-- STEP 2/4 --
+
+The name of the g3 carbon: C1
+Calculating charge distribution using all components...
+Selected 11: 'C1'
+Selected 0: 'System'
+gcq#346: "What's the point, yo, what's the spread?" (Red Hot Chili Peppers)
+
+-- STEP 3/4 --
+
+Will calculate the POSITIONS of g3 peaks for each leaflet.
+Note. I assume that your bilayer CoM is at the box center.
+
+The name of the g3 carbon: C1
+Calculating density distribution of C1s...
+Selected 11: 'C1'
+Selected 11: 'C1'
+gcq#547: "Scientists do not join hands every Sunday and sing "Yes gravity is real! I know gravity is real! I will have faith! I believe in my heart that what goes up, up, up must come down, down, down. Amen!" If they did, we would think they were pretty insecure about the concept." (Dan Barker)
+
+Peak positions:
+Negative peak at: -1.76457 (std. dev. 0.206235) nm from bilayer center.
+Positive peak at:  1.76451 (std. dev. 0.205047) nm from bilayer center.
+
+-- STEP 4/4 --
+Upper leaflet surface charge density at 1.76451 nm is 0.0308166 q/nm2.
+Lower leaflet surface charge density at 1.76457 nm is 0.0244388 q/nm2.
+
+localhost:surfaceCharges bb$
+
+
