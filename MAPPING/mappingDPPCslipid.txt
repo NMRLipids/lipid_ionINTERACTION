@@ -1,0 +1,17 @@
+#Individual atoms. NOTE! List incomplete!
+M_G1_M           C3 
+M_G1C17_M        C316
+M_G2_M           C2 
+M_G3_M           C1 
+M_G3P2_M         P 
+M_G3C4_M         C11
+M_G3C4H1_M       H11A 
+M_G3C4H2_M       H11B 
+M_G3C5_M         C12
+M_G3C5H1_M       H12A 
+M_G3C5H2_M       H12B 
+
+#Whole molecules
+M_DPPC_M         DPPC
+M_NA_M           NA
+M_CL_M           CL

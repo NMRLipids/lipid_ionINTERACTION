@@ -1,3 +1,4 @@
+#Individual atoms [NOTE! LIST INCOMPLETE!]
 M_G1C17_M        C50
 M_G3_M           C12
 M_G3C5_M         C5
@@ -9,7 +10,7 @@ M_G3C4H2_M       H62
 M_G3P2_M         P8
 
 #Whole molecules
-M_POPC_M         PLA
+M_DPPC_M         DPPC
 M_NA_M           NA
 M_CL_M           CL
 M_CA_M           CA
