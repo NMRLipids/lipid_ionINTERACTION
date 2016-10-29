@@ -1,0 +1,342 @@
+set term pdfcairo enhanced color dashed dashlength 0.5 size 10cm, 21cm font "Arial,15" 
+set out "NaDensities.pdf"
+
+nPanels=9
+set multiplot layout nPanels, 1
+top = 0.994
+heightY = 1.05/nPanels
+bottom = top-heightY
+right = 0.985
+left = 0.15
+
+zMax=4.0
+set xtics format '' 1
+set mxtics 4
+
+dMax=0.8
+set ytics format "%2.1f" 0.2
+#set mytics 2
+
+cMax=1000.0 #-- highest salt concentration
+
+width = 2        #-- line width Na
+wCl = 0.5*width  #-- line width Cl
+dash = 2         #-- dash type Cl 
+
+# Colour palette to indicate ion concentrations:
+set palette model RGB maxcolors 11
+set palette defined (0 "#FFD300", 1 "#D70039", 2 "#0088BF", 3 "#00A368")
+set key at graph 0.02, graph 0.675 left reverse Left noautotitle textcolor variable samplen -1
+unset colorbox
+
+# Indicator for Phosphorus peak positions:
+pCol="#8FFF00" #-- color of phosphorus indicator lines
+plw=2 #-- line width of phosphorus indicator lines
+
+set label 1 "Orange" at graph 0.05, graph 0.8 font "Arial,20" 
+set rmargin at screen right
+set lmargin at screen left
+set tmargin at screen top
+set bmargin at screen bottom
+# Phosphorus peak positions:
+Pcenter=1.97752
+NAdens=0.0259708
+set arrow 10 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.97745
+NAdens=0.0151024
+set arrow 11 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.90136
+NAdens=0.0741117
+set arrow 12 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.90139
+NAdens=0.11273
+set arrow 13 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.91977
+NAdens=0.130212
+set arrow 14 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.91983
+NAdens=0.128967
+set arrow 15 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+plot [0:zMax][0:dMax] \
+  "./data/Orange/ClDensity_Orange_POPC_1000mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 1000/cMax lw wCl dt dash t "1000 mM", \
+  "./data/Orange/ClDensity_Orange_POPC_510mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 510/cMax lw wCl dt dash t "&{1}@{ }510 mM", \
+  "./data/Orange/ClDensity_Orange_POPC_140mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 140/cMax lw wCl dt dash t "&{1}@{ }140 mM", \
+  "./data/Orange/NaDensity_Orange_POPC_1000mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 1000/cMax lw width, \
+  "./data/Orange/NaDensity_Orange_POPC_510mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 510/cMax lw width, \
+  "./data/Orange/NaDensity_Orange_POPC_140mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 140/cMax lw width
+
+
+# do not write the highest tick mark on y-axis:
+set ytics 0,0.2,dMax-0.2
+
+
+set label 1 "Lipid14"
+top = bottom
+bottom = bottom - heightY
+set tmargin at screen top
+set bmargin at screen bottom
+# Phosphorus peak positions:
+Pcenter=1.91494
+NAdens=0.0594833
+set arrow 10 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.91494
+NAdens=0.0492583
+set arrow 11 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.95196
+NAdens=0.24583
+set arrow 12 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.95195
+NAdens=0.295144
+set arrow 13 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+unset arrow 14 
+unset arrow 15 
+plot [0:zMax][0:dMax] \
+  "./data/Lipid14/ClDensity_Lipid14_POPC_1000mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 1000/cMax lw wCl dt dash t "1000 mM", \
+  "./data/Lipid14/ClDensity_Lipid14_POPC_150mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 150/cMax lw wCl dt dash t "&{1}@{ }150 mM", \
+  "./data/Lipid14/NaDensity_Lipid14_POPC_1000mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 1000/cMax lw width, \
+  "./data/Lipid14/NaDensity_Lipid14_POPC_150mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 150/cMax lw width
+
+set label 1 "CHARMM36"
+top = bottom
+bottom = bottom - heightY
+set tmargin at screen top
+set bmargin at screen bottom
+# Phosphorus peak positions:
+Pcenter=1.97467
+NAdens=0.143857
+set arrow 10 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.9747
+NAdens=0.163132
+set arrow 11 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.97232
+NAdens=0.24844
+set arrow 12 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.97231
+NAdens=0.275394
+set arrow 13 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.96357
+NAdens=0.317947
+set arrow 14 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.96356
+NAdens=0.310523
+set arrow 15 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+plot [0:zMax][0:dMax] \
+  "./data/C36/ClDensity_C36_POPC_950mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 950/cMax lw wCl dt dash t "&{1}@{ }950 mM", \
+  "./data/C36/ClDensity_C36_POPC_690mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 690/cMax lw wCl dt dash t "&{1}@{ }690 mM", \
+  "./data/C36/ClDensity_C36_POPC_350mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 350/cMax lw wCl dt dash t "&{1}@{ }350 mM", \
+  "./data/C36/NaDensity_C36_POPC_950mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 950/cMax lw width, \
+  "./data/C36/NaDensity_C36_POPC_690mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 690/cMax lw width, \
+  "./data/C36/NaDensity_C36_POPC_350mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 350/cMax lw width
+
+
+# set label for y-axis:
+set ylabel "number density (nm^{-3})" font "Arial,20" offset graph -0.017, graph -0.5
+
+
+set label 1 "Ulmschneiders"
+top = bottom
+bottom = bottom - heightY
+set tmargin at screen top
+set bmargin at screen bottom
+# Phosphorus peak positions:
+Pcenter=2.00205
+NAdens=0.395683
+set arrow 10 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=2.00207
+NAdens=0.41799
+set arrow 11 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=2.02854
+NAdens=0.117716
+set arrow 12 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=2.02855
+NAdens=0.141059
+set arrow 13 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+unset arrow 14 
+unset arrow 15 
+plot [0:zMax][0:dMax] \
+  "./data/Ulmschneiders/ClDensity_Ulmschneiders_POPC_1000mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 1000/cMax lw wCl dt dash t "1000 mM", \
+  "./data/Ulmschneiders/ClDensity_Ulmschneiders_POPC_150mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 150/cMax lw wCl dt dash t "&{1}@{ }150 mM", \
+  "./data/Ulmschneiders/NaDensity_Ulmschneiders_POPC_1000mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 1000/cMax lw width, \
+  "./data/Ulmschneiders/NaDensity_Ulmschneiders_POPC_150mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 150/cMax lw width
+
+
+unset ylabel
+
+set label 1 "Berger-OPLS"
+top = bottom
+bottom = bottom - heightY
+set tmargin at screen top
+set bmargin at screen bottom
+# Phosphorus peak positions:
+Pcenter=1.81245
+NAdens=0.0787676
+set arrow 10 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.81244
+NAdens=0.136059
+set arrow 11 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=2.03885
+NAdens=0.418461
+set arrow 12 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=2.03891
+NAdens=0.407082
+set arrow 13 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+plot [0:zMax][0:dMax] \
+  "./data/Berger-OPLS/ClDensity_Berger-OPLS_DPPC_1000mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 1000/cMax lw wCl dt dash t "1000 mM ^_★", \
+  "./data/Berger-OPLS/ClDensity_Berger-OPLS_DPPC_150mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 150/cMax lw wCl dt dash t "&{1}@{ }150 mM ^_★", \
+  "./data/Berger-OPLS/NaDensity_Berger-OPLS_DPPC_1000mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 1000/cMax lw width, \
+  "./data/Berger-OPLS/NaDensity_Berger-OPLS_DPPC_150mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 150/cMax lw width
+
+set label 1 "Slipids"
+top = bottom
+bottom = bottom - heightY
+set tmargin at screen top
+set bmargin at screen bottom
+# Phosphorus peak positions:
+Pcenter=1.90749
+NAdens=0.365514
+set arrow 10 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.90746
+NAdens=0.425471
+set arrow 11 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.7841
+NAdens=0.108645
+set arrow 12 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.78422
+NAdens=0.0844851
+set arrow 13 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+plot [0:zMax][0:dMax] \
+  "./data/Slipid/ClDensity_Slipid_DPPC_850mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 850/cMax lw wCl dt dash t "&{1}@{ }850 mM ^_★", \
+  "../../../Data/DPPC/NaCl/SLIPIDS/150mM/pd_323k.xvg" \
+  u (abs($1)):($4) w l lc palette frac 150/cMax lw wCl dt dash t "&{1}@{ }150 mM ^_★", \
+  "./data/Slipid/ClDensity_Slipid_POPC_130mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 130/cMax lw wCl dt dash t "&{1}@{ }130 mM", \
+  "./data/Slipid/NaDensity_Slipid_DPPC_850mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 850/cMax lw width, \
+  "../../../Data/DPPC/NaCl/SLIPIDS/150mM/pd_323k.xvg" \
+  u (abs($1)):($3) w l lc palette frac 150/cMax lw width, \
+  "./data/Slipid/NaDensity_Slipid_POPC_130mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 130/cMax lw width
+
+set label 1 "Berger"
+top = bottom
+bottom = bottom - heightY
+set tmargin at screen top
+set bmargin at screen bottom
+# Phosphorus peak positions:
+Pcenter=1.99795
+NAdens=0.189924
+set arrow 10 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.99796
+NAdens=0.165636
+set arrow 11 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.87118
+NAdens=0.208116
+set arrow 12 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.8713
+NAdens=0.0894807
+set arrow 13 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.98383
+NAdens=0.546482
+set arrow 14 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.98386
+NAdens=0.636752
+set arrow 15 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+plot [0:zMax][0:dMax] \
+  "./data/Berger/ClDensity_Berger_DPPC_1000mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 1000/cMax lw wCl dt dash t "1000 mM ^_★", \
+  "./data/Berger/ClDensity_Berger_POPC_340mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 340/cMax lw wCl dt dash t "&{1}@{ }340 mM", \
+  "./data/Berger/ClDensity_Berger_DPPC_150mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 150/cMax lw wCl dt dash t "&{1}@{ }150 mM ^_★", \
+  "./data/Berger/NaDensity_Berger_DPPC_1000mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 1000/cMax lw width, \
+  "./data/Berger/NaDensity_Berger_POPC_340mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 340/cMax lw width, \
+  "./data/Berger/NaDensity_Berger_DPPC_150mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 150/cMax lw width
+
+set xtics format '%1.0f' 1
+set xlabel "distance to bilayer center (nm)" font "Arial,20"
+
+# Explanation for the star:
+c2x=0.235 # position x
+c2y=0.414 # position y
+set obj 2 rect fc rgb "white" fillstyle solid 1.0 from screen c2x-0.007, screen c2y-0.01 to screen c2x+0.127, screen c2y+0.01
+set label 2 "^_★ DPPC" at screen c2x, screen c2y font "Arial,14" front
+
+set label 1 "MacRog"
+top = bottom
+bottom = bottom - heightY
+set tmargin at screen top
+set bmargin at screen bottom
+# Phosphorus peak positions:
+Pcenter=1.86839
+NAdens=0.103039
+set arrow 10 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.86843
+NAdens=0.0932748
+set arrow 11 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.87751
+NAdens=0.177094
+set arrow 12 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.87751
+NAdens=0.19011
+set arrow 13 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.90858
+NAdens=0.24241
+set arrow 14 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.90868
+NAdens=0.23241
+set arrow 15 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.88529
+NAdens=0.284295
+set arrow 16 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.88521
+NAdens=0.307486
+set arrow 17 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+plot [0:zMax][0:dMax] \
+  "./data/MacRog/ClDensity_MacRog_POPC_416mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 420/cMax lw wCl dt dash t "&{1}@{ }420 mM", \
+  "./data/MacRog/ClDensity_MacRog_POPC_311mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 310/cMax lw wCl dt dash t "&{1}@{ }310 mM", \
+  "./data/MacRog/ClDensity_MacRog_POPC_207mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 210/cMax lw wCl dt dash t "&{1}@{ }210 mM", \
+  "./data/MacRog/ClDensity_MacRog_POPC_103mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 100/cMax lw wCl dt dash t "&{1}@{ }100 mM", \
+  "./data/MacRog/NaDensity_MacRog_POPC_416mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 420/cMax lw width, \
+  "./data/MacRog/NaDensity_MacRog_POPC_311mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 310/cMax lw width, \
+  "./data/MacRog/NaDensity_MacRog_POPC_207mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 210/cMax lw width, \
+  "./data/MacRog/NaDensity_MacRog_POPC_103mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 100/cMax lw width
+
+unset label 2
+unset obj 2
+unset multiplot

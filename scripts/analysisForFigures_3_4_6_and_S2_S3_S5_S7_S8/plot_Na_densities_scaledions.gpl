@@ -1,0 +1,197 @@
+set term pdfcairo enhanced color dashed dashlength 0.5 size 10cm, 11cm font "Arial,15" 
+set out "NaDensities_scaledions.pdf"
+
+nPanels=5
+set multiplot layout nPanels, 1
+top = 0.985
+heightY = 1.1/nPanels
+bottom = top-heightY
+right = 0.985
+left = 0.15
+
+zMax=4.0
+set xtics format '' 1
+set mxtics 4
+
+dMax=0.8
+set ytics format "%2.1f" 0.2
+#set mytics 2
+
+cMax=1000.0 #-- highest salt concentration
+
+width = 2        #-- line width Na
+wCl = 0.5*width  #-- line width Cl
+dash = 2         #-- dash type Cl 
+
+# Colour palette to indicate ion concentrations:
+set palette model RGB maxcolors 11
+set palette defined (0 "#FFD300", 1 "#D70039", 2 "#0088BF", 3 "#00A368")
+set key at graph 0.03, graph 0.675 left reverse Left noautotitle textcolor variable samplen 1.2
+unset colorbox
+
+set label 1 "CHARMM36" at graph 0.05, graph 0.8 font "Arial,20" 
+set label 2 "&{1}730 mM" at graph 0.803, graph 0.87 textcolor rgb "#36838C"
+set label 3 "&{1}690 mM" at graph 0.803, graph 0.72 textcolor rgb "#2F79A7"
+set rmargin at screen right
+set lmargin at screen left
+set tmargin at screen top
+set bmargin at screen bottom
+plot [0:zMax][0:dMax] \
+  "./data/C36/NaDensity_C36_POPC_690mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 690/cMax lw width t "Na^{+} with NBFIX", \
+  "./data/C36/ClDensity_C36_POPC_690mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 690/cMax lw wCl dt dash t "@{Cl^^_–}&{Na^{+} with}\"", \
+  "./data/C36/NaDensity_C36_POPC_730mM-NaCl_noNBFIX.xvg" \
+  u (abs($1)):($2) w l lc palette frac 730/cMax dt (30,5,2,5) lw width t "Na^{+} @{w/o}&{with} NBFIX", \
+  "./data/C36/ClDensity_C36_POPC_730mM-NaCl_noNBFIX.xvg" \
+  u (abs($1)):($2) w l lc palette frac 730/cMax lw wCl dt (30,5,2,5) t "@{Cl^^_–}&{Na^{+} with}\""
+
+unset label 2
+unset label 3
+
+# do not write the highest tick mark on y-axis:
+set ytics 0,0.2,dMax-0.2
+
+# set label for y-axis:
+set ylabel "number density (nm^{-3})" font "Arial,20" offset graph -0.017, graph -0.5
+
+c2x=0.803 # position x
+c2y=0.75 # position y
+
+set label 1 "Slipids"
+top = bottom
+bottom = bottom - heightY
+set tmargin at screen top
+set bmargin at screen bottom
+plot [0:zMax][0:dMax] \
+  -1 lw width lc rgb "black" t "Na^{+}", \
+  -1 lw wCl lc rgb "black" dt dash t "Cl^^_–", \
+  -1 dt (30,5,2,5) lc rgb "black" lw width t "Na^{+} ECC", \
+  -1 lw wCl dt (30,5,2,5) lc rgb "black" t "@{Cl^^_–}&{Na^{+}}&{Ec}\"", \
+  "./data/Slipid/NaDensity_Slipid_POPC_1000mM-NaCl_ECC.xvg" \
+  u (abs($1)):($2) w l lc palette frac 1000/cMax dt (30,5,2,5) lw width, \
+  "./data/Slipid/ClDensity_Slipid_POPC_1000mM-NaCl_ECC.xvg" \
+  u (abs($1)):($2) w l lc palette frac 1000/cMax lw wCl dt (30,5,2,5), \
+  "./data/Slipid/NaDensity_Slipid_DPPC_850mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 850/cMax lw width, \
+  "./data/Slipid/ClDensity_Slipid_DPPC_850mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 850/cMax lw wCl dt dash, \
+  "./data/Slipid/NaDensity_Slipid_POPC_750mM-NaCl_ECC.xvg" \
+  u (abs($1)):($2) w l lc palette frac 750/cMax dt (30,5,2,5) lw width, \
+  "./data/Slipid/ClDensity_Slipid_POPC_750mM-NaCl_ECC.xvg" \
+  u (abs($1)):($2) w l lc palette frac 750/cMax lw wCl dt (30,5,2,5), \
+  "./data/Slipid/NaDensity_Slipid_POPC_500mM-NaCl_ECC.xvg" \
+  u (abs($1)):($2) w l lc palette frac 500/cMax dt (30,5,2,5) lw width, \
+  "./data/Slipid/ClDensity_Slipid_POPC_500mM-NaCl_ECC.xvg" \
+  u (abs($1)):($2) w l lc palette frac 500/cMax lw wCl dt (30,5,2,5), \
+  "./data/Slipid/NaDensity_Slipid_POPC_300mM-NaCl_ECC.xvg" \
+  u (abs($1)):($2) w l lc palette frac 300/cMax dt (30,5,2,5) lw width, \
+  "./data/Slipid/ClDensity_Slipid_POPC_300mM-NaCl_ECC.xvg" \
+  u (abs($1)):($2) w l lc palette frac 300/cMax lw wCl dt (30,5,2,5), \
+  "./data/Slipid/NaDensity_Slipid_POPC_130mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 130/cMax lw width, \
+  "./data/Slipid/ClDensity_Slipid_POPC_130mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 130/cMax lw wCl dt dash, \
+  "./data/Slipid/NaDensity_Slipid_POPC_130mM-NaCl_ECC.xvg" \
+  u (abs($1)):($2) w l lc palette frac 130/cMax dt (30,5,2,5) lw width, \
+  "./data/Slipid/ClDensity_Slipid_POPC_130mM-NaCl_ECC.xvg" \
+  u (abs($1)):($2) w l lc palette frac 130/cMax lw wCl dt (30,5,2,5)
+
+unset ylabel
+
+# color labels for Slipis (have to be given here to overlay the lines):
+set obj 20 rect fc rgb "white" fs noborder from graph 0.805, screen top-0.95*heightY to graph 0.975, screen bottom+0.9*heightY
+set obj 27 rect fc rgb "white" fs noborder from graph 0.97, screen top-0.33*heightY to graph 0.999, screen bottom+0.8*heightY
+set label 21 "1000 mM"    at graph 0.803, graph 1.87 font "Arial,14" textcolor rgb "#00A368" front
+set label 22 "&{1}850 mM ^_★" at graph 0.803, graph 1.72 textcolor rgb "#3D8C70"
+set label 23 "&{1}750 mM" at graph 0.803, graph 1.57 textcolor rgb "#35828B"
+set label 24 "&{1}500 mM" at graph 0.803, graph 1.42 textcolor rgb "#573168"
+set label 25 "&{1}300 mM" at graph 0.803, graph 1.27 textcolor rgb "#D22527"
+set label 26 "&{1}130 mM" at graph 0.803, graph 1.12 textcolor rgb "#EB8128"
+# color labels for Berger-OPLS and Berger:
+set label 31 "1000 mM ^_★" at graph 0.803, graph 0.45 textcolor rgb "#00A368"
+set label 32 "&{1}150 mM ^_★" at graph 0.803, graph 0.30 textcolor rgb "#EB8128"
+
+
+set label 1 "Berger-OPLS"
+top = bottom
+bottom = bottom - heightY
+set tmargin at screen top
+set bmargin at screen bottom
+plot [0:zMax][0:dMax] \
+  -1 lw width lc rgb "black" t "Na^{+}", \
+  -1 lw wCl lc rgb "black" dt dash t "Cl^^_–", \
+  -1 dt (30,5,2,5) lc rgb "black" lw width t "Na^{+} scaled", \
+  -1 lw wCl dt (30,5,2,5) lc rgb "black" t "@{Cl^^_–}&{Na^{+}}&{sca}@{\"}", \
+  "./data/Berger-OPLS/NaDensity_Berger-OPLS_DPPC_1000mM-NaCl_scaled.xvg" \
+  u (abs($1)):($2) w l lc palette frac 1000/cMax lw width dt (30,5,2,5), \
+  "./data/Berger-OPLS/ClDensity_Berger-OPLS_DPPC_1000mM-NaCl_scaled.xvg" \
+  u (abs($1)):($2) w l lc palette frac 1000/cMax lw wCl dt (30,5,2,5), \
+  "./data/Berger-OPLS/NaDensity_Berger-OPLS_DPPC_1000mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 1000/cMax lw width, \
+  "./data/Berger-OPLS/ClDensity_Berger-OPLS_DPPC_1000mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 1000/cMax lw wCl dt dash, \
+  "./data/Berger-OPLS/NaDensity_Berger-OPLS_DPPC_150mM-NaCl_scaled.xvg" \
+  u (abs($1)):($2) w l lc palette frac 150/cMax lw width dt (30,5,2,5), \
+  "./data/Berger-OPLS/ClDensity_Berger-OPLS_DPPC_150mM-NaCl_scaled.xvg" \
+  u (abs($1)):($2) w l lc palette frac 150/cMax lw wCl dt (30,5,2,5), \
+  "./data/Berger-OPLS/NaDensity_Berger-OPLS_DPPC_150mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 150/cMax lw width, \
+  "./data/Berger-OPLS/ClDensity_Berger-OPLS_DPPC_150mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 150/cMax lw wCl dt dash
+
+
+unset obj 20
+unset obj 27
+unset label 21
+unset label 22
+unset label 23
+unset label 24
+unset label 25
+unset label 26
+
+# set label for x-axis:
+set xtics format '%1.0f'
+set xlabel "distance to bilayer center (nm)" font "Arial,20" offset 0,0.2
+
+# There seems to be a bug (?!) in gnuplot, requiring us to move this one to keep it where it is supposed to be:
+set label 31 at graph 0.83, graph 0.45
+
+# Explanation for the star:
+c2x=0.867 # position x
+c2y=0.315 # position y
+set obj 41 rect fc rgb "white" fillstyle solid 1.0 from screen c2x-0.007, screen c2y-0.02 to screen c2x+0.125, screen c2y+0.017 front
+set label 42 "^_★ DPPC" at screen c2x, screen c2y font "Arial,14" front
+
+set label 1 "Berger"
+top = bottom
+bottom = bottom - heightY
+set tmargin at screen top
+set bmargin at screen bottom
+plot [0:zMax][0:dMax] \
+  -1 lw width lc rgb "black" t "Na^{+}", \
+  -1 lw wCl lc rgb "black" dt dash t "Cl^^_–", \
+  -1 dt (30,5,2,5) lc rgb "black" lw width t "Na^{+} scaled", \
+  -1 lw wCl dt (30,5,2,5) lc rgb "black" t "@{Cl^^_–}&{Na^{+}}&{sca}\"", \
+  "./data/Berger/NaDensity_Berger_DPPC_1000mM-NaCl_scaled.xvg" \
+  u (abs($1)):($2) w l lc palette frac 1000/cMax lw width dt (30,5,2,5), \
+  "./data/Berger/ClDensity_Berger_DPPC_1000mM-NaCl_scaled.xvg" \
+  u (abs($1)):($2) w l lc palette frac 1000/cMax lw wCl dt (30,5,2,5), \
+  "./data/Berger/NaDensity_Berger_DPPC_1000mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 1000/cMax lw width, \
+  "./data/Berger/ClDensity_Berger_DPPC_1000mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 1000/cMax lw wCl dt dash, \
+  "./data/Berger/NaDensity_Berger_DPPC_150mM-NaCl_scaled.xvg" \
+  u (abs($1)):($2) w l lc palette frac 150/cMax lw width dt (30,5,2,5), \
+  "./data/Berger/ClDensity_Berger_DPPC_150mM-NaCl_scaled.xvg" \
+  u (abs($1)):($2) w l lc palette frac 150/cMax lw wCl dt (30,5,2,5), \
+  "./data/Berger/NaDensity_Berger_DPPC_150mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 150/cMax lw width, \
+  "./data/Berger/ClDensity_Berger_DPPC_150mM-NaCl.xvg" \
+  u (abs($1)):($2) w l lc palette frac 150/cMax lw wCl dt dash
+
+unset label 31
+unset label 32
+unset obj 41
+unset label 42
+unset multiplot

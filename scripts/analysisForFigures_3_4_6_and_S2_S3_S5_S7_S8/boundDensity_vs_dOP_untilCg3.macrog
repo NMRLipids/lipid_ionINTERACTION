@@ -1,0 +1,42 @@
+# --BOUND- --------- ORDER PARAMETERS ----------- ------ SYSTEM ----------------
+#  CHARGE  noIonsOP      SEoM        OP      SEoM
+0.0000000 0.0131554 0.0039345 0.0131554 -0.0039345 # both leaflets of lipidwiseOPsVStime/POPC/MacRog/noIons/CB-HB1.dat
+0.0425304 0.0131554 0.0039345 -0.0202413 0.0074884 # lower leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-103mM/CB-HB1.dat
+0.0537955 0.0131554 0.0039345 -0.0140017 0.0086794 # upper leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-103mM/CB-HB1.dat
+0.0849800 0.0131554 0.0039345 -0.0319487 0.0108006 # upper leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-311mM/CB-HB1.dat
+0.0873020 0.0131554 0.0039345 -0.0259049 0.0093053 # lower leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-207mM/CB-HB1.dat
+0.0968166 0.0131554 0.0039345 -0.0292033 0.0095570 # upper leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-207mM/CB-HB1.dat
+0.1032600 0.0131554 0.0039345 -0.0186220 0.0096923 # upper leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-416mM/CB-HB1.dat
+0.1205720 0.0131554 0.0039345 -0.0374897 0.0089007 # lower leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-311mM/CB-HB1.dat
+0.1217680 0.0131554 0.0039345 -0.0224793 0.0094713 # lower leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-416mM/CB-HB1.dat
+
+0.0000000 0.0396080 0.0051723 0.0396080 -0.0051723 # both leaflets of lipidwiseOPsVStime/POPC/MacRog/noIons/CB-HB2.dat
+0.0425304 0.0396080 0.0051723 0.0268632 0.0109395 # lower leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-103mM/CB-HB2.dat
+0.0537955 0.0396080 0.0051723 0.0198351 0.0098382 # upper leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-103mM/CB-HB2.dat
+0.0849800 0.0396080 0.0051723 -0.0039503 0.0111083 # upper leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-311mM/CB-HB2.dat
+0.0873020 0.0396080 0.0051723 -0.0015271 0.0105982 # lower leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-207mM/CB-HB2.dat
+0.0968166 0.0396080 0.0051723 -0.0121163 0.0112732 # upper leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-207mM/CB-HB2.dat
+0.1032600 0.0396080 0.0051723 0.0021254 0.0119727 # upper leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-416mM/CB-HB2.dat
+0.1205720 0.0396080 0.0051723 -0.0184589 0.0110124 # lower leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-311mM/CB-HB2.dat
+0.1217680 0.0396080 0.0051723 -0.0192398 0.0091743 # lower leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-416mM/CB-HB2.dat
+
+0.0000000 0.0432355 0.0037377 0.0432355 -0.0037377 # both leaflets of lipidwiseOPsVStime/POPC/MacRog/noIons/CA-HA1.dat
+0.0425304 0.0432355 0.0037377 0.0448422 0.0104584 # lower leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-103mM/CA-HA1.dat
+0.0537955 0.0432355 0.0037377 0.0364567 0.0095078 # upper leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-103mM/CA-HA1.dat
+0.0849800 0.0432355 0.0037377 0.0076145 0.0108633 # upper leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-311mM/CA-HA1.dat
+0.0873020 0.0432355 0.0037377 0.0167677 0.0104674 # lower leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-207mM/CA-HA1.dat
+0.0968166 0.0432355 0.0037377 0.0040941 0.0106639 # upper leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-207mM/CA-HA1.dat
+0.1032600 0.0432355 0.0037377 0.0247114 0.0115764 # upper leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-416mM/CA-HA1.dat
+0.1205720 0.0432355 0.0037377 0.0026796 0.0104912 # lower leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-311mM/CA-HA1.dat
+0.1217680 0.0432355 0.0037377 -0.0031816 0.0087715 # lower leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-416mM/CA-HA1.dat
+
+0.0000000 0.0569354 0.0047097 0.0569354 -0.0047097 # both leaflets of lipidwiseOPsVStime/POPC/MacRog/noIons/CA-HA2.dat
+0.0425304 0.0569354 0.0047097 0.0105800 0.0072827 # lower leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-103mM/CA-HA2.dat
+0.0537955 0.0569354 0.0047097 0.0172660 0.0082488 # upper leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-103mM/CA-HA2.dat
+0.0849800 0.0569354 0.0047097 0.0037003 0.0105817 # upper leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-311mM/CA-HA2.dat
+0.0873020 0.0569354 0.0047097 0.0033291 0.0087005 # lower leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-207mM/CA-HA2.dat
+0.0968166 0.0569354 0.0047097 0.0043453 0.0094109 # upper leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-207mM/CA-HA2.dat
+0.1032600 0.0569354 0.0047097 0.0100926 0.0091411 # upper leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-416mM/CA-HA2.dat
+0.1205720 0.0569354 0.0047097 -0.0107649 0.0082973 # lower leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-311mM/CA-HA2.dat
+0.1217680 0.0569354 0.0047097 0.0064939 0.0087771 # lower leaflet of lipidwiseOPsVStime/POPC/MacRog/NaCl-416mM/CA-HA2.dat
+

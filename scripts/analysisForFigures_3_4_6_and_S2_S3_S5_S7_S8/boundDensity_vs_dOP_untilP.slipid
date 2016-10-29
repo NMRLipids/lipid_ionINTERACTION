@@ -1,0 +1,54 @@
+# --BOUND- --------- ORDER PARAMETERS ----------- ------ SYSTEM ----------------
+#  CHARGE  noIonsOP      SEoM        OP      SEoM
+0.0000000 -0.0060925 0.0025688 -0.0060925 -0.0025688 # both leaflets of lipidwiseOPsVStime/DPPC/slipid/noIons/CB-HB1.dat
+0.0000000 -0.0221289 0.0028190 -0.0221289 -0.0028190 # both leaflets of lipidwiseOPsVStime/POPC/slipid/noIons/CB-HB1.dat
+0.0533935 -0.0221289 0.0028190 -0.0212148 0.0033138 # upper leaflet of ./lipidwiseOPsVStime/POPC/Slipid/NaCl-130mM/CB-HB1.dat
+0.0605913 -0.0221289 0.0028190 -0.0284540 0.0033225 # lower leaflet of ./lipidwiseOPsVStime/POPC/Slipid/NaCl-130mM/CB-HB1.dat
+0.1891560 -0.0060925 0.0025688 -0.0432743 0.0024917 # lower leaflet of ./lipidwiseOPsVStime/DPPC/Slipid/NaCl-850mM/CB-HB1.dat
+0.2084320 -0.0060925 0.0025688 -0.0433677 0.0027109 # upper leaflet of ./lipidwiseOPsVStime/DPPC/Slipid/NaCl-850mM/CB-HB1.dat
+0.3095120 -0.0060925 0.0025688 -0.0582102 0.0035698 # lower leaflet of ./lipidwiseOPsVStime/DPPC/Slipid/NaCl-1750mM/CB-HB1.dat
+0.3242590 -0.0060925 0.0025688 -0.0676974 0.0039752 # upper leaflet of ./lipidwiseOPsVStime/DPPC/Slipid/NaCl-1750mM/CB-HB1.dat
+0.4201740 -0.0060925 0.0025688 -0.0647047 0.0035890 # lower leaflet of ./lipidwiseOPsVStime/DPPC/Slipid/NaCl-2570mM/CB-HB1.dat
+0.4297480 -0.0060925 0.0025688 -0.0693153 0.0041113 # upper leaflet of ./lipidwiseOPsVStime/DPPC/Slipid/NaCl-2570mM/CB-HB1.dat
+0.5013620 -0.0221289 0.0028190 -0.1097284 0.0112136 # upper leaflet of ./lipidwiseOPsVStime/POPC/Slipid/CaCl2-450mM/CB-HB1.dat
+0.5631820 -0.0221289 0.0028190 -0.1056610 0.0128974 # lower leaflet of ./lipidwiseOPsVStime/POPC/Slipid/CaCl2-450mM/CB-HB1.dat
+
+0.0000000 -0.0417829 0.0021075 -0.0417829 -0.0021075 # both leaflets of lipidwiseOPsVStime/DPPC/slipid/noIons/CB-HB2.dat
+0.0000000 -0.0402637 0.0024098 -0.0402637 -0.0024098 # both leaflets of lipidwiseOPsVStime/POPC/slipid/noIons/CB-HB2.dat
+0.0533935 -0.0402637 0.0024098 -0.0573417 0.0024898 # upper leaflet of ./lipidwiseOPsVStime/POPC/Slipid/NaCl-130mM/CB-HB2.dat
+0.0605913 -0.0402637 0.0024098 -0.0629572 0.0025838 # lower leaflet of ./lipidwiseOPsVStime/POPC/Slipid/NaCl-130mM/CB-HB2.dat
+0.1891560 -0.0417829 0.0021075 -0.0707841 0.0019092 # lower leaflet of ./lipidwiseOPsVStime/DPPC/Slipid/NaCl-850mM/CB-HB2.dat
+0.2084320 -0.0417829 0.0021075 -0.0710524 0.0021699 # upper leaflet of ./lipidwiseOPsVStime/DPPC/Slipid/NaCl-850mM/CB-HB2.dat
+0.3095120 -0.0417829 0.0021075 -0.0847760 0.0032653 # lower leaflet of ./lipidwiseOPsVStime/DPPC/Slipid/NaCl-1750mM/CB-HB2.dat
+0.3242590 -0.0417829 0.0021075 -0.0934470 0.0031727 # upper leaflet of ./lipidwiseOPsVStime/DPPC/Slipid/NaCl-1750mM/CB-HB2.dat
+0.4201740 -0.0417829 0.0021075 -0.0960189 0.0032988 # lower leaflet of ./lipidwiseOPsVStime/DPPC/Slipid/NaCl-2570mM/CB-HB2.dat
+0.4297480 -0.0417829 0.0021075 -0.0943668 0.0031939 # upper leaflet of ./lipidwiseOPsVStime/DPPC/Slipid/NaCl-2570mM/CB-HB2.dat
+0.5013620 -0.0402637 0.0024098 -0.1102739 0.0093715 # upper leaflet of ./lipidwiseOPsVStime/POPC/Slipid/CaCl2-450mM/CB-HB2.dat
+0.5631820 -0.0402637 0.0024098 -0.1132797 0.0126398 # lower leaflet of ./lipidwiseOPsVStime/POPC/Slipid/CaCl2-450mM/CB-HB2.dat
+
+0.0000000 0.0581197 0.0025194 0.0581197 -0.0025194 # both leaflets of lipidwiseOPsVStime/DPPC/slipid/noIons/CA-HA1.dat
+0.0000000 0.0581927 0.0025646 0.0581927 -0.0025646 # both leaflets of lipidwiseOPsVStime/POPC/slipid/noIons/CA-HA1.dat
+0.0533935 0.0581927 0.0025646 0.0550882 0.0032734 # upper leaflet of ./lipidwiseOPsVStime/POPC/Slipid/NaCl-130mM/CA-HA1.dat
+0.0605913 0.0581927 0.0025646 0.0488048 0.0032535 # lower leaflet of ./lipidwiseOPsVStime/POPC/Slipid/NaCl-130mM/CA-HA1.dat
+0.1891560 0.0581197 0.0025194 0.0309888 0.0026968 # lower leaflet of ./lipidwiseOPsVStime/DPPC/Slipid/NaCl-850mM/CA-HA1.dat
+0.2084320 0.0581197 0.0025194 0.0239889 0.0023642 # upper leaflet of ./lipidwiseOPsVStime/DPPC/Slipid/NaCl-850mM/CA-HA1.dat
+0.3095120 0.0581197 0.0025194 0.0067497 0.0049712 # lower leaflet of ./lipidwiseOPsVStime/DPPC/Slipid/NaCl-1750mM/CA-HA1.dat
+0.3242590 0.0581197 0.0025194 0.0070562 0.0048322 # upper leaflet of ./lipidwiseOPsVStime/DPPC/Slipid/NaCl-1750mM/CA-HA1.dat
+0.4201740 0.0581197 0.0025194 -0.0065630 0.0050852 # lower leaflet of ./lipidwiseOPsVStime/DPPC/Slipid/NaCl-2570mM/CA-HA1.dat
+0.4297480 0.0581197 0.0025194 -0.0056488 0.0051356 # upper leaflet of ./lipidwiseOPsVStime/DPPC/Slipid/NaCl-2570mM/CA-HA1.dat
+0.5013620 0.0581927 0.0025646 -0.0769589 0.0141443 # upper leaflet of ./lipidwiseOPsVStime/POPC/Slipid/CaCl2-450mM/CA-HA1.dat
+0.5631820 0.0581927 0.0025646 -0.0640934 0.0159952 # lower leaflet of ./lipidwiseOPsVStime/POPC/Slipid/CaCl2-450mM/CA-HA1.dat
+
+0.0000000 0.0490802 0.0026594 0.0490802 -0.0026594 # both leaflets of lipidwiseOPsVStime/DPPC/slipid/noIons/CA-HA2.dat
+0.0000000 0.0522125 0.0024125 0.0522125 -0.0024125 # both leaflets of lipidwiseOPsVStime/POPC/slipid/noIons/CA-HA2.dat
+0.0533935 0.0522125 0.0024125 0.0431130 0.0030913 # upper leaflet of ./lipidwiseOPsVStime/POPC/Slipid/NaCl-130mM/CA-HA2.dat
+0.0605913 0.0522125 0.0024125 0.0434537 0.0034927 # lower leaflet of ./lipidwiseOPsVStime/POPC/Slipid/NaCl-130mM/CA-HA2.dat
+0.1891560 0.0490802 0.0026594 0.0195311 0.0022926 # lower leaflet of ./lipidwiseOPsVStime/DPPC/Slipid/NaCl-850mM/CA-HA2.dat
+0.2084320 0.0490802 0.0026594 0.0141050 0.0025817 # upper leaflet of ./lipidwiseOPsVStime/DPPC/Slipid/NaCl-850mM/CA-HA2.dat
+0.3095120 0.0490802 0.0026594 0.0019172 0.0044286 # lower leaflet of ./lipidwiseOPsVStime/DPPC/Slipid/NaCl-1750mM/CA-HA2.dat
+0.3242590 0.0490802 0.0026594 -0.0015367 0.0038807 # upper leaflet of ./lipidwiseOPsVStime/DPPC/Slipid/NaCl-1750mM/CA-HA2.dat
+0.4201740 0.0490802 0.0026594 -0.0130755 0.0061218 # lower leaflet of ./lipidwiseOPsVStime/DPPC/Slipid/NaCl-2570mM/CA-HA2.dat
+0.4297480 0.0490802 0.0026594 -0.0165798 0.0049185 # upper leaflet of ./lipidwiseOPsVStime/DPPC/Slipid/NaCl-2570mM/CA-HA2.dat
+0.5013620 0.0522125 0.0024125 0.0356858 0.0237413 # upper leaflet of ./lipidwiseOPsVStime/POPC/Slipid/CaCl2-450mM/CA-HA2.dat
+0.5631820 0.0522125 0.0024125 -0.0092052 0.0197643 # lower leaflet of ./lipidwiseOPsVStime/POPC/Slipid/CaCl2-450mM/CA-HA2.dat
+

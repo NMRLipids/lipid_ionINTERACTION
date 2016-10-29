@@ -1,0 +1,78 @@
+set term pdfcairo enhanced color dashed dashlength 0.5 size 10cm, 6.3cm font "Arial,15" 
+set out "CaDensities_scaledions.pdf"
+
+nPanels=3
+set multiplot layout nPanels, 1
+top = 0.97
+heightY = 1.16/nPanels
+bottom = top-heightY
+right = 0.985
+left = 0.15
+
+zMax=4.0
+set xtics format '' 1
+set mxtics 4
+
+dMax=1.4
+set ytics format "%2.1f" 0.2
+#set mytics 2
+
+cMax=1000.0 #-- highest salt concentration
+
+width = 2        #-- line width Na
+wCl = 0.5*width  #-- line width Cl
+dash = 2         #-- dash type Cl 
+
+# Colour palette to indicate ion concentrations:
+set palette model RGB maxcolors 11
+set palette defined (0 "#FFD300", 1 "#D70039", 2 "#0088BF", 3 "#00A368")
+set key at graph 0.03, graph 0.675 left reverse Left noautotitle samplen 1.2
+unset colorbox
+
+
+set label 2 "450 mM" at graph 0.77, graph 0.8 font "Arial,20" textcolor rgb "#9B1D43"
+set label 1 "CHARMM36" at graph 0.05, graph 0.8 font "Arial,20" 
+set rmargin at screen right
+set lmargin at screen left
+set tmargin at screen top
+set bmargin at screen bottom
+plot [0:zMax][0:dMax] \
+  "./data/C36/CaDensity_C36_POPC_450mM-CaCl2.xvg" \
+  u (abs($1)):($2) w l lc palette frac 450/cMax lw width t "Ca^_^{2+}", \
+  "./data/C36/ClDensity_C36_POPC_450mM-CaCl2.xvg" \
+  u (abs($1)):($2) w l lc palette frac 450/cMax lw wCl dt dash t "Cl^^_–", \
+  "./data/C36/CaDensity_C36_POPC_450mM-CaCl2_ECC.xvg" \
+  u (abs($1)):($2) w l lc palette frac 450/cMax dt (30,5,2,5) lw width t "Ca^_^{2+} ECC", \
+  "./data/C36/ClDensity_C36_POPC_450mM-CaCl2_ECC.xvg" \
+  u (abs($1)):($2) w l lc palette frac 450/cMax lw wCl dt (30,5,2,5) t "@{Cl^^_–}&{Ca^_^{2+}}&{Ec}\""
+
+
+# do not write the highest tick mark on y-axis:
+set ytics 0,0.2,dMax-0.2
+
+# set label for y-axis:
+set ylabel "number density (nm^{-3})" font "Arial,20" offset graph -0.017, graph 0.5
+
+# set label for x-axis:
+set xtics format '%1.0f'
+set xlabel "distance to bilayer center (nm)" font "Arial,20" offset 0,0.2
+
+set label 1 "Slipids"
+top = bottom
+bottom = bottom - heightY
+set tmargin at screen top
+set bmargin at screen bottom
+plot [0:zMax][0:dMax] \
+  "./data/Slipid/CaDensity_Slipid_POPC_450mM-CaCl2.xvg" \
+  u (abs($1)):($2) w l lc palette frac 450/cMax lw width t "Ca^_^{2+}", \
+  "./data/Slipid/ClDensity_Slipid_POPC_450mM-CaCl2.xvg" \
+  u (abs($1)):($2) w l lc palette frac 450/cMax lw wCl dt dash t "Cl^^_–", \
+  "./data/Slipid/CaDensity_Slipid_POPC_450mM-CaCl2_ECC.xvg" \
+  u (abs($1)):($2) w l lc palette frac 450/cMax dt (30,5,2,5) lw width t "Ca^_^{2+} ECC", \
+   "./data/Slipid/ClDensity_Slipid_POPC_450mM-CaCl2_ECC.xvg" \
+  u (abs($1)):($2) w l lc palette frac 450/cMax lw wCl dt (30,5,2,5) t "@{Cl^^_–}&{Ca^_^{2+}}&{Ec}\""
+
+unset ylabel
+
+
+unset multiplot

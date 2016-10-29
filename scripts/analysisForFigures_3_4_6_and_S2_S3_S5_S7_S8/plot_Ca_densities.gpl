@@ -1,0 +1,167 @@
+set term pdfcairo enhanced color dashed dashlength 0.5 size 10cm, 16cm font "Arial,15" 
+set out "CaDensities.pdf"
+
+nPanels=7
+set multiplot layout nPanels, 1
+top = 0.993
+heightY = 1.065/nPanels
+bottom = top-heightY
+right = 0.985
+left = 0.15
+
+zMax=4.0
+set xtics format '' 1
+set mxtics 4
+
+dMax=1.4
+set ytics format "%2.1f" 0.2
+#set mytics 2
+
+cMax=1000.0 #-- highest salt concentration
+
+width = 2        #-- line width Ca
+wCl = 0.5*width  #-- line width Cl
+dash = 2         #-- dash type Cl 
+
+# Colour palette to indicate ion concentrations:
+set palette model RGB maxcolors 11
+set palette defined (0 "#FFD300", 1 "#D70039", 2 "#0088BF", 3 "#00A368")
+set key at graph 0.02, graph 0.675 left reverse Left noautotitle textcolor variable samplen -1
+unset colorbox
+
+# Indicator for Phosphorus peak positions:
+pCol="#8FFF00" #-- color of phosphorus indicator lines
+plw=2 #-- line width of phosphorus indicator lines
+
+set label 1 "Orange" at graph 0.05, graph 0.8 font "Arial,20" 
+set rmargin at screen right
+set lmargin at screen left
+set tmargin at screen top
+set bmargin at screen bottom
+# Phosphorus peak positions:
+Pcenter=1.9604
+NAdens=0.61
+set arrow 10 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.96043
+NAdens=0.81
+set arrow 11 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+plot [0:zMax][0:dMax] \
+  "./data/Orange/ClDensity_Orange_POPC_510mM-CaCl2.xvg" \
+  u (abs($1)):($2) w l lc palette frac 510/cMax lw wCl dt dash t "&{1}@{ }510 mM", \
+  "./data/Orange/CaDensity_Orange_POPC_510mM-CaCl2.xvg" \
+  u (abs($1)):($2) w l lc palette frac 510/cMax lw width
+
+# do not write the highest tick mark on y-axis:
+set ytics 0,0.2,dMax-0.2
+
+
+set label 1 "Lipid14"
+top = bottom
+bottom = bottom - heightY
+set tmargin at screen top
+set bmargin at screen bottom
+# Phosphorus peak positions:
+Pcenter=1.959
+NAdens=0.45
+set arrow 10 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.95904
+NAdens=0.65
+set arrow 11 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+plot [0:zMax][0:dMax] \
+  "./data/Lipid14/ClDensity_Lipid14_POPC_350mM-CaCl2.xvg" \
+  u (abs($1)):($2) w l lc palette frac 350/cMax lw wCl dt dash t "&{1}@{ }350 mM", \
+  "./data/Lipid14/CaDensity_Lipid14_POPC_350mM-CaCl2.xvg" \
+  u (abs($1)):($2) w l lc palette frac 350/cMax lw width
+
+# set label for y-axis:
+set ylabel "number density (nm^{-3})" font "Arial,20" offset graph -0.017, graph -0.5
+
+set label 1 "CHARMM36 /"
+set label 2 "Yoo heptahydrated Ca^_^{2+}" at graph 0.405, graph 0.8 font "Arial,19"
+top = bottom
+bottom = bottom - heightY
+set tmargin at screen top
+set bmargin at screen bottom
+# Phosphorus peak positions:
+unset arrow 10
+unset arrow 11 
+plot [0:zMax][0:dMax] \
+  "../../../Data/DPPC/CaCl/CHARMM36/430mMyoo/128DPPC_60CaCl2_7760water_430mM_distribution.dat" \
+  u (0.1*abs($1)):(1000*$4) w l lc palette frac 430/cMax lw wCl dt dash t "&{1}@{ }430 mM ^_★", \
+  "../../../Data/DPPC/CaCl/CHARMM36/430mMyoo/128DPPC_60CaCl2_7760water_430mM_distribution.dat" \
+  u (0.1*abs($1)):(1000*$3/2) w l lc palette frac 430/cMax lw width
+
+unset label 2
+unset ylabel
+
+set label 1 "CHARMM36"
+top = bottom
+bottom = bottom - heightY
+set tmargin at screen top
+set bmargin at screen bottom
+# Phosphorus peak positions:
+Pcenter=2.14854
+NAdens=1.25
+set arrow 10 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=2.14839
+NAdens=1.33
+set arrow 11 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+plot [0:zMax][0:dMax] \
+  "./data/C36/ClDensity_C36_POPC_450mM-CaCl2.xvg" \
+  u (abs($1)):($2) w l lc palette frac 450/cMax lw wCl dt dash t "&{1}@{ }450 mM ^_☆", \
+  "./data/C36/CaDensity_C36_POPC_450mM-CaCl2.xvg" \
+  u (abs($1)):($2) w l lc palette frac 450/cMax lw width
+
+
+
+set label 1 "Slipids"
+top = bottom
+bottom = bottom - heightY
+set tmargin at screen top
+set bmargin at screen bottom
+# Phosphorus peak positions:
+Pcenter=1.9376
+NAdens=0.79
+set arrow 10 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=1.93763
+NAdens=1.05
+set arrow 11 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+plot [0:zMax][0:dMax] \
+  "./data/Slipid/ClDensity_Slipid_POPC_450mM-CaCl2.xvg" \
+  u (abs($1)):($2) w l lc palette frac 450/cMax lw wCl dt dash t "&{1}@{ }450 mM ^_☆", \
+  "./data/Slipid/CaDensity_Slipid_POPC_450mM-CaCl2.xvg" \
+  u (abs($1)):($2) w l lc palette frac 450/cMax lw width
+
+set xtics format '%1.0f'
+set xlabel "distance to bilayer center (nm)" font "Arial,20"
+
+# Explanation for the star:
+c2x=0.19 # position x
+c2y=0.567 # position y
+set obj 2 rect fc rgb "white" fillstyle solid 1.0 from screen c2x-0.007, screen c2y-0.04 to screen c2x+0.255, screen c2y+0.017
+set label 2 "^_★ DPPC\n^_☆ 2 {/Symbol m}s simulation" at screen c2x, screen c2y font "Arial,14" front
+
+set label 1 "Berger"
+top = bottom
+bottom = bottom - heightY
+set tmargin at screen top
+set bmargin at screen bottom
+# Phosphorus peak positions:
+Pcenter=2.02125
+NAdens=0.21
+set arrow 10 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+Pcenter=2.02122
+NAdens=0.26
+set arrow 11 from Pcenter, graph 0 to Pcenter, NAdens nohead back lw plw lc rgb pCol
+plot [0:zMax][0:dMax] \
+  "./data/Berger/ClDensity_Berger_POPC_340mM-CaCl2.xvg" \
+  u (abs($1)):($2) w l lc palette frac 340/cMax lw wCl dt dash t "&{1}@{ }340 mM", \
+  "./data/Berger/CaDensity_Berger_POPC_340mM-CaCl2.xvg" \
+  u (abs($1)):($2) w l lc palette frac 340/cMax lw width
+
+
+
+
+unset label 2
+unset obj 2
+unset multiplot

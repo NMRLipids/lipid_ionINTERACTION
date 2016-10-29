@@ -1,0 +1,26 @@
+# --BOUND- --------- ORDER PARAMETERS ----------- ------ SYSTEM ----------------
+#  CHARGE  noIonsOP      SEoM        OP      SEoM
+0.0000000 0.0482825 0.0029826 0.0482825 -0.0029826 # both leaflets of ./lipidwiseOPsVStime/DPPC/Berger-OPLS/noIons/CB-HB1.dat
+0.0595582 0.0482825 0.0029826 0.0379777 0.0047619 # lower leaflet of lipidwiseOPsVStime/DPPC/Berger-OPLS/NaCl-150mM/CB-HB1.dat
+0.1247680 0.0482825 0.0029826 0.0312540 0.0059149 # upper leaflet of lipidwiseOPsVStime/DPPC/Berger-OPLS/NaCl-150mM/CB-HB1.dat
+0.2852040 0.0482825 0.0029826 0.0233214 0.0057990 # lower leaflet of lipidwiseOPsVStime/DPPC/Berger-OPLS/NaCl-1000mM/CB-HB1.dat
+0.3363120 0.0482825 0.0029826 0.0132375 0.0068583 # upper leaflet of lipidwiseOPsVStime/DPPC/Berger-OPLS/NaCl-1000mM/CB-HB1.dat
+
+0.0000000 0.0516138 0.0031561 0.0516138 -0.0031561 # both leaflets of ./lipidwiseOPsVStime/DPPC/Berger-OPLS/noIons/CB-HB2.dat
+0.0595582 0.0516138 0.0031561 0.0408078 0.0039183 # lower leaflet of lipidwiseOPsVStime/DPPC/Berger-OPLS/NaCl-150mM/CB-HB2.dat
+0.1247680 0.0516138 0.0031561 0.0386162 0.0063076 # upper leaflet of lipidwiseOPsVStime/DPPC/Berger-OPLS/NaCl-150mM/CB-HB2.dat
+0.2852040 0.0516138 0.0031561 0.0262084 0.0053891 # lower leaflet of lipidwiseOPsVStime/DPPC/Berger-OPLS/NaCl-1000mM/CB-HB2.dat
+0.3363120 0.0516138 0.0031561 0.0223784 0.0072226 # upper leaflet of lipidwiseOPsVStime/DPPC/Berger-OPLS/NaCl-1000mM/CB-HB2.dat
+
+0.0000000 0.0811801 0.0044265 0.0811801 -0.0044265 # both leaflets of ./lipidwiseOPsVStime/DPPC/Berger-OPLS/noIons/CA-HA1.dat
+0.0595582 0.0811801 0.0044265 0.0702734 0.0073203 # lower leaflet of lipidwiseOPsVStime/DPPC/Berger-OPLS/NaCl-150mM/CA-HA1.dat
+0.1247680 0.0811801 0.0044265 0.0631220 0.0059202 # upper leaflet of lipidwiseOPsVStime/DPPC/Berger-OPLS/NaCl-150mM/CA-HA1.dat
+0.2852040 0.0811801 0.0044265 0.0363873 0.0082438 # lower leaflet of lipidwiseOPsVStime/DPPC/Berger-OPLS/NaCl-1000mM/CA-HA1.dat
+0.3363120 0.0811801 0.0044265 0.0238966 0.0068627 # upper leaflet of lipidwiseOPsVStime/DPPC/Berger-OPLS/NaCl-1000mM/CA-HA1.dat
+
+0.0000000 0.1482476 0.0060637 0.1482476 -0.0060637 # both leaflets of ./lipidwiseOPsVStime/DPPC/Berger-OPLS/noIons/CA-HA2.dat
+0.0595582 0.1482476 0.0060637 0.1329871 0.0098362 # lower leaflet of lipidwiseOPsVStime/DPPC/Berger-OPLS/NaCl-150mM/CA-HA2.dat
+0.1247680 0.1482476 0.0060637 0.1103038 0.0095738 # upper leaflet of lipidwiseOPsVStime/DPPC/Berger-OPLS/NaCl-150mM/CA-HA2.dat
+0.2852040 0.1482476 0.0060637 0.1169152 0.0088036 # lower leaflet of lipidwiseOPsVStime/DPPC/Berger-OPLS/NaCl-1000mM/CA-HA2.dat
+0.3363120 0.1482476 0.0060637 0.0752712 0.0126998 # upper leaflet of lipidwiseOPsVStime/DPPC/Berger-OPLS/NaCl-1000mM/CA-HA2.dat
+

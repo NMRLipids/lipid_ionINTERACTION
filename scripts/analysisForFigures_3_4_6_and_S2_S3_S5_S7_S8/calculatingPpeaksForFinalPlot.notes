@@ -1,0 +1,121 @@
+--
+kuvaja:boundIons bb$ ./calculatePeakPositions.sh ../../MAPPING/mappingPOPCcharmm.txt ../../../../fromZenodo/POPC/NaCl/C36/350mM/popcRUN2.tpr ./centered_trajs/C36/POPC/centered_350mM-NaCl.xtc 150 M_G3P2_M
+Output the peak of: M_G3P2_M
+Peak positions:
+Negative peak at: -1.97467 (std. dev. 0.212034) nm from bilayer center.
+Positive peak at:  1.9747 (std. dev. 0.197939) nm from bilayer center.
+kuvaja:boundIons bb$ ./calculatePeakPositions.sh ../../MAPPING/mappingPOPCcharmm.txt ../../../../fromZenodo/POPC/NaCl/C36/690mM/popcRUN2.tpr ./centered_trajs/C36/POPC/centered_690mM-NaCl.xtc 150 M_G3P2_M
+Output the peak of: M_G3P2_M
+Peak positions:
+Negative peak at: -1.97232 (std. dev. 0.200259) nm from bilayer center.
+Positive peak at:  1.97231 (std. dev. 0.221231) nm from bilayer center.
+kuvaja:boundIons bb$ ./calculatePeakPositions.sh ../../MAPPING/mappingPOPCcharmm.txt ../../../../fromZenodo/POPC/NaCl/C36/950mM/popcRUN2.tpr ./centered_trajs/C36/POPC/centered_950mM-NaCl.xtc 150 M_G3P2_M
+Output the peak of: M_G3P2_M
+Peak positions:
+Negative peak at: -1.96357 (std. dev. 0.202886) nm from bilayer center.
+Positive peak at:  1.96356 (std. dev. 0.201971) nm from bilayer center.
+--
+kuvaja:boundIons bb$ ./calculatePeakPositions.sh ../../MAPPING/mappingPOPCorange.txt ../../../../fromZenodo/POPC/NaCl/Orange/140mM/popcRUN2.tpr ./centered_trajs/Orange/centered_140mM-NaCl.xtc 150 M_G3P2_M
+Output the peak of: M_G3P2_M
+Peak positions:
+Negative peak at: -1.97752 (std. dev. 0.22511) nm from bilayer center.
+Positive peak at:  1.97745 (std. dev. 0.199478) nm from bilayer center.
+kuvaja:boundIons bb$ ./calculatePeakPositions.sh ../../MAPPING/mappingPOPCorange.txt ../../../../fromZenodo/POPC/NaCl/Orange/510mM/popcRUN.tpr ./centered_trajs/Orange/centered_510mM-NaCl.xtc 150 M_G3P2_M
+Output the peak of: M_G3P2_M
+Peak positions:
+Negative peak at: -1.90136 (std. dev. 0.200699) nm from bilayer center.
+Positive peak at:  1.90139 (std. dev. 0.197879) nm from bilayer center.
+kuvaja:boundIons bb$ ./calculatePeakPositions.sh ../../MAPPING/mappingPOPCorange.txt ../../../../fromZenodo/POPC/NaCl/Orange/1000mM/popcRUN.tpr ./centered_trajs/Orange/centered_1000mM-NaCl.xtc 150 M_G3P2_M
+Output the peak of: M_G3P2_M
+Peak positions:
+Negative peak at: -1.91977 (std. dev. 0.197517) nm from bilayer center.
+Positive peak at:  1.91983 (std. dev. 0.199907) nm from bilayer center.
+--
+kuvaja:boundIons bb$ ./calculatePeakPositions.sh ../../MAPPING/mappingPOPClipid14.txt ../../../../fromZenodo/POPC/NaCl/Lipid14/150mM/run_200ns_gpu.tpr ./centered_trajs/Lipid14/centered_150mM-NaCl.xtc 150 M_G3P2_M
+Output the peak of: M_G3P2_M
+Peak positions:
+Negative peak at: -1.91494 (std. dev. 0.2364) nm from bilayer center.
+Positive peak at:  1.91494 (std. dev. 0.243875) nm from bilayer center.
+kuvaja:boundIons bb$ ./calculatePeakPositions.sh ../../MAPPING/mappingPOPClipid14.txt ../../../../fromZenodo/POPC/NaCl/Lipid14/1000mM/run_200ns_gpu.tpr ./centered_trajs/Lipid14/centered_1000mM-NaCl.xtc 150 M_G3P2_M
+Output the peak of: M_G3P2_M
+Peak positions:
+Negative peak at: -1.95196 (std. dev. 0.252967) nm from bilayer center.
+Positive peak at:  1.95195 (std. dev. 0.233262) nm from bilayer center.
+--
+kuvaja:boundIons bb$ ./calculatePeakPositions.sh ../../MAPPING/mappingPOPCulmschneider.txt ../../../../fromZenodo/POPC/NaCl/Ulmschneiders/1000mM/run_200ns_gpu.tpr ./centered_trajs/Ulmschneiders/POPC/centered_1000mM-NaCl.xtc 150 M_G3P2_M
+Output the peak of: M_G3P2_M
+Peak positions:
+Negative peak at: -2.00205 (std. dev. 0.2186) nm from bilayer center.
+Positive peak at:  2.00207 (std. dev. 0.225734) nm from bilayer center.
+kuvaja:boundIons bb$ ./calculatePeakPositions.sh ../../MAPPING/mappingPOPCulmschneider.txt ../../../../fromZenodo/POPC/NaCl/Ulmschneiders/150mM/run_200ns_gpu.tpr ./centered_trajs/Ulmschneiders/POPC/centered_150mM-NaCl.xtc 150 M_G3P2_M
+Output the peak of: M_G3P2_M
+Peak positions:
+Negative peak at: -2.02854 (std. dev. 0.241631) nm from bilayer center.
+Positive peak at:  2.02855 (std. dev. 0.233955) nm from bilayer center.
+--
+kuvaja:boundIons bb$ ./calculatePeakPositions.sh ../../MAPPING/mappingDPPCberger-OPLS.txt ../../../../fromZenodo/DPPC/NaCl/Berger-OPLS/150mM/md.tpr ./centered_trajs/Berger-OPLS/DPPC/centered_150mM-NaCl.xtc 150 M_G3P2_M
+Output the peak of: M_G3P2_M
+Peak positions:
+Negative peak at: -1.81245 (std. dev. 0.214208) nm from bilayer center.
+Positive peak at:  1.81244 (std. dev. 0.204796) nm from bilayer center.
+kuvaja:boundIons bb$ ./calculatePeakPositions.sh ../../MAPPING/mappingDPPCberger-OPLS.txt ../../../../fromZenodo/DPPC/NaCl/Berger-OPLS/1000mM/md.tpr ./centered_trajs/Berger-OPLS/DPPC/centered_1000mM-NaCl.xtc 150 M_G3P2_M
+Output the peak of: M_G3P2_M
+Peak positions:
+Negative peak at: -2.03885 (std. dev. 0.216265) nm from bilayer center.
+Positive peak at:  2.03891 (std. dev. 0.214979) nm from bilayer center.
+--
+kuvaja:boundIons bb$ ./calculatePeakPositions.sh ../../MAPPING/mappingDPPCslipid.txt ../../../../fromZenodo/DPPC/NaCl/Slipid/850mM/topol.tpr ./centered_trajs/Slipid/DPPC/centered_850mM-NaCl.xtc 150 M_G3P2_M
+Output the peak of: M_G3P2_M
+Peak positions:
+Negative peak at: -1.90749 (std. dev. 0.232168) nm from bilayer center.
+Positive peak at:  1.90746 (std. dev. 0.235279) nm from bilayer center.
+--
+kuvaja:boundIons bb$ ./calculatePeakPositions.sh ../../MAPPING/mappingDPPCslipid.txt ../../../../fromZenodo/DPPC/NaCl/Slipid/850mM/topol.tpr ./centered_trajs/Slipid/DPPC/centered_850mM-NaCl.xtc 150 M_G3P2_M
+Output the peak of: M_G3P2_M
+Peak positions:
+Negative peak at: -1.90749 (std. dev. 0.232168) nm from bilayer center.
+Positive peak at:  1.90746 (std. dev. 0.235279) nm from bilayer center.
+--
+kuvaja:boundIons bb$ ./calculatePeakPositions.sh ../../MAPPING/mappingPOPCslipid.txt ../../../../fromZenodo/POPC/NaCl/Slipid/130mM/md.tpr ./centered_trajs/Slipid/POPC/centered_130mM-NaCl.xtc 150 M_G3P2_M
+Output the peak of: M_G3P2_M
+Peak positions:
+Negative peak at: -1.7841 (std. dev. 0.225427) nm from bilayer center.
+Positive peak at:  1.78422 (std. dev. 0.229715) nm from bilayer center.
+--
+kuvaja:boundIons bb$ ./calculatePeakPositions.sh ../../MAPPING/mappingPOPCberger.txt ../../../../fromZenodo/POPC/NaCl/Berger/340mM/run2.tpr ./centered_trajs/Berger/POPC/centered_340mM-NaCl.xtc 150 M_G3P2_M
+Output the peak of: M_G3P2_M
+Peak positions:
+Negative peak at: -1.99795 (std. dev. 0.193225) nm from bilayer center.
+Positive peak at:  1.99796 (std. dev. 0.188722) nm from bilayer center.
+--
+kuvaja:boundIons bb$ ./calculatePeakPositions.sh ../../MAPPING/mappingDPPCberger.txt ../../../../fromZenodo/DPPC/NaCl/Berger/150mM/md.tpr ./centered_trajs/Berger/DPPC/centered_150mM-NaCl.xtc 150 M_G3P2_M
+Output the peak of: M_G3P2_M
+Peak positions:
+Negative peak at: -1.87118 (std. dev. 0.194385) nm from bilayer center.
+Positive peak at:  1.8713 (std. dev. 0.187633) nm from bilayer center.
+kuvaja:boundIons bb$ ./calculatePeakPositions.sh ../../MAPPING/mappingDPPCberger.txt ../../../../fromZenodo/DPPC/NaCl/Berger/1000mM/md.tpr ./centered_trajs/Berger/DPPC/centered_1000mM-NaCl.xtc 150 M_G3P2_M
+Output the peak of: M_G3P2_M
+Peak positions:
+Negative peak at: -1.98383 (std. dev. 0.174093) nm from bilayer center.
+Positive peak at:  1.98386 (std. dev. 0.165528) nm from bilayer center.
+--
+kuvaja:boundIons bb$ ./calculatePeakPositions.sh ../../MAPPING/mappingPOPCmacrog.txt ../../../../fromZenodo/POPC/NaCl/MacRog/103mM/100.tpr ./centered_trajs/MacRog/centered_103mM-NaCl.xtc 150 M_G3P2_M
+Output the peak of: M_G3P2_M
+Peak positions:
+Negative peak at: -1.86839 (std. dev. 0.248513) nm from bilayer center.
+Positive peak at:  1.86843 (std. dev. 0.241618) nm from bilayer center.
+kuvaja:boundIons bb$ ./calculatePeakPositions.sh ../../MAPPING/mappingPOPCmacrog.txt ../../../../fromZenodo/POPC/NaCl/MacRog/207mM/200.tpr ./centered_trajs/MacRog/centered_207mM-NaCl.xtc 150 M_G3P2_M
+Output the peak of: M_G3P2_M
+Peak positions:
+Negative peak at: -1.87751 (std. dev. 0.24217) nm from bilayer center.
+Positive peak at:  1.87751 (std. dev. 0.255942) nm from bilayer center.
+kuvaja:boundIons bb$ ./calculatePeakPositions.sh ../../MAPPING/mappingPOPCmacrog.txt ../../../../fromZenodo/POPC/NaCl/MacRog/311mM/300.tpr ./centered_trajs/MacRog/centered_311mM-NaCl.xtc 150 M_G3P2_M
+Output the peak of: M_G3P2_M
+Peak positions:
+Negative peak at: -1.90858 (std. dev. 0.277024) nm from bilayer center.
+Positive peak at:  1.90868 (std. dev. 0.315596) nm from bilayer center.
+kuvaja:boundIons bb$ ./calculatePeakPositions.sh ../../MAPPING/mappingPOPCmacrog.txt ../../../../fromZenodo/POPC/NaCl/MacRog/416mM/400.tpr ./centered_trajs/MacRog/centered_416mM-NaCl.xtc 150 M_G3P2_M
+Output the peak of: M_G3P2_M
+Peak positions:
+Negative peak at: -1.88529 (std. dev. 0.27668) nm from bilayer center.
+Positive peak at:  1.88521 (std. dev. 0.225263) nm from bilayer center.

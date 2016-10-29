@@ -1,0 +1,151 @@
+set term pdfcairo enhanced rounded color dashed dashlength 1 size 10cm, 12.8cm
+top = 0.99
+heightY = 0.46
+right = 0.985
+left = 0.14
+set out "dOP_vs_boundCationCharge_Cg3.pdf"
+
+unset key
+set border back # draws border lines behind everything, so key will be on top
+
+w=2 # line width
+pw=1 # line width in points
+ls_forKey = 10
+ls_berger = 11
+ls_beOPLS = 111
+ls_chrm36 = 12
+ls_lipd14 = 13
+ls_macrog = 14
+ls_orange = 15
+ls_ulmsch = 16
+ls_slipid = 17
+
+r=0.65  # point radius
+set pointsize r
+pt_DPPC_Na = 4
+pt_POPC_Na = 6
+pt_POPC_Ca = 7
+
+set style fill transparent solid 0.3 noborder
+
+# Line- and point types for different force fields:
+set style line ls_forKey lt 1 ps 1.5*r lc rgb "black"
+set style line ls_berger lt 1 dt 1 lw w lc rgb "#D70039"
+set style line ls_beOPLS lt 1 dt 3 lw w lc rgb "#D70039"
+set style line ls_chrm36 lt 1 dt 1 lw w lc rgb "#0088BF"
+set style line ls_lipd14 lt 1 dt 1 lw w lc rgb "#FFD300"
+set style line ls_macrog lt 1 dt 1 lw w lc rgb "#00A368"
+set style line ls_orange lt 1 dt 1 lw w lc rgb "#FF6600"
+set style line ls_ulmsch lt 1 dt 1 lw w lc rgb "#FFA0A3"
+set style line ls_slipid lt 1 dt 1 lw w lc rgb "#7AEE9E"
+set multiplot layout 2, 1 #tit " "
+
+yMax=0.03
+yMinB=-0.11
+yMinA=-0.15
+set rmargin at screen right
+set lmargin at screen left
+set tmargin at screen top
+set bmargin at screen top-2.0*(yMax-yMinB)/(2*yMax-yMinA-yMinB)*heightY
+unset xlabel
+set xtics format '' 0.1
+set mxtics 2
+set ytics format "%3.2f" 0.02
+set mytics 2
+set ylabel "change of C-H order parameter from salt-free solution ({/Symbol D}S_{CH})" offset 0.75,-10
+set label 100 "{/Symbol b}" at graph 0.06, 0.11 font ",25"
+plot [:0.325][yMinB:yMax] \
+  "boundDensity_vs_dOP_untilCg3.orange"        u ($1):($4-$2+$3+$5):($4-$2-$3-$5) ev :::::1 w filledcurves ls ls_orange t "", \
+  "boundDensity_vs_dOP_untilCg3.berger"        u ($1):($4-$2+$3+$5):($4-$2-$3-$5) ev :::::1 w filledcurves ls ls_berger t "", \
+  "boundDensity_vs_dOP_untilCg3.berger-OPLS"   u ($1):($4-$2+$3+$5):($4-$2-$3-$5) ev :::::1 w filledcurves ls ls_beOPLS t "", \
+  "boundDensity_vs_dOP_untilCg3.macrog"        u ($1):($4-$2+$3+$5):($4-$2-$3-$5) ev :::::1 w filledcurves ls ls_macrog t "", \
+  "boundDensity_vs_dOP_untilCg3.c36"           u ($1):($4-$2+$3+$5):($4-$2-$3-$5) ev :::::1 w filledcurves ls ls_chrm36 t "", \
+  "boundDensity_vs_dOP_untilCg3.slipid"        u ($1):($4-$2+$3+$5):($4-$2-$3-$5) ev :::::1 w filledcurves ls ls_slipid t "", \
+  "boundDensity_vs_dOP_untilCg3.lipid14"       u ($1):($4-$2+$3+$5):($4-$2-$3-$5) ev :::::1 w filledcurves ls ls_lipd14 t "", \
+  "boundDensity_vs_dOP_untilCg3.ulmschneiders" u ($1):($4-$2+$3+$5):($4-$2-$3-$5) ev :::::1 w filledcurves ls ls_ulmsch t "", \
+   "boundDensity_vs_dOP_untilCg3_typeseparation.orange" ev :::0::0 u ($1):($4-$2) w p ls ls_orange lw pw pt pt_POPC_Na t "", \
+   "boundDensity_vs_dOP_untilCg3_typeseparation.orange" ev :::1::1 u ($1):($4-$2) w p ls ls_orange lw pw pt pt_POPC_Ca t "", \
+   "boundDensity_vs_dOP_untilCg3_typeseparation.berger" ev :::0::0 u ($1):($4-$2) w p ls ls_berger lw pw pt pt_DPPC_Na t "", \
+   "boundDensity_vs_dOP_untilCg3_typeseparation.berger" ev :::1::1 u ($1):($4-$2) w p ls ls_berger lw pw pt pt_POPC_Na t "", \
+   "boundDensity_vs_dOP_untilCg3_typeseparation.berger" ev :::2::2 u ($1):($4-$2) w p ls ls_berger lw pw pt pt_POPC_Ca t "", \
+   "boundDensity_vs_dOP_untilCg3.berger-OPLS" ev ::1:::1 u ($1):($4-$2) w p ls ls_beOPLS lw pw pt pt_DPPC_Na t "", \
+   "boundDensity_vs_dOP_untilCg3.macrog" ev ::1:::1 u ($1):($4-$2) w p ls ls_macrog lw pw pt pt_POPC_Na t "", \
+   "boundDensity_vs_dOP_untilCg3_typeseparation.c36" ev :::0::0 u ($1):($4-$2) w p ls ls_chrm36 lw pw pt pt_POPC_Na t "", \
+   "boundDensity_vs_dOP_untilCg3_typeseparation.c36" ev :::1::1 u ($1):($4-$2) w p ls ls_chrm36 lw pw pt pt_POPC_Ca t "", \
+   "boundDensity_vs_dOP_untilCg3_typeseparation.slipid" ev :::0::0 u ($1):($4-$2) w p ls ls_slipid lw pw pt pt_DPPC_Na t "", \
+   "boundDensity_vs_dOP_untilCg3_typeseparation.slipid" ev :::1::1 u ($1):($4-$2) w p ls ls_slipid lw pw pt pt_POPC_Na t "", \
+   "boundDensity_vs_dOP_untilCg3_typeseparation.slipid" ev :::2::2 u ($1):($4-$2) w p ls ls_slipid lw pw pt pt_POPC_Ca t "", \
+   "boundDensity_vs_dOP_untilCg3_typeseparation.lipid14" ev :::0::0 u ($1):($4-$2) w p ls ls_lipd14 lw pw pt pt_POPC_Na t "", \
+   "boundDensity_vs_dOP_untilCg3_typeseparation.lipid14" ev :::1::1 u ($1):($4-$2) w p ls ls_lipd14 lw pw pt pt_POPC_Ca t "", \
+   "boundDensity_vs_dOP_untilCg3.ulmschneiders"          ev ::1:::1 u ($1):($4-$2) w p ls ls_ulmsch lw pw pt pt_POPC_Na t "", \
+    "boundDensity_vs_dOP_untilCg3.orange"        u ($1):($4-$2) ev :::::1 w l ls ls_orange t "Orange", \
+    "boundDensity_vs_dOP_untilCg3.berger"        u ($1):($4-$2) ev :::::1 w l ls ls_berger t "Berger", \
+    "boundDensity_vs_dOP_untilCg3.berger-OPLS"   u ($1):($4-$2) ev :::::1 w l ls ls_beOPLS t "Berger-OPLS", \
+    "boundDensity_vs_dOP_untilCg3.macrog"        u ($1):($4-$2) ev :::::1 w l ls ls_macrog t "MacRog", \
+    "boundDensity_vs_dOP_untilCg3.c36"           u ($1):($4-$2) ev :::::1 w l ls ls_chrm36 t "CHARMM36", \
+    "boundDensity_vs_dOP_untilCg3.slipid"        u ($1):($4-$2) ev :::::1 w l ls ls_slipid t "Slipids", \
+    "boundDensity_vs_dOP_untilCg3.lipid14"       u ($1):($4-$2) ev :::::1 w l ls ls_lipd14 t "Lipid14", \
+    "boundDensity_vs_dOP_untilCg3.ulmschneiders" u ($1):($4-$2) ev :::::1 w l ls ls_ulmsch t "Ulmschneiders"
+#   "forKey.dat" ev :::0::0 w p ls ls_forKey pt pt_POPC_Na t "", \
+#   "forKey.dat" ev :::2::2 w p ls ls_forKey pt pt_POPC_Ca t "", \
+#   "forKey.dat" ev :::1::1 w p ls ls_forKey pt pt_DPPC_Na t ""
+
+# Key:
+c2x=0.285 # position x
+c2y=0.845 # position y
+set key at graph c2x, graph c2y reverse Left bottom left maxcolumn 2 maxrows 5 samplen 1 opaque width -1 height 0.5 box
+
+# Explanation for point types:
+c3x=0.845
+c3y=1.68
+w3=0.34
+h3=0.23
+set object 200 rectangle center graph c3x, graph c3y size graph w3, graph h3 fs solid
+set label 1 at graph c3x, graph c3y+0.075 "NaCl" center
+set label 2 at graph c3x+0.110, graph c3y+0.075 "CaCl_2" center
+set label 3 at graph c3x-0.155, graph c3y+0.005 "POPC"
+set label 4 at graph c3x, graph c3y+0.01 " ○" font ",22" center
+set label 5 at graph c3x+0.110, graph c3y+0.01 "●" font ",22" center
+set label 6 at graph c3x-0.155, graph c3y-0.075 "DPPC"
+set label 7 at graph c3x, graph c3y-0.075 " ◻" font ",17" center #◼ 
+
+set tmargin at screen top-2.0*(yMax-yMinB)/(2*yMax-yMinA-yMinB)*heightY
+set bmargin at screen top-2*heightY
+set xlabel "bound cation charge (q/nm^{2}, integrated until C_{g_3})" offset 0,0.53
+set xtics format '%2.1f'
+unset ylabel
+set label 100 "{/Symbol a}"
+plot [:0.325][yMinA:yMax]\
+  "boundDensity_vs_dOP_untilCg3.orange"        u ($1):($4-$2+$3+$5):($4-$2-$3-$5) ev :::2 w filledcurves ls ls_orange t "", \
+  "boundDensity_vs_dOP_untilCg3.berger"        u ($1):($4-$2+$3+$5):($4-$2-$3-$5) ev :::2 w filledcurves ls ls_berger t "", \
+  "boundDensity_vs_dOP_untilCg3.berger-OPLS"   u ($1):($4-$2+$3+$5):($4-$2-$3-$5) ev :::2 w filledcurves ls ls_beOPLS t "", \
+  "boundDensity_vs_dOP_untilCg3.macrog"        u ($1):($4-$2+$3+$5):($4-$2-$3-$5) ev :::2 w filledcurves ls ls_macrog t "", \
+  "boundDensity_vs_dOP_untilCg3.c36"           u ($1):($4-$2+$3+$5):($4-$2-$3-$5) ev :::2 w filledcurves ls ls_chrm36 t "", \
+  "boundDensity_vs_dOP_untilCg3.slipid"        u ($1):($4-$2+$3+$5):($4-$2-$3-$5) ev :::2 w filledcurves ls ls_slipid t "", \
+  "boundDensity_vs_dOP_untilCg3.lipid14"       u ($1):($4-$2+$3+$5):($4-$2-$3-$5) ev :::2 w filledcurves ls ls_lipd14 t "", \
+  "boundDensity_vs_dOP_untilCg3.ulmschneiders" u ($1):($4-$2+$3+$5):($4-$2-$3-$5) ev :::2 w filledcurves ls ls_ulmsch t "", \
+   "boundDensity_vs_dOP_untilCg3_typeseparation.orange"  ev :::2::2 u ($1):($4-$2) w p ls ls_orange lw pw pt pt_POPC_Na t "", \
+   "boundDensity_vs_dOP_untilCg3_typeseparation.orange"  ev :::3::3 u ($1):($4-$2) w p ls ls_orange lw pw pt pt_POPC_Ca t "", \
+   "boundDensity_vs_dOP_untilCg3_typeseparation.berger"  ev :::3::3 u ($1):($4-$2) w p ls ls_berger lw pw pt pt_DPPC_Na t "", \
+   "boundDensity_vs_dOP_untilCg3_typeseparation.berger"  ev :::4::4 u ($1):($4-$2) w p ls ls_berger lw pw pt pt_POPC_Na t "", \
+   "boundDensity_vs_dOP_untilCg3_typeseparation.berger"  ev :::5::5 u ($1):($4-$2) w p ls ls_berger lw pw pt pt_POPC_Ca t "", \
+   "boundDensity_vs_dOP_untilCg3.berger-OPLS"            ev ::1:2 u ($1):($4-$2) w p ls ls_beOPLS lw pw pt pt_DPPC_Na t "", \
+   "boundDensity_vs_dOP_untilCg3.macrog"                 ev ::1:2 u ($1):($4-$2) w p ls ls_macrog lw pw pt pt_POPC_Na t "", \
+   "boundDensity_vs_dOP_untilCg3_typeseparation.c36"     ev :::2::2 u ($1):($4-$2) w p ls ls_chrm36 lw pw pt pt_POPC_Na t "", \
+   "boundDensity_vs_dOP_untilCg3_typeseparation.c36"     ev :::3::3 u ($1):($4-$2) w p ls ls_chrm36 lw pw pt pt_POPC_Ca t "", \
+   "boundDensity_vs_dOP_untilCg3_typeseparation.slipid" ev :::3::3 u ($1):($4-$2) w p ls ls_slipid lw pw pt pt_DPPC_Na t "", \
+   "boundDensity_vs_dOP_untilCg3_typeseparation.slipid" ev :::4::4 u ($1):($4-$2) w p ls ls_slipid lw pw pt pt_POPC_Na t "", \
+   "boundDensity_vs_dOP_untilCg3_typeseparation.slipid" ev :::5::5 u ($1):($4-$2) w p ls ls_slipid lw pw pt pt_POPC_Ca t "", \
+   "boundDensity_vs_dOP_untilCg3_typeseparation.lipid14" ev :::2::2 u ($1):($4-$2) w p ls ls_lipd14 lw pw pt pt_POPC_Na t "", \
+   "boundDensity_vs_dOP_untilCg3_typeseparation.lipid14" ev :::3::3 u ($1):($4-$2) w p ls ls_lipd14 lw pw pt pt_POPC_Ca t "", \
+   "boundDensity_vs_dOP_untilCg3.ulmschneiders"          ev ::1:2 u ($1):($4-$2) w p ls ls_ulmsch lw pw pt pt_POPC_Na t "", \
+    "boundDensity_vs_dOP_untilCg3.orange"        u ($1):($4-$2) ev :::2 w l ls ls_orange t "Orange", \
+    "boundDensity_vs_dOP_untilCg3.berger"        u ($1):($4-$2) ev :::2 w l ls ls_berger t "Berger", \
+    "boundDensity_vs_dOP_untilCg3.berger-OPLS"   u ($1):($4-$2) ev :::2 w l ls ls_beOPLS t "Berger-OPLS", \
+    "boundDensity_vs_dOP_untilCg3.macrog"        u ($1):($4-$2) ev :::2 w l ls ls_macrog t "MacRog", \
+    "boundDensity_vs_dOP_untilCg3.c36"           u ($1):($4-$2) ev :::2 w l ls ls_chrm36 t "CHARMM36", \
+    "boundDensity_vs_dOP_untilCg3.slipid"        u ($1):($4-$2) ev :::2 w l ls ls_slipid t "Slipids", \
+    "boundDensity_vs_dOP_untilCg3.lipid14"       u ($1):($4-$2) ev :::2 w l ls ls_lipd14 t "Lipid14", \
+    "boundDensity_vs_dOP_untilCg3.ulmschneiders" u ($1):($4-$2) ev :::2 w l ls ls_ulmsch t "Ulmschneiders"
+
+unset multiplot
