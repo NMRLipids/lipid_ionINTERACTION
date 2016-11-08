@@ -163,7 +163,7 @@
 %Please use \dag to cite the ESI in the main text of the article.
 %If you article does not have ESI please remove the the \dag symbol from the title and the footnotetext below.
 \footnotetext{\dag~Electronic Supplementary Information (ESI) available: %[details of any supplementary information available should be included here]. 
-5 figures, detailed technical discussion and simulation details.
+8 figures, detailed technical discussion and simulation details.
 See DOI: 10.1039/b000000x/}
 %additional addresses can be cited as above using the lower-case letters, c, d, e... If all authors are from the same address, no letter is required
 
@@ -183,25 +183,28 @@ See DOI: 10.1039/b000000x/}
 %\begin{center}
 %\part*{SUPPLEMENTARY INFORMATION}
 %\end{center}
-\section{Ion binding equilibration times}
-Simulations containing 450~mM CaCl$_2$ with CHARMM36 and Slipids were ran 2~$\mu$s to estimate the times
-required to equilibrate amount of bound Ca$^{2+}$ in lipid bilayer. The amount of bound calcium
-as a function of simulation time from these simulations are shown in Fig.~\ref{longruns}.
-The results show a clear increase in ion binding up to 1000~ns and 700~ns in CHARMM36 and Slipids, respectively,
-and moderate increase even after this. This is also reflected to the CHARMM36 results in Fig.~2 in the main text, where
-long CHARMM36 simulation with 450~mM CaCl$_2$ show relatively lower order parameters than shorter simulations. 
-This can be rationalised with higher and more equilibrated ion binding in long simulations. 
-The results suggest that in other simulations the binding affinity 
-may be underestimated due to the insufficient equilibration times. This should be taken into account in more careful studies,
-but do not interfere the conclusion in this work that Ca$^{2+}$ binding is most likely overestimated in all the
-other models than CHARMM36 with ion model by Yoo et al. \cite{yoo16}.
+\section{Ca$^{2+}$ binding equilibration times}
+To estimate the times required to equilibrate the amount of bound Ca$^{2+}$ in lipid bilayer,
+simulations containing 450~mM CaCl$_2$ were ran with CHARMM36 and Slipids  for 2~$\mu$s (Fig.~\ref{longruns}).
 \begin{figure}[h]
   \centering
   \includegraphics[width=8cm]{../Fig/bindingINlongRUNS.eps} 
   \caption{\label{longruns}
-    Number of bound Ca$^{2+}$ as a function of time from 2~$\mu$s long simulations with CHARMM36 and Slipids.
+    Number of bound Ca$^{2+}$ during 2~$\mu$s simulations with CHARMM36 and Slipids.
 }
 \end{figure}
+There was a clear increase in ion binding up to 1000~ns in CHARMM36 and 700~ns in Slipids,
+and a moderate increase even after this. This was also reflected in the CHARMM36 results of Fig.~2 in the main text, where
+the long CHARMM36 simulation with $[$CaCl$_2]=450$~mM showed lower order parameters than shorter simulations
+with  $[$CaCl$_2]>450$~mM, in line
+with the higher (see Fig.~\ref{CAdensities})  ion binding in the (more equilibrated) long simulation. 
+
+These results suggest that in the other simulations the Ca$^{2+}$ binding affinities 
+may also be underestimated due to insufficient equilibration times. While this should be taken into account in more careful studies,
+it does not interfere with our key conclusion that Ca$^{2+}$ binding is most likely overestimated in all the
+models --- except in CHARMM36 with the heptahydrated Ca$^{2+}$ by Yoo et al. \cite{yoo16},
+for which the number of Ca$^{2+}$ ions on the coordination shell of lipid oxygens (the measurable shown in Fig.~\ref{longruns})
+would remain strictly at zero at all times, as each calcium is explicitly bound to a set of seven water molecules.
 
 
 \section{Change of choline order parameters as a function of bound cation charge}
@@ -212,7 +215,7 @@ To demonstrate that also in current MD simulations the molecular electrometer wo
 As in reality ions have continuum density distributions, any division to bound and non-bound ions is somewhat artificial,
 and thus the choice of parameters describing ion partitioning is more or less ambiguous.
 We chose to integrate the cation charge distribution from the centre of the membrane until a certain predefined limit. Three limits were tested:
-until the g$_3$-carbon (Fig.~\ref{electrometer_g3}), until the phosphorus (Fig.~3 in the main text), and until the $\alpha$-carbon (Fig.~\ref{electrometer_ca}) density maximum. Although phosphorus seems to be the most intuitive choice, comparison of these three plots shows that the conclusions we draw here do not depend on the chosen limit.
+until the g$_3$-carbon (Fig.~\ref{electrometer_g3}), until the phosphorus (Fig.~3 in the main text), and until the $\alpha$-carbon (Fig.~\ref{electrometer_ca}) density maximum. Although phosphorus seems to be the most intuitive choice, comparison of these three plots shows that the conclusions we drew here did not depend on the chosen limit.
 That said, we must stress that the slopes of the curves depend {\bf strongly} on the chosen limit; therefore, one should be very careful when comparing them to one another or to experimental data --- a given limit might or might not match with what is considered 'bound' in an experiment.
 %To put it in other words, we can affect the slopes of the simulation curves by our choice of the integration limit, whereas the experimental slope will not be affected. This has a potential of us introducing an unconscious bias on the one hand, and on the other hand people looking at the plot might conclude one FF to be better matching the experiments than some other, although this might not be the case (both because the OPs at zero bound charge in the simulations are not correct and because of this additional effect on the slope coming from the choice of the integration limit.)
 
@@ -225,7 +228,7 @@ That said, we must stress that the slopes of the curves depend {\bf strongly} on
     shown as a function of bound cation charge.
     The order parameters as well as the bound charge calculated separately for
     each leaflet; {\bf cations residing between the bilayer centre and the density maximum of g$_3$ carbon
-    considered bound}; error bars show the standard error of the mean over all lipids.
+    considered bound}; error bars (shaded) show the standard error of the mean over all lipids.
    }
 \end{figure}
 \begin{figure}[t]
@@ -237,17 +240,17 @@ That said, we must stress that the slopes of the curves depend {\bf strongly} on
     shown as a function of bound cation charge.
     The order parameters as well as the bound charge calculated separately for
     each leaflet; {\bf cations residing between the bilayer centre and the density maximum of $\alpha$ carbon
-    considered bound}; error bars show the standard error of the mean over all lipids.
+    considered bound}; error bars (shaded) show the standard error of the mean over all lipids.
     }
 \end{figure}
 
-Figures~\ref{electrometer_g3},~\ref{electrometer_ca} and~3 in the main text show that in all MD models a clear correlation exists between the bound cation charge and the change of the ($\beta$, $\alpha$) order parameters. Also, this correlation does not seem to depend heavily on ion type, as Na$^+$ and Ca$^{2+}$ fall effectively on the same line in each force field.
-In other words, the plots demonstrate that the molecular electrometer is robust, that is, qualitatively reproduced also in MD simulations, and even with rather inaccurate force fields. (A similar robust effect was the reorientation of the headgroup upon dehydration in our previous paper~\cite{botan15}.)
+Figures~\ref{electrometer_g3},~\ref{electrometer_ca} and~3 in the main text show that in all MD models a clear correlation existed between the bound cation charge and the change of the ($\beta$, $\alpha$) order parameters. Also, this correlation did not seem to depend heavily on ion type, as Na$^+$ and Ca$^{2+}$ fell effectively on the same line in each force field.
+In other words, the plots demonstrate that the molecular electrometer is robust, that is, qualitatively reproduced also in MD simulations, and even with rather inaccurate force fields. (A similar robust effect was found to be the reorientation of the PC headgroup upon dehydration in our previous paper~\cite{botan15}.)
 
 We wish to note that with the mono- and divalent ions the bound charge is localised differently in the membrane.
-Interestingly, however, it seems that a single linear slope can capture responses to both.
+Interestingly, however, a single linear slope could capture responses to both (Figs.~\ref{electrometer_g3},~\ref{electrometer_ca} and 3 in the main text).
 This is somewhat surprising, as one might expect correlation effects between the bound ions;
-probably these become evident only at higher concentrations.
+these might become evident only at higher concentrations.
 
 %We also note that the differences between force fields for order parameter changes as a function of bound charge do not seem to exactly match the differences between force fields for order parameter changes as a function of ion concentration (Fig.~\ref{ordPions}): The order parameter change as a function of bound charge is similar e.g. for Lipid14 and Berger even though significant difference is observed as a function of ion concentration, and Orange has the smallest dependence on ion concentration but strongest dependence on bound cation charge. Conclusion seems to be that in most cases the order parameter changes as a function of ion concentration arise from differences in ion binding affinity, not from different headgroup responses to ion binding. HOWEVER. The slopes are affected by the choice of the integration limit (see Figs.~\ref{electrometer_g3},~\ref{electrometer}, and \ref{electrometer_ca}), so one should be very careful with conclusions.
 %The exception may be the alpha carbon for CHARMM. It has the weakest dependence on bound charge and it is the only segment which agrees with experiments as a function of Calcium concentration. It may be that CHARMM is more realisitic in this aspect --- or this might coincidental.
