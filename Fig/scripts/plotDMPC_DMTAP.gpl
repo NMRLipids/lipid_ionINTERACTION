@@ -3,7 +3,7 @@ set output "../OrderParameterDMPC_DMTAP.pdf"
 top = 0.91
 heightY = 0.42
 right = 0.97
-left = 0.14
+left = 0.175
 
 set multiplot  layout 2,1
 set ytic 0.04
