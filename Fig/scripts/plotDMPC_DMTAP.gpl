@@ -1,17 +1,18 @@
-#set term postscript enhanced color  
-set terminal postscript portrait enhanced color dashed lw 1 "Helvetica" 14 
-set output "../OrderParameterDMPC_DMTAP.eps"
-set size 1.0, 0.97
+set term pdfcairo enhanced color dashed dashlength 0.5 size 10cm, 17cm font "Helvetica,14" 
+set output "../OrderParameterDMPC_DMTAP.pdf"
+top = 0.91
+heightY = 0.42
+right = 0.97
+left = 0.175
+
 set multiplot  layout 2,1
 set ytic 0.04
 set key above reverse Left
-#set key at screen 0.6,screen 0.885 maxcols 1 maxrows 11	
-#set key font ",13"
 set tic font ",16"
 set key font ",17"
 
 
-set pointsize 1.65
+set pointsize 1.1
 pt_DPPC_Na = 4
 pt_POPC_Na = 6
 pt_POPC_Ca = 7
@@ -27,28 +28,25 @@ ls_forKey = 10
 #set style line ls_ulmsch lt 1 dt 1 lw w lc rgb "#FFA0A3"
 #set style line ls_slipid lt 1 dt 1 lw w lc rgb "#7AEE9E"
 
-#set lmargin at screen 0.37
-#set key at screen 1.3,screen 0.87 maxcols 2 maxrows 8
-#set xrange [-0.12:-0.0001] 
-
-set yrange [-0.3:0.05]
 set ylabel "{/Symbol D}S_{CH}^{/Symbol b}" font ",21"
 set xtic format ""
-set origin 0.02,0.46
-#set size 0.65, 0.31
-plot "../../Data/DMPC/DMPC_DMTAP/BERGERdmtapCONSchange.dat" using ($1/(100-$1)):2:3 with yerrorbars notitle pt 7 lt 1 lc rgb '#D70039', "" using ($1/(100-$1)):2 with linespoint title 'POPC/DMTAP, Berger' pt 7 linetype 1 lc rgb '#D70039', \
+set rmargin at screen right
+set lmargin at screen left
+set tmargin at screen top
+set bmargin at screen top-heightY
+plot [:][-0.3:0.05] "../../Data/DMPC/DMPC_DMTAP/BERGERdmtapCONSchange.dat" using ($1/(100-$1)):2:3 with yerrorbars notitle pt 7 lt 1 lc rgb '#D70039', "" using ($1/(100-$1)):2 with linespoint title 'DMPC/DMTAP, Berger' pt 7 linetype 1 lc rgb '#D70039', \
      "../../Data/DMPC/DMPC_DMTAP/BERGERdmtapCONSchange.dat" using ($1/(100-$1)):4:5 with yerrorbars notitle  pt 7 lt 1 lc rgb '#D70039', "" using ($1/(100-$1)):4 with lines notitle linetype 1 lc rgb '#D70039',\
      "../../Data/DMPC/DMPC_DMTAP/EXP-franzin1998change.dat"  using ($1/(100-$1)):($2*(-1)*0.00784) title 'POPC/DOTAP, ^2H NMR' with linespoints  linetype 1 dt 2 pt 7 lc rgb 'black', \
-     "../../Data/DMPC/DMPC_DMTAP/BERGERdmtapCONSchange.dat" using ($1/(100-$1)):(($1/(100-$1))*(-1)*(15.4+20.5+20.9+21.3)/4*4/(3*167)) title 'Cationic amphiphiles, ^2H NMR' with lines linetype 1 lc rgb 'black', \
+     "../../Data/DMPC/DMPC_DMTAP/BERGERdmtapCONSchange.dat" using ($1/(100-$1)):(($1/(100-$1))*(-1)*(15.4+20.5+20.9+21.3)/4*4/(3*167)) title 'cationic amphiphiles, ^2H NMR' with lines linetype 1 lc rgb 'black', \
      "./forLineDMPC_DMTAP.dat" using 1:2 notitle with lines lt 1 dt 3 lc rgb 'black' 
 
 set ylabel '{/Symbol D}S_{CH}^{/Symbol a}' font ",21"
-set xlabel 'Cationic amphiphile per lipid (X^+)' font ",21"
+set xlabel 'cationic amphiphiles per PC lipid (X^+)' font ",21"
 set xtic format "%G"
-set origin 0.02,0.0
-plot "../../Data/DMPC/DMPC_DMTAP/BERGERdmtapCONSchange.dat" using ($1/(100-$1)):6:7  with yerrorbars notitle pt 7 lt 1 lc rgb '#D70039', "" using ($1/(100-$1)):6 with lines notitle linetype 1 lc rgb '#D70039', \
+set tmargin at screen top-heightY
+set bmargin at screen top-2*heightY
+plot [:][-0.3:0.05] "../../Data/DMPC/DMPC_DMTAP/BERGERdmtapCONSchange.dat" using ($1/(100-$1)):6:7  with yerrorbars notitle pt 7 lt 1 lc rgb '#D70039', "" using ($1/(100-$1)):6 with lines notitle linetype 1 lc rgb '#D70039', \
      "../../Data/DMPC/DMPC_DMTAP/BERGERdmtapCONSchange.dat" using ($1/(100-$1)):8:9  with yerrorbars notitle pt 7 lt 1 lc rgb '#D70039', "" using ($1/(100-$1)):8 with lines notitle linetype 1 lc rgb '#D70039',\
      "../../Data/DMPC/DMPC_DMTAP/EXP-franzin1998change.dat"  using ($1/(100-$1)):($3*0.00784) notitle with linespoints  linetype 1 pt 7 dt 2 lc rgb 'black', \
      "../../Data/DMPC/DMPC_DMTAP/BERGERdmtapCONSchange.dat" using ($1/(100-$1)):(($1/(100-$1))*(-1)*(27.4+29.9+30.9+31.4)/4*4/(3*167)) notitle with lines linetype 1 lc rgb 'black', \
      "./forLineDMPC_DMTAP.dat" using 1:2 notitle with lines lt 1 dt 3 lc rgb 'black' 
-    
