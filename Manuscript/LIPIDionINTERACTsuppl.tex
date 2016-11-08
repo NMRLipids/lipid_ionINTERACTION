@@ -257,49 +257,55 @@ probably these become evident only at higher concentrations.
 
 \section{Headgroup response to charged amphiphiles}
 
-The order parameter changes as a function of the bound charge cannot be straightforwardly
-compared between simulations and experiments from systems with ions because the 
-results depend on the definition of bound ions in simulations (see previous section). In systems with charged
-amphiphiles the situation is more straightforward since all the charges can be assumed 
-to locate in the bilayer in both, simulations and experiments. The order parameter changes as a 
-function of charged amphiphiles, calculated from previously published simulation 
+As discussed in the previous section, the definition of bound ions is somewhat arbitrary in simulations. Therefore, for systems with ions
+the order parameter changes as a function of the bound charge cannot be straightforwardly
+compared between simulations and experiments.
+In systems with charged
+amphiphiles the situation is more straightforward, because all the charges can be assumed 
+to be located in the bilayer in both simulations and experiments.
+
+Figure~\ref{DMPC_DMTAP} shows the order parameter changes versus
+the number of charged amphiphiles per PC lipid, calculated from previously published simulation 
 data~\cite{miettinen09,DMPC_DMTAP0mol,DMPC_DMTAP6mol,DMPC_DMTAP50mol} and
-experiments~\cite{scherer89,franzin98}, is shown in Fig~\ref{DMPC_DMTAP}.
+experiments~\cite{scherer89,franzin98}.
 \begin{figure}[t]
   \centering
   \includegraphics[width=8cm]{../Fig/OrderParameterDMPC_DMTAP.pdf} 
   \caption{\label{DMPC_DMTAP}
-    Order parameter changes as a function of cationic amphiphiles from simulations~\cite{miettinen09,DMPC_DMTAP0mol,DMPC_DMTAP6mol,DMPC_DMTAP50mol} 
-    and experiments~\cite{scherer89,franzin98}. Experimental points for binary mixtures of POPC and 1,2-dioleoyloxy-3-(trimethylammonio)propane (DOTAP)
-    are from ~\cite{franzin98}. Experimental lines are from $\Delta S_{\rm{CH}}^{i}=\frac{4}{3}\chi^{-1}m_i X^\pm$, where $m_i$ are taken as average
-    for different amphiphiles measured in Ref.~\citenum{scherer89}.
+    Order parameter changes as a function of number of cationic amphiphiles per PC lipid from simulations~\cite{miettinen09,DMPC_DMTAP0mol,DMPC_DMTAP6mol,DMPC_DMTAP50mol} 
+    and experiments~\cite{scherer89,franzin98}. Experimental points for binary mixtures of POPC and DOTAP (1,2-dioleoyloxy-3-(trimethylammonio)propane)
+    are from Ref.~\citenum{franzin98}. The solid experimental lines are $\Delta S_{\rm{CH}}^{i}=\frac{4}{3}\chi^{-1}m_i X^\pm$, where $m_i$ are the averages
+    over the different amphiphiles measured in Ref.~\citenum{scherer89}.
 }
 \end{figure}
+The experimental data from various amphiphiles with saturated acyl chains~\cite{scherer89} had a
+steeper slope than the experimental data from POPC/DOTAP (1,2-dioleoyloxy-3-(trimethylammonio)propane) mixtures~\cite{franzin98}.
+The origin of the difference is unknown, but may arise, e.g., from the differences in acyl chain saturation levels, or from differences in the charged amphiphile headgroups.
 
-The simulation data is from previously published binary mixture of cationic dimyristoyltrimethylammoniumpropane (DMTAP) 
-and zwitterionic (neutral) dimyristoylphosphatidylcholine (DMPC)~\cite{miettinen09,DMPC_DMTAP0mol,DMPC_DMTAP6mol,DMPC_DMTAP50mol},
-simulated with Berger based model. The experimental data from various amphiphiles with saturated acyl chains~\cite{scherer89} show
-steeper slope than the data from from DMPC/DOTAP mixtures~\cite{franzin98}. The origin of the difference is not known. 
-It may arise, e.g., from the differences in acyl chain saturation level or headgroups of the amphiphiles.
-In the used simulation data the amphiphile acyl chains are fully saturated as in experimental data for various 
-amphiphiles from Ref.~\citenum{scherer89}, but the amphiphile headgroup and lipids are the same as in experimental data 
-from Ref.~\citenum{franzin98}. The order parameter changes from simulations overestimate the changes measured in latter experiment
-(especially with larger amphiphile concentrations), but are in good agreement with the former. However, the simulated
-system is not exactly the same as in experiments and also, the potential effect of Cl$^-$ binding affinity cannot be excluded.
-Thus, with the available data we cannot accurately determine how realistic the headgroup response to bound charge is in simulation. 
+In the simulations, a Berger-based model was used for binary mixtures of zwitterionic (neutral) dimyristoylphosphatidylcholine (DMPC)
+and cationic dimyristoyltrimethylammoniumpropane (DMTAP), with Cl$^-$ counter ions~\cite{miettinen09,DMPC_DMTAP0mol,DMPC_DMTAP6mol,DMPC_DMTAP50mol}. 
+The amphiphile acyl chains were fully saturated as in the experimental data for various 
+amphiphiles from Ref.~\citenum{scherer89}, whereas the amphiphile headgroup was the same as in the experimental data 
+from Ref.~\citenum{franzin98}. The order parameter changes in simulations exceeded the changes measured in Ref.~\citenum{franzin98}
+(especially with larger amphiphile concentrations), but were in good agreement with Ref.~\citenum{scherer89}. That said, the simulated
+system was not exactly the same as in the experiments, and also the potential effect of Cl$^-$ binding affinity could not be excluded.
+Thus, with the available data we could not accurately determine how realistic the headgroup response to bound charge was in these simulations. 
 
-To estimate the maximum error we take the maximum amount of bound charge from Fig.~3 in the main text ($\approx$ 0.5$\frac{\rm e}{\rm nm^2}$)
-and assume the area per lipid of 0.68~nm$^2$. This gives for maximum amount of bound 
+To estimate the maximum error, we took the maximum amount of bound cation charge from Fig.~\ref{electrometer_ca} ($\approx0.5\frac{\rm e}{\rm nm^2}$;
+note that the amount would be the same from Fig.~3 in the main text, because practically the whole bound cation peak was inluded already there, see
+the Berger panels of Figs.~4 and~6 in the main text),
+and assumed an area per lipid of 0.68~nm$^2$. This gave for the maximum amount of bound 
 charge per lipid $X^+_{\rm max}=0.5\frac{\rm e}{\rm nm^2}\cdot 0.68\frac{\rm nm^2}{\rm lipid}=0.34\frac{\rm e}{\rm lipid}$,
-which is shown as dashed line in Fig.~\ref{DMPC_DMTAP}. The maximum
-overestimations of order parameter decrease with this amount of bound charge per lipid are $\approx$0.04 and $\approx$0.06 for $\beta$ and $\alpha$ order parameter changes, respectively.
-The numbers are smaller with less amount of bound cations. In principle,
-these values could explain the overestimated order parameter change due to the presence of CaCl$_2$ in Berger model but not in the presence
-of NaCl (see Fig.~2 in the main text).
+which is shown as a dashed vertical line in Fig.~\ref{DMPC_DMTAP}. The difference between the simulated and
+the farther experimental curve at this point provided estimates for the maximum
+overestimation of order parameter decrease: $\approx0.04$ for the $\beta$ and $\approx0.06$ for the $\alpha$ order parameter.
+(Note that smaller amounts of bound cations result in smaller numbers.)
+These values could, in principle, explain the observed overestimated order parameter changes in the Berger model due to CaCl$_2$, but not the ones due to
+NaCl (see Fig.~2 in the main text).
 
-In conclusion, with the current data we cannot fully exclude the possibility that the overestimated order parameter response to the
-CaCl$_2$ with Berger model arises from oversensitive headgroup response to bound cations. However, in the presence of NaCl
-the differences between responses in simulations and experiments in Fig.~2 in the main text are larger than the maximum estimated 
+In conclusion, with the current data we cannot fully exclude the possibility that the overestimated order parameter response to
+CaCl$_2$ in the Berger model arose from an oversensitive headgroup response to bound cations. However, in the presence of NaCl
+the differences between responses in simulations and experiments in Fig.~2 in the main text were larger than the maximum estimated 
 influence from a possible oversensitivity of the headgroup. 
 
 \section{Density distributions with different CaCl$_2$ concentrations}

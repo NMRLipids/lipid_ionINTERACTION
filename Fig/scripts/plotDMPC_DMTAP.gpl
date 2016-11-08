@@ -37,11 +37,11 @@ set bmargin at screen top-heightY
 plot [:][-0.3:0.05] "../../Data/DMPC/DMPC_DMTAP/BERGERdmtapCONSchange.dat" using ($1/(100-$1)):2:3 with yerrorbars notitle pt 7 lt 1 lc rgb '#D70039', "" using ($1/(100-$1)):2 with linespoint title 'DMPC/DMTAP, Berger' pt 7 linetype 1 lc rgb '#D70039', \
      "../../Data/DMPC/DMPC_DMTAP/BERGERdmtapCONSchange.dat" using ($1/(100-$1)):4:5 with yerrorbars notitle  pt 7 lt 1 lc rgb '#D70039', "" using ($1/(100-$1)):4 with lines notitle linetype 1 lc rgb '#D70039',\
      "../../Data/DMPC/DMPC_DMTAP/EXP-franzin1998change.dat"  using ($1/(100-$1)):($2*(-1)*0.00784) title 'POPC/DOTAP, ^2H NMR' with linespoints  linetype 1 dt 2 pt 7 lc rgb 'black', \
-     "../../Data/DMPC/DMPC_DMTAP/BERGERdmtapCONSchange.dat" using ($1/(100-$1)):(($1/(100-$1))*(-1)*(15.4+20.5+20.9+21.3)/4*4/(3*167)) title 'Cationic amphiphiles, ^2H NMR' with lines linetype 1 lc rgb 'black', \
+     "../../Data/DMPC/DMPC_DMTAP/BERGERdmtapCONSchange.dat" using ($1/(100-$1)):(($1/(100-$1))*(-1)*(15.4+20.5+20.9+21.3)/4*4/(3*167)) title 'cationic amphiphiles, ^2H NMR' with lines linetype 1 lc rgb 'black', \
      "./forLineDMPC_DMTAP.dat" using 1:2 notitle with lines lt 1 dt 3 lc rgb 'black' 
 
 set ylabel '{/Symbol D}S_{CH}^{/Symbol a}' font ",21"
-set xlabel 'Cationic amphiphile per lipid (X^+)' font ",21"
+set xlabel 'cationic amphiphiles per PC lipid (X^+)' font ",21"
 set xtic format "%G"
 set tmargin at screen top-heightY
 set bmargin at screen top-2*heightY
